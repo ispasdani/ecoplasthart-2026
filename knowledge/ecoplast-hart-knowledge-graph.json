@@ -1,0 +1,197 @@
+{
+  "$schema": "informal-knowledge-graph/v1",
+  "meta": {
+    "subject": "Ecoplast Hart SRL",
+    "purpose": "Portable knowledge graph for reuse as context in other chats",
+    "compiled_on": "2026-09-01",
+    "sources": [
+      "Project website source (this repo: /constants/*.tsx, bilingual RO/EN marketing copy)",
+      "https://www.ecoplasthart.com/ (live company site)",
+      "https://termene.ro/firma/17059959-ECOPLAST-HART-SRL",
+      "https://www.risco.ro/en/verifica-firma/ecoplast-hart-cui-17059959",
+      "https://www.confidas.ro/profil/17059959/ecoplast-hart-srl",
+      "https://listafirme.eu/ecoplast-hart-srl-17059959/",
+      "https://www.totalfirme.ro/ecoplast-hart-srl-punct-de-lucru-cristur-35287696",
+      "https://www.colectaredeseuri.ro/colector/ecoplasthartsr17/"
+    ],
+    "confidence_notes": [
+      "Registry identifiers (CUI, J-number, founding date, CAEN 3832) are consistent across all sources = high confidence.",
+      "Financial figures vary slightly by source/year due to reporting lag; treat as approximate.",
+      "Employee counts 2024-2025 are contradictory between aggregators (4-5 vs 22-24); the higher figure is more plausible given turnover.",
+      "'Operations in Hungary and Moldova' is website marketing language, not corroborated by the trade registry (no registered foreign branches found).",
+      "ISO 9001/14001/45001 certifications are claimed on the company website; certificate numbers/issuers were not independently verified."
+    ]
+  },
+  "entities": [
+    {
+      "id": "ecoplast_hart",
+      "type": "Company",
+      "name": "Ecoplast Hart SRL",
+      "aka": ["S.C. Ecoplast Hart S.R.L.", "SC ECOPLAST HART SRL", "ECOPLAST HART"],
+      "attributes": {
+        "legal_form": "SRL (societate cu raspundere limitata / limited liability company)",
+        "country": "Romania",
+        "county": "Hunedoara (judet Hunedoara)",
+        "cui_tax_code": "17059959",
+        "trade_register_no": "J20/1943/2004",
+        "founded": "2004-12-20",
+        "vat_registered": true,
+        "anaf_debts": "none reported (as of 2025)",
+        "status": "active",
+        "principal_caen": "3832 - Recuperarea materialelor reciclabile sortate (Recovery of sorted recyclable materials)",
+        "website": "https://www.ecoplasthart.com/",
+        "languages": ["Romanian", "English"],
+        "self_reported_experience": "19+ years (figure shown on website, ~2023 baseline)",
+        "growth_model": "self-funded; continuous reinvestment of profit into processing facilities, logistics parks and qualified staff"
+      }
+    },
+    {
+      "id": "work_point_cristur",
+      "type": "Facility",
+      "name": "Ecoplast Hart SRL - Punct de lucru Cristur",
+      "attributes": {
+        "role": "main operational site / waste yard and processing facility",
+        "secondary_cui": "35287696",
+        "address": "Sos. Hunedoarei nr. 13, Sat Cristur, Deva, jud. Hunedoara",
+        "note": "Cristur is a village administratively belonging to the municipality of Deva; this is the address shown in the website footer.",
+        "opened": "2015-12-03",
+        "activity": "waste storage/deposit and recyclable material recovery (CAEN 3832)"
+      }
+    },
+    {
+      "id": "registered_office",
+      "type": "Address",
+      "name": "Registered office",
+      "attributes": {
+        "address": "B-dul Dacia nr. 2, Bl. E5, et. P, ap. 1, Municipiul Hunedoara, jud. Hunedoara",
+        "postal_code": "~331025",
+        "role": "legal/registered headquarters (sediu social)"
+      }
+    },
+    {
+      "id": "contact",
+      "type": "ContactInfo",
+      "name": "Contact details",
+      "attributes": {
+        "email_website": "ecoplast_hart@yahoo.com",
+        "phones": ["+40 746 152 318 (mobile)", "0254 746515", "0254 236228"],
+        "footer_address": "Sat Cristur, Strada Hunedoarei nr. 13, Jud. Hunedoara"
+      }
+    },
+    {
+      "id": "mission",
+      "type": "Positioning",
+      "name": "Mission & positioning",
+      "attributes": {
+        "tagline": "Join the recycling revolution and make the world greener.",
+        "specialization": "collection, sorting and recycling of all types of waste (hazardous and non-hazardous)",
+        "object_of_activity": "recovery of sorted recyclable materials; storage of non-hazardous and hazardous waste; wholesale trade of waste and scrap",
+        "regulatory_stance": "full compliance with EU waste-management policy and the waste hierarchy; operates the generator -> collector -> recovery circuit",
+        "advocacy": "campaigns to change public mentality toward recycling and to apply EU-specific legislation and work procedures"
+      }
+    },
+    {
+      "id": "markets",
+      "type": "MarketPresence",
+      "name": "Geographic markets",
+      "attributes": {
+        "claimed_countries": ["Romania", "Hungary", "Moldova (Republic of Moldova)"],
+        "confirmed": ["Romania (Hunedoara county: Cristur/Deva and Hunedoara; collection points also referenced in Deva)"],
+        "caveat": "Hungary and Moldova appear only in website marketing copy; no foreign branches found in the Romanian trade registry."
+      }
+    },
+    { "id": "iso_9001", "type": "Certification", "name": "ISO 9001:2015", "attributes": { "domain": "Quality Management System (QMS)", "status": "claimed on company website" } },
+    { "id": "iso_14001", "type": "Certification", "name": "ISO 14001:2015", "attributes": { "domain": "Environmental Management System (EMS)", "status": "claimed on company website" } },
+    { "id": "iso_45001", "type": "Certification", "name": "ISO 45001:2018", "attributes": { "domain": "Occupational Health & Safety Management System (OH&S)", "status": "claimed on company website" } },
+
+    { "id": "ws_plastic", "type": "WasteStream", "name": "Plastic waste", "attributes": { "examples": ["PET", "film/foil (folie)", "crates (ladite)", "trays (tavite)", "conduit (copex)", "plastic with metal inclusions"] } },
+    { "id": "ws_paper_cardboard", "type": "WasteStream", "name": "Paper & cardboard waste", "attributes": { "examples": ["cardboard (carton)", "paper (hartie)"] } },
+    { "id": "ws_wood", "type": "WasteStream", "name": "Wood waste" },
+    { "id": "ws_textile_leather", "type": "WasteStream", "name": "Textile & leather waste" },
+    { "id": "ws_ferrous", "type": "WasteStream", "name": "Ferrous metal waste (fier)" },
+    { "id": "ws_nonferrous", "type": "WasteStream", "name": "Non-ferrous metal waste", "attributes": { "metals": ["aluminium", "copper", "brass (alama)", "lead", "nickel", "zinc"], "trace": ["silver", "gold", "platinum", "rare metals in mixed alloys"] } },
+    { "id": "ws_weee", "type": "WasteStream", "name": "WEEE / DEEE (waste electrical & electronic equipment)" },
+    { "id": "ws_glass", "type": "WasteStream", "name": "Glass waste" },
+    { "id": "ws_rubber", "type": "WasteStream", "name": "Rubber waste" },
+    { "id": "ws_batteries", "type": "WasteStream", "name": "Used batteries & accumulators" },
+    { "id": "ws_hazardous", "type": "WasteStream", "name": "Hazardous waste" },
+    { "id": "ws_oils", "type": "WasteStream", "name": "Used / mineral oils", "attributes": { "note": "authorized for collection and/or recovery of used oils (per colectaredeseuri.ro)" } },
+    { "id": "ws_cables", "type": "WasteStream", "name": "Cables (Al/Cu conductors)", "attributes": { "sources": ["overhead/underground installations", "automotive industry", "electronic equipment"] } },
+
+    {
+      "id": "cap_cable_processing",
+      "type": "Capability",
+      "name": "Cable processing facility",
+      "attributes": {
+        "output": ["copper granules", "aluminium granules", "plastic fractions"],
+        "classification": "produces secondary raw materials (materii prime secundare)"
+      }
+    },
+    { "id": "cap_collection", "type": "Capability", "name": "Waste collection", "attributes": { "scope": "at generation site and at the yard; transport of non-hazardous waste across Romania" } },
+    { "id": "cap_sorting", "type": "Capability", "name": "Sorting", "attributes": { "equipment": "sorting mill / recycling lines with function-specific equipment" } },
+    { "id": "cap_compaction", "type": "Capability", "name": "Compaction & volume reduction", "attributes": { "equipment": ["mills (mori) for volume/storage reduction", "compaction/baling for cardboard and plastic"] } },
+    { "id": "cap_partner_equipping", "type": "Capability", "name": "On-site partner equipping", "attributes": { "provides": ["mills", "collection containers", "big bags for selective collection"] } },
+    {
+      "id": "cap_logistics",
+      "type": "Capability",
+      "name": "Logistics base / fleet",
+      "attributes": {
+        "assets": ["roll-off trucks (Abrollkipper)", "large-tonnage dump trucks", "small-tonnage trucks", "containers", "grab/material-handler crane (greifer)"]
+      }
+    },
+    {
+      "id": "financials",
+      "type": "FinancialsTimeSeries",
+      "name": "Financials (approximate, RON unless noted)",
+      "attributes": {
+        "currency_note": "turnover roughly EUR 2.4-2.7M/yr",
+        "by_year": {
+          "2018": { "turnover_ron": 11783010, "profit_ron": 431762, "employees": 17 },
+          "2019": { "turnover_ron": 11255914, "profit_ron": 263836, "employees": 18 },
+          "2020": { "turnover_ron": 12869865, "profit_ron": 228193, "employees": 17 },
+          "2021": { "turnover_ron": 13434746, "profit_ron": 684576, "employees": 19 },
+          "2022": { "turnover_eur": 2360963, "profit_eur": 89137, "employees": 18 },
+          "2023": { "turnover_eur": 2578719, "profit_eur": 53131, "employees": 18 },
+          "2024": { "turnover_ron": 13195785, "profit_ron": 749449, "employees": "reported 4-22 (contradictory)" },
+          "2025": { "turnover_ron": 13139580, "profit_ron": 742353, "employees": "reported 5-24 (contradictory)" }
+        }
+      }
+    }
+  ],
+  "relations": [
+    ["ecoplast_hart", "has_registered_office_at", "registered_office"],
+    ["ecoplast_hart", "operates_facility", "work_point_cristur"],
+    ["ecoplast_hart", "reachable_via", "contact"],
+    ["ecoplast_hart", "positioned_as", "mission"],
+    ["ecoplast_hart", "serves_markets", "markets"],
+    ["ecoplast_hart", "claims_certification", "iso_9001"],
+    ["ecoplast_hart", "claims_certification", "iso_14001"],
+    ["ecoplast_hart", "claims_certification", "iso_45001"],
+    ["ecoplast_hart", "reports", "financials"],
+    ["ecoplast_hart", "handles_waste_stream", "ws_plastic"],
+    ["ecoplast_hart", "handles_waste_stream", "ws_paper_cardboard"],
+    ["ecoplast_hart", "handles_waste_stream", "ws_wood"],
+    ["ecoplast_hart", "handles_waste_stream", "ws_textile_leather"],
+    ["ecoplast_hart", "handles_waste_stream", "ws_ferrous"],
+    ["ecoplast_hart", "handles_waste_stream", "ws_nonferrous"],
+    ["ecoplast_hart", "handles_waste_stream", "ws_weee"],
+    ["ecoplast_hart", "handles_waste_stream", "ws_glass"],
+    ["ecoplast_hart", "handles_waste_stream", "ws_rubber"],
+    ["ecoplast_hart", "handles_waste_stream", "ws_batteries"],
+    ["ecoplast_hart", "handles_waste_stream", "ws_hazardous"],
+    ["ecoplast_hart", "handles_waste_stream", "ws_oils"],
+    ["ecoplast_hart", "handles_waste_stream", "ws_cables"],
+    ["ecoplast_hart", "has_capability", "cap_collection"],
+    ["ecoplast_hart", "has_capability", "cap_sorting"],
+    ["ecoplast_hart", "has_capability", "cap_compaction"],
+    ["ecoplast_hart", "has_capability", "cap_cable_processing"],
+    ["ecoplast_hart", "has_capability", "cap_partner_equipping"],
+    ["ecoplast_hart", "has_capability", "cap_logistics"],
+    ["cap_cable_processing", "processes", "ws_cables"],
+    ["cap_cable_processing", "processes", "ws_nonferrous"],
+    ["cap_partner_equipping", "supports", "cap_collection"],
+    ["work_point_cristur", "hosts_capability", "cap_sorting"],
+    ["work_point_cristur", "hosts_capability", "cap_compaction"],
+    ["work_point_cristur", "hosts_capability", "cap_cable_processing"]
+  ]
+}
