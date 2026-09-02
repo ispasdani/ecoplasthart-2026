@@ -52,11 +52,69 @@ export const siteUrl = (
 export const pathnames = {
   "/": { ro: "/", en: "/" },
   "/about-us": { ro: "/despre-noi", en: "/about-us" },
+  "/services": { ro: "/servicii", en: "/services" },
+  "/services/waste-collection": {
+    ro: "/servicii/colectare-deseuri",
+    en: "/services/waste-collection",
+  },
+  "/services/recycling-recovery": {
+    ro: "/servicii/valorificare-reciclare",
+    en: "/services/recycling-recovery",
+  },
+  "/services/metal-waste": {
+    ro: "/servicii/deseuri-metalice-fier-vechi",
+    en: "/services/metal-waste",
+  },
+  "/services/cable-processing": {
+    ro: "/servicii/procesare-reciclare-cabluri",
+    en: "/services/cable-processing",
+  },
+  "/services/hazardous-waste": {
+    ro: "/servicii/deseuri-periculoase",
+    en: "/services/hazardous-waste",
+  },
+  "/services/logistics": {
+    ro: "/servicii/transport-si-containere",
+    en: "/services/logistics",
+  },
+  "/certifications": { ro: "/certificari", en: "/certifications" },
+  "/contact": { ro: "/contact", en: "/contact" },
 } as const satisfies Record<string, Record<Locale, string>>;
 
 export type PathnameKey = keyof typeof pathnames;
 
 export const pathnameKeys = Object.keys(pathnames) as PathnameKey[];
+
+/**
+ * The six service detail routes, in nav/display order. These are `pathnames`
+ * keys under `/services/`, and the trailing segment is the `[service]` param
+ * of `app/[locale]/(marketing)/services/[service]/page.tsx`.
+ */
+export const serviceKeys = [
+  "/services/waste-collection",
+  "/services/recycling-recovery",
+  "/services/metal-waste",
+  "/services/cable-processing",
+  "/services/hazardous-waste",
+  "/services/logistics",
+] as const satisfies readonly PathnameKey[];
+
+export type ServiceKey = (typeof serviceKeys)[number];
+
+/** `"/services/metal-waste"` → `"metal-waste"` (the `[service]` route param). */
+export type ServiceSlug = ServiceKey extends `/services/${infer S}` ? S : never;
+
+export const serviceSlugs = serviceKeys.map(
+  (key) => key.slice("/services/".length) as ServiceSlug,
+);
+
+export function isServiceSlug(value: string): value is ServiceSlug {
+  return (serviceSlugs as string[]).includes(value);
+}
+
+export function serviceKeyFromSlug(slug: ServiceSlug): ServiceKey {
+  return `/services/${slug}` as ServiceKey;
+}
 
 export function isLocale(value: string | undefined): value is Locale {
   return !!value && (locales as readonly string[]).includes(value);

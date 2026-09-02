@@ -1,26 +1,16 @@
 import Link from "next/link";
-import { Geist, Geist_Mono } from "next/font/google";
 
-import "./globals.css";
-
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { Container } from "@/components/ui/layout";
 
 /**
- * Global 404. There is no root `app/layout.tsx` (each branch — `[locale]` and
- * `(dashboard)` — owns its own root layout), so this file renders its own
- * `<html>` shell. Defaults to Romanian, the primary locale.
+ * 404 inside the locale tree. Renders within `app/[locale]/layout.tsx`, so it
+ * inherits the `<html>` shell — but not the marketing header/footer, which
+ * live in the `(marketing)` route group below it.
  */
-export default function GlobalNotFound() {
+export default function LocaleNotFound() {
   return (
-    <html
-      lang="ro-RO"
-      className={`${geistSans.variable} ${geistMono.variable} h-full`}
-    >
-      <body className="grid min-h-full place-items-center bg-canvas px-6 py-24 text-center">
+    <Container>
+      <div className="grid min-h-[70vh] place-items-center py-24 text-center">
         <div>
           <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-brand">
             <span aria-hidden className="mr-1 opacity-60">
@@ -45,7 +35,7 @@ export default function GlobalNotFound() {
             Ecoplast Hart
           </Link>
         </div>
-      </body>
-    </html>
+      </div>
+    </Container>
   );
 }

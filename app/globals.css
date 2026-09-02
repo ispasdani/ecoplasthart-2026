@@ -1,26 +1,237 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ==========================================================================
+   Design tokens — Ecoplast Hart
+   Structure follows design.md; palette is tuned to the reference screenshots:
+   warm paper surfaces, near-black ink, pill buttons, deep-forest dark bands.
+   Green is the accent (eyebrows, icons, links, stats), not the button fill.
+   ========================================================================== */
+
+@theme {
+  /* --- Surface --- */
+  --color-canvas: #ffffff;
+  --color-surface: #f4f4ef;
+  --color-surface-soft: #fafaf7;
+  --color-surface-feature: #e9f1ea;
+
+  /* --- Hairlines --- */
+  --color-hairline: #e5e5de;
+  --color-hairline-soft: #eeeee8;
+  --color-hairline-strong: #d3d3c9;
+  --color-hairline-dark: rgba(255, 255, 255, 0.14);
+
+  /* --- Text --- */
+  --color-ink: #12150f;
+  --color-charcoal: #2b2f28;
+  --color-slate: #5b6058;
+  --color-steel: #7b8078;
+  --color-stone: #9aa096;
+  --color-muted: #b4b9af;
+  --color-on-dark: #f4f5f1;
+  --color-on-dark-muted: rgba(244, 245, 241, 0.62);
+
+  /* --- Brand --- */
+  --color-brand: #2f7d4f;
+  --color-brand-dark: #1f5836;
+  --color-brand-mid: #4f9a6c;
+  --color-brand-soft: #e6f0e8;
+  --color-brand-deep: #101c15;
+  --color-brand-deep-2: #17281d;
+  --color-sage: #8c9c83;
+
+  /* --- Category accents (waste-stream tags only) --- */
+  --color-accent-amber: #b5721f;
+  --color-accent-clay: #a4552f;
+  --color-accent-slateblue: #3f6383;
+  --color-accent-plum: #6b4780;
+
+  /* --- Radii --- */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-3xl: 32px;
+
+  /* --- Fonts --- */
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  /* --- Elevation (design.md scale) --- */
+  --shadow-e1: 0 1px 2px 0 rgba(18, 21, 15, 0.04);
+  --shadow-e2: 0 4px 12px 0 rgba(18, 21, 15, 0.08);
+  --shadow-e3: 0 12px 24px -4px rgba(18, 21, 15, 0.12);
+  --shadow-e4: 0 16px 48px -8px rgba(18, 21, 15, 0.16);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* ==========================================================================
+   Base
+   ========================================================================== */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  /* Sticky header height, so anchor jumps don't hide behind the nav. */
+  scroll-padding-top: 6rem;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-brand);
+  color: #fff;
+}
+
+/* Visible, on-brand focus ring for keyboard users only. */
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   Utilities
+   ========================================================================== */
+
+/* Fluid display type: tight leading + negative tracking per design.md. */
+@utility text-display {
+  font-size: clamp(2.25rem, 6.2vw, 4.5rem);
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+  font-weight: 600;
+}
+
+@utility text-display-sm {
+  font-size: clamp(1.875rem, 4.4vw, 3.25rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+}
+
+@utility text-heading {
+  font-size: clamp(1.5rem, 2.6vw, 2.25rem);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+/* Horizontal rule that fades out — used between feature rows. */
+@utility rule-fade {
+  background: linear-gradient(
+    to right,
+    var(--color-hairline-strong),
+    transparent
+  );
+}
+
+/* ==========================================================================
+   Motion
+   Animations are opt-in via data attributes so they degrade to plain content
+   when JS is unavailable, and are removed entirely for reduced-motion users.
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes reveal-rise {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*
+ * `.rise` — entrance for above-the-fold content (the hero).
+ *
+ * A plain CSS animation, so it starts at first paint instead of waiting for
+ * React to hydrate. Set the stagger with `--rise-delay`.
+ */
+.rise {
+  animation: reveal-rise 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  animation-delay: var(--rise-delay, 0ms);
+}
+
+/*
+ * `.reveal` — scroll-driven entrance for everything below the fold.
+ *
+ * Uses a scroll-progress timeline, which means no JavaScript, no
+ * IntersectionObserver and no hydration dependency. Crucially the rule only
+ * applies where `animation-timeline` is supported: everywhere else the element
+ * simply renders visible, so content is never hidden behind a script that
+ * failed to run. `--reveal-delay` (a unitless step index) offsets the range to
+ * cascade grid children.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: reveal-rise linear both;
+      animation-timeline: view();
+      animation-range: entry calc(2% + var(--reveal-delay, 0) * 5%) cover
+        calc(24% + var(--reveal-delay, 0) * 5%);
+    }
+  }
+}
+
+/* Cascade direct children of a stagger container. */
+.stagger > *:nth-child(1) {
+  --reveal-delay: 0;
+}
+.stagger > *:nth-child(2) {
+  --reveal-delay: 1;
+}
+.stagger > *:nth-child(3) {
+  --reveal-delay: 2;
+}
+.stagger > *:nth-child(4) {
+  --reveal-delay: 3;
+}
+.stagger > *:nth-child(5) {
+  --reveal-delay: 4;
+}
+.stagger > *:nth-child(n + 6) {
+  --reveal-delay: 5;
+}
+
+/* Continuous marquee used by the waste-stream ticker. */
+@keyframes marquee-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-x 42s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
 }
