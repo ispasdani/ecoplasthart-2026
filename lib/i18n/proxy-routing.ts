@@ -1,0 +1,133 @@
+import { NextResponse, type NextRequest } from "next/server";
+
+import {
+  defaultLocale,
+  isLocale,
+  keyForLocalizedPath,
+  localizedPath,
+  locales,
+  pathnameKeys,
+  pathnames,
+  type Locale,
+  type PathnameKey,
+} from "./routing";
+
+/**
+ * Paths that must never be touched by locale routing: framework internals,
+ * metadata route handlers, the private dashboard (its own root layout, no
+ * locale), API and Clerk paths, and anything that looks like a static file.
+ */
+function isExcluded(pathname: string): boolean {
+  if (
+    pathname.startsWith("/_next") ||
+    pathname.startsWith("/api") ||
+    pathname.startsWith("/__clerk") ||
+    pathname.startsWith("/monitoring")
+  ) {
+    return true;
+  }
+
+  const firstSegment = pathname.split("/")[1];
+  if (firstSegment === "dashboard") return true;
+
+  if (
+    pathname === "/favicon.ico" ||
+    pathname === "/robots.txt" ||
+    pathname === "/sitemap.xml" ||
+    pathname === "/manifest.webmanifest"
+  ) {
+    return true;
+  }
+
+  // Any file with an extension (e.g. `/og.png`, `/file.pdf`).
+  return /\/[^/]+\.[a-z0-9]+$/i.test(pathname);
+}
+
+function stripLocale(pathname: string): { locale: Locale; rest: string } {
+  const segments = pathname.split("/");
+  const first = segments[1];
+  if (isLocale(first)) {
+    const rest = "/" + segments.slice(2).join("/");
+    return { locale: first, rest: rest === "/" ? "/" : rest.replace(/\/$/, "") };
+  }
+  return { locale: defaultLocale, rest: pathname === "/" ? "/" : pathname.replace(/\/$/, "") };
+}
+
+/**
+ * Resolves the browser URL to an internal App Router path under `/[locale]/…`,
+ * or a redirect that canonicalises the URL. Returns `null` when the request
+ * should pass straight through.
+ *
+ * Rules:
+ *  - `/ro`, `/ro/...`      → 308 redirect, stripping the default-locale prefix.
+ *  - a route key used with the wrong locale's slug (e.g. `/about-us` for RO,
+ *    whose slug is `/despre-noi`) → 308 redirect to the correct slug.
+ *  - a known localized slug → rewrite to `/[locale]/<canonical key>`.
+ *  - anything else          → rewrite to `/[locale]<path>` so 404s and
+ *    dynamic routes still render inside the locale tree.
+ */
+export function resolveI18n(request: NextRequest): NextResponse | null {
+  const { pathname, search } = request.nextUrl;
+
+  if (isExcluded(pathname)) return null;
+
+  const firstSegment = pathname.split("/")[1];
+
+  // `/ro` and `/ro/...` are duplicates of the unprefixed default — redirect.
+  if (firstSegment === defaultLocale) {
+    const stripped = pathname.slice(defaultLocale.length + 1) || "/";
+    const url = request.nextUrl.clone();
+    url.pathname = stripped;
+    return NextResponse.redirect(url, 308);
+  }
+
+  const { locale, rest } = stripLocale(pathname);
+
+  // Exact match on a localized slug → rewrite to the canonical folder route.
+  const matchedKey = keyForLocalizedPath(locale, rest);
+  if (matchedKey) {
+    return rewriteToInternal(request, locale, matchedKey, search);
+  }
+
+  // The visitor used a canonical key or another locale's slug directly.
+  // Redirect them to this locale's real slug for that page.
+  const misusedKey = findKeyBySlugInAnyLocale(rest);
+  if (misusedKey && localizedPath(misusedKey, locale) !== joinLocale(locale, rest)) {
+    const url = request.nextUrl.clone();
+    url.pathname = localizedPath(misusedKey, locale);
+    return NextResponse.redirect(url, 308);
+  }
+
+  // Unmapped path (dynamic content, 404s) → keep it inside the locale tree.
+  const url = request.nextUrl.clone();
+  url.pathname = joinLocale(locale, rest);
+  return NextResponse.rewrite(url);
+}
+
+function joinLocale(locale: Locale, rest: string): string {
+  if (rest === "/" || rest === "") return `/${locale}`;
+  return `/${locale}${rest.startsWith("/") ? rest : `/${rest}`}`;
+}
+
+function rewriteToInternal(
+  request: NextRequest,
+  locale: Locale,
+  key: PathnameKey,
+  search: string,
+): NextResponse {
+  const url = request.nextUrl.clone();
+  url.pathname = key === "/" ? `/${locale}` : `/${locale}${key}`;
+  url.search = search;
+  return NextResponse.rewrite(url);
+}
+
+function findKeyBySlugInAnyLocale(slug: string): PathnameKey | null {
+  const clean = slug === "" ? "/" : slug;
+  for (const key of pathnameKeys) {
+    if (key === clean) return key;
+    for (const loc of locales) {
+      if (pathnames[key][loc] === clean) return key;
+    }
+  }
+  return null;
+}
