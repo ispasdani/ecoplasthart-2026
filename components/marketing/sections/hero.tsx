@@ -1,14 +1,18 @@
-import { MapPin, Truck } from "lucide-react";
+import { MapPin } from "lucide-react";
 
 import { ButtonLink } from "@/components/ui/button";
 import { Container, Eyebrow } from "@/components/ui/layout";
-import { MediaTile } from "@/components/ui/media";
 import { FadeIn } from "@/components/ui/reveal";
 import type { Messages } from "@/messages/ro";
 
 /**
  * Hero: oversized headline on the left, supporting copy + CTAs on the right,
- * with a full-width image band beneath — the reference design's opening move.
+ * over a full-bleed video band that fills the rest of the first screen.
+ *
+ * The section is sized to the viewport minus the sticky header (h-16, lg:4.5rem)
+ * so the video's bottom edge lands exactly at the fold rather than 64px past it.
+ * `svh` rather than `vh` — on mobile browsers `vh` measures the *largest*
+ * viewport, so the band would sit under the collapsing URL bar on first paint.
  */
 export function Hero({
   dict,
@@ -22,21 +26,15 @@ export function Hero({
   const t = dict.home.hero;
 
   return (
-    <section className="relative overflow-hidden bg-canvas">
-      {/* Soft brand wash behind the headline. */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-[26rem] bg-[radial-gradient(70%_100%_at_20%_0%,var(--color-brand-soft)_0%,transparent_70%)]"
-      />
-
-      <Container className="relative">
-        <div className="grid gap-8 pb-12 pt-14 sm:pt-20 lg:grid-cols-12 lg:gap-12 lg:pb-16 lg:pt-24">
+    <section className="relative flex min-h-[calc(100svh-4rem)] flex-col bg-canvas lg:min-h-[calc(100svh-4.5rem)]">
+      <Container>
+        <div className="grid gap-8 pb-10 pt-8 sm:pt-10 lg:grid-cols-12 lg:gap-12 lg:pb-12 lg:pt-12">
           <div className="lg:col-span-7">
             <FadeIn>
               <Eyebrow>{t.eyebrow}</Eyebrow>
             </FadeIn>
             <FadeIn delay={0.08}>
-              <h1 className="mt-5 max-w-[15ch] text-display text-balance text-ink">
+              <h1 className="mt-4 max-w-[15ch] text-display text-balance text-ink">
                 {t.title}
               </h1>
             </FadeIn>
@@ -62,24 +60,42 @@ export function Hero({
         </div>
       </Container>
 
-      <Container>
-        <FadeIn delay={0.3}>
-          <MediaTile
-            icon={Truck}
-            variant={0}
-            priority
-            sizes="(min-width: 1280px) 1216px, 100vw"
-            className="h-[18rem] rounded-2xl sm:h-[24rem] lg:h-[30rem]"
+      {/*
+        Full-bleed video band. `flex-1` lets it absorb whatever height the copy
+        leaves over, with a floor so it never collapses on short landscape
+        viewports. `bg-brand-deep` sits underneath so a still-loading (or
+        unsupported) video reads as a deliberate dark band, not a white gap.
+      */}
+      <FadeIn delay={0.3} className="relative min-h-[16rem] flex-1">
+        <div className="absolute inset-0 overflow-hidden bg-brand-deep">
+          <video
+            className="size-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            aria-hidden
+            tabIndex={-1}
           >
-            <div className="flex h-full items-end p-5 sm:p-8">
+            <source src="/videos/herobox-video.mov" />
+          </video>
+
+          <div
+            aria-hidden
+            className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 via-black/25 to-transparent"
+          />
+
+          <Container className="absolute inset-x-0 bottom-0">
+            <div className="pb-5 sm:pb-8">
               <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/25 px-3.5 py-1.5 text-[0.8125rem] font-medium text-white backdrop-blur-sm">
                 <MapPin aria-hidden className="size-3.5" />
                 {t.imageCaption}
               </span>
             </div>
-          </MediaTile>
-        </FadeIn>
-      </Container>
+          </Container>
+        </div>
+      </FadeIn>
     </section>
   );
 }
