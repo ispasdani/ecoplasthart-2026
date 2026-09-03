@@ -69,7 +69,7 @@ export function Hero({
       <FadeIn delay={0.3} className="relative min-h-[16rem] flex-1">
         <div className="absolute inset-0 overflow-hidden bg-brand-deep">
           <video
-            className="size-full object-cover"
+            className="size-full object-cover object-[center_65%]"
             autoPlay
             muted
             loop
