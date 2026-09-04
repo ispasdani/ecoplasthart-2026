@@ -2,7 +2,7 @@ import { ConvexError, v } from "convex/values";
 
 import { roleValidator } from "./schema";
 import { internalMutation, mutation, query } from "./_generated/server";
-import { getCurrentUser, requireAdmin } from "./lib/auth";
+import { getCurrentUser, requireAdmin, requireCurrentUser } from "./lib/auth";
 
 /**
  * The currently signed-in user's row (or `null`).
@@ -33,11 +33,17 @@ export const getById = query({
   },
 });
 
-/** Full member/admin list. Admin-only (used by the future roles admin screen). */
+/**
+ * Full member/admin roster — powers `/dashboard/team`.
+ *
+ * Readable by any signed-in member: the dashboard is already a private area and
+ * members need to see who else can publish. Changing a role stays admin-only,
+ * see {@link setRole}.
+ */
 export const list = query({
   args: {},
   handler: async (ctx) => {
-    await requireAdmin(ctx);
+    await requireCurrentUser(ctx);
     return await ctx.db.query("users").collect();
   },
 });
