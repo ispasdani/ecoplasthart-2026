@@ -540,6 +540,13 @@ export const en: Messages = {
       body: "Documents will appear here as soon as they are uploaded. In the meantime, you can request them from us by email.",
     },
     loading: "Loading documents…",
+    categories: {
+      iso: "ISO certificates",
+      environment: "Environmental permits",
+      permits: "Licences and approvals",
+      company: "Company documents",
+      transport: "Transport and traceability",
+    },
     uncategorized: "Other documents",
     metaTitle: "Certifications and authorisations",
     metaDescription:

@@ -551,6 +551,13 @@ export const ro = {
       body: "Documentele vor apărea aici imediat ce sunt încărcate. Între timp, ni le poți cere direct pe e-mail.",
     },
     loading: "Se încarcă documentele…",
+    categories: {
+      iso: "Certificate ISO",
+      environment: "Autorizații de mediu",
+      permits: "Licențe și avize",
+      company: "Documente companie",
+      transport: "Transport și trasabilitate",
+    },
     uncategorized: "Alte documente",
     metaTitle: "Certificări și autorizații",
     metaDescription:

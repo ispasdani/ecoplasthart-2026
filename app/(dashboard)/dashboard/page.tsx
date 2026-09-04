@@ -10,7 +10,8 @@ const SECTIONS = [
   },
   {
     title: "Bibliotecă media",
-    body: "Încarcă fotografii din incintă, cu utilajele și cu echipa, pentru a fi folosite pe site.",
+    body:
+      "Încarcă certificatele și autorizațiile care apar public pe pagina Certificări.",
   },
   {
     title: "Echipă",

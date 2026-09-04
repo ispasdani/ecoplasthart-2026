@@ -130,6 +130,7 @@ export default async function CertificationsPage({
                 documentsIntro: t.documentsIntro,
                 loading: t.loading,
                 uncategorized: t.uncategorized,
+                categoryLabels: t.categories,
                 download: dict.common.downloadFile,
                 emptyTitle: t.empty.title,
                 emptyBody: t.empty.body,

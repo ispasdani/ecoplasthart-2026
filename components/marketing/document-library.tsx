@@ -6,11 +6,14 @@ import { useMemo } from "react";
 
 import { api } from "@/convex/_generated/api";
 import { Badge } from "@/components/ui/button";
+import { localizedCategoryLabel } from "@/lib/site/document-categories";
 
 type DocLabels = {
   documentsIntro: string;
   loading: string;
   uncategorized: string;
+  /** Category key -> label in the current locale (see `lib/site/document-categories`). */
+  categoryLabels: Record<string, string>;
   download: string;
   emptyTitle: string;
   emptyBody: string;
@@ -29,21 +32,28 @@ export function DocumentLibrary({ labels }: { labels: DocLabels }) {
   const groups = useMemo(() => {
     if (!files) return [];
 
+    // Group by the *stored* category so two spellings never merge, then
+    // resolve each key to a label the visitor can read.
     const byCategory = new Map<string, typeof files>();
     for (const file of files) {
-      const key = file.category?.trim() || labels.uncategorized;
+      const key = file.category?.trim() || "";
       const bucket = byCategory.get(key);
       if (bucket) bucket.push(file);
       else byCategory.set(key, [file]);
     }
 
-    // Keep the catch-all bucket last, everything else alphabetical.
-    return [...byCategory.entries()].sort(([a], [b]) => {
-      if (a === labels.uncategorized) return 1;
-      if (b === labels.uncategorized) return -1;
-      return a.localeCompare(b);
-    });
-  }, [files, labels.uncategorized]);
+    const labelOf = (key: string) =>
+      key ? localizedCategoryLabel(key, labels.categoryLabels) : labels.uncategorized;
+
+    // Keep the catch-all bucket last, everything else alphabetical by label.
+    return [...byCategory.entries()]
+      .map(([key, group]) => [labelOf(key), group, key] as const)
+      .sort((a, b) => {
+        if (!a[2]) return 1;
+        if (!b[2]) return -1;
+        return a[0].localeCompare(b[0]);
+      });
+  }, [files, labels.uncategorized, labels.categoryLabels]);
 
   if (files === undefined) {
     return (
@@ -78,10 +88,10 @@ export function DocumentLibrary({ labels }: { labels: DocLabels }) {
     <div className="space-y-12">
       <p className="text-[0.9375rem] text-slate">{labels.documentsIntro}</p>
 
-      {groups.map(([category, categoryFiles]) => (
-        <section key={category}>
+      {groups.map(([label, categoryFiles, key]) => (
+        <section key={key || "uncategorized"}>
           <h3 className="text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-steel">
-            {category}
+            {label}
           </h3>
           <ul className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {categoryFiles.map((file) => (
