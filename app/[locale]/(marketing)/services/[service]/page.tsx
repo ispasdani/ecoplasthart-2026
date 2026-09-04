@@ -20,7 +20,7 @@ import {
   serviceKeyFromSlug,
   serviceSlugs,
 } from "@/lib/i18n/routing";
-import { serviceIcons, serviceVideos } from "@/lib/site/icons";
+import { serviceIcons, serviceImages, serviceVideos } from "@/lib/site/icons";
 import { getPrimaryLinks, getServiceNavItems } from "@/lib/site/nav";
 
 /** All six services × both locales are prerendered at build time. */
@@ -184,6 +184,7 @@ export default async function ServiceDetailPage({
             <Reveal className="lg:col-span-5">
               <MediaTile
                 icon={Icon}
+                src={serviceImages[service]}
                 video={serviceVideos[service]}
                 variant={variant}
                 overlay={false}

@@ -43,6 +43,15 @@ export const serviceIcons: Record<ServiceSlug, LucideIcon> = {
 };
 
 /**
+ * Background photography for the service tiles, keyed the same way as the
+ * icons. Takes precedence over `serviceVideos` — a slug listed in both renders
+ * the still. Slugs in neither keep the gradient artwork.
+ */
+export const serviceImages: Partial<Record<ServiceSlug, string>> = {
+  "hazardous-waste": "/images/hazard.webp",
+};
+
+/**
  * Background clips for the service tiles, keyed the same way as the icons.
  * Only the slugs listed here get a video; the rest keep the gradient artwork.
  */
