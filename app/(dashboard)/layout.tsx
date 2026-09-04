@@ -6,19 +6,30 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import { ConvexClientProvider } from "@/app/providers/convex-client-provider";
 
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
-const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+// `latin-ext` is required for Romanian: ă (U+0103), ș (U+0219) and ț (U+021B)
+// are outside the `latin` subset and would otherwise fall back to a system font
+// mid-word. (â and î are in Latin-1, so they render either way.)
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin", "latin-ext"],
+});
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin", "latin-ext"],
+});
 
 export const metadata: Metadata = {
-  title: "Dashboard",
+  title: "Panou de administrare",
   robots: { index: false, follow: false },
 };
 
+// The dashboard is a private, Romanian-only area — it sits outside the
+// `[locale]` tree, so its copy is written inline rather than via `messages/`.
 const SIDEBAR_LINKS = [
-  { href: "/dashboard", label: "Overview" },
-  { href: "/dashboard/content", label: "Website content" },
-  { href: "/dashboard/media", label: "Media library" },
-  { href: "/dashboard/team", label: "Team" },
+  { href: "/dashboard", label: "Prezentare generală" },
+  { href: "/dashboard/content", label: "Conținut site" },
+  { href: "/dashboard/media", label: "Bibliotecă media" },
+  { href: "/dashboard/team", label: "Echipă" },
 ];
 
 export default function DashboardLayout({ children }: { children: ReactNode }) {
@@ -38,14 +49,14 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
                   </span>
                   <span>Ecoplast Hart</span>
                   <span className="rounded-full bg-stone-100 px-2 py-0.5 text-xs font-medium text-stone-500">
-                    Private
+                    Privat
                   </span>
                 </div>
                 <Link
                   href="/"
                   className="text-sm text-stone-600 transition-colors hover:text-emerald-700"
                 >
-                  View website ↗
+                  Vezi site-ul ↗
                 </Link>
               </div>
             </header>

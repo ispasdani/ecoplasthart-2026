@@ -61,7 +61,7 @@ export const updateFile = mutation({
 
     const file = await ctx.db.get(args.fileId);
     if (!file) {
-      throw new ConvexError("File not found");
+      throw new ConvexError("Fișierul nu a fost găsit");
     }
 
     await ctx.db.patch(args.fileId, {
@@ -80,7 +80,7 @@ export const deleteFile = mutation({
 
     const file = await ctx.db.get(args.fileId);
     if (!file) {
-      throw new ConvexError("File not found");
+      throw new ConvexError("Fișierul nu a fost găsit");
     }
 
     await ctx.storage.delete(file.storageId);

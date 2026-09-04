@@ -58,13 +58,16 @@ export const setRole = mutation({
   handler: async (ctx, args) => {
     const admin = await requireAdmin(ctx);
 
+    // These two messages are rendered verbatim in the dashboard, which is
+    // Romanian-only. The `internalMutation` errors below are not, so they
+    // stay in English.
     const target = await ctx.db.get(args.userId);
     if (!target) {
-      throw new ConvexError("User not found");
+      throw new ConvexError("Utilizatorul nu a fost găsit");
     }
 
     if (target._id === admin._id && args.role !== "admin") {
-      throw new ConvexError("You cannot remove your own admin role");
+      throw new ConvexError("Nu îți poți retrage propriul rol de administrator");
     }
 
     await ctx.db.patch(args.userId, { role: args.role });

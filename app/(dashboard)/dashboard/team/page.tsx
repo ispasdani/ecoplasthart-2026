@@ -35,13 +35,13 @@ export default function TeamPage() {
   return (
     <div className="space-y-8">
       <header>
-        <h1 className="text-2xl font-semibold tracking-tight">Team</h1>
+        <h1 className="text-2xl font-semibold tracking-tight">Echipă</h1>
         <p className="mt-1 max-w-2xl text-sm text-stone-600">
-          Everyone with an account for this dashboard. New people appear here
-          automatically once they sign up through Clerk.{" "}
+          Toate persoanele care au cont în acest panou. Conturile noi apar aici
+          automat după înregistrarea prin Clerk.{" "}
           {isAdmin
-            ? "As an admin you can change roles below."
-            : "Only admins can change roles."}
+            ? "Ca administrator, poți schimba rolurile mai jos."
+            : "Doar administratorii pot schimba rolurile."}
         </p>
       </header>
 
@@ -56,10 +56,14 @@ export default function TeamPage() {
       ) : (
         <>
           <div className="grid gap-4 sm:grid-cols-3">
-            <StatCard label="Total accounts" value={sorted.length} icon={Users} />
-            <StatCard label="Admins" value={adminCount} icon={ShieldCheck} />
+            <StatCard label="Total conturi" value={sorted.length} icon={Users} />
             <StatCard
-              label="Members"
+              label="Administratori"
+              value={adminCount}
+              icon={ShieldCheck}
+            />
+            <StatCard
+              label="Membri"
               value={sorted.length - adminCount}
               icon={UserRound}
             />
@@ -67,9 +71,9 @@ export default function TeamPage() {
 
           <div className="overflow-hidden rounded-2xl border border-stone-200 bg-white">
             <div className="hidden border-b border-stone-200 bg-stone-50 px-5 py-2.5 text-xs font-medium uppercase tracking-wide text-stone-500 sm:grid sm:grid-cols-[minmax(0,1fr)_9rem_10rem] sm:gap-4">
-              <span>Person</span>
-              <span>Joined</span>
-              <span>Role</span>
+              <span>Persoană</span>
+              <span>Înregistrat</span>
+              <span>Rol</span>
             </div>
 
             <ul className="divide-y divide-stone-200">
@@ -119,7 +123,9 @@ function TeamRow({
       await setRole({ userId: user._id, role });
     } catch (err) {
       setError(
-        err instanceof ConvexError ? String(err.data) : "Could not change role",
+        err instanceof ConvexError
+          ? String(err.data)
+          : "Rolul nu a putut fi schimbat",
       );
     } finally {
       setPending(false);
@@ -135,7 +141,7 @@ function TeamRow({
             <span className="truncate">{user.name}</span>
             {isSelf ? (
               <span className="shrink-0 rounded-full bg-stone-100 px-2 py-0.5 text-xs font-medium text-stone-500">
-                You
+                Tu
               </span>
             ) : null}
           </p>
@@ -149,7 +155,7 @@ function TeamRow({
       </div>
 
       <p className="text-sm text-stone-500">
-        <span className="sm:hidden">Joined </span>
+        <span className="sm:hidden">Înregistrat </span>
         {formatDate(user._creationTime)}
       </p>
 
@@ -157,7 +163,7 @@ function TeamRow({
         {canEdit && !isSelf && !isLastAdmin ? (
           <div className="flex items-center gap-2">
             <label className="sr-only" htmlFor={`role-${user._id}`}>
-              Role for {user.name}
+              Rol pentru {user.name}
             </label>
             <select
               id={`role-${user._id}`}
@@ -166,8 +172,8 @@ function TeamRow({
               onChange={(event) => handleRoleChange(event.target.value as Role)}
               className="h-9 rounded-lg border border-stone-300 bg-white px-2 text-sm text-stone-800 transition-colors hover:border-stone-400 focus:border-emerald-600 focus:outline-none focus:ring-1 focus:ring-emerald-600 disabled:opacity-50"
             >
-              <option value="member">Member</option>
-              <option value="admin">Admin</option>
+              <option value="member">Membru</option>
+              <option value="admin">Administrator</option>
             </select>
             {pending ? (
               <Loader2
@@ -180,7 +186,7 @@ function TeamRow({
           <div className="flex items-center gap-2">
             <RoleBadge role={user.role} />
             {canEdit && isLastAdmin && !isSelf ? (
-              <span className="text-xs text-stone-400">last admin</span>
+              <span className="text-xs text-stone-400">ultimul administrator</span>
             ) : null}
           </div>
         )}
@@ -237,7 +243,7 @@ function RoleBadge({ role }: { role: Role }) {
       ) : (
         <UserRound aria-hidden className="size-3.5" />
       )}
-      {isAdmin ? "Admin" : "Member"}
+      {isAdmin ? "Administrator" : "Membru"}
     </span>
   );
 }
@@ -268,7 +274,7 @@ function LoadingCard() {
   return (
     <div className="flex items-center gap-3 rounded-2xl border border-stone-200 bg-white px-5 py-10 text-sm text-stone-500">
       <Loader2 aria-hidden className="size-4 animate-spin" />
-      Loading team…
+      Se încarcă echipa…
     </div>
   );
 }
@@ -277,10 +283,10 @@ function EmptyCard() {
   return (
     <div className="rounded-2xl border border-dashed border-stone-300 bg-white px-5 py-12 text-center">
       <Users aria-hidden className="mx-auto size-7 text-stone-400" strokeWidth={1.5} />
-      <h2 className="mt-4 font-semibold text-stone-900">No accounts yet</h2>
+      <h2 className="mt-4 font-semibold text-stone-900">Niciun cont încă</h2>
       <p className="mx-auto mt-1 max-w-md text-sm text-stone-600">
-        People show up here once they sign up and the Clerk webhook mirrors them
-        into Convex.
+        Persoanele apar aici după ce își creează cont, iar webhook-ul Clerk le
+        sincronizează în Convex.
       </p>
     </div>
   );
@@ -294,13 +300,13 @@ function EmptyCard() {
 function ConvexAuthNotice() {
   return (
     <div className="rounded-2xl border border-amber-200 bg-amber-50 px-5 py-6">
-      <h2 className="font-semibold text-amber-900">Convex isn’t authenticated</h2>
+      <h2 className="font-semibold text-amber-900">Convex nu este autentificat</h2>
       <p className="mt-1 max-w-2xl text-sm text-amber-800">
-        You’re signed in with Clerk, but Convex isn’t accepting the session
-        token, so the roster can’t be read. Check that{" "}
-        <code>CLERK_JWT_ISSUER_DOMAIN</code> is set in the Convex dashboard
-        (Settings → Environment Variables) and that a Clerk JWT template named{" "}
-        <code>convex</code> exists.
+        Ești autentificat cu Clerk, dar Convex nu acceptă token-ul de sesiune,
+        așa că lista nu poate fi citită. Verifică dacă{" "}
+        <code>CLERK_JWT_ISSUER_DOMAIN</code> este setat în panoul Convex
+        (Settings → Environment Variables) și dacă există un template JWT în
+        Clerk numit <code>convex</code>.
       </p>
     </div>
   );
@@ -309,14 +315,16 @@ function ConvexAuthNotice() {
 function NotSyncedNotice() {
   return (
     <div className="rounded-2xl border border-amber-200 bg-amber-50 px-5 py-6">
-      <h2 className="font-semibold text-amber-900">Your account isn’t synced yet</h2>
+      <h2 className="font-semibold text-amber-900">
+        Contul tău nu este încă sincronizat
+      </h2>
       <p className="mt-1 max-w-2xl text-sm text-amber-800">
-        You’re signed in with Clerk, but there is no matching row in the Convex{" "}
-        <code>users</code> table — so the roster can’t be read. Check that the
-        Clerk webhook points at{" "}
-        <code>&lt;CONVEX_SITE_URL&gt;/clerk</code> and that{" "}
-        <code>CLERK_WEBHOOK_SECRET</code> is set in the Convex environment
-        variables, then sign out and back in.
+        Ești autentificat cu Clerk, dar nu există un rând corespunzător în
+        tabelul <code>users</code> din Convex, așa că lista nu poate fi citită.
+        Verifică dacă webhook-ul Clerk trimite către{" "}
+        <code>&lt;CONVEX_SITE_URL&gt;/clerk</code> și dacă{" "}
+        <code>CLERK_WEBHOOK_SECRET</code> este setat în variabilele de mediu
+        Convex, apoi deconectează-te și autentifică-te din nou.
       </p>
     </div>
   );
@@ -332,7 +340,8 @@ function sortUsers(users: User[] | undefined): User[] {
 
   return [...users].sort((a, b) => {
     if (a.role !== b.role) return a.role === "admin" ? -1 : 1;
-    return a.name.localeCompare(b.name);
+    // Romanian collation, so diacritics sort next to their base letter.
+    return a.name.localeCompare(b.name, "ro");
   });
 }
 

@@ -28,7 +28,8 @@ export async function getCurrentUser(ctx: QueryCtx): Promise<Doc<"users"> | null
 export async function requireCurrentUser(ctx: QueryCtx): Promise<Doc<"users">> {
   const user = await getCurrentUser(ctx);
   if (!user) {
-    throw new ConvexError("Not authenticated");
+    // Surfaced verbatim in the (Romanian-only) dashboard UI.
+    throw new ConvexError("Nu ești autentificat");
   }
   return user;
 }
@@ -37,7 +38,7 @@ export async function requireCurrentUser(ctx: QueryCtx): Promise<Doc<"users">> {
 export async function requireAdmin(ctx: QueryCtx): Promise<Doc<"users">> {
   const user = await requireCurrentUser(ctx);
   if (user.role !== "admin") {
-    throw new ConvexError("Forbidden: admin role required");
+    throw new ConvexError("Acces interzis: este necesar rolul de administrator");
   }
   return user;
 }
