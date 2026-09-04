@@ -48,6 +48,7 @@ export const serviceIcons: Record<ServiceSlug, LucideIcon> = {
  */
 export const serviceVideos: Partial<Record<ServiceSlug, string>> = {
   "waste-collection": "/videos/trucks.mov",
+  "cable-processing": "/videos/cabluri.mp4",
 };
 
 /** Matches the order of `home.industries.items` in the dictionaries. */
