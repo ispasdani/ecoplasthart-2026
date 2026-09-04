@@ -2,7 +2,7 @@ import { Container, Section, SectionHeader } from "@/components/ui/layout";
 import { Reveal, RevealItem, Stagger } from "@/components/ui/reveal";
 import type { Messages } from "@/messages/ro";
 
-/** Numbered four-step process rail. */
+/** Numbered five-step process rail. */
 export function Process({ dict }: { dict: Messages }) {
   const t = dict.home.process;
 
@@ -17,15 +17,15 @@ export function Process({ dict }: { dict: Messages }) {
           />
         </Reveal>
 
-        <Stagger className="mt-14 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+        <Stagger className="mt-14 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {t.steps.map((step, i) => (
             <RevealItem key={step.title}>
               <div className="relative h-full">
-                {/* Connector line between steps on wide screens. */}
+                {/* Connector line between steps, only on the 5-across row. */}
                 {i < t.steps.length - 1 ? (
                   <span
                     aria-hidden
-                    className="absolute left-12 right-0 top-[1.125rem] hidden h-px bg-hairline-strong lg:block"
+                    className="absolute left-12 right-0 top-[1.125rem] hidden h-px bg-hairline-strong xl:block"
                   />
                 ) : null}
 

@@ -228,7 +228,7 @@ export const ro = {
     },
     process: {
       eyebrow: "Cum lucrăm",
-      heading: "Patru pași de la primul telefon la raportul final",
+      heading: "Cinci pași de la primul telefon la raportul final",
       intro:
         "Un proces previzibil, cu documente complete la fiecare ridicare.",
       steps: [
@@ -247,6 +247,10 @@ export const ro = {
         {
           title: "Valorificare & raportare",
           body: "Sortăm, procesăm și îți predăm documentele de trasabilitate necesare raportării de mediu.",
+        },
+        {
+          title: "Finalizare",
+          body: "Închidem ciclul: confirmăm cantitățile valorificate, arhivăm documentele și ajustăm fluxul pentru ridicarea următoare.",
         },
       ],
     },

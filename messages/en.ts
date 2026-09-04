@@ -222,7 +222,7 @@ export const en: Messages = {
     },
     process: {
       eyebrow: "How we work",
-      heading: "Four steps from the first call to the final report",
+      heading: "Five steps from the first call to the final report",
       intro: "A predictable process, with complete paperwork at every pickup.",
       steps: [
         {
@@ -240,6 +240,10 @@ export const en: Messages = {
         {
           title: "Recovery & reporting",
           body: "We sort, process and hand you the traceability documents your environmental reporting needs.",
+        },
+        {
+          title: "Completion",
+          body: "We close the loop: confirm the recovered quantities, archive the paperwork and fine-tune the flow for the next pickup.",
         },
       ],
     },
