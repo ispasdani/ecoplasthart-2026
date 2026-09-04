@@ -48,8 +48,13 @@ export function Capabilities({
 
         <div className="mt-12 grid gap-8 lg:grid-cols-12 lg:gap-12">
           <Reveal className="lg:col-span-5">
+            {/*
+              One-off section media, so the path is inlined here rather than
+              routed through the service maps — same as the hero's clip.
+            */}
             <MediaTile
               icon={Factory}
+              video="/videos/infrastructura.mp4"
               variant={2}
               sizes="(min-width: 1024px) 40vw, 100vw"
               overlay={false}

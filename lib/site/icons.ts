@@ -58,6 +58,7 @@ export const serviceImages: Partial<Record<ServiceSlug, string>> = {
  */
 export const serviceVideos: Partial<Record<ServiceSlug, string>> = {
   "waste-collection": "/videos/trucks.mov",
+  "recycling-recovery": "/videos/verificare.mp4",
   "cable-processing": "/videos/cabluri.mp4",
   logistics: "/videos/graifer.mp4",
 };
