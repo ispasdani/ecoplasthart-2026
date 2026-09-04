@@ -93,33 +93,37 @@ export function MediaTile({
       )}
 
       {!src && video ? (
-        <>
-          <video
-            /* No hover scale here: the footage is already moving, and zooming it on top of that reads as a glitch. */
-            className="absolute inset-0 size-full object-cover motion-reduce:hidden"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            aria-hidden
-            tabIndex={-1}
-          >
-            <source src={video} />
-          </video>
+        <video
+          /* No hover scale: the footage already moves, and zooming it on top of that reads as a glitch. */
+          className="absolute inset-0 size-full object-cover motion-reduce:hidden"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden
+          tabIndex={-1}
+        >
+          <source src={video} />
+        </video>
+      ) : null}
 
-          {/*
-            The footage runs bright at the top (sky), which would swallow a
-            white corner badge. Tied to `overlay`, so tiles carrying content
-            get the protection and purely decorative ones show clean footage.
-          */}
-          {overlay ? (
-            <div
-              aria-hidden
-              className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-black/50 to-transparent motion-reduce:hidden"
-            />
-          ) : null}
-        </>
+      {/*
+        Real media runs bright at the top (sky, sky-lit yards), which would
+        swallow the white corner badge tiles overlay there. The gradient art is
+        dark enough not to need this, and `overlay` gates it so purely
+        decorative tiles — nothing to protect — show the media clean.
+      */}
+      {overlay && (src || video) ? (
+        <div
+          aria-hidden
+          className={cn(
+            "absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-black/50 to-transparent",
+            // A video tile falls back to that dark art under reduced motion, so
+            // its scrim goes too. A still is always on screen and always needs it.
+            !src && "motion-reduce:hidden",
+          )}
+        />
       ) : null}
 
       {overlay ? (

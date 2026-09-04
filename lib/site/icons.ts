@@ -48,6 +48,7 @@ export const serviceIcons: Record<ServiceSlug, LucideIcon> = {
  * the still. Slugs in neither keep the gradient artwork.
  */
 export const serviceImages: Partial<Record<ServiceSlug, string>> = {
+  "metal-waste": "/images/feros.webp",
   "hazardous-waste": "/images/hazard.webp",
 };
 
@@ -58,6 +59,7 @@ export const serviceImages: Partial<Record<ServiceSlug, string>> = {
 export const serviceVideos: Partial<Record<ServiceSlug, string>> = {
   "waste-collection": "/videos/trucks.mov",
   "cable-processing": "/videos/cabluri.mp4",
+  logistics: "/videos/graifer.mp4",
 };
 
 /** Matches the order of `home.industries.items` in the dictionaries. */
