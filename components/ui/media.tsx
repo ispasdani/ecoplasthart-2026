@@ -9,7 +9,9 @@ import { cn } from "@/lib/cn";
  * The company's own photography isn't in the repo yet, so every tile renders a
  * deliberate abstract graphic (layered brand gradients + a diagonal weave + a
  * ghosted icon) instead of a grey box. Pass `src` once real photos exist and
- * the tile swaps to `next/image` with no other changes.
+ * the tile swaps to `next/image` with no other changes; pass `video` for a
+ * silent, looping background clip that layers on top of that same graphic, so
+ * the tile still reads as designed while the file loads or if it can't play.
  */
 
 const ART = [
@@ -29,6 +31,7 @@ const WEAVE =
 export function MediaTile({
   src,
   alt = "",
+  video,
   icon: Icon,
   variant = 0,
   className,
@@ -40,6 +43,8 @@ export function MediaTile({
 }: {
   src?: string;
   alt?: string;
+  /** Looping background clip, e.g. `"/videos/trucks.mov"`. Ignored when `src` is set. */
+  video?: string;
   icon?: LucideIcon;
   /** Picks one of four gradient treatments so adjacent tiles differ. */
   variant?: number;
@@ -86,6 +91,36 @@ export function MediaTile({
           ) : null}
         </div>
       )}
+
+      {!src && video ? (
+        <>
+          <video
+            /* No hover scale here: the footage is already moving, and zooming it on top of that reads as a glitch. */
+            className="absolute inset-0 size-full object-cover motion-reduce:hidden"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            aria-hidden
+            tabIndex={-1}
+          >
+            <source src={video} />
+          </video>
+
+          {/*
+            The footage runs bright at the top (sky), which would swallow a
+            white corner badge. Tied to `overlay`, so tiles carrying content
+            get the protection and purely decorative ones show clean footage.
+          */}
+          {overlay ? (
+            <div
+              aria-hidden
+              className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-black/50 to-transparent motion-reduce:hidden"
+            />
+          ) : null}
+        </>
+      ) : null}
 
       {overlay ? (
         <div

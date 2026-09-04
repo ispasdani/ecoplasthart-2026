@@ -42,6 +42,14 @@ export const serviceIcons: Record<ServiceSlug, LucideIcon> = {
   logistics: Truck,
 };
 
+/**
+ * Background clips for the service tiles, keyed the same way as the icons.
+ * Only the slugs listed here get a video; the rest keep the gradient artwork.
+ */
+export const serviceVideos: Partial<Record<ServiceSlug, string>> = {
+  "waste-collection": "/videos/trucks.mov",
+};
+
 /** Matches the order of `home.industries.items` in the dictionaries. */
 export const industryIcons: readonly LucideIcon[] = [
   Factory,
