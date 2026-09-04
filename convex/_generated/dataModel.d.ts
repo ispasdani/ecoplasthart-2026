@@ -23,7 +23,7 @@ import schema from "../schema.js";
 export type TableNames = TableNamesInDataModel<DataModel>;
 
 /**
- * The type of a document stored in Convex.
+ * The type of a document stored in Convex. 
  *
  * @typeParam TableName - A string literal type of the table name (like "users").
  */

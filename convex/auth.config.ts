@@ -1,4 +1,4 @@
-export default {
+const authConfig = {
   providers: [
     {
       // Clerk "Frontend API URL" / JWT issuer, e.g. https://your-app.clerk.accounts.dev
@@ -8,3 +8,5 @@ export default {
     },
   ],
 };
+
+export default authConfig;
