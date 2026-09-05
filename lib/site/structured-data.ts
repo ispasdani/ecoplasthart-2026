@@ -17,15 +17,18 @@
 
 import {
   absoluteUrl,
+  articleKeyFromSlug,
   localeHtmlLang,
   localizedPath,
   serviceKeyFromSlug,
   siteUrl,
+  type ArticleSlug,
   type Locale,
   type PathnameKey,
   type ServiceSlug,
 } from "@/lib/i18n/routing";
 import { FOUNDING_DATE } from "@/lib/site/company";
+import { getArticle, getArticles } from "@/lib/site/articles";
 import { MAPS_HREF, getServiceNavItems } from "@/lib/site/nav";
 import type { Messages } from "@/messages/ro";
 
@@ -379,6 +382,142 @@ export function serviceDetailGraph(
       areaServed: AREA_SERVED,
     },
   ]);
+}
+
+function articlesCrumb(dict: Messages, locale: Locale): Crumb {
+  return {
+    name: dict.nav.articles,
+    url: absoluteUrl(localizedPath("/articles", locale)),
+  };
+}
+
+/**
+ * The OG card route doubles as the article's `image`. Google requires an image
+ * on `Article` for the rich result, and pointing at the generated card is
+ * honest — it is the picture that actually represents the page — where a
+ * yard photograph unrelated to the topic would not be.
+ */
+function articleImage(locale: Locale) {
+  return {
+    "@type": "ImageObject",
+    url: absoluteUrl(`/${locale}/opengraph-image`),
+    width: 1200,
+    height: 630,
+  };
+}
+
+/** The feed: a `Blog` whose posts are listed, plus the usual page nodes. */
+export function articlesIndexGraph(dict: Messages, locale: Locale) {
+  const articles = getArticles(dict, locale);
+  const url = absoluteUrl(localizedPath("/articles", locale));
+
+  return graph([
+    organizationNode(dict),
+    webSiteNode(dict, locale),
+    webPageNode({
+      locale,
+      pathnameKey: "/articles",
+      title: dict.articles.metaTitle,
+      description: dict.articles.metaDescription,
+    }),
+    breadcrumbNode([homeCrumb(dict, locale), articlesCrumb(dict, locale)]),
+    {
+      "@type": "Blog",
+      "@id": `${url}#blog`,
+      name: dict.articles.title,
+      description: dict.articles.metaDescription,
+      url,
+      inLanguage: localeHtmlLang[locale],
+      publisher: { "@id": ORGANIZATION_ID },
+      blogPost: articles.map((article) => ({
+        "@type": "BlogPosting",
+        "@id": `${absoluteUrl(article.href)}#article`,
+        headline: article.title,
+        url: absoluteUrl(article.href),
+        datePublished: article.publishedAt,
+        dateModified: article.updatedAt,
+      })),
+    },
+  ]);
+}
+
+/**
+ * One article.
+ *
+ * The page node carries both `WebPage` and `FAQPage`, rather than emitting a
+ * second free-standing `FAQPage` root: the questions are part of this page,
+ * not a separate document that happens to share the URL. `BlogPosting` then
+ * points at it via `mainEntityOfPage`.
+ *
+ * `author` is the company, referenced by `@id` — not a fabricated byline.
+ * Google is explicit that `author` must be the entity that actually wrote the
+ * piece, and an organisation is a valid one.
+ */
+export function articleDetailGraph(
+  dict: Messages,
+  locale: Locale,
+  slug: ArticleSlug,
+) {
+  const article = getArticle(dict, locale, slug);
+  const pathnameKey = articleKeyFromSlug(slug);
+  const url = absoluteUrl(localizedPath(pathnameKey, locale));
+
+  return graph([
+    organizationNode(dict),
+    webSiteNode(dict, locale),
+    {
+      ...webPageNode({
+        locale,
+        pathnameKey,
+        title: article.metaTitle,
+        description: article.metaDescription,
+      }),
+      "@type": ["WebPage", "FAQPage"],
+      mainEntity: article.faq.map((entry) => ({
+        "@type": "Question",
+        name: entry.question,
+        acceptedAnswer: { "@type": "Answer", text: entry.answer },
+      })),
+    },
+    breadcrumbNode([
+      homeCrumb(dict, locale),
+      articlesCrumb(dict, locale),
+      { name: article.title, url },
+    ]),
+    {
+      "@type": "BlogPosting",
+      "@id": `${url}#article`,
+      headline: article.title,
+      description: article.excerpt,
+      articleSection: article.topicLabel,
+      url,
+      mainEntityOfPage: { "@id": `${url}#webpage` },
+      datePublished: article.publishedAt,
+      dateModified: article.updatedAt,
+      inLanguage: localeHtmlLang[locale],
+      wordCount: countWords(article),
+      timeRequired: `PT${article.readMinutes}M`,
+      image: articleImage(locale),
+      author: { "@id": ORGANIZATION_ID },
+      publisher: { "@id": ORGANIZATION_ID },
+      isPartOf: {
+        "@id": `${absoluteUrl(localizedPath("/articles", locale))}#blog`,
+      },
+    },
+  ]);
+}
+
+/**
+ * `wordCount` over the prose that actually renders, so the number stays true
+ * when an article is edited. Counting is naive on purpose — it only has to be
+ * the right order of magnitude.
+ */
+function countWords(article: { lead: string; sections: readonly { body: readonly string[] }[] }) {
+  const text = [
+    article.lead,
+    ...article.sections.flatMap((section) => section.body),
+  ].join(" ");
+  return text.split(/\s+/).filter(Boolean).length;
 }
 
 export function contactGraph(dict: Messages, locale: Locale) {

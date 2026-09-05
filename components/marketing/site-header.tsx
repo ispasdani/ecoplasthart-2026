@@ -34,6 +34,7 @@ export type SiteHeaderProps = {
     about: { href: string; label: string };
     services: { href: string; label: string };
     certifications: { href: string; label: string };
+    articles: { href: string; label: string };
     contact: { href: string; label: string };
   };
   services: NavServiceItem[];
@@ -245,6 +246,12 @@ export function SiteHeader({
               {links.certifications.label}
             </NavLink>
             <NavLink
+              href={links.articles.href}
+              active={isActive(links.articles.href)}
+            >
+              {links.articles.label}
+            </NavLink>
+            <NavLink
               href={links.contact.href}
               active={isActive(links.contact.href)}
             >
@@ -389,6 +396,11 @@ export function SiteHeader({
               <li>
                 <MobileLink href={links.certifications.href}>
                   {links.certifications.label}
+                </MobileLink>
+              </li>
+              <li>
+                <MobileLink href={links.articles.href}>
+                  {links.articles.label}
                 </MobileLink>
               </li>
               <li>

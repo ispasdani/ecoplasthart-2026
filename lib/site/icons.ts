@@ -3,6 +3,7 @@ import {
   BatteryCharging,
   Building2,
   Cable,
+  ClipboardList,
   Container,
   Factory,
   FileCheck2,
@@ -25,7 +26,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-import type { ServiceSlug } from "@/lib/i18n/routing";
+import type { ArticleSlug, ServiceSlug } from "@/lib/i18n/routing";
 
 /**
  * Icons live here, not in the dictionaries — they're presentation, not copy,
@@ -61,6 +62,19 @@ export const serviceVideos: Partial<Record<ServiceSlug, string>> = {
   "recycling-recovery": "/videos/verificare.mp4",
   "cable-processing": "/videos/cabluri.mp4",
   logistics: "/videos/graifer.mp4",
+};
+
+/**
+ * Illustration for each article tile. The articles have no photography of
+ * their own, so the tile falls back to `MediaTile`'s gradient artwork with
+ * this icon ghosted into it — the same treatment the service tiles use.
+ */
+export const articleIcons: Record<ArticleSlug, LucideIcon> = {
+  "choosing-a-waste-collection-partner": Handshake,
+  "waste-codes-and-transport-documents": ClipboardList,
+  "scrap-metal-prices-explained": Scale,
+  "cable-recycling-copper-granules": Cable,
+  "hazardous-waste-obligations": Fuel,
 };
 
 /** Matches the order of `home.industries.items` in the dictionaries. */

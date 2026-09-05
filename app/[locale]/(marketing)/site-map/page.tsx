@@ -9,6 +9,7 @@ import { Reveal } from "@/components/ui/reveal";
 import { getDictionary } from "@/lib/i18n/dictionary";
 import { buildPageMetadata } from "@/lib/i18n/metadata";
 import { isLocale, localizedPath } from "@/lib/i18n/routing";
+import { getArticles } from "@/lib/site/articles";
 import { getPrimaryLinks, getServiceNavItems } from "@/lib/site/nav";
 import { simplePageGraph } from "@/lib/site/structured-data";
 
@@ -52,6 +53,7 @@ export default async function SiteMapPage({
   const dict = await getDictionary(locale);
   const links = getPrimaryLinks(dict, locale);
   const services = getServiceNavItems(dict, locale);
+  const articles = getArticles(dict, locale);
   const t = dict.siteMap;
 
   const groups = [
@@ -69,6 +71,16 @@ export default async function SiteMapPage({
         { href: links.about.href, label: dict.nav.about },
         { href: links.certifications.href, label: dict.nav.certifications },
         { href: links.contact.href, label: dict.nav.contact },
+      ],
+    },
+    {
+      heading: t.resourcesHeading,
+      items: [
+        { href: links.articles.href, label: dict.articles.title },
+        ...articles.map((article) => ({
+          href: article.href,
+          label: article.title,
+        })),
       ],
     },
     {

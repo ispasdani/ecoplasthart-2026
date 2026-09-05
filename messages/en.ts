@@ -1,4 +1,5 @@
 import type { Messages } from "./ro";
+import { articlesEn } from "./articles-en";
 
 /**
  * English dictionary. Typed as `Messages`, so it must mirror `ro.ts` exactly —
@@ -54,6 +55,7 @@ export const en: Messages = {
     servicesOverview: "All services",
     servicesOverviewDesc: "See our full range of waste-management services.",
     certifications: "Certifications",
+    articles: "Articles",
     contact: "Contact",
     privacy: "Privacy policy",
     cookies: "Cookie policy",
@@ -546,6 +548,7 @@ export const en: Messages = {
     lead: "Every public page on the site, in one place.",
     servicesHeading: "Services",
     companyHeading: "Company",
+    resourcesHeading: "Resources",
     legalHeading: "Legal documents",
     metaTitle: "Site map",
     metaDescription:
@@ -832,6 +835,8 @@ export const en: Messages = {
       },
     },
   },
+
+  articles: articlesEn,
 
   notFound: {
     title: "Page not found",

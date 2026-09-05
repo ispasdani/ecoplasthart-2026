@@ -121,6 +121,27 @@ export const pathnames = {
     en: "/services/logistics",
   },
   "/certifications": { ro: "/certificari", en: "/certifications" },
+  "/articles": { ro: "/articole", en: "/articles" },
+  "/articles/choosing-a-waste-collection-partner": {
+    ro: "/articole/cum-alegi-firma-de-colectare-deseuri",
+    en: "/articles/choosing-a-waste-collection-partner",
+  },
+  "/articles/waste-codes-and-transport-documents": {
+    ro: "/articole/coduri-de-deseuri-si-formulare-de-transport",
+    en: "/articles/waste-codes-and-transport-documents",
+  },
+  "/articles/scrap-metal-prices-explained": {
+    ro: "/articole/cum-se-stabileste-pretul-la-fier-vechi",
+    en: "/articles/scrap-metal-prices-explained",
+  },
+  "/articles/cable-recycling-copper-granules": {
+    ro: "/articole/reciclarea-cablurilor-granule-de-cupru",
+    en: "/articles/cable-recycling-copper-granules",
+  },
+  "/articles/hazardous-waste-obligations": {
+    ro: "/articole/deseuri-periculoase-obligatiile-firmelor",
+    en: "/articles/hazardous-waste-obligations",
+  },
   "/contact": { ro: "/contact", en: "/contact" },
   "/privacy-policy": {
     ro: "/politica-de-confidentialitate",
@@ -163,6 +184,40 @@ export function isServiceSlug(value: string): value is ServiceSlug {
 
 export function serviceKeyFromSlug(slug: ServiceSlug): ServiceKey {
   return `/services/${slug}` as ServiceKey;
+}
+
+/**
+ * The article routes, newest first — the order the feed renders in. These are
+ * `pathnames` keys under `/articles/`, and the trailing segment is the `[slug]`
+ * param of `app/[locale]/(marketing)/articles/[slug]/page.tsx`.
+ *
+ * Enumerating articles here rather than deriving them from a CMS is deliberate
+ * at this size: it is what gives every article a localized Romanian URL, an
+ * hreflang pair and a sitemap entry for free, exactly like the service pages.
+ */
+export const articleKeys = [
+  "/articles/choosing-a-waste-collection-partner",
+  "/articles/waste-codes-and-transport-documents",
+  "/articles/scrap-metal-prices-explained",
+  "/articles/cable-recycling-copper-granules",
+  "/articles/hazardous-waste-obligations",
+] as const satisfies readonly PathnameKey[];
+
+export type ArticleKey = (typeof articleKeys)[number];
+
+/** `"/articles/scrap-metal-prices-explained"` → the `[slug]` route param. */
+export type ArticleSlug = ArticleKey extends `/articles/${infer S}` ? S : never;
+
+export const articleSlugs = articleKeys.map(
+  (key) => key.slice("/articles/".length) as ArticleSlug,
+);
+
+export function isArticleSlug(value: string): value is ArticleSlug {
+  return (articleSlugs as string[]).includes(value);
+}
+
+export function articleKeyFromSlug(slug: ArticleSlug): ArticleKey {
+  return `/articles/${slug}` as ArticleKey;
 }
 
 export function isLocale(value: string | undefined): value is Locale {

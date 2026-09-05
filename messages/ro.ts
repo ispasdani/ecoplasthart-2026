@@ -8,6 +8,8 @@
  *
  * Content is grounded in `knowledge/ecoplast-hart-knowledge-graph.md`.
  */
+import { articlesRo } from "./articles-ro";
+
 export const ro = {
   meta: {
     siteName: "Ecoplast Hart",
@@ -60,6 +62,7 @@ export const ro = {
     servicesOverviewDesc:
       "Vezi întreaga gamă de servicii de management al deșeurilor.",
     certifications: "Certificări",
+    articles: "Articole",
     contact: "Contact",
     privacy: "Politica de confidențialitate",
     cookies: "Politica de cookie-uri",
@@ -568,6 +571,7 @@ export const ro = {
     lead: "Toate paginile publice ale site-ului, într-un singur loc.",
     servicesHeading: "Servicii",
     companyHeading: "Companie",
+    resourcesHeading: "Resurse",
     legalHeading: "Documente legale",
     metaTitle: "Harta site-ului",
     metaDescription:
@@ -865,6 +869,9 @@ export const ro = {
       },
     },
   },
+
+  /** Article feed and long-form copy — see `messages/articles-ro.ts`. */
+  articles: articlesRo,
 
   notFound: {
     title: "Pagina nu a fost găsită",
