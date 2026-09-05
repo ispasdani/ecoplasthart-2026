@@ -77,6 +77,30 @@ export async function generateMetadata({
     // CUI and trade-register numbers in the footer. Real numbers are explicit
     // `tel:` links, so nothing is lost by turning the heuristic off.
     formatDetection: { telephone: false, address: false, email: false },
+    // Inherited by every page: `buildPageMetadata` never sets `robots`, and
+    // Next merges the field shallowly, so the parent value survives.
+    //
+    // The defaults Google applies without this are conservative — a ~160-char
+    // snippet and a thumbnail small enough that most results show none at all.
+    // `max-image-preview: large` is the one that decides whether the OG card
+    // appears beside the result on mobile, and it has to be granted explicitly.
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-snippet": -1,
+        "max-image-preview": "large",
+        "max-video-preview": -1,
+      },
+    },
+    // Search Console's HTML-tag verification method. Left undefined until the
+    // token is in the environment — Next then omits the tag entirely, which is
+    // correct; a placeholder string would be a failed verification instead.
+    verification: process.env.GOOGLE_SITE_VERIFICATION
+      ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+      : undefined,
     // No `alternates` here on purpose: canonical/hreflang are per-page, and a
     // shallow-merged wrong canonical would be worse than none. Each page sets
     // its own via `buildPageMetadata`.
