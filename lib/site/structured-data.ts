@@ -77,12 +77,53 @@ const AREA_SERVED = [
 ];
 
 /**
- * Photographs of the operation. These replace an earlier `image` that pointed
- * at a page URL rather than an image — invalid, and silently discarded.
- * Dedicated yard photography in 1:1, 4:3 and 16:9 crops should supersede these.
+ * IPTC digital source types. The controlled vocabulary every major platform
+ * has standardised on for “how was this made”, carried here as a
+ * `PropertyValue` because schema.org has no native property for it.
+ *
+ * `digitalCapture` is a positive claim, not boilerplate: the photography on
+ * this site was shot at the yard, and asserting that is worth doing precisely
+ * because the video on the site was not (see `SYNTHETIC_MEDIA`).
+ */
+const IPTC_SOURCE_TYPE = "https://cv.iptc.org/newscodes/digitalsourcetype/";
+
+function digitalSourceType(value: string) {
+  return {
+    "@type": "PropertyValue",
+    name: "digitalSourceType",
+    propertyID: IPTC_SOURCE_TYPE,
+    value,
+  };
+}
+
+/**
+ * The moving imagery is generated (Higgsfield AI, conditioned on the company’s
+ * own photographs), so it is `trainedAlgorithmicMedia` rather than a capture.
+ * Attach this to a `VideoObject` when the clips gain poster frames and can be
+ * marked up — audit B-16.
+ */
+export const SYNTHETIC_MEDIA_SOURCE_TYPE = "trainedAlgorithmicMedia";
+
+/**
+ * Photographs of the operation, as full `ImageObject` nodes rather than bare
+ * URLs, so the company’s ownership travels with them.
+ *
+ * This is original photography of an industrial site — genuinely scarce
+ * material that competitors fill with stock — so it is worth claiming
+ * explicitly rather than publishing anonymously.
  */
 const BUSINESS_IMAGES = ["/images/feros.webp", "/images/hazard.webp"].map(
-  absoluteUrl,
+  (path) => ({
+    "@type": "ImageObject",
+    "@id": `${absoluteUrl(path)}#image`,
+    url: absoluteUrl(path),
+    contentUrl: absoluteUrl(path),
+    creditText: "Ecoplast Hart SRL",
+    creator: { "@id": ORGANIZATION_ID },
+    copyrightHolder: { "@id": ORGANIZATION_ID },
+    copyrightNotice: "© Ecoplast Hart SRL",
+    additionalProperty: digitalSourceType("digitalCapture"),
+  }),
 );
 
 /**

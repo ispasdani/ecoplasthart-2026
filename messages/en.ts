@@ -12,11 +12,11 @@ export const en: Messages = {
       "Ecoplast Hart — Waste Collection, Sorting & Recycling | Deva, Romania",
     titleTemplate: "%s | Ecoplast Hart",
     description:
-      "Ecoplast Hart SRL collects, sorts and recycles non-hazardous and hazardous waste across Hunedoara county and all of Romania. In-house cable-processing plant, own container fleet, and full document traceability.",
+      "Collection, sorting and recycling of non-hazardous and hazardous waste across Hunedoara and all of Romania. In-house cable plant and full traceability.",
     home: {
       title: "Waste collection, sorting and recycling — Deva, Romania",
       description:
-        "We collect, sort and recycle waste for companies across Romania: scrap metal, plastic, cardboard, Al/Cu cables, used oils and WEEE. Containers at source and complete paperwork.",
+        "We collect, sort and recycle waste for companies across Romania: scrap metal, plastic, cardboard, Al/Cu cables, used oils and WEEE.",
     },
     about: {
       title: "About us — a recycling company since 2004",
@@ -57,6 +57,7 @@ export const en: Messages = {
     contact: "Contact",
     privacy: "Privacy policy",
     cookies: "Cookie policy",
+    siteMap: "Site map",
     cta: "Request a quote",
     openMenu: "Open menu",
     closeMenu: "Close menu",
@@ -95,6 +96,8 @@ export const en: Messages = {
     contactHeading: "Contact",
     legalHeading: "Company details",
     rights: "All rights reserved.",
+    mediaCredit:
+      "Photographs were taken by us at the Cristur site. Video sequences are generated with artificial intelligence from our own photographs.",
     officeLabel: "Operational site",
     legalSeatLabel: "Registered office",
     legalLinksLabel: "Legal documents",
@@ -439,7 +442,7 @@ export const en: Messages = {
         ],
         metaTitle: "Scrap metal and metal waste collection — Hunedoara",
         metaDescription:
-          "Authorised collection centre for scrap iron, ferrous and non-ferrous metals (aluminium, copper, brass, lead, zinc) in Cristur, Deva, Hunedoara county. Transparent weighing.",
+          "Authorised collection centre for scrap iron and ferrous and non-ferrous metals (aluminium, copper, brass, lead, zinc) in Cristur, Deva. Transparent weighing.",
       },
       "cable-processing": {
         name: "Cable processing",
@@ -470,7 +473,7 @@ export const en: Messages = {
         ],
         metaTitle: "Al/Cu cable processing and recycling",
         metaDescription:
-          "In-house plant for processing aluminium and copper cables: copper granules, aluminium granules and plastic fractions as secondary raw materials. Ecoplast Hart SRL.",
+          "In-house plant for processing aluminium and copper cables: copper and aluminium granules and plastic fractions as secondary raw materials.",
       },
       "hazardous-waste": {
         name: "Hazardous waste",
@@ -501,7 +504,7 @@ export const en: Messages = {
         ],
         metaTitle: "Hazardous waste, used oils, batteries and WEEE",
         metaDescription:
-          "Authorised hazardous waste collection in Hunedoara county: used oils, petroleum sludges, batteries and accumulators, WEEE. Full documentation. Ecoplast Hart SRL.",
+          "Authorised hazardous waste collection in Hunedoara county: used oils, petroleum sludges, batteries, accumulators and WEEE. Full documentation.",
       },
       logistics: {
         name: "Transport & containers",
@@ -535,6 +538,18 @@ export const en: Messages = {
           "Own fleet for waste transport across Romania: roll-off trucks, tippers, containers in various capacities and a grab crane. Ecoplast Hart SRL.",
       },
     },
+  },
+
+  siteMap: {
+    eyebrow: "Navigation",
+    title: "Site map",
+    lead: "Every public page on the site, in one place.",
+    servicesHeading: "Services",
+    companyHeading: "Company",
+    legalHeading: "Legal documents",
+    metaTitle: "Site map",
+    metaDescription:
+      "Every page on the Ecoplast Hart SRL site: collection and recycling services, certifications, contact and legal documents.",
   },
 
   certifications: {
@@ -594,7 +609,7 @@ export const en: Messages = {
       lead: "How we collect, use and protect personal data when you contact us or browse this site.",
       metaTitle: "Privacy policy",
       metaDescription:
-        "How Ecoplast Hart SRL processes personal data: what we collect, for which purposes and on which legal bases, who we share it with, how long we keep it and what your rights are under the GDPR.",
+        "How we process personal data: what we collect, for which purposes, who we share it with, how long we keep it and what your rights are under the GDPR.",
       identityHeading: "Data controller",
       identityLabels: {
         legalName: "Legal name",
@@ -712,7 +727,7 @@ export const en: Messages = {
       lead: "Which cookies this site sets, who sets them, what they are for and how to control them from your browser.",
       metaTitle: "Cookie policy",
       metaDescription:
-        "The full list of cookies used on the Ecoplast Hart website: provider, purpose, duration and category, plus instructions for controlling them from your browser.",
+        "The full list of cookies used on this website: provider, purpose, duration and category, plus how to control them from your browser.",
       tableCaption: "Cookies and similar technologies used on this site",
       tableHeadings: ["Name", "Provider", "Purpose", "Duration", "Category"],
       rows: [

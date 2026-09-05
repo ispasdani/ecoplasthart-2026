@@ -16,6 +16,12 @@ const geistSans = Geist({
 });
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  // Not preloaded: the mono face renders only inside the legal-document
+  // tables, so preloading it on every page put two font requests in front of
+  // the LCP element (measured as a text button, not an image) competing with
+  // the sans face that actually paints it. It still loads on the pages that
+  // use it, just on demand.
+  preload: false,
   subsets: ["latin", "latin-ext"],
 });
 

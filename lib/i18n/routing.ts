@@ -127,6 +127,7 @@ export const pathnames = {
     en: "/privacy-policy",
   },
   "/cookie-policy": { ro: "/politica-cookie", en: "/cookie-policy" },
+  "/site-map": { ro: "/harta-site", en: "/site-map" },
 } as const satisfies Record<string, Record<Locale, string>>;
 
 export type PathnameKey = keyof typeof pathnames;

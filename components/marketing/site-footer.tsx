@@ -170,6 +170,10 @@ export function SiteFooter({
             </nav>
           </div>
 
+          <p className="mt-4 max-w-3xl text-on-dark-muted">
+            {footer.mediaCredit}
+          </p>
+
           <p className="mt-4 flex flex-wrap gap-x-4 gap-y-1">
             <span>CUI {company.cui}</span>
             <span aria-hidden className="hidden sm:inline">

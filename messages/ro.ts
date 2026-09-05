@@ -15,23 +15,23 @@ export const ro = {
       "Ecoplast Hart — Colectare, sortare și reciclare deșeuri | Deva, Hunedoara",
     titleTemplate: "%s | Ecoplast Hart",
     description:
-      "Ecoplast Hart SRL colectează, sortează și reciclează deșeuri nepericuloase și periculoase în județul Hunedoara și în toată România. Instalație proprie de procesare cabluri, flotă de containere și trasabilitate completă a documentelor.",
+      "Colectare, sortare și reciclare deșeuri nepericuloase și periculoase în Hunedoara și toată România. Instalație proprie de cabluri și trasabilitate completă.",
     // Per-page titles. These are plain strings so the parent layout's
     // `%s | Ecoplast Hart` template appends the brand exactly once.
     home: {
       title: "Colectare, sortare și reciclare deșeuri — Deva, Hunedoara",
       description:
-        "Colectăm, sortăm și reciclăm deșeuri pentru companii din toată România: fier vechi, plastic, carton, cabluri Al/Cu, uleiuri uzate și DEEE. Containere la sursă și documente complete.",
+        "Colectăm, sortăm și reciclăm deșeuri pentru companii din toată România: fier vechi, plastic, carton, cabluri Al/Cu, uleiuri uzate și DEEE.",
     },
     about: {
       title: "Despre noi — companie de reciclare din 2004",
       description:
-        "Ecoplast Hart SRL, companie românească de reciclare înființată în 2004 în județul Hunedoara: instalație de procesare cabluri, stație de sortare și flotă logistică proprie.",
+        "Companie românească de reciclare, înființată în 2004 în județul Hunedoara: instalație de procesare cabluri, stație de sortare și flotă proprie.",
     },
     services: {
       title: "Servicii de colectare și reciclare deșeuri",
       description:
-        "Colectare deșeuri, valorificare și reciclare, fier vechi, procesare cabluri, deșeuri periculoase și transport cu containere. Servicii pentru companii în toată România.",
+        "Colectare deșeuri, valorificare, fier vechi, procesare cabluri, deșeuri periculoase și transport cu containere, pentru companii din toată România.",
     },
   },
 
@@ -63,6 +63,7 @@ export const ro = {
     contact: "Contact",
     privacy: "Politica de confidențialitate",
     cookies: "Politica de cookie-uri",
+    siteMap: "Harta site-ului",
     cta: "Solicită o ofertă",
     openMenu: "Deschide meniul",
     closeMenu: "Închide meniul",
@@ -101,6 +102,14 @@ export const ro = {
     contactHeading: "Contact",
     legalHeading: "Date firmă",
     rights: "Toate drepturile rezervate.",
+    /**
+     * Media provenance. The photography is ours and worth claiming; the video
+     * is generated and worth declaring. A company whose whole proposition is
+     * documented traceability cannot run undisclosed synthetic footage of its
+     * own yard.
+     */
+    mediaCredit:
+      "Fotografiile sunt realizate de noi la punctul de lucru Cristur. Secvențele video sunt generate cu inteligență artificială, pornind de la fotografiile noastre.",
     officeLabel: "Punct de lucru",
     legalSeatLabel: "Sediu social",
     legalLinksLabel: "Documente legale",
@@ -393,7 +402,7 @@ export const ro = {
         ],
         metaTitle: "Colectare deșeuri industriale — companii",
         metaDescription:
-          "Colectare deșeuri pentru companii în Hunedoara și toată România: containere la sursă, ridicare programată și documente complete de trasabilitate. Ecoplast Hart SRL.",
+          "Colectare deșeuri pentru companii în Hunedoara și toată România: containere la sursă, ridicare programată și documente complete de trasabilitate.",
       },
       "recycling-recovery": {
         name: "Valorificare și reciclare",
@@ -455,7 +464,7 @@ export const ro = {
         ],
         metaTitle: "Colectare fier vechi și deșeuri metalice — Hunedoara",
         metaDescription:
-          "Centru autorizat de colectare fier vechi, metale feroase și neferoase (aluminiu, cupru, alamă, plumb, zinc) în Cristur, Deva, județul Hunedoara. Cântărire transparentă.",
+          "Centru autorizat de colectare fier vechi și metale feroase și neferoase (aluminiu, cupru, alamă, plumb, zinc) în Cristur, Deva. Cântărire transparentă.",
       },
       "cable-processing": {
         name: "Procesare cabluri",
@@ -486,7 +495,7 @@ export const ro = {
         ],
         metaTitle: "Procesare și reciclare cabluri Al/Cu",
         metaDescription:
-          "Instalație proprie de procesare a cablurilor de aluminiu și cupru: granule de cupru, granule de aluminiu și fracții de plastic ca materii prime secundare. Ecoplast Hart SRL.",
+          "Instalație proprie de procesare a cablurilor de aluminiu și cupru: granule de cupru și aluminiu și fracții de plastic ca materii prime secundare.",
       },
       "hazardous-waste": {
         name: "Deșeuri periculoase",
@@ -517,7 +526,7 @@ export const ro = {
         ],
         metaTitle: "Deșeuri periculoase, uleiuri uzate, baterii și DEEE",
         metaDescription:
-          "Colectare autorizată de deșeuri periculoase în județul Hunedoara: uleiuri uzate, șlamuri petroliere, baterii și acumulatori, DEEE. Documentație completă. Ecoplast Hart SRL.",
+          "Colectare autorizată de deșeuri periculoase în județul Hunedoara: uleiuri uzate, șlamuri petroliere, baterii, acumulatori și DEEE. Documentație completă.",
       },
       logistics: {
         name: "Transport și containere",
@@ -548,9 +557,21 @@ export const ro = {
         ],
         metaTitle: "Transport deșeuri și închiriere containere",
         metaDescription:
-          "Flotă proprie pentru transport deșeuri în toată România: camioane Abrollkipper, basculante, containere de diverse capacități și macara cu graifăr. Ecoplast Hart SRL.",
+          "Flotă proprie pentru transport deșeuri în toată România: camioane Abrollkipper, basculante, containere de diverse capacități și macara cu graifăr.",
       },
     },
+  },
+
+  siteMap: {
+    eyebrow: "Navigare",
+    title: "Harta site-ului",
+    lead: "Toate paginile publice ale site-ului, într-un singur loc.",
+    servicesHeading: "Servicii",
+    companyHeading: "Companie",
+    legalHeading: "Documente legale",
+    metaTitle: "Harta site-ului",
+    metaDescription:
+      "Toate paginile Ecoplast Hart SRL: servicii de colectare și reciclare, certificări, contact și documente legale.",
   },
 
   certifications: {
@@ -621,7 +642,7 @@ export const ro = {
       lead: "Cum colectăm, folosim și protejăm datele cu caracter personal atunci când ne contactezi sau navighezi pe acest site.",
       metaTitle: "Politica de confidențialitate",
       metaDescription:
-        "Cum prelucrează Ecoplast Hart SRL datele cu caracter personal: ce date colectăm, în ce scopuri și temeiuri legale, cui le divulgăm, cât le păstrăm și care sunt drepturile tale conform GDPR.",
+        "Cum prelucrăm datele cu caracter personal: ce date colectăm, în ce scopuri, cui le divulgăm, cât le păstrăm și care sunt drepturile tale conform GDPR.",
       identityHeading: "Operatorul de date",
       identityLabels: {
         legalName: "Denumire",
