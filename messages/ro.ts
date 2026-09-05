@@ -118,7 +118,7 @@ export const ro = {
     },
     stats: [
       { value: "2004", label: "Anul înființării" },
-      { value: "20+", label: "Ani de experiență" },
+      { value: "{years}+", label: "Ani de experiență" },
       { value: "13", label: "Fluxuri de deșeuri" },
       { value: "3", label: "Sisteme ISO" },
     ],

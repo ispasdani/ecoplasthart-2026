@@ -112,7 +112,7 @@ export const en: Messages = {
     },
     stats: [
       { value: "2004", label: "Year founded" },
-      { value: "20+", label: "Years of experience" },
+      { value: "{years}+", label: "Years of experience" },
       { value: "13", label: "Waste streams" },
       { value: "3", label: "ISO systems" },
     ],

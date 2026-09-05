@@ -25,6 +25,25 @@ const ART = [
   "bg-[radial-gradient(130%_110%_at_100%_0%,#3d6b4c_0%,#1a2c20_50%,#0d150f_100%)]",
 ] as const;
 
+/**
+ * Explicit `type` on each `<source>` so a browser can reject a container it
+ * cannot decode without downloading it first. This matters here: two clips are
+ * still QuickTime (`.mov`), which Chrome and Firefox will not play — untyped,
+ * they fetch the file before discovering that. Typed, they skip it and fall
+ * through to the gradient artwork underneath at no bandwidth cost.
+ */
+const VIDEO_MIME: Record<string, string> = {
+  mp4: "video/mp4",
+  webm: "video/webm",
+  ogv: "video/ogg",
+  mov: "video/quicktime",
+};
+
+function videoMime(src: string): string | undefined {
+  const ext = src.split(".").pop()?.toLowerCase();
+  return ext ? VIDEO_MIME[ext] : undefined;
+}
+
 const WEAVE =
   "repeating-linear-gradient(135deg,rgba(255,255,255,0.05)_0px,rgba(255,255,255,0.05)_1px,transparent_1px,transparent_9px)";
 
@@ -32,6 +51,7 @@ export function MediaTile({
   src,
   alt = "",
   video,
+  poster,
   icon: Icon,
   variant = 0,
   className,
@@ -45,6 +65,8 @@ export function MediaTile({
   alt?: string;
   /** Looping background clip, e.g. `"/videos/trucks.mov"`. Ignored when `src` is set. */
   video?: string;
+  /** Still frame shown before the clip can paint. Also what remains if it never can. */
+  poster?: string;
   icon?: LucideIcon;
   /** Picks one of four gradient treatments so adjacent tiles differ. */
   variant?: number;
@@ -100,11 +122,14 @@ export function MediaTile({
           muted
           loop
           playsInline
-          preload="auto"
+          poster={poster}
+          /* `metadata`, not `auto`: the services index renders four of these,
+             and `auto` eagerly pulls every clip in full on first paint. */
+          preload="metadata"
           aria-hidden
           tabIndex={-1}
         >
-          <source src={video} />
+          <source src={video} type={videoMime(video)} />
         </video>
       ) : null}
 

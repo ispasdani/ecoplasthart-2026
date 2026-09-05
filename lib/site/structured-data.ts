@@ -25,6 +25,7 @@ import {
   type PathnameKey,
   type ServiceSlug,
 } from "@/lib/i18n/routing";
+import { FOUNDING_DATE } from "@/lib/site/company";
 import { MAPS_HREF, getServiceNavItems } from "@/lib/site/nav";
 import type { Messages } from "@/messages/ro";
 
@@ -32,9 +33,6 @@ import type { Messages } from "@/messages/ro";
 export const ORGANIZATION_ID = `${siteUrl}#organization`;
 export const LOCAL_BUSINESS_ID = `${siteUrl}#localbusiness`;
 export const WEBSITE_ID = `${siteUrl}#website`;
-
-/** Trade-registry incorporation date. */
-const FOUNDING_DATE = "2004-12-20";
 
 const POSTAL_ADDRESS = {
   "@type": "PostalAddress",

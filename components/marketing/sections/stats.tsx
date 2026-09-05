@@ -1,5 +1,6 @@
 import { Container, Section } from "@/components/ui/layout";
 import { RevealItem, Stagger } from "@/components/ui/reveal";
+import { withYears } from "@/lib/site/company";
 import type { Messages } from "@/messages/ro";
 
 /**
@@ -32,7 +33,7 @@ export function StatsBand({ dict }: { dict: Messages }) {
           {dict.home.stats.map((stat) => (
             <RevealItem key={stat.label}>
               <p className="text-[2.5rem] font-semibold leading-none tracking-tight text-brand tabular-nums sm:text-[3rem]">
-                {stat.value}
+                {withYears(stat.value)}
               </p>
               <p className="mt-3 text-sm leading-snug text-slate">{stat.label}</p>
             </RevealItem>

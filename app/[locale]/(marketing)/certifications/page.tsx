@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { ShieldCheck } from "lucide-react";
 
 import { CtaBand } from "@/components/marketing/sections/cta-band";
+import { ConvexPublicProvider } from "@/app/providers/convex-public-provider";
 import { DocumentLibrary } from "@/components/marketing/document-library";
 import { PageHero } from "@/components/marketing/page-hero";
 import { Container, Section } from "@/components/ui/layout";
@@ -112,18 +113,20 @@ export default async function CertificationsPage({
           </Reveal>
 
           <Reveal className="mt-8">
-            <DocumentLibrary
-              labels={{
-                documentsIntro: t.documentsIntro,
-                loading: t.loading,
-                uncategorized: t.uncategorized,
-                categoryLabels: t.categories,
-                download: dict.common.downloadFile,
-                emptyTitle: t.empty.title,
-                emptyBody: t.empty.body,
-                contactEmail: dict.company.email,
-              }}
-            />
+            <ConvexPublicProvider>
+              <DocumentLibrary
+                labels={{
+                  documentsIntro: t.documentsIntro,
+                  loading: t.loading,
+                  uncategorized: t.uncategorized,
+                  categoryLabels: t.categories,
+                  download: dict.common.downloadFile,
+                  emptyTitle: t.empty.title,
+                  emptyBody: t.empty.body,
+                  contactEmail: dict.company.email,
+                }}
+              />
+            </ConvexPublicProvider>
           </Reveal>
         </Container>
       </Section>
