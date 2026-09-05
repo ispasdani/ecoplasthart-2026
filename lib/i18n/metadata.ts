@@ -33,6 +33,18 @@ export function buildPageMetadata({
 }): Metadata {
   const path = localizedPath(pathnameKey, locale);
 
+  // Next only auto-attaches a file-based `opengraph-image` when the segment
+  // does not set `openGraph` itself. Every page here does (see above), so the
+  // image has to be referenced explicitly or no card is emitted at all.
+  const images = [
+    {
+      url: `/${locale}/opengraph-image`,
+      width: 1200,
+      height: 630,
+      alt: `${siteName} — ${title}`,
+    },
+  ];
+
   return {
     metadataBase: new URL(siteUrl),
     title,
@@ -51,11 +63,13 @@ export function buildPageMetadata({
       title,
       description,
       url: path,
+      images,
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images,
     },
   };
 }

@@ -11,10 +11,12 @@ import { ServicesShowcase } from "@/components/marketing/sections/services-showc
 import { StatsBand } from "@/components/marketing/sections/stats";
 import { WasteStreams } from "@/components/marketing/sections/waste-streams";
 import { WhyUs } from "@/components/marketing/sections/why-us";
+import { JsonLd } from "@/components/seo/json-ld";
 import { getDictionary } from "@/lib/i18n/dictionary";
 import { buildPageMetadata } from "@/lib/i18n/metadata";
-import { absoluteUrl, isLocale, localizedPath, siteUrl } from "@/lib/i18n/routing";
-import { MAPS_HREF, getPrimaryLinks, getServiceNavItems } from "@/lib/site/nav";
+import { isLocale } from "@/lib/i18n/routing";
+import { getPrimaryLinks, getServiceNavItems } from "@/lib/site/nav";
+import { homeGraph } from "@/lib/site/structured-data";
 
 export async function generateMetadata({
   params,
@@ -46,55 +48,9 @@ export default async function HomePage({
   const links = getPrimaryLinks(dict, locale);
   const services = getServiceNavItems(dict, locale);
 
-  const jsonLd = [
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "@id": `${siteUrl}#organization`,
-      name: dict.company.legalName,
-      alternateName: dict.company.shortName,
-      url: absoluteUrl(localizedPath("/", locale)),
-      email: dict.company.email,
-      telephone: dict.company.phonePrimary.replace(/\s/g, ""),
-      foundingDate: "2004-12-20",
-      vatID: `RO${dict.company.cui}`,
-      taxID: dict.company.cui,
-      description: dict.meta.description,
-      areaServed: { "@type": "Country", name: "Romania" },
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Șos. Hunedoarei nr. 13, Sat Cristur",
-        addressLocality: "Deva",
-        addressRegion: "Hunedoara",
-        addressCountry: "RO",
-      },
-      hasMap: MAPS_HREF,
-      makesOffer: services.map((service) => ({
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: service.name,
-          url: absoluteUrl(service.href),
-        },
-      })),
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "@id": `${siteUrl}#website`,
-      name: dict.meta.siteName,
-      url: siteUrl,
-      inLanguage: locale === "ro" ? "ro-RO" : "en",
-      publisher: { "@id": `${siteUrl}#organization` },
-    },
-  ];
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <JsonLd graph={homeGraph(dict, locale)} />
 
       <Hero
         dict={dict}

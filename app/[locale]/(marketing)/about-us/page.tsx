@@ -7,11 +7,13 @@ import { PageHero } from "@/components/marketing/page-hero";
 import { Container, Section, SectionHeader } from "@/components/ui/layout";
 import { MediaTile } from "@/components/ui/media";
 import { Reveal, RevealItem, Stagger } from "@/components/ui/reveal";
+import { JsonLd } from "@/components/seo/json-ld";
 import { getDictionary } from "@/lib/i18n/dictionary";
 import { buildPageMetadata } from "@/lib/i18n/metadata";
-import { absoluteUrl, isLocale, localizedPath } from "@/lib/i18n/routing";
+import { isLocale, localizedPath } from "@/lib/i18n/routing";
 import { valueIcons } from "@/lib/site/icons";
 import { getPrimaryLinks } from "@/lib/site/nav";
+import { simplePageGraph } from "@/lib/site/structured-data";
 
 export async function generateMetadata({
   params,
@@ -43,31 +45,16 @@ export default async function AboutUsPage({
   const links = getPrimaryLinks(dict, locale);
   const t = dict.about;
 
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: dict.nav.home,
-        item: absoluteUrl(localizedPath("/", locale)),
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: dict.nav.about,
-        item: absoluteUrl(localizedPath("/about-us", locale)),
-      },
-    ],
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
+      <JsonLd graph={simplePageGraph({
+          dict,
+          locale,
+          pathnameKey: "/about-us",
+          title: dict.meta.about.title,
+          description: dict.meta.about.description,
+          crumbLabel: dict.nav.about,
+        })} />
 
       <PageHero
         eyebrow={t.eyebrow}

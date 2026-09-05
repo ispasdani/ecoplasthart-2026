@@ -9,11 +9,13 @@ import { PageHero } from "@/components/marketing/page-hero";
 import { IconCircle } from "@/components/ui/button";
 import { Container, Section } from "@/components/ui/layout";
 import { Reveal, RevealItem, Stagger } from "@/components/ui/reveal";
+import { JsonLd } from "@/components/seo/json-ld";
 import { getDictionary } from "@/lib/i18n/dictionary";
 import { buildPageMetadata } from "@/lib/i18n/metadata";
-import { absoluteUrl, isLocale, localizedPath } from "@/lib/i18n/routing";
+import { isLocale, localizedPath } from "@/lib/i18n/routing";
 import { serviceIcons } from "@/lib/site/icons";
 import { getPrimaryLinks, getServiceNavItems } from "@/lib/site/nav";
+import { servicesIndexGraph } from "@/lib/site/structured-data";
 
 export async function generateMetadata({
   params,
@@ -45,43 +47,9 @@ export default async function ServicesIndexPage({
   const links = getPrimaryLinks(dict, locale);
   const services = getServiceNavItems(dict, locale);
 
-  const jsonLd = [
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: dict.nav.home,
-          item: absoluteUrl(localizedPath("/", locale)),
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: dict.nav.services,
-          item: absoluteUrl(localizedPath("/services", locale)),
-        },
-      ],
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      itemListElement: services.map((service, i) => ({
-        "@type": "ListItem",
-        position: i + 1,
-        name: service.name,
-        url: absoluteUrl(service.href),
-      })),
-    },
-  ];
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <JsonLd graph={servicesIndexGraph(dict, locale)} />
 
       <PageHero
         eyebrow={dict.services.eyebrow}

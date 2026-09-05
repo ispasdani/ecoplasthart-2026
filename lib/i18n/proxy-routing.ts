@@ -39,6 +39,16 @@ function isExcluded(pathname: string): boolean {
     return true;
   }
 
+  // App Router metadata images (`/ro/opengraph-image`, `/en/opengraph-image`).
+  // These are assets, not pages, so they must not be locale-canonicalised —
+  // a 308 on `/ro/opengraph-image` would break every social card preview.
+  if (
+    pathname.endsWith("/opengraph-image") ||
+    pathname.endsWith("/twitter-image")
+  ) {
+    return true;
+  }
+
   // Any file with an extension (e.g. `/og.png`, `/file.pdf`).
   return /\/[^/]+\.[a-z0-9]+$/i.test(pathname);
 }

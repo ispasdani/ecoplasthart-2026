@@ -7,10 +7,12 @@ import { ButtonLink, IconCircle } from "@/components/ui/button";
 import { Container, Section } from "@/components/ui/layout";
 import { MediaTile } from "@/components/ui/media";
 import { Reveal, RevealItem, Stagger } from "@/components/ui/reveal";
+import { JsonLd } from "@/components/seo/json-ld";
 import { getDictionary } from "@/lib/i18n/dictionary";
 import { buildPageMetadata } from "@/lib/i18n/metadata";
-import { absoluteUrl, isLocale, localizedPath } from "@/lib/i18n/routing";
+import { isLocale, localizedPath } from "@/lib/i18n/routing";
 import { MAPS_HREF, getServiceNavItems } from "@/lib/site/nav";
+import { contactGraph } from "@/lib/site/structured-data";
 
 export async function generateMetadata({
   params,
@@ -45,50 +47,9 @@ export default async function ContactPage({
 
   const tel = (value: string) => `tel:${value.replace(/\s/g, "")}`;
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: company.legalName,
-    image: absoluteUrl(localizedPath("/", locale)),
-    url: absoluteUrl(localizedPath("/contact", locale)),
-    email: company.email,
-    telephone: company.phonePrimary.replace(/\s/g, ""),
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Șos. Hunedoarei nr. 13, Sat Cristur",
-      addressLocality: "Deva",
-      addressRegion: "Hunedoara",
-      addressCountry: "RO",
-    },
-    hasMap: MAPS_HREF,
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-        ],
-        opens: "08:00",
-        closes: "17:00",
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Saturday"],
-        opens: "08:00",
-        closes: "13:00",
-      },
-    ],
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <JsonLd graph={contactGraph(dict, locale)} />
 
       <PageHero
         eyebrow={t.eyebrow}

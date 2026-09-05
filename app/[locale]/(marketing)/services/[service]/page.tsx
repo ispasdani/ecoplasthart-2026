@@ -10,10 +10,10 @@ import { ButtonLink, IconCircle } from "@/components/ui/button";
 import { Container, Eyebrow, Section } from "@/components/ui/layout";
 import { MediaTile } from "@/components/ui/media";
 import { Reveal, RevealItem, Stagger } from "@/components/ui/reveal";
+import { JsonLd } from "@/components/seo/json-ld";
 import { getDictionary } from "@/lib/i18n/dictionary";
 import { buildPageMetadata } from "@/lib/i18n/metadata";
 import {
-  absoluteUrl,
   isLocale,
   isServiceSlug,
   localizedPath,
@@ -22,6 +22,7 @@ import {
 } from "@/lib/i18n/routing";
 import { serviceIcons, serviceImages, serviceVideos } from "@/lib/site/icons";
 import { getPrimaryLinks, getServiceNavItems } from "@/lib/site/nav";
+import { serviceDetailGraph } from "@/lib/site/structured-data";
 
 /** All six services × both locales are prerendered at build time. */
 export function generateStaticParams() {
@@ -69,48 +70,9 @@ export default async function ServiceDetailPage({
   const related = allServices.filter((s) => s.slug !== service).slice(0, 3);
   const variant = serviceSlugs.indexOf(service);
 
-  const jsonLd = [
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      name: item.title,
-      description: item.metaDescription,
-      url: absoluteUrl(href),
-      serviceType: item.name,
-      provider: {
-        "@type": "Organization",
-        name: dict.company.legalName,
-        url: absoluteUrl(localizedPath("/", locale)),
-      },
-      areaServed: { "@type": "Country", name: "Romania" },
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: dict.nav.home,
-          item: absoluteUrl(localizedPath("/", locale)),
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: dict.nav.services,
-          item: absoluteUrl(localizedPath("/services", locale)),
-        },
-        { "@type": "ListItem", position: 3, name: item.name, item: absoluteUrl(href) },
-      ],
-    },
-  ];
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <JsonLd graph={serviceDetailGraph(dict, locale, service)} />
 
       <PageHero
         eyebrow={item.name}
