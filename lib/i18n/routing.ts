@@ -35,10 +35,53 @@ export const openGraphLocale: Record<Locale, string> = {
   en: "en_US",
 };
 
-/** Absolute origin of the production site, no trailing slash. */
-export const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://ecoplasthart.ro"
-).replace(/\/$/, "");
+/**
+ * Absolute origin of the production site, no trailing slash.
+ *
+ * There is deliberately NO production fallback. The previous default here was
+ * `https://ecoplasthart.ro` — a domain that was never registered — and because
+ * every absolute URL on the site derives from this one value, it propagated
+ * into every canonical tag, all hreflang tags, `og:url`, the sitemap, the
+ * `Host:`/`Sitemap:` lines in robots.txt and the JSON-LD entity `@id`. Every
+ * page told Google it was a duplicate of an unreachable URL, so the site was
+ * crawled and then dropped from the index.
+ *
+ * The failure mode that made it survive so long was the fallback looking
+ * plausible. Fail the build instead, and fall back in development to
+ * `localhost`, which is obviously wrong the moment it shows up in output.
+ */
+function resolveSiteUrl(): string {
+  const raw = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+
+  if (!raw) {
+    if (process.env.NODE_ENV !== "production") return "http://localhost:3000";
+
+    throw new Error(
+      "NEXT_PUBLIC_SITE_URL is not set. It must be the absolute production " +
+        "origin (e.g. https://www.ecoplasthart.com). Canonical URLs, hreflang, " +
+        "the sitemap, robots.txt and the JSON-LD entity @id all derive from " +
+        "it. Set it in the Vercel project environment variables for every " +
+        "environment — .env.local alone does not reach a deployed build.",
+    );
+  }
+
+  const trimmed = raw.replace(/\/+$/, "");
+
+  // Origin only: protocol + host (+ optional port). A stray path, a missing
+  // protocol or a trailing slash all produce subtly malformed absolute URLs
+  // that validate as strings but not as canonicals.
+  if (!/^https?:\/\/[^/\s]+$/.test(trimmed)) {
+    throw new Error(
+      `NEXT_PUBLIC_SITE_URL must be a bare origin including the protocol, ` +
+        `with no path or trailing slash (e.g. https://www.ecoplasthart.com). ` +
+        `Received: ${JSON.stringify(raw)}`,
+    );
+  }
+
+  return trimmed;
+}
+
+export const siteUrl = resolveSiteUrl();
 
 /**
  * Canonical route key (matches the folder path under `app/[locale]/…`) →
