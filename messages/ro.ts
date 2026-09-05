@@ -351,6 +351,18 @@ export const ro = {
       title: "Servicii de management al deșeurilor",
       lead: "Acoperim întreg circuitul, de la containerul de la poarta ta până la materia primă secundară livrată către reciclatori. Alege serviciul care te interesează sau spune-ne ce deșeu generezi și îți propunem noi soluția.",
     },
+    /**
+     * Alt text for the service photography in `lib/site/icons.ts`. Only the
+     * slugs that actually have a photo appear here — alt text describes a
+     * specific image, so there is nothing to write for the tiles that fall
+     * back to gradient artwork.
+     */
+    imageAlts: {
+      "metal-waste":
+        "Deșeuri metalice feroase sortate în punctul de lucru Cristur, pregătite pentru cântărire și valorificare",
+      "hazardous-waste":
+        "Recipiente pentru deșeuri periculoase, etichetate și depozitate separat conform reglementărilor de mediu",
+    },
     items: {
       "waste-collection": {
         name: "Colectare deșeuri",

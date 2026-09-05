@@ -29,11 +29,25 @@ export function getServiceNavItems(dict: Messages, locale: Locale) {
       desc: item.navDesc,
       lead: item.lead,
       title: item.title,
+      imageAlt: serviceImageAlt(dict, slug),
     };
   });
 }
 
 export type ServiceNavItem = ReturnType<typeof getServiceNavItems>[number];
+
+/**
+ * Alt text for a service photo, or `undefined` when that service has no photo.
+ * Cast because only the slugs with an image carry a key, and an empty alt is
+ * the correct output for a purely decorative gradient tile.
+ */
+export function serviceImageAlt(
+  dict: Messages,
+  slug: ServiceSlug,
+): string | undefined {
+  const alts = dict.services.imageAlts as Partial<Record<ServiceSlug, string>>;
+  return alts[slug];
+}
 
 /** Google Maps deep link for the operational yard. */
 export const MAPS_HREF =

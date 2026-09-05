@@ -6,7 +6,26 @@ import {
   languageAlternates,
   localizedPath,
   pathnameKeys,
+  type PathnameKey,
 } from "@/lib/i18n/routing";
+
+/**
+ * Content photography per page, for the `<image:image>` entries.
+ *
+ * Declared here rather than imported from `lib/site/icons.ts`: that module
+ * pulls the whole lucide barrel for its icon maps, and a metadata route has no
+ * business dragging an icon library into its bundle. Keep the paths in step
+ * with `serviceImages` there.
+ *
+ * Original photography of an industrial site competes in Google Images against
+ * far weaker material than the text queries do, so it is worth declaring.
+ */
+const PAGE_IMAGES: Partial<Record<PathnameKey, string[]>> = {
+  // Both appear in the services showcase on the homepage.
+  "/": ["/images/feros.webp", "/images/hazard.webp"],
+  "/services/metal-waste": ["/images/feros.webp"],
+  "/services/hazardous-waste": ["/images/hazard.webp"],
+};
 
 /**
  * One `<url>` entry per page, keyed on the default-locale (Romanian) URL, with
@@ -24,10 +43,15 @@ import {
  * there is a real per-page content-modification date to report (audit D-01).
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  return pathnameKeys.map((key) => ({
-    url: absoluteUrl(localizedPath(key, defaultLocale)),
-    alternates: {
-      languages: languageAlternates(key),
-    },
-  }));
+  return pathnameKeys.map((key) => {
+    const images = PAGE_IMAGES[key];
+
+    return {
+      url: absoluteUrl(localizedPath(key, defaultLocale)),
+      alternates: {
+        languages: languageAlternates(key),
+      },
+      ...(images ? { images: images.map(absoluteUrl) } : {}),
+    };
+  });
 }

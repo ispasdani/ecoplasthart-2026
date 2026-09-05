@@ -21,7 +21,7 @@ import {
   serviceSlugs,
 } from "@/lib/i18n/routing";
 import { serviceIcons, serviceImages, serviceVideos } from "@/lib/site/icons";
-import { getPrimaryLinks, getServiceNavItems } from "@/lib/site/nav";
+import { getPrimaryLinks, getServiceNavItems, serviceImageAlt } from "@/lib/site/nav";
 import { serviceDetailGraph } from "@/lib/site/structured-data";
 
 /** All six services × both locales are prerendered at build time. */
@@ -147,6 +147,7 @@ export default async function ServiceDetailPage({
               <MediaTile
                 icon={Icon}
                 src={serviceImages[service]}
+                alt={serviceImageAlt(dict, service) ?? ""}
                 video={serviceVideos[service]}
                 variant={variant}
                 overlay={false}

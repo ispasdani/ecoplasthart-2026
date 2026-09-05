@@ -26,17 +26,20 @@ const ART = [
 ] as const;
 
 /**
- * Explicit `type` on each `<source>` so a browser can reject a container it
- * cannot decode without downloading it first. This matters here: two clips are
- * still QuickTime (`.mov`), which Chrome and Firefox will not play — untyped,
- * they fetch the file before discovering that. Typed, they skip it and fall
- * through to the gradient artwork underneath at no bandwidth cost.
+ * Explicit `type` on each `<source>`, so a browser can skip a container it
+ * cannot decode instead of fetching it to find out.
+ *
+ * `.mov` is deliberately absent, and that is load-bearing. Chromium plays the
+ * two QuickTime clips here happily by sniffing the content — but
+ * `canPlayType("video/quicktime")` returns "", so declaring the type makes it
+ * refuse the source outright (`networkState: NO_SOURCE`) and the tile goes
+ * blank. Leaving `.mov` untyped preserves the sniffing path that works today.
+ * Once the clips are transcoded to mp4/webm this map covers them.
  */
 const VIDEO_MIME: Record<string, string> = {
   mp4: "video/mp4",
   webm: "video/webm",
   ogv: "video/ogg",
-  mov: "video/quicktime",
 };
 
 function videoMime(src: string): string | undefined {

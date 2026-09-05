@@ -92,6 +92,7 @@ function ServiceTile({
       <MediaTile
         icon={Icon}
         src={serviceImages[service.slug]}
+        alt={service.imageAlt ?? ""}
         video={serviceVideos[service.slug]}
         variant={variant}
         sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"

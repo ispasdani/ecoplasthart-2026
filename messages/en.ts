@@ -341,6 +341,12 @@ export const en: Messages = {
       title: "Waste-management services",
       lead: "We cover the whole circuit, from the container at your gate to the secondary raw material delivered to recyclers. Pick the service you're interested in, or tell us what waste you generate and we'll propose the solution.",
     },
+    imageAlts: {
+      "metal-waste":
+        "Sorted ferrous scrap at the Cristur yard, ready for weighing and recovery",
+      "hazardous-waste":
+        "Labelled hazardous-waste containers, stored separately in line with environmental regulations",
+    },
     items: {
       "waste-collection": {
         name: "Waste collection",
