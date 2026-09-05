@@ -61,6 +61,8 @@ export const ro = {
       "Vezi întreaga gamă de servicii de management al deșeurilor.",
     certifications: "Certificări",
     contact: "Contact",
+    privacy: "Politica de confidențialitate",
+    cookies: "Politica de cookie-uri",
     cta: "Solicită o ofertă",
     openMenu: "Deschide meniul",
     closeMenu: "Închide meniul",
@@ -101,6 +103,7 @@ export const ro = {
     rights: "Toate drepturile rezervate.",
     officeLabel: "Punct de lucru",
     legalSeatLabel: "Sediu social",
+    legalLinksLabel: "Documente legale",
   },
 
   home: {
@@ -583,6 +586,251 @@ export const ro = {
     metaTitle: "Contact",
     metaDescription:
       "Contactează Ecoplast Hart SRL: telefon, e-mail și punctul de lucru din Sat Cristur, Deva, județul Hunedoara. Solicită o ofertă pentru colectarea deșeurilor.",
+  },
+
+  /**
+   * Legal pages. The content is deliberately specific about which third-party
+   * services actually run on this site — a generic template would describe
+   * cookies we do not set and omit the ones we do, which is the failure mode
+   * ANSPDCP actually sanctions.
+   *
+   * `updatedDate` is written by hand rather than derived from the build date:
+   * a policy that claims to change on every deploy tells the reader nothing.
+   * Bump it when the content below changes.
+   */
+  legal: {
+    updatedLabel: "Ultima actualizare",
+    updatedDate: "5 septembrie 2026",
+    tocHeading: "Cuprins",
+
+    privacy: {
+      eyebrow: "Legal",
+      title: "Politica de confidențialitate",
+      lead: "Cum colectăm, folosim și protejăm datele cu caracter personal atunci când ne contactezi sau navighezi pe acest site.",
+      metaTitle: "Politica de confidențialitate",
+      metaDescription:
+        "Cum prelucrează Ecoplast Hart SRL datele cu caracter personal: ce date colectăm, în ce scopuri și temeiuri legale, cui le divulgăm, cât le păstrăm și care sunt drepturile tale conform GDPR.",
+      identityHeading: "Operatorul de date",
+      identityLabels: {
+        legalName: "Denumire",
+        cui: "Cod unic de înregistrare",
+        tradeRegister: "Registrul Comerțului",
+        addressLegal: "Sediu social",
+        addressOperational: "Punct de lucru",
+        email: "E-mail",
+        phone: "Telefon",
+      },
+      sections: [
+        {
+          heading: "Cine suntem",
+          paragraphs: [
+            "Ecoplast Hart SRL este operatorul datelor cu caracter personal prelucrate prin acest site, în sensul Regulamentului (UE) 2016/679 (GDPR) și al Legii nr. 190/2018. Datele noastre de identificare și de contact sunt cele din tabelul de mai sus.",
+            "Nu am desemnat un responsabil cu protecția datelor, întrucât activitatea noastră nu se încadrează în situațiile prevăzute la art. 37 din GDPR. Solicitările privind datele personale sunt tratate direct de conducerea societății, la adresa de e-mail de mai sus.",
+          ],
+          bullets: [],
+          footnote: "",
+        },
+        {
+          heading: "Ce date colectăm",
+          paragraphs: [
+            "Acest site nu conține formulare și nu îți cere să îți creezi un cont. Datele ajung la noi în două moduri:",
+          ],
+          bullets: [
+            "Date pe care ni le transmiți direct, atunci când ne scrii pe e-mail sau ne suni: nume, adresă de e-mail, număr de telefon, denumirea companiei pe care o reprezinți și orice alte informații pe care alegi să le incluzi în mesaj.",
+            "Date tehnice generate automat la vizitarea site-ului: adresa IP, tipul dispozitivului și al browserului, pagina de proveniență, paginile vizitate și momentul accesării. Acestea sunt colectate de infrastructura care găzduiește site-ul și de instrumentul de analiză a traficului.",
+          ],
+          footnote:
+            "Nu colectăm categorii speciale de date (date privind sănătatea, convingerile, apartenența sindicală) și nu solicităm date personale de la minori.",
+        },
+        {
+          heading: "De ce prelucrăm datele și în ce temei",
+          paragraphs: [
+            "Prelucrăm datele exclusiv pentru scopurile de mai jos, fiecare cu temeiul său legal din art. 6 alin. (1) GDPR:",
+          ],
+          bullets: [
+            "Pentru a răspunde solicitărilor tale și a-ți transmite o ofertă — temei: demersuri precontractuale efectuate la cererea ta, lit. b).",
+            "Pentru a derula relația contractuală și a emite documentele de transport și de trasabilitate a deșeurilor — temei: executarea contractului, lit. b).",
+            "Pentru a respecta obligațiile fiscale, contabile și de raportare a deșeurilor prevăzute de lege — temei: obligație legală, lit. c).",
+            "Pentru a menține site-ul funcțional și sigur și pentru a înțelege, la nivel agregat, cum este folosit — temei: interesul nostru legitim de a opera și îmbunătăți site-ul, lit. f).",
+          ],
+          footnote:
+            "Nu folosim datele tale pentru marketing direct, profilare sau luarea de decizii automate care să producă efecte juridice asupra ta.",
+        },
+        {
+          heading: "Cui divulgăm datele",
+          paragraphs: [
+            "Nu vindem și nu închiriem date cu caracter personal. Le divulgăm doar furnizorilor care ne ajută să operăm site-ul, în calitate de persoane împuternicite care acționează pe baza instrucțiunilor noastre, precum și autorităților publice atunci când legea ne obligă.",
+            "Furnizorii care intervin în funcționarea acestui site sunt:",
+          ],
+          bullets: [
+            "Vercel Inc. — găzduirea site-ului și analiza traficului.",
+            "Clerk, Inc. — autentificarea utilizatorilor în zona privată de administrare a site-ului.",
+            "Convex, Inc. — stocarea conținutului și a documentelor publicate pe site.",
+          ],
+          footnote:
+            "Acești furnizori sunt stabiliți în Statele Unite ale Americii. Transferurile de date în afara Spațiului Economic European se efectuează pe baza clauzelor contractuale standard adoptate de Comisia Europeană și, după caz, a Cadrului transatlantic privind confidențialitatea datelor (EU–U.S. Data Privacy Framework).",
+        },
+        {
+          heading: "Cât timp păstrăm datele",
+          paragraphs: [
+            "Păstrăm corespondența comercială pe durata discuțiilor și, dacă acestea se finalizează cu o colaborare, pe durata relației contractuale.",
+            "Documentele financiar-contabile și evidențele privind gestiunea deșeurilor sunt păstrate pe termenele impuse de legislația aplicabilă, care în general variază între 3 și 10 ani, în funcție de tipul documentului.",
+            "Datele tehnice de trafic și statisticile agregate sunt păstrate cel mult 24 de luni, după care sunt șterse sau anonimizate ireversibil.",
+          ],
+          bullets: [],
+          footnote: "",
+        },
+        {
+          heading: "Drepturile tale",
+          paragraphs: [
+            "În calitate de persoană vizată, GDPR îți conferă următoarele drepturi în legătură cu datele tale:",
+          ],
+          bullets: [
+            "Dreptul de acces — să afli dacă prelucrăm date despre tine și să primești o copie a acestora.",
+            "Dreptul la rectificare — să ceri corectarea datelor inexacte sau completarea celor incomplete.",
+            "Dreptul la ștergere — să ceri ștergerea datelor, atunci când nu mai avem un temei pentru a le păstra.",
+            "Dreptul la restricționarea prelucrării — să ceri suspendarea prelucrării cât timp verificăm o contestație.",
+            "Dreptul la portabilitate — să primești datele într-un format structurat, folosit în mod curent.",
+            "Dreptul la opoziție — să te opui prelucrărilor întemeiate pe interesul nostru legitim.",
+            "Dreptul de a nu face obiectul unei decizii bazate exclusiv pe prelucrarea automată.",
+          ],
+          footnote:
+            "Îți poți exercita oricare dintre aceste drepturi printr-o cerere transmisă la adresa noastră de e-mail. Îți răspundem în cel mult o lună de la primirea cererii. Dacă răspunsul nostru nu te mulțumește, ai dreptul să depui o plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (B-dul G-ral. Gheorghe Magheru nr. 28-30, Sector 1, București, anspdcp@dataprotection.ro) sau să te adresezi instanței de judecată competente.",
+        },
+        {
+          heading: "Securitatea datelor",
+          paragraphs: [
+            "Site-ul este servit exclusiv prin conexiune criptată HTTPS, iar accesul la zona de administrare este protejat prin autentificare. Aplicăm măsuri tehnice și organizatorice rezonabile pentru a proteja datele împotriva accesului neautorizat, pierderii sau divulgării accidentale.",
+            "Niciun sistem nu este însă complet invulnerabil. Dacă are loc o încălcare a securității datelor care îți poate afecta drepturile, te informăm și notificăm autoritatea de supraveghere în termenele prevăzute de GDPR.",
+          ],
+          bullets: [],
+          footnote: "",
+        },
+        {
+          heading: "Modificări ale acestei politici",
+          paragraphs: [
+            "Putem actualiza această politică atunci când se schimbă serviciile pe care le folosim sau cerințele legale aplicabile. Versiunea în vigoare este întotdeauna cea publicată pe această pagină, iar data ultimei actualizări este afișată la începutul documentului.",
+          ],
+          bullets: [],
+          footnote: "",
+        },
+      ],
+      cookieCrossLink: {
+        text: "Detaliile despre cookie-urile instalate de acest site — ce sunt, cine le pune și cât durează — sunt într-un document separat.",
+        cta: "Vezi politica de cookie-uri",
+      },
+    },
+
+    cookies: {
+      eyebrow: "Legal",
+      title: "Politica de cookie-uri",
+      lead: "Ce cookie-uri instalează acest site, cine le pune, la ce folosesc și cum le poți controla din browser.",
+      metaTitle: "Politica de cookie-uri",
+      metaDescription:
+        "Lista completă a cookie-urilor folosite pe site-ul Ecoplast Hart: furnizor, scop, durată și categorie, plus instrucțiuni pentru a le controla din browser.",
+      tableCaption: "Cookie-uri și tehnologii similare folosite pe acest site",
+      tableHeadings: ["Nume", "Furnizor", "Scop", "Durată", "Categorie"],
+      rows: [
+        {
+          name: "__client_uat, __client_uat_<sufix>",
+          provider: "Clerk, Inc.",
+          purpose:
+            "Indică dacă există o sesiune autentificată activă. Folosit de zona privată de administrare a site-ului.",
+          duration: "1 an",
+          category: "Strict necesar",
+        },
+        {
+          name: "__session",
+          provider: "Clerk, Inc.",
+          purpose:
+            "Token-ul de sesiune al utilizatorului autentificat în zona de administrare.",
+          duration: "7 zile",
+          category: "Strict necesar",
+        },
+        {
+          name: "__clerk_db_jwt, __clerk_db_jwt_<sufix>",
+          provider: "Clerk, Inc.",
+          purpose:
+            "Menține starea sesiunii în mediile de dezvoltare și de testare ale site-ului.",
+          duration: "1 an",
+          category: "Strict necesar",
+        },
+        {
+          name: "__clerk_environment, clerk_telemetry_throttler (localStorage)",
+          provider: "Clerk, Inc.",
+          purpose:
+            "Stochează configurația serviciului de autentificare și limitează frecvența raportărilor tehnice trimise către furnizor.",
+          duration: "Până la ștergerea manuală",
+          category: "Strict necesar",
+        },
+      ],
+      sections: [
+        {
+          heading: "Ce sunt cookie-urile",
+          paragraphs: [
+            "Un cookie este un fișier text de mici dimensiuni pe care un site îl salvează în browserul tău. La vizitele următoare browserul îl trimite înapoi, iar site-ul poate astfel să „își amintească” anumite informații. Aceleași reguli se aplică tehnologiilor similare, precum localStorage, care stochează date direct în browser fără să le trimită cu fiecare cerere.",
+            "În România, instalarea cookie-urilor este reglementată de Legea nr. 506/2004 privind prelucrarea datelor cu caracter personal în sectorul comunicațiilor electronice, iar prelucrarea datelor personale rezultate intră sub incidența GDPR.",
+          ],
+          bullets: [],
+          footnote: "",
+        },
+      ],
+      inventoryHeading: "Ce cookie-uri folosim",
+      inventoryIntro:
+        "Tabelul de mai jos listează cookie-urile și tehnologiile similare care pot fi instalate în browserul tău atunci când vizitezi acest site.",
+      inventoryNote:
+        "Toate sunt instalate de furnizorul nostru de autentificare, Clerk, al cărui script este încărcat pe întregul site, inclusiv pe paginile publice, deși zona de administrare este folosită exclusiv de echipa noastră internă. Aceste cookie-uri nu sunt folosite pentru publicitate și nu construiesc un profil al comportamentului tău de navigare.",
+      trailingSections: [
+        {
+          heading: "Analiza traficului",
+          paragraphs: [
+            "Folosim Vercel Web Analytics pentru a înțelege ce pagini sunt vizitate și de unde vin vizitatorii. Spre deosebire de majoritatea instrumentelor de analiză, acesta nu instalează cookie-uri și nu folosește identificatori persistenți: vizitele sunt agregate pe baza unei valori hash temporare, recalculate zilnic, din care nu se poate reconstitui adresa IP sau identitatea vizitatorului.",
+            "Din acest motiv nu îți cerem consimțământul pentru analiza traficului. Temeiul prelucrării este interesul nostru legitim de a înțelege cum este folosit site-ul, iar te poți opune oricând printr-un mesaj la adresa noastră de e-mail.",
+          ],
+          bullets: [],
+          footnote: "",
+        },
+        {
+          heading: "Ce nu folosim",
+          paragraphs: [
+            "Acest site nu folosește cookie-uri de publicitate, de remarketing sau de urmărire între site-uri.",
+          ],
+          bullets: [
+            "Nu integrăm pixeli de rețele sociale și nu folosim Google Analytics, Google Ads sau Meta Pixel.",
+            "Nu încorporăm hărți, clipuri video sau alte elemente găzduite de terți în paginile site-ului.",
+            "Nu vindem, nu închiriem și nu punem la dispoziția terților date despre navigarea ta.",
+          ],
+          footnote:
+            "Adresa punctului de lucru este un simplu link către Google Maps, care se deschide într-o filă nouă. Google primește date despre tine doar dacă alegi să dai clic pe acel link.",
+        },
+        {
+          heading: "Cum controlezi cookie-urile",
+          paragraphs: [
+            "Poți șterge cookie-urile deja instalate și poți bloca instalarea altora noi din setările browserului. Instrucțiunile diferă de la un browser la altul:",
+          ],
+          bullets: [
+            "Google Chrome: Setări → Confidențialitate și securitate → Cookie-uri și alte date ale site-urilor.",
+            "Mozilla Firefox: Setări → Confidențialitate și securitate → Cookie-uri și date despre site-uri.",
+            "Safari: Preferințe → Confidențialitate → Gestionare date site-uri web.",
+            "Microsoft Edge: Setări → Cookie-uri și permisiuni site → Gestionare și ștergere cookie-uri.",
+          ],
+          footnote:
+            "Blocarea tuturor cookie-urilor nu afectează în niciun fel consultarea paginilor publice ale acestui site. Poate însă împiedica autentificarea în zona de administrare.",
+        },
+        {
+          heading: "Modificări ale acestei politici",
+          paragraphs: [
+            "Actualizăm această pagină ori de câte ori se schimbă cookie-urile folosite pe site. Data ultimei actualizări este afișată la începutul documentului.",
+          ],
+          bullets: [],
+          footnote: "",
+        },
+      ],
+      privacyCrossLink: {
+        text: "Cum prelucrăm datele cu caracter personal, cui le divulgăm și ce drepturi ai — inclusiv datele de contact ale operatorului.",
+        cta: "Vezi politica de confidențialitate",
+      },
+    },
   },
 
   notFound: {

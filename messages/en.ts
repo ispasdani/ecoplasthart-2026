@@ -55,6 +55,8 @@ export const en: Messages = {
     servicesOverviewDesc: "See our full range of waste-management services.",
     certifications: "Certifications",
     contact: "Contact",
+    privacy: "Privacy policy",
+    cookies: "Cookie policy",
     cta: "Request a quote",
     openMenu: "Open menu",
     closeMenu: "Close menu",
@@ -95,6 +97,7 @@ export const en: Messages = {
     rights: "All rights reserved.",
     officeLabel: "Operational site",
     legalSeatLabel: "Registered office",
+    legalLinksLabel: "Legal documents",
   },
 
   home: {
@@ -572,6 +575,241 @@ export const en: Messages = {
     metaTitle: "Contact",
     metaDescription:
       "Contact Ecoplast Hart SRL: phone, email and our site in Sat Cristur, Deva, Hunedoara county. Request a quote for waste collection.",
+  },
+
+  legal: {
+    updatedLabel: "Last updated",
+    updatedDate: "5 September 2026",
+    tocHeading: "Contents",
+
+    privacy: {
+      eyebrow: "Legal",
+      title: "Privacy policy",
+      lead: "How we collect, use and protect personal data when you contact us or browse this site.",
+      metaTitle: "Privacy policy",
+      metaDescription:
+        "How Ecoplast Hart SRL processes personal data: what we collect, for which purposes and on which legal bases, who we share it with, how long we keep it and what your rights are under the GDPR.",
+      identityHeading: "Data controller",
+      identityLabels: {
+        legalName: "Legal name",
+        cui: "VAT / registration number",
+        tradeRegister: "Trade register",
+        addressLegal: "Registered office",
+        addressOperational: "Operational site",
+        email: "Email",
+        phone: "Phone",
+      },
+      sections: [
+        {
+          heading: "Who we are",
+          paragraphs: [
+            "Ecoplast Hart SRL is the controller of the personal data processed through this site, within the meaning of Regulation (EU) 2016/679 (GDPR) and Romanian Law no. 190/2018. Our identification and contact details are set out in the table above.",
+            "We have not appointed a data protection officer, as our activity does not fall within the cases listed in Article 37 GDPR. Requests concerning personal data are handled directly by company management, at the email address above.",
+          ],
+          bullets: [],
+          footnote: "",
+        },
+        {
+          heading: "What data we collect",
+          paragraphs: [
+            "This site contains no forms and does not ask you to create an account. Data reaches us in two ways:",
+          ],
+          bullets: [
+            "Data you send us directly, when you email or call us: your name, email address, phone number, the company you represent and any other information you choose to include in your message.",
+            "Technical data generated automatically when you visit the site: IP address, device and browser type, referring page, pages visited and time of access. This is collected by the infrastructure hosting the site and by the traffic analytics tool.",
+          ],
+          footnote:
+            "We do not collect special categories of data (health, beliefs, trade union membership) and we do not knowingly seek personal data from minors.",
+        },
+        {
+          heading: "Why we process the data, and on what basis",
+          paragraphs: [
+            "We process data solely for the purposes below, each with its legal basis under Article 6(1) GDPR:",
+          ],
+          bullets: [
+            "To answer your enquiry and send you a quote — basis: steps taken at your request prior to entering into a contract, point (b).",
+            "To perform the contract and issue waste transport and traceability documents — basis: performance of a contract, point (b).",
+            "To meet the tax, accounting and waste-reporting obligations imposed on us by law — basis: legal obligation, point (c).",
+            "To keep the site working and secure, and to understand in aggregate how it is used — basis: our legitimate interest in operating and improving the site, point (f).",
+          ],
+          footnote:
+            "We do not use your data for direct marketing, profiling, or automated decision-making that produces legal effects concerning you.",
+        },
+        {
+          heading: "Who we share data with",
+          paragraphs: [
+            "We do not sell or rent personal data. We disclose it only to the suppliers who help us operate this site, acting as processors on our instructions, and to public authorities where the law requires it.",
+            "The suppliers involved in running this site are:",
+          ],
+          bullets: [
+            "Vercel Inc. — website hosting and traffic analytics.",
+            "Clerk, Inc. — user authentication for the site's private administration area.",
+            "Convex, Inc. — storage of the content and documents published on the site.",
+          ],
+          footnote:
+            "These suppliers are established in the United States. Transfers outside the European Economic Area are carried out on the basis of the Standard Contractual Clauses adopted by the European Commission and, where applicable, the EU–U.S. Data Privacy Framework.",
+        },
+        {
+          heading: "How long we keep data",
+          paragraphs: [
+            "We keep commercial correspondence for the duration of the discussions and, where these lead to a working relationship, for the duration of that relationship.",
+            "Accounting records and waste-management records are kept for the periods required by the applicable legislation, which generally range between 3 and 10 years depending on the type of document.",
+            "Technical traffic data and aggregate statistics are kept for no more than 24 months, after which they are deleted or irreversibly anonymised.",
+          ],
+          bullets: [],
+          footnote: "",
+        },
+        {
+          heading: "Your rights",
+          paragraphs: [
+            "As a data subject, the GDPR gives you the following rights in relation to your data:",
+          ],
+          bullets: [
+            "The right of access — to find out whether we process data about you and to receive a copy of it.",
+            "The right to rectification — to have inaccurate data corrected and incomplete data completed.",
+            "The right to erasure — to have data deleted where we no longer have a basis for keeping it.",
+            "The right to restriction of processing — to have processing paused while we verify a challenge.",
+            "The right to data portability — to receive your data in a structured, commonly used format.",
+            "The right to object — to object to processing based on our legitimate interest.",
+            "The right not to be subject to a decision based solely on automated processing.",
+          ],
+          footnote:
+            "You can exercise any of these rights by sending a request to our email address. We will respond within one month of receiving it. If our response does not satisfy you, you have the right to lodge a complaint with the Romanian Data Protection Authority (ANSPDCP, B-dul G-ral. Gheorghe Magheru nr. 28-30, Sector 1, Bucharest, anspdcp@dataprotection.ro) or to bring the matter before the competent court.",
+        },
+        {
+          heading: "Data security",
+          paragraphs: [
+            "The site is served exclusively over an encrypted HTTPS connection, and access to the administration area is protected by authentication. We apply reasonable technical and organisational measures to protect data against unauthorised access, loss or accidental disclosure.",
+            "No system is entirely invulnerable, however. If a personal data breach occurs that is likely to affect your rights, we will inform you and notify the supervisory authority within the deadlines set by the GDPR.",
+          ],
+          bullets: [],
+          footnote: "",
+        },
+        {
+          heading: "Changes to this policy",
+          paragraphs: [
+            "We may update this policy when the services we rely on or the applicable legal requirements change. The version in force is always the one published on this page, and the date it was last updated is shown at the top of the document.",
+          ],
+          bullets: [],
+          footnote: "",
+        },
+      ],
+      cookieCrossLink: {
+        text: "The details of the cookies this site sets — what they are, who sets them and how long they last — are in a separate document.",
+        cta: "Read the cookie policy",
+      },
+    },
+
+    cookies: {
+      eyebrow: "Legal",
+      title: "Cookie policy",
+      lead: "Which cookies this site sets, who sets them, what they are for and how to control them from your browser.",
+      metaTitle: "Cookie policy",
+      metaDescription:
+        "The full list of cookies used on the Ecoplast Hart website: provider, purpose, duration and category, plus instructions for controlling them from your browser.",
+      tableCaption: "Cookies and similar technologies used on this site",
+      tableHeadings: ["Name", "Provider", "Purpose", "Duration", "Category"],
+      rows: [
+        {
+          name: "__client_uat, __client_uat_<suffix>",
+          provider: "Clerk, Inc.",
+          purpose:
+            "Indicates whether an authenticated session is active. Used by the site's private administration area.",
+          duration: "1 year",
+          category: "Strictly necessary",
+        },
+        {
+          name: "__session",
+          provider: "Clerk, Inc.",
+          purpose:
+            "The session token of a user signed in to the administration area.",
+          duration: "7 days",
+          category: "Strictly necessary",
+        },
+        {
+          name: "__clerk_db_jwt, __clerk_db_jwt_<suffix>",
+          provider: "Clerk, Inc.",
+          purpose:
+            "Maintains session state in the site's development and staging environments.",
+          duration: "1 year",
+          category: "Strictly necessary",
+        },
+        {
+          name: "__clerk_environment, clerk_telemetry_throttler (localStorage)",
+          provider: "Clerk, Inc.",
+          purpose:
+            "Stores the authentication service's configuration and rate-limits the technical reports sent back to the provider.",
+          duration: "Until manually cleared",
+          category: "Strictly necessary",
+        },
+      ],
+      sections: [
+        {
+          heading: "What cookies are",
+          paragraphs: [
+            "A cookie is a small text file that a website saves in your browser. On later visits your browser sends it back, which lets the site “remember” certain information. The same rules apply to similar technologies such as localStorage, which stores data directly in the browser without sending it with every request.",
+            "In Romania, the setting of cookies is governed by Law no. 506/2004 on the processing of personal data in the electronic communications sector, while the processing of any resulting personal data falls under the GDPR.",
+          ],
+          bullets: [],
+          footnote: "",
+        },
+      ],
+      inventoryHeading: "Which cookies we use",
+      inventoryIntro:
+        "The table below lists the cookies and similar technologies that may be set in your browser when you visit this site.",
+      inventoryNote:
+        "All of them are set by our authentication provider, Clerk, whose script is loaded across the whole site, including the public pages, even though the administration area is used only by our internal team. These cookies are not used for advertising and do not build a profile of your browsing behaviour.",
+      trailingSections: [
+        {
+          heading: "Traffic analytics",
+          paragraphs: [
+            "We use Vercel Web Analytics to understand which pages are visited and where visitors come from. Unlike most analytics tools it sets no cookies and uses no persistent identifiers: visits are aggregated using a temporary hash, recalculated daily, from which neither the IP address nor the visitor's identity can be reconstructed.",
+            "For that reason we do not ask for your consent for traffic analytics. The basis for the processing is our legitimate interest in understanding how the site is used, and you may object at any time by writing to our email address.",
+          ],
+          bullets: [],
+          footnote: "",
+        },
+        {
+          heading: "What we do not use",
+          paragraphs: [
+            "This site uses no advertising, remarketing or cross-site tracking cookies.",
+          ],
+          bullets: [
+            "We embed no social network pixels and use no Google Analytics, Google Ads or Meta Pixel.",
+            "We embed no maps, videos or other third-party hosted elements in the site's pages.",
+            "We do not sell, rent or otherwise make your browsing data available to third parties.",
+          ],
+          footnote:
+            "The operational site address is a plain link to Google Maps that opens in a new tab. Google receives data about you only if you choose to click that link.",
+        },
+        {
+          heading: "How to control cookies",
+          paragraphs: [
+            "You can delete cookies that have already been set and block new ones from your browser settings. The steps differ from browser to browser:",
+          ],
+          bullets: [
+            "Google Chrome: Settings → Privacy and security → Third-party cookies and site data.",
+            "Mozilla Firefox: Settings → Privacy & Security → Cookies and Site Data.",
+            "Safari: Preferences → Privacy → Manage Website Data.",
+            "Microsoft Edge: Settings → Cookies and site permissions → Manage and delete cookies.",
+          ],
+          footnote:
+            "Blocking all cookies has no effect whatsoever on reading the public pages of this site. It may, however, prevent signing in to the administration area.",
+        },
+        {
+          heading: "Changes to this policy",
+          paragraphs: [
+            "We update this page whenever the cookies used on the site change. The date it was last updated is shown at the top of the document.",
+          ],
+          bullets: [],
+          footnote: "",
+        },
+      ],
+      privacyCrossLink: {
+        text: "How we process personal data, who we share it with and what rights you have — including the controller's contact details.",
+        cta: "Read the privacy policy",
+      },
+    },
   },
 
   notFound: {

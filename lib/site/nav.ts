@@ -58,5 +58,13 @@ export function getPrimaryLinks(dict: Messages, locale: Locale) {
       href: localizedPath("/contact", locale),
       label: dict.nav.contact,
     },
+    privacy: {
+      href: localizedPath("/privacy-policy", locale),
+      label: dict.nav.privacy,
+    },
+    cookies: {
+      href: localizedPath("/cookie-policy", locale),
+      label: dict.nav.cookies,
+    },
   };
 }

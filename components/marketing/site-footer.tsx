@@ -16,12 +16,15 @@ export function SiteFooter({
   homeHref,
   serviceLinks,
   companyLinks,
+  legalLinks,
   mapsHref,
 }: {
   dict: Messages;
   homeHref: string;
   serviceLinks: FooterLink[];
   companyLinks: FooterLink[];
+  /** Privacy and cookie policies — rendered in the bottom legal strip. */
+  legalLinks: FooterLink[];
   mapsHref: string;
 }) {
   const { company, footer } = dict;
@@ -145,11 +148,29 @@ export function SiteFooter({
         </div>
 
         {/* Legal strip */}
-        <div className="flex flex-col gap-3 border-t border-hairline-dark py-6 text-[0.8125rem] text-on-dark-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © {year} {company.legalName}. {footer.rights}
-          </p>
-          <p className="flex flex-wrap gap-x-4 gap-y-1">
+        <div className="border-t border-hairline-dark py-6 text-[0.8125rem] text-on-dark-muted">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <p>
+              © {year} {company.legalName}. {footer.rights}
+            </p>
+
+            <nav aria-label={footer.legalLinksLabel}>
+              <ul className="flex flex-wrap items-center gap-x-5 gap-y-2">
+                {legalLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="transition-colors hover:text-on-dark"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+
+          <p className="mt-4 flex flex-wrap gap-x-4 gap-y-1">
             <span>CUI {company.cui}</span>
             <span aria-hidden className="hidden sm:inline">
               ·
