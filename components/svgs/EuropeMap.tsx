@@ -14,7 +14,7 @@ const EuropeMap = ({ labels }: EuropeMapProps) => {
   const [countryHovered, setCountryHovered] = useState<string>("");
 
   const pathClasses =
-    "fill-[#e2e8f0] stroke-[#e2e8f0] hover:fill-brand hover:stroke-brand cursor-pointer transition-colors duration-300";
+    "fill-[#e2e8f0] stroke-[#e2e8f0] hover:fill-brand hover:stroke-brand cursor-pointer transition-all duration-300 hover:scale-110 origin-center [transform-box:fill-box]";
 
   return (
     <div className="flex flex-col items-center w-full">
