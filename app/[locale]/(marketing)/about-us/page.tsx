@@ -14,6 +14,7 @@ import { isLocale, localizedPath } from "@/lib/i18n/routing";
 import { valueIcons } from "@/lib/site/icons";
 import { getPrimaryLinks } from "@/lib/site/nav";
 import { simplePageGraph } from "@/lib/site/structured-data";
+import EuropeMap from "@/components/svgs/EuropeMap";
 
 export async function generateMetadata({
   params,
@@ -142,8 +143,34 @@ export default async function AboutUsPage({
         </Container>
       </Section>
 
-      {/* Registry identity + ISO */}
+      {/* Where we operate */}
       <Section tone="canvas" space="lg">
+        <Container>
+          <div className="grid gap-12 lg:grid-cols-12 lg:gap-14 items-center">
+            <Reveal className="lg:col-span-7">
+              <h2 className="text-heading text-balance text-ink">
+                {t.presence.heading}
+              </h2>
+              <p className="mt-6 text-[1.0625rem] font-medium leading-relaxed text-ink">
+                {t.presence.intro}
+              </p>
+              <p className="mt-4 text-[1.0625rem] leading-relaxed text-slate">
+                {t.presence.info}
+              </p>
+              <p className="mt-4 text-[1.0625rem] leading-relaxed text-slate">
+                {t.presence.info2}
+              </p>
+            </Reveal>
+
+            <Reveal className="lg:col-span-5 flex justify-center">
+              <EuropeMap />
+            </Reveal>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Registry identity + ISO */}
+      <Section tone="surface" space="lg">
         <Container>
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-14">
             <Reveal className="lg:col-span-7">

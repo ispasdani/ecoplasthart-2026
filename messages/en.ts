@@ -329,6 +329,12 @@ export const en: Messages = {
         },
       ],
     },
+    presence: {
+      heading: "Where we operate",
+      intro: "Global Reach, Local Impact: Discover Ecoplast Hart across Romania, Hungary, and the Republic of Moldova.",
+      info: "With our main operations based in Hunedoara county, Romania, we deploy our own logistics fleet to collect, sort, and process waste materials nationally. We are also proud to extend our services and partnerships into Hungary and the Republic of Moldova.",
+      info2: "Our commitment to EU waste-hierarchy compliance ensures that wherever we operate, we deliver the same standard of traceability, environmental responsibility, and genuine recycling that has defined us since 2004.",
+    },
     certifications: {
       heading: "Certifications",
       items: [

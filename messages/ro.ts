@@ -343,6 +343,12 @@ export const ro = {
         },
       ],
     },
+    presence: {
+      heading: "Unde operăm",
+      intro: "Acoperire globală, impact local: Descoperiți Ecoplast Hart în România, Ungaria și Republica Moldova.",
+      info: "Având sediul central în județul Hunedoara, România, utilizăm propria noastră flotă logistică pentru a colecta, sorta și procesa deșeuri la nivel național. De asemenea, suntem mândri să ne extindem serviciile și parteneriatele în Ungaria și Republica Moldova.",
+      info2: "Angajamentul nostru față de respectarea ierarhiei deșeurilor din UE asigură că, oriunde am opera, oferim același standard de trasabilitate, responsabilitate față de mediu și reciclare reală care ne definește din 2004.",
+    },
     certifications: {
       heading: "Certificări",
       items: [
