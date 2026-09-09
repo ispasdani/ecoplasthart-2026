@@ -76,6 +76,11 @@ export const en: Messages = {
     sendEmail: "Send an email",
     backToServices: "Back to services",
     acceptedMaterials: "Accepted materials",
+    countries: {
+      romania: "Romania",
+      hungary: "Hungary",
+      moldova: "Republic of Moldova",
+    },
     howItWorks: "How it works",
     downloadFile: "Download",
     viewDocument: "View document",

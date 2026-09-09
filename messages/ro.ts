@@ -83,6 +83,11 @@ export const ro = {
     sendEmail: "Trimite un e-mail",
     backToServices: "Înapoi la servicii",
     acceptedMaterials: "Materiale acceptate",
+    countries: {
+      romania: "România",
+      hungary: "Ungaria",
+      moldova: "Republica Moldova",
+    },
     howItWorks: "Cum funcționează",
     downloadFile: "Descarcă",
     viewDocument: "Vezi documentul",

@@ -2,7 +2,15 @@
 
 import React, { useState } from "react";
 
-const EuropeMap = () => {
+type EuropeMapProps = {
+  labels: {
+    romania: string;
+    hungary: string;
+    moldova: string;
+  };
+};
+
+const EuropeMap = ({ labels }: EuropeMapProps) => {
   const [countryHovered, setCountryHovered] = useState<string>("");
 
   const pathClasses =
@@ -23,7 +31,7 @@ const EuropeMap = () => {
             strokeWidth="0.2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            onMouseEnter={() => setCountryHovered("Hungary")}
+            onMouseEnter={() => setCountryHovered(labels.hungary)}
             onMouseLeave={() => setCountryHovered("")}
           />
           <path
@@ -33,7 +41,7 @@ const EuropeMap = () => {
             strokeWidth="0.2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            onMouseEnter={() => setCountryHovered("Republic of Moldova")}
+            onMouseEnter={() => setCountryHovered(labels.moldova)}
             onMouseLeave={() => setCountryHovered("")}
           />
           <path
@@ -43,7 +51,7 @@ const EuropeMap = () => {
             strokeWidth="0.2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            onMouseEnter={() => setCountryHovered("Romania")}
+            onMouseEnter={() => setCountryHovered(labels.romania)}
             onMouseLeave={() => setCountryHovered("")}
           />
         </g>

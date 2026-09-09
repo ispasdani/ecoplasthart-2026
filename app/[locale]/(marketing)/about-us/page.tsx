@@ -163,7 +163,7 @@ export default async function AboutUsPage({
             </Reveal>
 
             <Reveal className="lg:col-span-5 flex justify-center">
-              <EuropeMap />
+              <EuropeMap labels={dict.common.countries} />
             </Reveal>
           </div>
         </Container>
