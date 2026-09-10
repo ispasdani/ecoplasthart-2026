@@ -364,5 +364,138 @@ export const articlesEn = {
         },
       ],
     },
+
+    "packaging-waste-recycling-obligations": {
+      metaTitle: "Packaging waste recycling obligations for companies in Romania",
+      metaDescription:
+        "What Legea 249/2015 requires of companies that put packaging on the Romanian market: individual compliance, transfer of responsibility, reporting and permitted operators.",
+      title:
+        "Packaging waste obligations: what every company that uses packaging must do",
+      excerpt:
+        "Putting a product in a box makes you a packaging producer in the legal sense. The obligation to recycle follows the packaging, not the customer.",
+      lead: "Most packaging waste non-conformities come from companies that did not know they were producers in the first place. Legea 249/2015 on packaging and packaging waste defines the term broadly: if your company packs, fills or labels goods that reach the market — or imports them already packed — you are a producer, and the obligation to ensure recovery attaches to you.",
+      sections: [
+        {
+          heading: "Who counts as a packaging producer under Romanian law",
+          body: [
+            "Legea 249/2015, transposing the EU Packaging and Packaging Waste Directive, defines a packaging producer as anyone who professionally packs, fills, labels or imports packaged goods on the Romanian market. This includes manufacturers, importers, distributors who put goods into packaging, and retailers who use service packaging (bags, boxes) at the point of sale.",
+            "The obligation is proportional to the quantity placed on the market and to the type of material — glass, plastics, paper, metal, wood and composite are tracked separately. If your company generates more than one tonne of packaging per year, the reporting obligation is annual; below that threshold the obligation still exists but the documentary burden is lighter.",
+          ],
+        },
+        {
+          heading:
+            "Individual compliance versus transfer of responsibility to an organisation",
+          body: [
+            "Legea 249/2015 gives producers two routes. Individual compliance means setting up your own take-back scheme, documenting recovery and sending an annual report to the county environmental agency and the National Packaging Register. This route is viable for very large producers with their own logistics.",
+            "The more common route is transfer of responsibility: the producer signs a contract with an accredited packaging responsibility organisation (OTR), which aggregates the obligation across many producers and funds recovery on their behalf. The contract must precede the first tonne placed on the market in any calendar year, and the amounts transferred cover the organisation's operating costs and the actual recycling operations.",
+          ],
+        },
+        {
+          heading: "Which operators count towards the recovery target",
+          body: [
+            "Not every company that takes your cardboard or plastic counts towards the packaging recovery target. Only waste operators with an environmental permit that explicitly covers the recovery of packaging fractions — and that send material to licensed recyclers — qualify. The OTR or, in the individual compliance route, the generator itself must hold the documentation that proves the full chain.",
+            "We collect, sort and bale several packaging fractions — cardboard and paper, plastic films and rigid plastics, metal — and the documentation we issue on every pickup is usable as evidence in your compliance file. If you work through an OTR, your OTR will confirm what chains qualify; if you manage the obligation directly, ask the collector for the recovery or treatment confirmation that goes into your annual report.",
+          ],
+        },
+        {
+          heading: "Documentation and the annual report",
+          body: [
+            "The annual report in the National Packaging Register covers quantities of each packaging material placed on the market and the corresponding recovery achieved, by fraction. It is due by 25 March for the previous calendar year. Missing it carries fines, but the practical consequence that tends to sting more is that permit renewals for the parent company often require a clean packaging compliance record.",
+            "The records underlying the report — weight tickets, recovery confirmations, OTR transfer receipts — should be retained for five years. In practice that means a folder per year, updated as each collection takes place, rather than a reconstruction exercise every February.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "If your company packs, fills, labels or imports packaged goods on the Romanian market, you are a packaging producer and the recovery obligation applies to you.",
+        "Transferring responsibility to an accredited OTR is the standard route for most companies; the contract must precede the first tonne placed on the market each year.",
+        "Only waste operators permitted for packaging recovery fractions count towards the target — keep the documentation for five years.",
+      ],
+      faq: [
+        {
+          question:
+            "If I import only small amounts of packaged goods, am I still a producer?",
+          answer:
+            "Yes, under Legea 249/2015 imports trigger the producer obligation regardless of volume. The annual report format and minimum thresholds vary by quantity, but the obligation to ensure recovery is the same.",
+        },
+        {
+          question: "What is an OTR and how do I know it is accredited?",
+          answer:
+            "An organisation for transferring responsibility (OTR) is accredited by the Ministry of Environment and listed in the National Packaging Register. Check the register before signing any contract — an unaccredited intermediary does not transfer liability.",
+        },
+        {
+          question:
+            "Can I count cardboard bales I send directly to a paper mill?",
+          answer:
+            "Yes, if you can document the chain: the collector's permit covering the relevant code, the transport form and confirmation from the receiving facility that the material went to recovery rather than disposal. Without documentation, the tonne does not count.",
+        },
+      ],
+    },
+
+    "aluminium-scrap-recycling": {
+      metaTitle:
+        "Aluminium scrap recycling: grades, prices and how to prepare your waste",
+      metaDescription:
+        "Profiles, castings, turnings, cable and foil: how aluminium waste is graded, priced and processed. What to separate at source to recover the most value.",
+      title:
+        "Recycling aluminium scrap: grades, prices and what to do at source",
+      excerpt:
+        "Aluminium is infinitely recyclable and recovered at a fraction of the energy primary smelting needs. But the grade you hand over decides how close to the London quotation you get paid.",
+      lead: "Of all the non-ferrous metals that cross our yard, aluminium is the one where source preparation makes the most visible difference to the price. The physical chemistry of aluminium recycling tolerates a wide range of grades — but the market prices each grade separately, and the gap between the best and the worst can be large enough to be worth a conversation.",
+      sections: [
+        {
+          heading: "Why aluminium is worth recycling carefully",
+          body: [
+            "Recycling aluminium saves roughly 95 % of the energy that primary smelting requires, because re-melting and re-casting consumes far less than extracting aluminium from bauxite. That environmental fact translates directly into economic value: aluminium keeps its worth through recycling cycles in a way that most materials do not.",
+            "The London Metal Exchange publishes daily reference prices for primary aluminium and several alloy classes. Secondary (recycled) aluminium trades at a discount to primary, but the spread narrows significantly for clean, well-sorted material. That is the lever a generator controls.",
+          ],
+        },
+        {
+          heading: "Main grades and what separates them",
+          body: [
+            "Clean extruded profile — window frames, structural sections, heat sinks — is the premium grade. It is one alloy class; surface coatings such as paint or anodising do not matter much at the smelter level, but iron inserts and fasteners still attached do. Mixed profiles from different alloy families, or profiles with steel hardware, fall into a lower grade because alloying elements have to be managed at the melt.",
+            "Cast aluminium — engine blocks, gearbox housings, wheels — is a different alloy family and must be kept separate from wrought alloys. Mixing cast and wrought is the mistake that costs the most at intake, because a smelter buying for one application cannot use the other, and the mixed lot is priced at the less valuable grade.",
+          ],
+        },
+        {
+          heading: "Turnings, swarf and shredded aluminium",
+          body: [
+            "Aluminium turnings and machining swarf are lower-density material with a large surface area, which means more oxide and more trapped coolant or cutting oil. They are weighed with deductions for moisture and contamination, and they go to secondary smelters that specifically handle turnings rather than to primary remelters.",
+            "Shredded aluminium — from car bodies, mixed-stream processing — is the most variable grade, because the alloy mix is unknown until spectrometry. If you can keep identifiable alloy families separate before they reach the shredder, that step is worth taking. Once in the shredder, the alloy mix is fixed and so is the price ceiling.",
+          ],
+        },
+        {
+          heading: "Foil, cans and mixed small-format aluminium",
+          body: [
+            "Aluminium foil and packaging — food trays, lidding, thin-walled containers — is a distinct grade, because the high surface-to-mass ratio and the frequent presence of food residues, lacquers and paper or plastic laminates require a different processing path from structural material. Keep it separate from profiles and cast alloys.",
+            "Beverage cans, if clean and uncontaminated, are a recoverable fraction — but for an industrial generator volumes are usually small. The practical question is whether they reach a separate container or go into a mixed lot where they are a minor fraction and treated accordingly.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Aluminium is infinitely recyclable and recycling it saves roughly 95 % of the energy that primary smelting requires.",
+        "Separating wrought alloys (profiles, sheet) from cast alloys (engine parts, wheels) is the most impactful sorting step.",
+        "Turnings and swarf carry moisture and coolant deductions; keeping them dry and separate from clean profiles preserves the price.",
+      ],
+      faq: [
+        {
+          question:
+            "Does the anodising or paint on aluminium profiles affect the price?",
+          answer:
+            "Surface coatings burn off or are managed in the refining process, so they matter less than alloy composition. The more important factor is removing iron fasteners and keeping profiles of the same alloy family together.",
+        },
+        {
+          question:
+            "Can I mix aluminium cable and copper cable in the same container?",
+          answer:
+            "No. Aluminium cable and copper cable are separate grades priced against different reference quotations. Mixing them means both fractions are paid at the lower of the two, and the sorting cost comes out of the price.",
+        },
+        {
+          question:
+            "How is the price for aluminium turnings determined?",
+          answer:
+            "From the LME reference for the relevant alloy class, less deductions for moisture, coolant contamination, fines (very small chips that oxidise quickly) and processing. Clean, dry turnings from a known alloy fetch considerably more than a wet or oil-soaked swarf mix.",
+        },
+      ],
+    },
   },
 } as const;

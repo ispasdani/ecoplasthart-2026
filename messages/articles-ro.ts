@@ -371,5 +371,138 @@ export const articlesRo = {
         },
       ],
     },
+
+    "packaging-waste-recycling-obligations": {
+      metaTitle: "Obligații privind ambalajele: ce trebuie să facă firmele",
+      metaDescription:
+        "Ce prevede Legea 249/2015 pentru firmele care introduc ambalaje pe piața din România: conformare individuală, transfer de responsabilitate, raportare și operatori autorizați.",
+      title:
+        "Obligații privind ambalajele: ce trebuie să facă orice firmă care utilizează ambalaje",
+      excerpt:
+        "Dacă ambalezi, etichetezi sau introduci pe piață produse ambalate, ești producător de ambalaje în sens legal. Obligația de recuperare urmează ambalajul, nu clientul.",
+      lead: "Cele mai multe neconformități pe ambalaje vin de la firme care nu știau că sunt producători. Legea 249/2015 privind ambalajele și deșeurile de ambalaje definește termenul larg: dacă firma ta ambalează, umple sau etichetează bunuri care ajung pe piață — sau le importă deja ambalate — ești producător, și obligația de a asigura valorificarea îți aparține.",
+      sections: [
+        {
+          heading: "Cine este producător de ambalaje conform legii române",
+          body: [
+            "Legea 249/2015, care transpune Directiva europeană privind ambalajele și deșeurile de ambalaje, definește producătorul de ambalaje ca orice persoană care ambalează, umple, etichetează sau importă bunuri ambalate pe piața din România cu titlu profesional. Intră în această categorie producătorii, importatorii, distribuitorii care introduc mărfuri în ambalaje și comercianții care folosesc ambalaje de serviciu (pungi, cutii) la punctul de vânzare.",
+            "Obligația este proporțională cu cantitatea introdusă pe piață și cu tipul de material — sticlă, plastic, hârtie, metal, lemn și materiale compozite se urmăresc separat. Dacă firma ta generează mai mult de o tonă de ambalaje pe an, obligația de raportare este anuală; sub acest prag, obligația există în continuare, dar sarcina documentară este mai mică.",
+          ],
+        },
+        {
+          heading:
+            "Conformare individuală sau transfer de responsabilitate la o organizație",
+          body: [
+            "Legea 249/2015 le oferă producătorilor două căi. Conformarea individuală presupune organizarea unui sistem propriu de preluare, documentarea valorificării și transmiterea unui raport anual la agenția județeană pentru protecția mediului și la Registrul Național al Ambalajelor. Această cale este viabilă pentru producătorii mari, cu logistică proprie.",
+            "Calea mai frecventă este transferul de responsabilitate: producătorul semnează un contract cu o organizație de transfer al răspunderii (OTR) acreditată, care agregă obligația mai multor producători și finanțează valorificarea în numele lor. Contractul trebuie să preceadă prima tonă introdusă pe piață în orice an calendaristic, iar sumele transferate acoperă costurile organizației și operațiunile efective de reciclare.",
+          ],
+        },
+        {
+          heading: "Ce operatori se iau în calcul pentru țintele de valorificare",
+          body: [
+            "Nu orice firmă care preia cartonul sau plasticul tău contează pentru țintele de valorificare a ambalajelor. Se califică numai operatorii de deșeuri cu autorizație de mediu care acoperă explicit valorificarea fracțiilor de ambalaje și care trimit materialul la reciclatori licențiați. OTR-ul, sau, în cazul conformării individuale, generatorul însuși, trebuie să dețină documentația care dovedește lanțul complet.",
+            "Colectăm, sortăm și balotăm mai multe fracții de ambalaje — carton și hârtie, folii și plastic rigid, metal — iar documentele pe care le emitem la fiecare ridicare pot fi folosite ca dovadă în dosarul tău de conformare. Dacă lucrezi printr-un OTR, acesta va confirma ce lanțuri se califică; dacă gestionezi obligația direct, cere operatorului de colectare confirmarea valorificării sau tratării care intră în raportul anual.",
+          ],
+        },
+        {
+          heading: "Documentele și raportul anual",
+          body: [
+            "Raportul anual în Registrul Național al Ambalajelor acoperă cantitățile de ambalaje introduse pe piață pe fiecare material și valorificarea corespunzătoare obținută, pe fracție. Se depune până pe 25 martie pentru anul calendaristic anterior. Omiterea lui atrage amenzi, dar consecința practică mai dureroasă este că reînnoirea autorizațiilor firmei-mamă cere adesea un dosar curat de conformare la ambalaje.",
+            "Evidențele care stau la baza raportului — bonuri de cântar, confirmări de valorificare, chitanțe de transfer la OTR — se păstrează cinci ani. În practică, asta înseamnă un dosar pe an, actualizat la fiecare ridicare, nu o reconstituire în fiecare februarie.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Dacă firma ta ambalează, umple, etichetează sau importă bunuri ambalate pe piața din România, ești producător de ambalaje și obligația de valorificare îți revine.",
+        "Transferul de responsabilitate la un OTR acreditat este calea standard pentru majoritatea firmelor; contractul trebuie să preceadă prima tonă introdusă pe piață în fiecare an.",
+        "Se iau în calcul numai operatorii autorizați pentru valorificarea fracțiilor de ambalaje — păstrează documentele cinci ani.",
+      ],
+      faq: [
+        {
+          question:
+            "Dacă import cantități mici de bunuri ambalate, sunt totuși producător?",
+          answer:
+            "Da, conform Legii 249/2015, importul declanșează obligația de producător indiferent de volum. Formatul raportului anual și pragurile minime variază cu cantitatea, dar obligația de a asigura valorificarea este aceeași.",
+        },
+        {
+          question: "Ce este un OTR și cum știu că este acreditat?",
+          answer:
+            "O organizație de transfer al răspunderii (OTR) este acreditată de Ministerul Mediului și înscrisă în Registrul Național al Ambalajelor. Verifică registrul înainte de a semna orice contract — un intermediar neacreditat nu transferă răspunderea.",
+        },
+        {
+          question:
+            "Pot contabiliza baloturile de carton pe care le trimit direct la o fabrică de hârtie?",
+          answer:
+            "Da, dacă poți documenta lanțul: autorizația colectorului care acoperă codul relevant, formularul de transport și confirmarea din partea instalației receptoare că materialul a mers la valorificare și nu la eliminare. Fără documente, tona nu se ia în calcul.",
+        },
+      ],
+    },
+
+    "aluminium-scrap-recycling": {
+      metaTitle:
+        "Reciclarea aluminiului: categorii, prețuri și pregătire la sursă",
+      metaDescription:
+        "Profile, piese turnate, șpan, cablu și folie: cum se clasifică, prețuiesc și procesează deșeurile de aluminiu. Ce să separi la sursă pentru a recupera valoarea maximă.",
+      title:
+        "Reciclarea deșeurilor de aluminiu: categorii, prețuri și ce faci la sursă",
+      excerpt:
+        "Aluminiul se reciclează la infinit și se recuperează cu o fracție din energia topiturii primare. Dar categoria pe care o predai decide cât de aproape de cotația de la Londra ești plătit.",
+      lead: "Dintre toate neferoasele care trec prin platforma noastră, aluminiul este cel la care pregătirea la sursă face cea mai vizibilă diferență în preț. Chimia fizică a reciclării aluminiului tolerează o gamă largă de categorii — dar piața prețuiește fiecare categorie separat, iar diferența dintre cea mai bună și cea mai slabă poate fi destul de mare încât să merite o discuție.",
+      sections: [
+        {
+          heading: "De ce reciclarea aluminiului merită atenție",
+          body: [
+            "Reciclarea aluminiului economisește aproximativ 95% din energia necesară topiturii primare, deoarece retopirea și recularea consumă mult mai puțin decât extracția aluminiului din bauxită. Acest fapt se traduce direct în valoare economică: aluminiul își păstrează valoarea prin cicluri de reciclare într-un mod în care puține materiale o fac.",
+            "London Metal Exchange publică zilnic prețuri de referință pentru aluminiu primar și mai multe clase de aliaje. Aluminiul secundar (reciclat) se tranzacționează cu un discount față de cel primar, dar diferența se îngustează semnificativ pentru material curat, bine sortat. Aceasta este pârghia pe care o controlează generatorul.",
+          ],
+        },
+        {
+          heading: "Principalele categorii și ce le diferențiază",
+          body: [
+            "Profilul extrudat curat — tâmplărie, secțiuni structurale, radiatoare — este categoria premium. Este o singură clasă de aliaj; tratamentele de suprafață precum vopseaua sau anodizarea contează mai puțin la nivelul topitoriei, dar inserțiile și elementele de fixare din oțel neîndepărtate contează. Profilurile mixte din familii diferite de aliaje, sau cele cu accesorii din oțel, cad într-o categorie inferioară, deoarece elementele de aliere trebuie gestionate la topire.",
+            "Aluminiul turnat — blocuri motoare, carcase de cutii de viteze, jante — este o altă familie de aliaje și trebuie ținut separat de aliajele deformate. Amestecul turnat cu deformat este greșeala care costă cel mai mult la recepție, pentru că o topitorie care cumpără pentru o aplicație nu poate folosi cealaltă, iar lotul amestecat se prețuiește la valoarea categoriei mai mici.",
+          ],
+        },
+        {
+          heading: "Strunjiri, șpan și aluminiu mărunțit",
+          body: [
+            "Strunjirile și șpanul de aluminiu sunt materiale cu densitate mai mică și suprafață specifică mare, ceea ce înseamnă mai multă oxidare și mai mult lichid de răcire sau ulei de tăiere prins. Se cântăresc cu deduceri pentru umiditate și contaminare și merg la topitorii secundare care lucrează specific cu șpan, nu la cele care retopesc material compact.",
+            "Aluminiul mărunțit — din caroserii auto, procesare în flux mixt — este categoria cea mai variabilă, deoarece compoziția aliajelor este necunoscută până la spectrometrie. Dacă poți ține familiile de aliaje identificabile separate înainte de tocător, acel pas merită luat. Odată intrat la tocător, amestecul de aliaje este fixat și la fel este și plafonul de preț.",
+          ],
+        },
+        {
+          heading: "Folie, doze și aluminiu mic-format mixt",
+          body: [
+            "Folia de aluminiu și ambalajele — tăvi alimentare, capace, recipiente cu pereți subțiri — reprezintă o categorie distinctă, deoarece raportul mare suprafață/masă și prezența frecventă a reziduurilor alimentare, lacurilor și laminatelor din hârtie sau plastic cer o cale de procesare diferită față de materialul structural. Ține-le separate de profile și piese turnate.",
+            "Dozele de băuturi, dacă sunt curate și necontaminate, sunt o fracție valorificabilă — dar pentru un generator industrial volumele sunt de obicei mici. Întrebarea practică este dacă ajung într-un container separat sau într-un lot mixt unde sunt o fracție minoră și tratate ca atare.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Aluminiul se reciclează la infinit, iar reciclarea lui economisește aproximativ 95% din energia necesară topiturii primare.",
+        "Separarea aliajelor deformate (profile, tablă) de aliajele turnate (piese motor, jante) este cel mai impactant pas de sortare.",
+        "Strunjirile și șpanul suportă deduceri pentru umiditate și lichide de răcire; menținerea lor uscate și separate de profiluri curate păstrează prețul.",
+      ],
+      faq: [
+        {
+          question:
+            "Afectează anodizarea sau vopseaua profilurilor de aluminiu prețul?",
+          answer:
+            "Tratamentele de suprafață ard sau sunt gestionate în procesul de rafinare, deci contează mai puțin decât compoziția aliajului. Factorul mai important este îndepărtarea elementelor de fixare din oțel și menținerea profilurilor din aceeași familie de aliaje împreună.",
+        },
+        {
+          question:
+            "Pot amesteca cablul de aluminiu cu cel de cupru în același container?",
+          answer:
+            "Nu. Cablul de aluminiu și cel de cupru sunt categorii separate, prețuite față de cotații de referință diferite. Amestecul lor înseamnă că ambele fracții sunt plătite la cea mai mică dintre cele două valori, iar costul sortării se scade din preț.",
+        },
+        {
+          question:
+            "Cum se stabilește prețul pentru strunjirile de aluminiu?",
+          answer:
+            "Pornind de la referința LME pentru clasa de aliaj relevantă, minus deducerile pentru umiditate, contaminare cu lichid de răcire, fines (așchii foarte mici care se oxidează rapid) și procesare. Strunjirile curate și uscate dintr-un aliaj cunoscut se plătesc semnificativ mai bine decât un amestec de șpan umed sau înmuiat în ulei.",
+        },
+      ],
+    },
   },
 } as const;
