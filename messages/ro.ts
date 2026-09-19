@@ -35,6 +35,14 @@ export const ro = {
       description:
         "Colectare deșeuri, valorificare, fier vechi, procesare cabluri, deșeuri periculoase și transport cu containere, pentru companii din toată România.",
     },
+    reviews: {
+      title: "Recenzii și certificări",
+      description: "Păreri de la parteneri și certificările Ecoplast Hart.",
+    },
+    howItWorks: {
+      title: "Cum funcționează colectarea deșeurilor",
+      description: "Procesul de preluare, sortare și trasabilitate documentară.",
+    },
   },
 
   company: {
@@ -65,6 +73,8 @@ export const ro = {
     privacy: "Politica de confidențialitate",
     cookies: "Politica de cookie-uri",
     siteMap: "Harta site-ului",
+    reviews: "Recenzii",
+    howItWorks: "Cum funcționează",
     cta: "Solicită o ofertă",
     openMenu: "Deschide meniul",
     closeMenu: "Închide meniul",
@@ -877,6 +887,48 @@ export const ro = {
         cta: "Vezi politica de confidențialitate",
       },
     },
+  },
+
+  reviews: {
+    hero: {
+      title: "Recenzii și Certificări",
+      subtitle: "Un partener de încredere pentru companiile din România.",
+    },
+    testimonials: [
+      {
+        quote: "Ecoplast Hart ne-a ajutat să eficientizăm complet managementul deșeurilor din fabrică.",
+        author: "Director Producție, Automotive",
+      },
+      {
+        quote: "Trasabilitate completă și promptitudine la ridicarea containerelor.",
+        author: "Manager Logistică",
+      },
+    ],
+  },
+
+  howItWorks: {
+    hero: {
+      title: "Cum funcționează procesul nostru",
+      subtitle: "Simplificăm managementul deșeurilor de la prima vizită până la emiterea certificatelor.",
+    },
+    steps: [
+      {
+        title: "1. Audit și Ofertare",
+        desc: "Evaluăm fluxurile de deșeuri și dimensionăm necesarul de containere.",
+      },
+      {
+        title: "2. Colectare și Transport",
+        desc: "Preluăm deșeurile cu flota noastră autorizată la termenele stabilite.",
+      },
+      {
+        title: "3. Sortare și Procesare",
+        desc: "Deșeurile ajung în stația noastră de la Deva unde sunt separate și procesate.",
+      },
+      {
+        title: "4. Trasabilitate",
+        desc: "Oferim documentația completă pentru raportările de mediu.",
+      },
+    ],
   },
 
   /** Article feed and long-form copy — see `messages/articles-ro.ts`. */

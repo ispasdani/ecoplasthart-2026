@@ -165,6 +165,8 @@ export const pathnames = {
   },
   "/cookie-policy": { ro: "/politica-cookie", en: "/cookie-policy" },
   "/site-map": { ro: "/harta-site", en: "/site-map" },
+  "/reviews": { ro: "/recenzii", en: "/reviews" },
+  "/how-it-works": { ro: "/cum-functioneaza", en: "/how-it-works" },
 } as const satisfies Record<string, Record<Locale, string>>;
 
 export type PathnameKey = keyof typeof pathnames;

@@ -29,6 +29,14 @@ export const en: Messages = {
       description:
         "Waste collection, recovery and recycling, scrap metal, cable processing, hazardous waste and container transport. Services for businesses across Romania.",
     },
+    reviews: {
+      title: "Reviews & Certifications",
+      description: "Partner testimonials and Ecoplast Hart certifications.",
+    },
+    howItWorks: {
+      title: "How waste collection works",
+      description: "The process of collection, sorting and full document traceability.",
+    },
   },
 
   company: {
@@ -58,6 +66,8 @@ export const en: Messages = {
     privacy: "Privacy policy",
     cookies: "Cookie policy",
     siteMap: "Site map",
+    reviews: "Reviews",
+    howItWorks: "How it works",
     cta: "Request a quote",
     openMenu: "Open menu",
     closeMenu: "Close menu",
@@ -843,6 +853,48 @@ export const en: Messages = {
         cta: "Read the privacy policy",
       },
     },
+  },
+
+  reviews: {
+    hero: {
+      title: "Reviews & Certifications",
+      subtitle: "A trusted partner for companies across Romania.",
+    },
+    testimonials: [
+      {
+        quote: "Ecoplast Hart helped us completely streamline waste management in our factory.",
+        author: "Production Director, Automotive",
+      },
+      {
+        quote: "Full traceability and promptness in picking up containers.",
+        author: "Logistics Manager",
+      },
+    ],
+  },
+
+  howItWorks: {
+    hero: {
+      title: "How our process works",
+      subtitle: "We simplify waste management from the first visit to issuing the certificates.",
+    },
+    steps: [
+      {
+        title: "1. Audit and Quote",
+        desc: "We assess your waste streams and size the required containers.",
+      },
+      {
+        title: "2. Collection and Transport",
+        desc: "We pick up the waste with our authorized fleet at the agreed deadlines.",
+      },
+      {
+        title: "3. Sorting and Processing",
+        desc: "The waste arrives at our Deva facility where it is separated and processed.",
+      },
+      {
+        title: "4. Traceability",
+        desc: "We provide complete documentation for environmental reporting.",
+      },
+    ],
   },
 
   articles: articlesEn,
