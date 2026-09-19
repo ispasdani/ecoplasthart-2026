@@ -29,6 +29,7 @@ const SIDEBAR_LINKS = [
   { href: "/dashboard", label: "Prezentare generală" },
   { href: "/dashboard/content", label: "Conținut site" },
   { href: "/dashboard/media", label: "Bibliotecă media" },
+  { href: "/dashboard/messages", label: "Mesaje" },
   { href: "/dashboard/team", label: "Echipă" },
 ];
 

@@ -5,6 +5,7 @@ import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { PageHero } from "@/components/marketing/page-hero";
 import { ButtonLink, IconCircle } from "@/components/ui/button";
 import { Container, Section } from "@/components/ui/layout";
+import { ContactForm } from "./_components/contact-form";
 import { MediaTile } from "@/components/ui/media";
 import { Reveal, RevealItem, Stagger } from "@/components/ui/reveal";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -100,19 +101,12 @@ export default async function ContactPage({
                 label={t.phoneLabel}
               >
                 <div className="space-y-1">
-                  {[
-                    company.phonePrimary,
-                    company.phoneSecondary,
-                    company.phoneTertiary,
-                  ].map((phone) => (
-                    <a
-                      key={phone}
-                      href={tel(phone)}
-                      className="block text-[0.9375rem] font-medium text-ink transition-colors hover:text-brand"
-                    >
-                      {phone}
-                    </a>
-                  ))}
+                  <a
+                    href={tel(company.phonePrimary)}
+                    className="block text-[0.9375rem] font-medium text-ink transition-colors hover:text-brand"
+                  >
+                    {company.phonePrimary}
+                  </a>
                 </div>
               </ContactCard>
             </RevealItem>
@@ -138,13 +132,7 @@ export default async function ContactPage({
         <Container>
           <div className="grid gap-8 lg:grid-cols-12 lg:gap-12">
             <Reveal className="lg:col-span-6">
-              <MediaTile
-                icon={MapPin}
-                variant={1}
-                overlay={false}
-                sizes="(min-width: 1024px) 45vw, 100vw"
-                className="h-[16rem] rounded-2xl sm:h-[22rem] lg:h-full lg:min-h-[24rem]"
-              />
+              <ContactForm />
             </Reveal>
 
             <div className="space-y-8 lg:col-span-6">

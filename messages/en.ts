@@ -35,9 +35,7 @@ export const en: Messages = {
     legalName: "Ecoplast Hart SRL",
     shortName: "Ecoplast Hart",
     email: "ecoplast_hart@yahoo.com",
-    phonePrimary: "+40 746 152 318",
-    phoneSecondary: "+40 254 746 515",
-    phoneTertiary: "+40 254 236 228",
+    phonePrimary: "+40 740 072 256",
     addressOperational:
       "Șos. Hunedoarei nr. 13, Sat Cristur, Deva, Hunedoara county",
     addressLegal:
