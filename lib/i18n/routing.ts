@@ -150,6 +150,14 @@ export const pathnames = {
     ro: "/articole/reciclarea-deseurilor-de-aluminiu",
     en: "/articles/aluminium-scrap-recycling",
   },
+  "/articles/weee-recycling-guide-for-companies": {
+    ro: "/articole/ghid-reciclare-deee-pentru-companii",
+    en: "/articles/weee-recycling-guide-for-companies",
+  },
+  "/articles/industrial-plastic-waste-recycling": {
+    ro: "/articole/reciclarea-deseurilor-de-plastic-industrial",
+    en: "/articles/industrial-plastic-waste-recycling",
+  },
   "/contact": { ro: "/contact", en: "/contact" },
   "/privacy-policy": {
     ro: "/politica-de-confidentialitate",
@@ -211,6 +219,8 @@ export const articleKeys = [
   "/articles/hazardous-waste-obligations",
   "/articles/packaging-waste-recycling-obligations",
   "/articles/aluminium-scrap-recycling",
+  "/articles/weee-recycling-guide-for-companies",
+  "/articles/industrial-plastic-waste-recycling",
 ] as const satisfies readonly PathnameKey[];
 
 export type ArticleKey = (typeof articleKeys)[number];

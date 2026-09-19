@@ -504,5 +504,103 @@ export const articlesRo = {
         },
       ],
     },
+    "weee-recycling-guide-for-companies": {
+      metaTitle: "Ghid de reciclare DEEE pentru companii",
+      metaDescription:
+        "Cum trebuie să gestioneze firmele Deșeurile de Echipamente Electrice și Electronice (DEEE), cerințele legale și practicile sigure de reciclare.",
+      title: "Reciclarea DEEE: Ghid complet pentru companii",
+      excerpt:
+        "Casarea corectă a echipamentelor IT și electronicelor nu este doar o opțiune ecologică, ci o obligație legală. Iată cum se gestionează corect DEEE-urile.",
+      lead: "Orice modernizare a biroului sau înlocuire de echipamente generează Deșeuri de Echipamente Electrice și Electronice (DEEE). Gestionarea corectă a acestui flux asigură securitatea datelor, conformitatea de mediu și recuperarea materialelor. Află care sunt obligațiile tale și cum să colaborezi cu un colector autorizat.",
+      sections: [
+        {
+          heading: "Identificarea DEEE-urilor în compania ta",
+          body: [
+            "Calculatoarele, monitoarele, serverele, dar și electrocasnicele din chicinetă sau unele scule electrice intră în categoria DEEE. Acestea conțin atât substanțe periculoase (plumb, mercur, agenți de ignifugare), cât și materiale valoroase (aur, cupru, aluminiu).",
+            "Recunoașterea corectă a echipamentelor care reprezintă DEEE este primul pas pentru a te asigura că nu ajung în deșeurile municipale, fapt care este și ilegal, și dăunător mediului.",
+          ],
+        },
+        {
+          heading: "Obligații legale și trasabilitate",
+          body: [
+            "Conform legislației, companiile trebuie să predea DEEE-urile exclusiv către operatori autorizați pentru colectare și tratare. Eliminarea acestora prin canale neautorizate sau la groapa de gunoi poate atrage amenzi semnificative din partea Gărzii de Mediu.",
+            "La predarea echipamentelor, asigură-te că primești documentația legală necesară, cum ar fi formularul de încărcare-descărcare sau anexa de transport, pentru a dovedi trasabilitatea în cazul unui control.",
+          ],
+        },
+        {
+          heading: "Securitatea datelor la casarea IT",
+          body: [
+            "Înainte de reciclarea echipamentelor IT, securitatea datelor este prioritară. Asigură-te că toate mediile de stocare (HDD, SSD) sunt șterse ireversibil sau distruse fizic.",
+            "Un partener de reciclare profesionist oferă deseori servicii de distrugere securizată și eliberează un certificat de distrugere, oferindu-ți siguranța că datele sensibile ale companiei nu vor fi compromise.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "DEEE-urile trebuie colectate și predate separat de restul deșeurilor.",
+        "Colaborează exclusiv cu operatori autorizați pentru gestionarea deșeurilor electronice.",
+        "Asigură-te că datele sunt șterse în siguranță înainte de predarea echipamentelor IT.",
+      ],
+      faq: [
+        {
+          question: "Pot arunca electronicele vechi la gunoiul menajer?",
+          answer:
+            "Nu. Este interzis prin lege și poluează grav mediul, deoarece electronicele conțin metale grele și substanțe toxice care ajung în sol și în pânza freatică.",
+        },
+        {
+          question: "Primesc un document justificativ pentru casare?",
+          answer:
+            "Da. Un operator autorizat îți va elibera formularul de încărcare-descărcare conform HG 1061/2008, care este dovada legală a predării corecte a deșeurilor.",
+        },
+      ],
+    },
+    "industrial-plastic-waste-recycling": {
+      metaTitle: "Reciclarea deșeurilor de plastic industrial",
+      metaDescription:
+        "Cum pot companiile de producție să sorteze și să recicleze masele plastice, tipuri de polimeri și beneficiile sortării corecte.",
+      title: "Deșeurile de plastic industrial: Strategii de sortare și reciclare",
+      excerpt:
+        "Nu toate plasticele sunt la fel. Află cum sortarea la sursă a deșeurilor din plastic crește valoarea de reciclare și scade costurile de eliminare.",
+      lead: "Procesele de producție și ambalare generează cantități semnificative de deșeuri din plastic. Totuși, plasticul amestecat are o valoare de piață redusă, în timp ce polimerii curați și sortați (precum PE, PP sau PET) sunt foarte căutați. Iată cum să îți organizezi fluxurile de plastic pentru o valorificare maximă.",
+      sections: [
+        {
+          heading: "Importanța sortării la sursă",
+          body: [
+            "Amestecarea diferitelor tipuri de plastice face reciclarea dificilă și costisitoare. Când polimerii sunt amestecați, valoarea lor scade drastic, existând riscul să fie direcționați spre incinerare sau depozitare în loc de reciclare.",
+            "Implementarea unui sistem clar de sortare la punctul de generare — asigurând pubele sau containere separate pentru fiecare tip de polimer — garantează că materialul rămâne curat și ușor reciclabil.",
+          ],
+        },
+        {
+          heading: "Mase plastice industriale comune: PE, PP și PET",
+          body: [
+            "Folia de polietilenă (PE), lăzile din polipropilenă (PP) și flacoanele PET sunt printre cele mai comune materiale plastice industriale. Fiecare are un proces specific de reciclare și o valoare distinctă pe piață.",
+            "Păstrarea foliei transparente de PE separat de cea colorată, precum și asigurarea că recipientele din PP nu conțin reziduuri majore de produs, sunt pași simpli care cresc semnificativ valoarea de piață a deșeului.",
+          ],
+        },
+        {
+          heading: "Balotarea și optimizarea logisticii",
+          body: [
+            "Transportul plasticului vrac înseamnă, în mare parte, transportul aerului. Deoarece deșeurile de plastic au o densitate redusă, logistica poate deveni rapid cel mai mare cost în procesul de reciclare.",
+            "Utilizarea unei prese de balotat la punctul de lucru reduce costurile logistice prin compactarea deșeurilor în baloți denși, optimizând astfel spațiul în camioane și reducând numărul curselor necesare.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Sortează deșeurile de plastic pe tipuri de polimeri pentru a le menține valoarea.",
+        "Evită contaminarea materialelor plastice cu uleiuri sau alte substanțe periculoase.",
+        "Balotarea plasticului direct la punctul de lucru reduce drastic costurile de transport.",
+      ],
+      faq: [
+        {
+          question: "Pot fi reciclate toate tipurile de plastic industrial?",
+          answer:
+            "Majoritatea termoplasticelor pot fi reciclate, cu condiția să fie curate și sortate pe tipuri. Materialele compozite, plasticele multistrat sau cele puternic contaminate sunt mult mai greu de reciclat.",
+        },
+        {
+          question: "Am nevoie de o presă de balotat pentru deșeurile din plastic?",
+          answer:
+            "Este extrem de recomandată dacă generați volume mari. O presă de balotat reduce frecvența transporturilor, eliberează spațiu și face deșeurile mult mai atractive pentru reciclatori.",
+        },
+      ],
+    },
   },
 } as const;

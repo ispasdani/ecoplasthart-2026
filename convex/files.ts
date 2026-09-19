@@ -66,7 +66,9 @@ export const updateFile = mutation({
 
     await ctx.db.patch(args.fileId, {
       ...(args.title !== undefined ? { title: args.title } : {}),
-      ...(args.description !== undefined ? { description: args.description } : {}),
+      ...(args.description !== undefined
+        ? { description: args.description }
+        : {}),
       ...(args.category !== undefined ? { category: args.category } : {}),
     });
   },

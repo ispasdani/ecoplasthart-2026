@@ -497,5 +497,103 @@ export const articlesEn = {
         },
       ],
     },
+    "weee-recycling-guide-for-companies": {
+      metaTitle: "WEEE Recycling Guide for Companies",
+      metaDescription:
+        "How businesses should manage Waste Electrical and Electronic Equipment (WEEE), compliance requirements, and safe recycling practices.",
+      title: "WEEE Recycling: A Complete Guide for Companies",
+      excerpt:
+        "Proper disposal of IT equipment and electronics is not just an environmental choice—it's a legal obligation. Here is how to handle WEEE correctly.",
+      lead: "Every office upgrade or equipment replacement generates Waste Electrical and Electronic Equipment (WEEE). Managing this waste stream correctly ensures data security, environmental compliance, and material recovery. Learn what your obligations are and how to partner with a certified collector.",
+      sections: [
+        {
+          heading: "Identifying WEEE in your business",
+          body: [
+            "Computers, monitors, servers, but also breakroom appliances, lighting equipment, and even some tools fall under the WEEE category. They contain hazardous substances like lead, mercury, and flame retardants, as well as valuable materials like gold, copper, and aluminum.",
+            "Recognizing which items are considered WEEE is the first step in ensuring they don't end up in general waste streams, which is both illegal and harmful to the environment.",
+          ],
+        },
+        {
+          heading: "Legal obligations and compliance",
+          body: [
+            "Companies must ensure WEEE is handed over only to authorized operators for collection, treatment, and recycling. Disposing of WEEE through unauthorized channels can result in significant fines and legal repercussions.",
+            "When handing over WEEE, ensure you receive the appropriate legal documentation, such as the loading-unloading form or the consignment note, to prove compliance during any environmental audit.",
+          ],
+        },
+        {
+          heading: "Data security and physical destruction",
+          body: [
+            "Before recycling IT equipment, consider data security. Ensure all storage media (hard drives, SSDs) are securely wiped or physically destroyed.",
+            "A professional recycling partner can often provide secure destruction services and issue a certificate of destruction, giving you peace of mind that sensitive company data will not be compromised.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "WEEE must be collected separately from general waste.",
+        "Only work with certified operators for e-waste.",
+        "Ensure data is wiped before handing over IT equipment.",
+      ],
+      faq: [
+        {
+          question: "Can I throw old electronics in the regular trash?",
+          answer:
+            "No, it's illegal and harmful to the environment. Electronics contain toxic substances that can leach into soil and water if landfilled.",
+        },
+        {
+          question: "Do I get a certificate of destruction?",
+          answer:
+            "Yes, a certified partner will provide the necessary paperwork, which serves as proof that the equipment was disposed of legally and responsibly.",
+        },
+      ],
+    },
+    "industrial-plastic-waste-recycling": {
+      metaTitle: "Industrial Plastic Waste Recycling",
+      metaDescription:
+        "How manufacturing companies can sort and recycle industrial plastics, types of recoverable polymers, and the benefits of proper sorting.",
+      title: "Industrial Plastic Waste: Sorting and Recycling Strategies",
+      excerpt:
+        "Not all plastics are the same. Discover how sorting industrial plastic waste at the source increases its recycling value and lowers your disposal costs.",
+      lead: "Manufacturing and packaging processes generate significant amounts of plastic waste. However, mixed plastic has little to no market value, whereas clean, sorted polymers (like PE, PP, or PET) are highly sought after. Here is how to organize your plastic streams for maximum recovery.",
+      sections: [
+        {
+          heading: "The importance of sorting at the source",
+          body: [
+            "Mixing different types of plastics makes recycling difficult and expensive. When plastics are mixed, their value drops drastically, and they may end up being incinerated or landfilled instead of recycled.",
+            "Implementing a clear sorting system at the point of generation—providing separate bins for different polymer types—ensures the material remains clean and highly recyclable.",
+          ],
+        },
+        {
+          heading: "Common industrial plastics: PE, PP, and PET",
+          body: [
+            "Polyethylene (PE) foils, Polypropylene (PP) crates, and PET bottles are among the most common industrial plastics. Each has specific recycling processes and distinct market values.",
+            "Keeping clear PE foil separate from colored foil, and ensuring PP containers are free of significant product residue, are simple steps that significantly increase the material's marketability.",
+          ],
+        },
+        {
+          heading: "Baling and logistics",
+          body: [
+            "Transporting unbaled plastic is mostly transporting air. Because plastic waste is low-density, logistics can quickly become the highest cost in the recycling process.",
+            "Using a baler on-site reduces logistical costs by compacting the waste into dense bales, which optimizes truck space and reduces the number of collections needed.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Sort plastic waste by polymer type to retain its value.",
+        "Avoid contamination with oils or hazardous substances.",
+        "Baling plastics on-site drastically reduces transport costs.",
+      ],
+      faq: [
+        {
+          question: "Can all types of industrial plastic be recycled?",
+          answer:
+            "Most thermoplastics can be recycled, provided they are clean and sorted by type. Composite materials or heavily contaminated plastics are much harder to recycle.",
+        },
+        {
+          question: "Do I need a baler for my plastic waste?",
+          answer:
+            "It is highly recommended if you generate large volumes. A baler cuts down on transport frequency and makes your plastic waste much more attractive to recyclers.",
+        },
+      ],
+    },
   },
 } as const;

@@ -84,6 +84,18 @@ export const ARTICLE_FACTS: Record<ArticleSlug, ArticleFacts> = {
     updatedAt: "2026-09-01",
     readMinutes: 7,
   },
+  "weee-recycling-guide-for-companies": {
+    topic: "guides",
+    publishedAt: "2026-09-19",
+    updatedAt: "2026-09-19",
+    readMinutes: 6,
+  },
+  "industrial-plastic-waste-recycling": {
+    topic: "recycling",
+    publishedAt: "2026-09-18",
+    updatedAt: "2026-09-18",
+    readMinutes: 7,
+  },
 };
 
 /** One article, resolved for a locale: facts + copy + localized href. */

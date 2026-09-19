@@ -77,6 +77,8 @@ export const articleIcons: Record<ArticleSlug, LucideIcon> = {
   "hazardous-waste-obligations": Fuel,
   "packaging-waste-recycling-obligations": Package,
   "aluminium-scrap-recycling": Recycle,
+  "weee-recycling-guide-for-companies": BatteryCharging,
+  "industrial-plastic-waste-recycling": Container,
 };
 
 /** Matches the order of `home.industries.items` in the dictionaries. */
