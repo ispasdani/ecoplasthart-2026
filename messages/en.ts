@@ -615,6 +615,25 @@ export const en: Messages = {
     hoursSaturday: "Saturday: 08:00 – 13:00",
     hoursSunday: "Sunday: closed",
     directionsCta: "Open in Google Maps",
+    form: {
+      heading: "Send us a message",
+      firstName: "First name",
+      lastName: "Last name",
+      email: "Email",
+      phone: "Phone",
+      message: "Message",
+      contactHint: "Please enter either an email address or a phone number.",
+      submit: "Send message",
+      submitting: "Sending...",
+      successHeading: "Your message has been sent!",
+      successBody:
+        "Thank you for getting in touch. We'll get back to you as soon as possible.",
+      genericError: "Something went wrong. Please try again.",
+      privacyNotice:
+        "We use the details in this form only to reply to you and keep them for 12 months. See our ",
+      privacyLink: "privacy policy",
+      privacyNoticeEnd: " for details.",
+    },
     metaTitle: "Contact",
     metaDescription:
       "Contact Ecoplast Hart SRL: phone, email and our site in Sat Cristur, Deva, Hunedoara county. Request a quote for waste collection.",
@@ -622,7 +641,7 @@ export const en: Messages = {
 
   legal: {
     updatedLabel: "Last updated",
-    updatedDate: "5 September 2026",
+    updatedDate: "28 September 2026",
     tocHeading: "Contents",
 
     privacy: {
@@ -655,9 +674,10 @@ export const en: Messages = {
         {
           heading: "What data we collect",
           paragraphs: [
-            "This site contains no forms and does not ask you to create an account. Data reaches us in two ways:",
+            "This site does not ask you to create an account. Data reaches us in three ways:",
           ],
           bullets: [
+            "Data you enter in the contact form: first name, last name, email address and/or phone number, and the content of your message. Filling in the form is voluntary; without an email address or phone number we cannot get back to you.",
             "Data you send us directly, when you email or call us: your name, email address, phone number, the company you represent and any other information you choose to include in your message.",
             "Technical data generated automatically when you visit the site: IP address, device and browser type, referring page, pages visited and time of access. This is collected by the infrastructure hosting the site and by the traffic analytics tool.",
           ],
@@ -670,7 +690,7 @@ export const en: Messages = {
             "We process data solely for the purposes below, each with its legal basis under Article 6(1) GDPR:",
           ],
           bullets: [
-            "To answer your enquiry and send you a quote — basis: steps taken at your request prior to entering into a contract, point (b).",
+            "To answer your enquiry, including those sent through the contact form, and send you a quote — basis: steps taken at your request prior to entering into a contract, point (b), or our legitimate interest in replying to messages we receive, point (f).",
             "To perform the contract and issue waste transport and traceability documents — basis: performance of a contract, point (b).",
             "To meet the tax, accounting and waste-reporting obligations imposed on us by law — basis: legal obligation, point (c).",
             "To keep the site working and secure, and to understand in aggregate how it is used — basis: our legitimate interest in operating and improving the site, point (f).",
@@ -687,7 +707,7 @@ export const en: Messages = {
           bullets: [
             "Vercel Inc. — website hosting and traffic analytics.",
             "Clerk, Inc. — user authentication for the site's private administration area.",
-            "Convex, Inc. — storage of the content and documents published on the site.",
+            "Convex, Inc. — storage of the content and documents published on the site, and of messages sent through the contact form.",
           ],
           footnote:
             "These suppliers are established in the United States. Transfers outside the European Economic Area are carried out on the basis of the Standard Contractual Clauses adopted by the European Commission and, where applicable, the EU–U.S. Data Privacy Framework.",
@@ -695,6 +715,7 @@ export const en: Messages = {
         {
           heading: "How long we keep data",
           paragraphs: [
+            "Messages sent through the contact form are kept for no more than 12 months from receipt, after which they are deleted. If the conversation continues by email or phone, that correspondence follows the rule below.",
             "We keep commercial correspondence for the duration of the discussions and, where these lead to a working relationship, for the duration of that relationship.",
             "Accounting records and waste-management records are kept for the periods required by the applicable legislation, which generally range between 3 and 10 years depending on the type of document.",
             "Technical traffic data and aggregate statistics are kept for no more than 24 months, after which they are deleted or irreversibly anonymised.",
@@ -801,7 +822,7 @@ export const en: Messages = {
       inventoryIntro:
         "The table below lists the cookies and similar technologies that may be set in your browser when you visit this site.",
       inventoryNote:
-        "All of them are set by our authentication provider, Clerk, whose script is loaded across the whole site, including the public pages, even though the administration area is used only by our internal team. These cookies are not used for advertising and do not build a profile of your browsing behaviour.",
+        "All of them are set by our authentication provider, Clerk, and only in the private administration area, which is used exclusively by our internal team. The public pages of this site set no cookies and store nothing in your browser. These cookies are not used for advertising and do not build a profile of your browsing behaviour.",
       trailingSections: [
         {
           heading: "Traffic analytics",

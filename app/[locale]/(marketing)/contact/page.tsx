@@ -132,7 +132,10 @@ export default async function ContactPage({
         <Container>
           <div className="grid gap-8 lg:grid-cols-12 lg:gap-12">
             <Reveal className="lg:col-span-6">
-              <ContactForm />
+              <ContactForm
+                t={t.form}
+                privacyHref={localizedPath("/privacy-policy", locale)}
+              />
             </Reveal>
 
             <div className="space-y-8 lg:col-span-6">

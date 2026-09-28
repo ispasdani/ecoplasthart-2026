@@ -1,13 +1,21 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { Button } from "@/components/ui/button";
+import type { Messages } from "@/messages/ro";
 
-export function ContactForm() {
+export function ContactForm({
+  t,
+  privacyHref,
+}: {
+  t: Messages["contact"]["form"];
+  privacyHref: string;
+}) {
   const submitMessage = useMutation(api.messages.submit);
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -25,7 +33,7 @@ export function ContactForm() {
     const message = formData.get("message") as string;
 
     if (!email && !phone) {
-      setError("Te rugăm să introduci fie adresa de email, fie numărul de telefon.");
+      setError(t.contactHint);
       setIsSubmitting(false);
       return;
     }
@@ -39,8 +47,10 @@ export function ContactForm() {
         message,
       });
       setIsSuccess(true);
-    } catch (err: any) {
-      setError(err.message || "A apărut o eroare. Vă rugăm să încercați din nou.");
+    } catch {
+      // Server errors are Romanian-only and wrapped in Convex request
+      // metadata; the only one a visitor can trigger is caught above.
+      setError(t.genericError);
     } finally {
       setIsSubmitting(false);
     }
@@ -49,9 +59,9 @@ export function ContactForm() {
   if (isSuccess) {
     return (
       <div className="rounded-2xl border border-hairline bg-canvas p-6 sm:p-8 text-center">
-        <h3 className="text-xl font-semibold text-ink">Mesajul a fost trimis!</h3>
+        <h3 className="text-xl font-semibold text-ink">{t.successHeading}</h3>
         <p className="mt-3 text-[0.9375rem] leading-relaxed text-slate">
-          Îți mulțumim că ne-ai contactat. Vom reveni cu un răspuns în cel mai scurt timp posibil.
+          {t.successBody}
         </p>
       </div>
     );
@@ -59,8 +69,8 @@ export function ContactForm() {
 
   return (
     <div className="rounded-2xl border border-hairline bg-canvas p-6 sm:p-8">
-      <h2 className="text-xl font-semibold text-ink mb-6">Trimite-ne un mesaj</h2>
-      
+      <h2 className="text-xl font-semibold text-ink mb-6">{t.heading}</h2>
+
       {error && (
         <div className="mb-6 rounded-lg bg-red-50 p-4 text-sm text-red-800">
           {error}
@@ -71,24 +81,26 @@ export function ContactForm() {
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           <div>
             <label htmlFor="firstName" className="block text-sm font-medium text-ink mb-1.5">
-              Prenume *
+              {t.firstName} *
             </label>
             <input
               type="text"
               name="firstName"
               id="firstName"
+              autoComplete="given-name"
               required
               className="w-full rounded-lg border border-hairline bg-white px-4 py-2.5 text-sm outline-none transition-colors focus:border-brand"
             />
           </div>
           <div>
             <label htmlFor="lastName" className="block text-sm font-medium text-ink mb-1.5">
-              Nume *
+              {t.lastName} *
             </label>
             <input
               type="text"
               name="lastName"
               id="lastName"
+              autoComplete="family-name"
               required
               className="w-full rounded-lg border border-hairline bg-white px-4 py-2.5 text-sm outline-none transition-colors focus:border-brand"
             />
@@ -97,32 +109,34 @@ export function ContactForm() {
 
         <div>
           <label htmlFor="email" className="block text-sm font-medium text-ink mb-1.5">
-            Email
+            {t.email}
           </label>
           <input
             type="email"
             name="email"
             id="email"
+            autoComplete="email"
             className="w-full rounded-lg border border-hairline bg-white px-4 py-2.5 text-sm outline-none transition-colors focus:border-brand"
           />
         </div>
 
         <div>
           <label htmlFor="phone" className="block text-sm font-medium text-ink mb-1.5">
-            Telefon
+            {t.phone}
           </label>
           <input
             type="tel"
             name="phone"
             id="phone"
+            autoComplete="tel"
             className="w-full rounded-lg border border-hairline bg-white px-4 py-2.5 text-sm outline-none transition-colors focus:border-brand"
           />
-          <p className="mt-1.5 text-xs text-slate">Te rugăm să introduci fie adresa de email, fie numărul de telefon.</p>
+          <p className="mt-1.5 text-xs text-slate">{t.contactHint}</p>
         </div>
 
         <div>
           <label htmlFor="message" className="block text-sm font-medium text-ink mb-1.5">
-            Mesaj *
+            {t.message} *
           </label>
           <textarea
             name="message"
@@ -134,8 +148,19 @@ export function ContactForm() {
         </div>
 
         <Button type="submit" className="w-full" disabled={isSubmitting}>
-          {isSubmitting ? "Se trimite..." : "Trimite mesajul"}
+          {isSubmitting ? t.submitting : t.submit}
         </Button>
+
+        <p className="text-xs leading-relaxed text-slate">
+          {t.privacyNotice}
+          <Link
+            href={privacyHref}
+            className="font-medium text-ink underline underline-offset-2 hover:text-brand"
+          >
+            {t.privacyLink}
+          </Link>
+          {t.privacyNoticeEnd}
+        </p>
       </form>
     </div>
   );

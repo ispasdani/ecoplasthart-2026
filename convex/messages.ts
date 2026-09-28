@@ -1,5 +1,6 @@
 import { ConvexError, v } from "convex/values";
-import { mutation, query } from "./_generated/server";
+import { internalMutation, mutation, query } from "./_generated/server";
+import { internal } from "./_generated/api";
 import { requireCurrentUser } from "./lib/auth";
 
 export const submit = mutation({
@@ -58,5 +59,33 @@ export const updateMessage = mutation({
       ...(args.status !== undefined ? { status: args.status } : {}),
       ...(args.notes !== undefined ? { notes: args.notes } : {}),
     });
+  },
+});
+
+/**
+ * Contact-form messages are kept for 12 months from receipt — the period
+ * stated in the privacy policy and in the notice under the form. Run by hand
+ * from the Convex dashboard for now (the daily cron in `crons.ts` is
+ * commented out); deletes in batches and reschedules itself if more remain.
+ */
+const RETENTION_MS = 365 * 24 * 60 * 60 * 1000;
+const PURGE_BATCH = 200;
+
+export const purgeExpired = internalMutation({
+  args: {},
+  handler: async (ctx) => {
+    const cutoff = Date.now() - RETENTION_MS;
+    const expired = await ctx.db
+      .query("messages")
+      .withIndex("by_creation_time", (q) => q.lt("_creationTime", cutoff))
+      .take(PURGE_BATCH);
+
+    for (const message of expired) {
+      await ctx.db.delete(message._id);
+    }
+
+    if (expired.length === PURGE_BATCH) {
+      await ctx.scheduler.runAfter(0, internal.messages.purgeExpired, {});
+    }
   },
 });
