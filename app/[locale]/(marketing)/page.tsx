@@ -6,6 +6,7 @@ import { CertificationsTeaser } from "@/components/marketing/sections/certificat
 import { CtaBand } from "@/components/marketing/sections/cta-band";
 import { Hero } from "@/components/marketing/sections/hero";
 import { Industries } from "@/components/marketing/sections/industries";
+import { Presence } from "@/components/marketing/sections/presence";
 import { Process } from "@/components/marketing/sections/process";
 import { ServicesShowcase } from "@/components/marketing/sections/services-showcase";
 import { StatsBand } from "@/components/marketing/sections/stats";
@@ -71,6 +72,7 @@ export default async function HomePage({
         learnMoreLabel={dict.common.learnMore}
       />
       <Process dict={dict} />
+      <Presence dict={dict} />
       <WasteStreams dict={dict} />
       <CertificationsTeaser dict={dict} href={links.certifications.href} />
       <CtaBand dict={dict} contactHref={links.contact.href} />

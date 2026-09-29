@@ -35,15 +35,21 @@ export const ro = {
       description:
         "Colectare deșeuri, valorificare, fier vechi, procesare cabluri, deșeuri periculoase și transport cu containere, pentru companii din toată România.",
     },
+    reviews: {
+      title: "Recenzii și certificări",
+      description: "Păreri de la parteneri și certificările Ecoplast Hart.",
+    },
+    howItWorks: {
+      title: "Cum funcționează colectarea deșeurilor",
+      description: "Procesul de preluare, sortare și trasabilitate documentară.",
+    },
   },
 
   company: {
     legalName: "Ecoplast Hart SRL",
     shortName: "Ecoplast Hart",
     email: "ecoplast_hart@yahoo.com",
-    phonePrimary: "+40 746 152 318",
-    phoneSecondary: "+40 254 746 515",
-    phoneTertiary: "+40 254 236 228",
+    phonePrimary: "+40 740 072 256",
     addressOperational:
       "Șos. Hunedoarei nr. 13, Sat Cristur, Deva, jud. Hunedoara",
     addressLegal:
@@ -67,6 +73,8 @@ export const ro = {
     privacy: "Politica de confidențialitate",
     cookies: "Politica de cookie-uri",
     siteMap: "Harta site-ului",
+    reviews: "Recenzii",
+    howItWorks: "Cum funcționează",
     cta: "Solicită o ofertă",
     openMenu: "Deschide meniul",
     closeMenu: "Închide meniul",
@@ -83,6 +91,11 @@ export const ro = {
     sendEmail: "Trimite un e-mail",
     backToServices: "Înapoi la servicii",
     acceptedMaterials: "Materiale acceptate",
+    countries: {
+      romania: "România",
+      hungary: "Ungaria",
+      moldova: "Republica Moldova",
+    },
     howItWorks: "Cum funcționează",
     downloadFile: "Descarcă",
     viewDocument: "Vezi documentul",
@@ -342,6 +355,12 @@ export const ro = {
           value: "Șos. Hunedoarei nr. 13, Sat Cristur, Deva, jud. Hunedoara",
         },
       ],
+    },
+    presence: {
+      heading: "Unde operăm",
+      intro: "Acoperire globală, impact local: Descoperiți Ecoplast Hart în România, Ungaria și Republica Moldova.",
+      info: "Având sediul central în județul Hunedoara, România, utilizăm propria noastră flotă logistică pentru a colecta, sorta și procesa deșeuri la nivel național. De asemenea, suntem mândri să ne extindem serviciile și parteneriatele în Ungaria și Republica Moldova.",
+      info2: "Angajamentul nostru față de respectarea ierarhiei deșeurilor din UE asigură că, oriunde am opera, oferim același standard de trasabilitate, responsabilitate față de mediu și reciclare reală care ne definește din 2004.",
     },
     certifications: {
       heading: "Certificări",
@@ -620,6 +639,28 @@ export const ro = {
     hoursSaturday: "Sâmbătă: 08:00 – 13:00",
     hoursSunday: "Duminică: închis",
     directionsCta: "Deschide în Google Maps",
+    form: {
+      heading: "Trimite-ne un mesaj",
+      firstName: "Prenume",
+      lastName: "Nume",
+      email: "E-mail",
+      phone: "Telefon",
+      message: "Mesaj",
+      contactHint:
+        "Te rugăm să introduci fie adresa de e-mail, fie numărul de telefon.",
+      submit: "Trimite mesajul",
+      submitting: "Se trimite...",
+      successHeading: "Mesajul a fost trimis!",
+      successBody:
+        "Îți mulțumim că ne-ai contactat. Revenim cu un răspuns în cel mai scurt timp posibil.",
+      genericError: "A apărut o eroare. Te rugăm să încerci din nou.",
+      // Art. 13 GDPR notice at the point of collection. Rendered as
+      // `privacyNotice` + link(`privacyLink`) + `privacyNoticeEnd`.
+      privacyNotice:
+        "Folosim datele din acest formular doar pentru a-ți răspunde și le păstrăm 12 luni. Detalii în ",
+      privacyLink: "politica de confidențialitate",
+      privacyNoticeEnd: ".",
+    },
     metaTitle: "Contact",
     metaDescription:
       "Contactează Ecoplast Hart SRL: telefon, e-mail și punctul de lucru din Sat Cristur, Deva, județul Hunedoara. Solicită o ofertă pentru colectarea deșeurilor.",
@@ -637,7 +678,7 @@ export const ro = {
    */
   legal: {
     updatedLabel: "Ultima actualizare",
-    updatedDate: "5 septembrie 2026",
+    updatedDate: "28 septembrie 2026",
     tocHeading: "Cuprins",
 
     privacy: {
@@ -670,9 +711,10 @@ export const ro = {
         {
           heading: "Ce date colectăm",
           paragraphs: [
-            "Acest site nu conține formulare și nu îți cere să îți creezi un cont. Datele ajung la noi în două moduri:",
+            "Acest site nu îți cere să îți creezi un cont. Datele ajung la noi în trei moduri:",
           ],
           bullets: [
+            "Date pe care le completezi în formularul de contact: prenume, nume, adresă de e-mail și/sau număr de telefon și conținutul mesajului. Completarea formularului este voluntară; fără o adresă de e-mail sau un număr de telefon nu te putem contacta înapoi.",
             "Date pe care ni le transmiți direct, atunci când ne scrii pe e-mail sau ne suni: nume, adresă de e-mail, număr de telefon, denumirea companiei pe care o reprezinți și orice alte informații pe care alegi să le incluzi în mesaj.",
             "Date tehnice generate automat la vizitarea site-ului: adresa IP, tipul dispozitivului și al browserului, pagina de proveniență, paginile vizitate și momentul accesării. Acestea sunt colectate de infrastructura care găzduiește site-ul și de instrumentul de analiză a traficului.",
           ],
@@ -685,7 +727,7 @@ export const ro = {
             "Prelucrăm datele exclusiv pentru scopurile de mai jos, fiecare cu temeiul său legal din art. 6 alin. (1) GDPR:",
           ],
           bullets: [
-            "Pentru a răspunde solicitărilor tale și a-ți transmite o ofertă — temei: demersuri precontractuale efectuate la cererea ta, lit. b).",
+            "Pentru a răspunde solicitărilor tale, inclusiv celor trimise prin formularul de contact, și a-ți transmite o ofertă — temei: demersuri precontractuale efectuate la cererea ta, lit. b), respectiv interesul nostru legitim de a răspunde mesajelor primite, lit. f).",
             "Pentru a derula relația contractuală și a emite documentele de transport și de trasabilitate a deșeurilor — temei: executarea contractului, lit. b).",
             "Pentru a respecta obligațiile fiscale, contabile și de raportare a deșeurilor prevăzute de lege — temei: obligație legală, lit. c).",
             "Pentru a menține site-ul funcțional și sigur și pentru a înțelege, la nivel agregat, cum este folosit — temei: interesul nostru legitim de a opera și îmbunătăți site-ul, lit. f).",
@@ -702,7 +744,7 @@ export const ro = {
           bullets: [
             "Vercel Inc. — găzduirea site-ului și analiza traficului.",
             "Clerk, Inc. — autentificarea utilizatorilor în zona privată de administrare a site-ului.",
-            "Convex, Inc. — stocarea conținutului și a documentelor publicate pe site.",
+            "Convex, Inc. — stocarea conținutului și a documentelor publicate pe site, precum și a mesajelor trimise prin formularul de contact.",
           ],
           footnote:
             "Acești furnizori sunt stabiliți în Statele Unite ale Americii. Transferurile de date în afara Spațiului Economic European se efectuează pe baza clauzelor contractuale standard adoptate de Comisia Europeană și, după caz, a Cadrului transatlantic privind confidențialitatea datelor (EU–U.S. Data Privacy Framework).",
@@ -710,6 +752,7 @@ export const ro = {
         {
           heading: "Cât timp păstrăm datele",
           paragraphs: [
+            "Mesajele trimise prin formularul de contact sunt păstrate cel mult 12 luni de la primire, după care sunt șterse. Dacă discuția continuă pe e-mail sau telefon, corespondența respectivă urmează regula de mai jos.",
             "Păstrăm corespondența comercială pe durata discuțiilor și, dacă acestea se finalizează cu o colaborare, pe durata relației contractuale.",
             "Documentele financiar-contabile și evidențele privind gestiunea deșeurilor sunt păstrate pe termenele impuse de legislația aplicabilă, care în general variază între 3 și 10 ani, în funcție de tipul documentului.",
             "Datele tehnice de trafic și statisticile agregate sunt păstrate cel mult 24 de luni, după care sunt șterse sau anonimizate ireversibil.",
@@ -816,7 +859,7 @@ export const ro = {
       inventoryIntro:
         "Tabelul de mai jos listează cookie-urile și tehnologiile similare care pot fi instalate în browserul tău atunci când vizitezi acest site.",
       inventoryNote:
-        "Toate sunt instalate de furnizorul nostru de autentificare, Clerk, al cărui script este încărcat pe întregul site, inclusiv pe paginile publice, deși zona de administrare este folosită exclusiv de echipa noastră internă. Aceste cookie-uri nu sunt folosite pentru publicitate și nu construiesc un profil al comportamentului tău de navigare.",
+        "Toate sunt instalate de furnizorul nostru de autentificare, Clerk, și doar în zona privată de administrare, folosită exclusiv de echipa noastră internă. Paginile publice ale site-ului nu instalează cookie-uri și nu stochează date în browserul tău. Aceste cookie-uri nu sunt folosite pentru publicitate și nu construiesc un profil al comportamentului tău de navigare.",
       trailingSections: [
         {
           heading: "Analiza traficului",
@@ -868,6 +911,48 @@ export const ro = {
         cta: "Vezi politica de confidențialitate",
       },
     },
+  },
+
+  reviews: {
+    hero: {
+      title: "Recenzii și Certificări",
+      subtitle: "Un partener de încredere pentru companiile din România.",
+    },
+    testimonials: [
+      {
+        quote: "Ecoplast Hart ne-a ajutat să eficientizăm complet managementul deșeurilor din fabrică.",
+        author: "Director Producție, Automotive",
+      },
+      {
+        quote: "Trasabilitate completă și promptitudine la ridicarea containerelor.",
+        author: "Manager Logistică",
+      },
+    ],
+  },
+
+  howItWorks: {
+    hero: {
+      title: "Cum funcționează procesul nostru",
+      subtitle: "Simplificăm managementul deșeurilor de la prima vizită până la emiterea certificatelor.",
+    },
+    steps: [
+      {
+        title: "1. Audit și Ofertare",
+        desc: "Evaluăm fluxurile de deșeuri și dimensionăm necesarul de containere.",
+      },
+      {
+        title: "2. Colectare și Transport",
+        desc: "Preluăm deșeurile cu flota noastră autorizată la termenele stabilite.",
+      },
+      {
+        title: "3. Sortare și Procesare",
+        desc: "Deșeurile ajung în stația noastră de la Deva unde sunt separate și procesate.",
+      },
+      {
+        title: "4. Trasabilitate",
+        desc: "Oferim documentația completă pentru raportările de mediu.",
+      },
+    ],
   },
 
   /** Article feed and long-form copy — see `messages/articles-ro.ts`. */

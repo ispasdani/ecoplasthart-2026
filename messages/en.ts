@@ -29,15 +29,21 @@ export const en: Messages = {
       description:
         "Waste collection, recovery and recycling, scrap metal, cable processing, hazardous waste and container transport. Services for businesses across Romania.",
     },
+    reviews: {
+      title: "Reviews & Certifications",
+      description: "Partner testimonials and Ecoplast Hart certifications.",
+    },
+    howItWorks: {
+      title: "How waste collection works",
+      description: "The process of collection, sorting and full document traceability.",
+    },
   },
 
   company: {
     legalName: "Ecoplast Hart SRL",
     shortName: "Ecoplast Hart",
     email: "ecoplast_hart@yahoo.com",
-    phonePrimary: "+40 746 152 318",
-    phoneSecondary: "+40 254 746 515",
-    phoneTertiary: "+40 254 236 228",
+    phonePrimary: "+40 740 072 256",
     addressOperational:
       "Șos. Hunedoarei nr. 13, Sat Cristur, Deva, Hunedoara county",
     addressLegal:
@@ -60,6 +66,8 @@ export const en: Messages = {
     privacy: "Privacy policy",
     cookies: "Cookie policy",
     siteMap: "Site map",
+    reviews: "Reviews",
+    howItWorks: "How it works",
     cta: "Request a quote",
     openMenu: "Open menu",
     closeMenu: "Close menu",
@@ -76,6 +84,11 @@ export const en: Messages = {
     sendEmail: "Send an email",
     backToServices: "Back to services",
     acceptedMaterials: "Accepted materials",
+    countries: {
+      romania: "Romania",
+      hungary: "Hungary",
+      moldova: "Republic of Moldova",
+    },
     howItWorks: "How it works",
     downloadFile: "Download",
     viewDocument: "View document",
@@ -328,6 +341,12 @@ export const en: Messages = {
           value: "Șos. Hunedoarei nr. 13, Sat Cristur, Deva, Hunedoara county",
         },
       ],
+    },
+    presence: {
+      heading: "Where we operate",
+      intro: "Global Reach, Local Impact: Discover Ecoplast Hart across Romania, Hungary, and the Republic of Moldova.",
+      info: "With our main operations based in Hunedoara county, Romania, we deploy our own logistics fleet to collect, sort, and process waste materials nationally. We are also proud to extend our services and partnerships into Hungary and the Republic of Moldova.",
+      info2: "Our commitment to EU waste-hierarchy compliance ensures that wherever we operate, we deliver the same standard of traceability, environmental responsibility, and genuine recycling that has defined us since 2004.",
     },
     certifications: {
       heading: "Certifications",
@@ -596,6 +615,25 @@ export const en: Messages = {
     hoursSaturday: "Saturday: 08:00 – 13:00",
     hoursSunday: "Sunday: closed",
     directionsCta: "Open in Google Maps",
+    form: {
+      heading: "Send us a message",
+      firstName: "First name",
+      lastName: "Last name",
+      email: "Email",
+      phone: "Phone",
+      message: "Message",
+      contactHint: "Please enter either an email address or a phone number.",
+      submit: "Send message",
+      submitting: "Sending...",
+      successHeading: "Your message has been sent!",
+      successBody:
+        "Thank you for getting in touch. We'll get back to you as soon as possible.",
+      genericError: "Something went wrong. Please try again.",
+      privacyNotice:
+        "We use the details in this form only to reply to you and keep them for 12 months. See our ",
+      privacyLink: "privacy policy",
+      privacyNoticeEnd: " for details.",
+    },
     metaTitle: "Contact",
     metaDescription:
       "Contact Ecoplast Hart SRL: phone, email and our site in Sat Cristur, Deva, Hunedoara county. Request a quote for waste collection.",
@@ -603,7 +641,7 @@ export const en: Messages = {
 
   legal: {
     updatedLabel: "Last updated",
-    updatedDate: "5 September 2026",
+    updatedDate: "28 September 2026",
     tocHeading: "Contents",
 
     privacy: {
@@ -636,9 +674,10 @@ export const en: Messages = {
         {
           heading: "What data we collect",
           paragraphs: [
-            "This site contains no forms and does not ask you to create an account. Data reaches us in two ways:",
+            "This site does not ask you to create an account. Data reaches us in three ways:",
           ],
           bullets: [
+            "Data you enter in the contact form: first name, last name, email address and/or phone number, and the content of your message. Filling in the form is voluntary; without an email address or phone number we cannot get back to you.",
             "Data you send us directly, when you email or call us: your name, email address, phone number, the company you represent and any other information you choose to include in your message.",
             "Technical data generated automatically when you visit the site: IP address, device and browser type, referring page, pages visited and time of access. This is collected by the infrastructure hosting the site and by the traffic analytics tool.",
           ],
@@ -651,7 +690,7 @@ export const en: Messages = {
             "We process data solely for the purposes below, each with its legal basis under Article 6(1) GDPR:",
           ],
           bullets: [
-            "To answer your enquiry and send you a quote — basis: steps taken at your request prior to entering into a contract, point (b).",
+            "To answer your enquiry, including those sent through the contact form, and send you a quote — basis: steps taken at your request prior to entering into a contract, point (b), or our legitimate interest in replying to messages we receive, point (f).",
             "To perform the contract and issue waste transport and traceability documents — basis: performance of a contract, point (b).",
             "To meet the tax, accounting and waste-reporting obligations imposed on us by law — basis: legal obligation, point (c).",
             "To keep the site working and secure, and to understand in aggregate how it is used — basis: our legitimate interest in operating and improving the site, point (f).",
@@ -668,7 +707,7 @@ export const en: Messages = {
           bullets: [
             "Vercel Inc. — website hosting and traffic analytics.",
             "Clerk, Inc. — user authentication for the site's private administration area.",
-            "Convex, Inc. — storage of the content and documents published on the site.",
+            "Convex, Inc. — storage of the content and documents published on the site, and of messages sent through the contact form.",
           ],
           footnote:
             "These suppliers are established in the United States. Transfers outside the European Economic Area are carried out on the basis of the Standard Contractual Clauses adopted by the European Commission and, where applicable, the EU–U.S. Data Privacy Framework.",
@@ -676,6 +715,7 @@ export const en: Messages = {
         {
           heading: "How long we keep data",
           paragraphs: [
+            "Messages sent through the contact form are kept for no more than 12 months from receipt, after which they are deleted. If the conversation continues by email or phone, that correspondence follows the rule below.",
             "We keep commercial correspondence for the duration of the discussions and, where these lead to a working relationship, for the duration of that relationship.",
             "Accounting records and waste-management records are kept for the periods required by the applicable legislation, which generally range between 3 and 10 years depending on the type of document.",
             "Technical traffic data and aggregate statistics are kept for no more than 24 months, after which they are deleted or irreversibly anonymised.",
@@ -782,7 +822,7 @@ export const en: Messages = {
       inventoryIntro:
         "The table below lists the cookies and similar technologies that may be set in your browser when you visit this site.",
       inventoryNote:
-        "All of them are set by our authentication provider, Clerk, whose script is loaded across the whole site, including the public pages, even though the administration area is used only by our internal team. These cookies are not used for advertising and do not build a profile of your browsing behaviour.",
+        "All of them are set by our authentication provider, Clerk, and only in the private administration area, which is used exclusively by our internal team. The public pages of this site set no cookies and store nothing in your browser. These cookies are not used for advertising and do not build a profile of your browsing behaviour.",
       trailingSections: [
         {
           heading: "Traffic analytics",
@@ -834,6 +874,48 @@ export const en: Messages = {
         cta: "Read the privacy policy",
       },
     },
+  },
+
+  reviews: {
+    hero: {
+      title: "Reviews & Certifications",
+      subtitle: "A trusted partner for companies across Romania.",
+    },
+    testimonials: [
+      {
+        quote: "Ecoplast Hart helped us completely streamline waste management in our factory.",
+        author: "Production Director, Automotive",
+      },
+      {
+        quote: "Full traceability and promptness in picking up containers.",
+        author: "Logistics Manager",
+      },
+    ],
+  },
+
+  howItWorks: {
+    hero: {
+      title: "How our process works",
+      subtitle: "We simplify waste management from the first visit to issuing the certificates.",
+    },
+    steps: [
+      {
+        title: "1. Audit and Quote",
+        desc: "We assess your waste streams and size the required containers.",
+      },
+      {
+        title: "2. Collection and Transport",
+        desc: "We pick up the waste with our authorized fleet at the agreed deadlines.",
+      },
+      {
+        title: "3. Sorting and Processing",
+        desc: "The waste arrives at our Deva facility where it is separated and processed.",
+      },
+      {
+        title: "4. Traceability",
+        desc: "We provide complete documentation for environmental reporting.",
+      },
+    ],
   },
 
   articles: articlesEn,

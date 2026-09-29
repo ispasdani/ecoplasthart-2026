@@ -142,6 +142,22 @@ export const pathnames = {
     ro: "/articole/deseuri-periculoase-obligatiile-firmelor",
     en: "/articles/hazardous-waste-obligations",
   },
+  "/articles/packaging-waste-recycling-obligations": {
+    ro: "/articole/obligatii-ambalaje-reciclare",
+    en: "/articles/packaging-waste-recycling-obligations",
+  },
+  "/articles/aluminium-scrap-recycling": {
+    ro: "/articole/reciclarea-deseurilor-de-aluminiu",
+    en: "/articles/aluminium-scrap-recycling",
+  },
+  "/articles/weee-recycling-guide-for-companies": {
+    ro: "/articole/ghid-reciclare-deee-pentru-companii",
+    en: "/articles/weee-recycling-guide-for-companies",
+  },
+  "/articles/industrial-plastic-waste-recycling": {
+    ro: "/articole/reciclarea-deseurilor-de-plastic-industrial",
+    en: "/articles/industrial-plastic-waste-recycling",
+  },
   "/contact": { ro: "/contact", en: "/contact" },
   "/privacy-policy": {
     ro: "/politica-de-confidentialitate",
@@ -149,6 +165,8 @@ export const pathnames = {
   },
   "/cookie-policy": { ro: "/politica-cookie", en: "/cookie-policy" },
   "/site-map": { ro: "/harta-site", en: "/site-map" },
+  "/reviews": { ro: "/recenzii", en: "/reviews" },
+  "/how-it-works": { ro: "/cum-functioneaza", en: "/how-it-works" },
 } as const satisfies Record<string, Record<Locale, string>>;
 
 export type PathnameKey = keyof typeof pathnames;
@@ -201,6 +219,10 @@ export const articleKeys = [
   "/articles/scrap-metal-prices-explained",
   "/articles/cable-recycling-copper-granules",
   "/articles/hazardous-waste-obligations",
+  "/articles/packaging-waste-recycling-obligations",
+  "/articles/aluminium-scrap-recycling",
+  "/articles/weee-recycling-guide-for-companies",
+  "/articles/industrial-plastic-waste-recycling",
 ] as const satisfies readonly PathnameKey[];
 
 export type ArticleKey = (typeof articleKeys)[number];

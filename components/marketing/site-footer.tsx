@@ -68,12 +68,6 @@ export function SiteFooter({
                   >
                     {company.phonePrimary}
                   </a>
-                  <a
-                    href={`tel:${company.phoneSecondary.replace(/\s/g, "")}`}
-                    className="block text-on-dark-muted transition-colors hover:text-brand-mid"
-                  >
-                    {company.phoneSecondary}
-                  </a>
                 </dd>
               </div>
             </dl>

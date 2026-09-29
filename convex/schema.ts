@@ -46,4 +46,19 @@ export default defineSchema({
   })
     .index("by_uploadedBy", ["uploadedBy"])
     .index("by_category", ["category"]),
+
+  messages: defineTable({
+    firstName: v.string(),
+    lastName: v.string(),
+    email: v.optional(v.string()),
+    phone: v.optional(v.string()),
+    message: v.string(),
+    status: v.union(
+      v.literal("unread"),
+      v.literal("read"),
+      v.literal("contacted"),
+      v.literal("archived")
+    ),
+    notes: v.optional(v.string()),
+  }).index("by_status", ["status"]),
 });

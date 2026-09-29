@@ -34,7 +34,7 @@ graph TD
 
     EH -->|registered office| RO_OFF["B-dul Dacia nr. 2, Bl. E5, ap. 1<br/>Municipiul Hunedoara"]
     EH -->|operational site| CRISTUR["Punct de lucru Cristur<br/>Șos. Hunedoarei nr. 13, Sat Cristur, Deva<br/>secondary CUI 35287696 · opened 2015"]
-    EH -->|contact| CT["ecoplast_hart@yahoo.com<br/>+40 746 152 318 · 0254 746515"]
+    EH -->|contact| CT["ecoplast_hart@yahoo.com<br/>+40 740 072 256"]
 
     EH -->|positioning| POS["Collection · Sorting · Recycling<br/>EU waste hierarchy · generator→collector→recovery<br/>self-funded growth · 19+ yrs experience"]
     EH -->|claimed markets| MK["Romania (confirmed)<br/>Hungary · Moldova (website claim only)"]
@@ -92,7 +92,7 @@ graph TD
 | Registered office | B-dul Dacia nr. 2, Bl. E5, et. P, ap. 1, Municipiul Hunedoara, jud. Hunedoara (~331025) |
 | Operational site | Șos. Hunedoarei nr. 13, Sat Cristur, Deva, jud. Hunedoara (work point, secondary CUI 35287696, opened 3 Dec 2015) |
 | Website | https://www.ecoplasthart.com/ (bilingual RO/EN) |
-| Contact | ecoplast_hart@yahoo.com · +40 746 152 318 · 0254 746515 · 0254 236228 |
+| Contact | ecoplast_hart@yahoo.com · +40 740 072 256 |
 
 > Note: "Cristur" is a village that administratively belongs to the **municipality of Deva**
 > (the county seat), roughly between Deva and Hunedoara. The website footer gives the Cristur
@@ -166,7 +166,7 @@ Turnover ≈ **13M RON/year (~€2.5M)**. Figures vary by source and reporting y
 - **Bilingual:** RO/EN toggled via `LanguageSelectorContext`; all copy lives in `/constants/*.tsx`.
 - **Interactive Europe map** (`svgs/EuropeMap`) highlighting Romania (RO), Hungary (HU), Moldova (MD).
 - Metadata still contains the default `"Create Next App"` title (not yet customised).
-- Contact in footer: `ecoplast_hart@yahoo.com`, `+40746152318`, "Sat Cristur, Strada Hunedoarei nr. 13, Jud. Hunedoara".
+- Contact in footer: `ecoplast_hart@yahoo.com`, `+40 740 072 256`, "Sat Cristur, Strada Hunedoarei nr. 13, Jud. Hunedoara".
 
 ---
 

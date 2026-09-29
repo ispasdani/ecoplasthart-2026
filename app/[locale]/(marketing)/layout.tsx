@@ -70,8 +70,10 @@ export default async function MarketingLayout({
         }))}
         companyLinks={[
           { href: links.about.href, label: dict.nav.about },
+          { href: links.howItWorks.href, label: dict.nav.howItWorks },
           { href: links.services.href, label: dict.nav.services },
           { href: links.certifications.href, label: dict.nav.certifications },
+          { href: links.reviews.href, label: dict.nav.reviews },
           { href: links.articles.href, label: dict.nav.articles },
           { href: links.contact.href, label: dict.nav.contact },
         ]}

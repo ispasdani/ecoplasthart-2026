@@ -17,6 +17,10 @@ const SECTIONS = [
     title: "Echipă",
     body: "Vezi cine are cont și stabilește cine are dreptul să publice conținut.",
   },
+  {
+    title: "Mesaje",
+    body: "Vizualizează mesajele trimise de vizitatori prin formularul de contact.",
+  },
 ];
 
 export default function DashboardOverviewPage() {
