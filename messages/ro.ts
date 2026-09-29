@@ -14,14 +14,14 @@ export const ro = {
   meta: {
     siteName: "Ecoplast Hart",
     titleDefault:
-      "Ecoplast Hart — Colectare, sortare și reciclare deșeuri | Deva, Hunedoara",
+      "Ecoplast Hart — Colectare, sortare și reciclare deșeuri | Deva, Hunedoara, România",
     titleTemplate: "%s | Ecoplast Hart",
     description:
       "Colectare, sortare și reciclare deșeuri nepericuloase și periculoase în Hunedoara și toată România. Instalație proprie de cabluri și trasabilitate completă.",
     // Per-page titles. These are plain strings so the parent layout's
     // `%s | Ecoplast Hart` template appends the brand exactly once.
     home: {
-      title: "Colectare, sortare și reciclare deșeuri — Deva, Hunedoara",
+      title: "Colectare, sortare și reciclare deșeuri — Deva, Hunedoara, România",
       description:
         "Colectăm, sortăm și reciclăm deșeuri pentru companii din toată România: fier vechi, plastic, carton, cabluri Al/Cu, uleiuri uzate și DEEE.",
     },

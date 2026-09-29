@@ -10,12 +10,12 @@ export const en: Messages = {
   meta: {
     siteName: "Ecoplast Hart",
     titleDefault:
-      "Ecoplast Hart — Waste Collection, Sorting & Recycling | Deva, Romania",
+      "Ecoplast Hart — Waste Collection, Sorting & Recycling | Deva, Hunedoara, Romania",
     titleTemplate: "%s | Ecoplast Hart",
     description:
       "Collection, sorting and recycling of non-hazardous and hazardous waste across Hunedoara and all of Romania. In-house cable plant and full traceability.",
     home: {
-      title: "Waste collection, sorting and recycling — Deva, Romania",
+      title: "Waste collection, sorting and recycling — Deva, Hunedoara, Romania",
       description:
         "We collect, sort and recycle waste for companies across Romania: scrap metal, plastic, cardboard, Al/Cu cables, used oils and WEEE.",
     },
