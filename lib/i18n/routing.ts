@@ -158,6 +158,22 @@ export const pathnames = {
     ro: "/articole/reciclarea-deseurilor-de-plastic-industrial",
     en: "/articles/industrial-plastic-waste-recycling",
   },
+  "/articles/why-companies-sell-scrap-metal": {
+    ro: "/articole/de-ce-vand-companiile-si-oamenii-fier-vechi",
+    en: "/articles/why-companies-sell-scrap-metal",
+  },
+  "/articles/ferrous-vs-non-ferrous-waste": {
+    ro: "/articole/deseuri-feroase-si-neferoase-diferente",
+    en: "/articles/ferrous-vs-non-ferrous-waste",
+  },
+  "/articles/waste-recovery-and-destruction-certificates": {
+    ro: "/articole/certificate-de-valorificare-si-distrugere-deseuri",
+    en: "/articles/waste-recovery-and-destruction-certificates",
+  },
+  "/articles/how-waste-container-rental-works": {
+    ro: "/articole/cum-functioneaza-inchirierea-containerelor-de-deseuri",
+    en: "/articles/how-waste-container-rental-works",
+  },
   "/contact": { ro: "/contact", en: "/contact" },
   "/privacy-policy": {
     ro: "/politica-de-confidentialitate",
@@ -223,6 +239,10 @@ export const articleKeys = [
   "/articles/aluminium-scrap-recycling",
   "/articles/weee-recycling-guide-for-companies",
   "/articles/industrial-plastic-waste-recycling",
+  "/articles/why-companies-sell-scrap-metal",
+  "/articles/ferrous-vs-non-ferrous-waste",
+  "/articles/waste-recovery-and-destruction-certificates",
+  "/articles/how-waste-container-rental-works",
 ] as const satisfies readonly PathnameKey[];
 
 export type ArticleKey = (typeof articleKeys)[number];

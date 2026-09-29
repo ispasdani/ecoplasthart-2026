@@ -96,6 +96,30 @@ export const ARTICLE_FACTS: Record<ArticleSlug, ArticleFacts> = {
     updatedAt: "2026-09-18",
     readMinutes: 7,
   },
+  "why-companies-sell-scrap-metal": {
+    topic: "guides",
+    publishedAt: "2026-09-22",
+    updatedAt: "2026-09-22",
+    readMinutes: 6,
+  },
+  "ferrous-vs-non-ferrous-waste": {
+    topic: "recycling",
+    publishedAt: "2026-09-24",
+    updatedAt: "2026-09-24",
+    readMinutes: 7,
+  },
+  "waste-recovery-and-destruction-certificates": {
+    topic: "legislation",
+    publishedAt: "2026-09-26",
+    updatedAt: "2026-09-26",
+    readMinutes: 7,
+  },
+  "how-waste-container-rental-works": {
+    topic: "guides",
+    publishedAt: "2026-09-29",
+    updatedAt: "2026-09-29",
+    readMinutes: 6,
+  },
 };
 
 /** One article, resolved for a locale: facts + copy + localized href. */

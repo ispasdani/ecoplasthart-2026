@@ -595,5 +595,253 @@ export const articlesEn = {
         },
       ],
     },
+
+    "why-companies-sell-scrap-metal": {
+      metaTitle: "Why companies and individuals sell scrap metal",
+      metaDescription:
+        "Freed-up space, environmental compliance, and cash from material that would otherwise sit idle: why companies and individuals sell scrap metal to a licensed collector.",
+      title: "Why companies and individuals sell scrap metal",
+      excerpt:
+        "Scrap metal isn't waste — it's raw material with a market price. Here's why companies clear out dead stock and individuals part with old appliances, and both come out ahead.",
+      lead: "A decommissioned machine or a broken appliance takes up space, and left where it is, it only rusts. The difference between treating it as junk and treating it as merchandise is one phone call to a licensed collector. Here is what drives that decision, for companies and individuals alike.",
+      sections: [
+        {
+          heading: "The material's value doesn't disappear when the equipment does",
+          body: [
+            "Scrap steel, copper, aluminium and brass remain metals with a market price regardless of shape — profile, pipe, housing or conductor. Their price tracks international metal quotations, not the visual condition of the piece, so a rusty machine can be worth just as much per kilogram as a clean one.",
+            "The gap between non-ferrous and ferrous metal is large: copper and aluminium often sell for several times more per kilogram than scrap steel. Knowing what you actually have before you call a collector can change the final weighbridge figure significantly.",
+          ],
+        },
+        {
+          heading: "For companies: freeing up space and closing a compliance question",
+          body: [
+            "A halted production line, equipment replaced during a modernisation, or raw material left over from a cancelled project takes up space that costs money — rent, insurance, management time. Selling the material turns that recurring cost into a one-off payment.",
+            "There is a compliance angle too: metal waste stored without proper records or without a licensed operator to take it away can become a talking point at an environmental inspection. Documented handover to a licensed collector closes the subject, with a weighbridge slip and, on request, a recovery certificate.",
+          ],
+        },
+        {
+          heading: "For individuals: decluttering and a bit of extra income",
+          body: [
+            "A renovation, a house cleared after an inheritance, or a garage full of old car parts all generate scrap steel and non-ferrous metal that most people would simply throw out with household waste if there were no collection point paying for it. The result: reclaimed space and a small income from something that was headed for the bin anyway.",
+            "The difference from a company is scale, not principle: the quantities are smaller, but the price per kilogram is the same. It still matters, just as it does for a business, who you hand the material to — a licensed centre weighs it correctly and gives you proof of the handover.",
+          ],
+        },
+        {
+          heading: "How the weighbridge figure is set",
+          body: [
+            "The final price depends on the type of metal, its purity — an insulated cable pays less than a bare conductor — and the day's quotation for non-ferrous metals, which moves the same way any internationally traded commodity does.",
+            "A metrologically verified scale and a slip issued at every reception are the only guarantee that the amount matches the actual quantity. We break down the full pricing mechanism, with examples for scrap steel, copper and aluminium, in the article on scrap metal prices.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Scrap steel and non-ferrous metals keep their market value even once decommissioned — that's why companies and individuals sell them instead of throwing them out.",
+        "For companies, the reason is twofold: cash from otherwise idle material, plus freed-up storage space and one less compliance question to answer.",
+        "For individuals, selling scrap metal is a simple source of income — but who you hand the material to still matters.",
+      ],
+      faq: [
+        {
+          question: "Can I sell scrap metal as an individual, or is it companies only?",
+          answer:
+            "Individuals can sell too. A licensed centre accepts material from anyone, usually against an ID, and issues a weighbridge slip for every handover.",
+        },
+        {
+          question: "Why does the price change from one day to the next?",
+          answer:
+            "Non-ferrous metals — copper, aluminium, brass — track international quotations that move daily. Scrap steel is more stable, but it too is adjusted periodically based on demand from the steel industry.",
+        },
+        {
+          question: "What paperwork do I get on handover?",
+          answer:
+            "A weighbridge slip at every reception, always. Companies that need extra proof for environmental reporting can also request a recovery certificate — we explain the difference between the two in the article on certificates.",
+        },
+      ],
+    },
+
+    "ferrous-vs-non-ferrous-waste": {
+      metaTitle: "Ferrous vs non-ferrous waste: differences and how it's collected",
+      metaDescription:
+        "What ferrous and non-ferrous metals mean, how to tell them apart, which waste codes apply, and why the collection price differs so much between them.",
+      title: "Ferrous vs non-ferrous waste: differences, codes, and how it's collected",
+      excerpt:
+        "A magnet and a few seconds are enough to tell whether a metal is ferrous or non-ferrous — but the difference changes your price and how it gets collected.",
+      lead: "\"Scrap metal\" is the catch-all term we use for any metal waste, but technically it only covers half the story. The other half — non-ferrous metals — gets collected, weighed, and above all paid differently. Here is what separates the two categories and why it's worth keeping them apart.",
+      sections: [
+        {
+          heading: "What \"ferrous\" and \"non-ferrous\" actually mean",
+          body: [
+            "Ferrous metals contain iron: steel, cast iron, sheet metal and structural steelwork all fall into this category. The practical test is a magnet — if it sticks, the metal is ferrous.",
+            "Non-ferrous metals contain no iron, or only insignificant traces: copper, aluminium, brass, lead, zinc and their alloys. They are not magnetic, and colour often gives them away to the naked eye — reddish copper, yellowish brass, matte grey aluminium.",
+          ],
+        },
+        {
+          heading: "Waste codes, and why separation matters",
+          body: [
+            "The European Waste List, transposed into Romanian law through HG 856/2002, treats metals as distinct code families — chapter 17 04, for instance, separates copper, aluminium, lead, zinc, iron and steel under different sub-codes, even when they come from the same site or the same production hall.",
+            "Separating by code isn't just paperwork: it also determines what the operator is allowed to do with the material next. An operator licensed for scrap steel isn't automatically licensed for non-ferrous waste too — check that the same way you'd check any other code when choosing a collector.",
+          ],
+        },
+        {
+          heading: "Why the collection price differs so much",
+          body: [
+            "Copper and aluminium trade at international quotations several times higher per kilogram than scrap steel. A load of non-ferrous metal mixed in with scrap steel and not weighed separately gets paid at the price of the cheapest metal in the load — you lose the value gap of the better material.",
+            "Scrap steel makes up for it in volume: it doesn't carry copper's price per kilogram, but it turns up in much larger quantities — structural steel, sheet metal, profiles — which keeps it profitable even at a modest quotation.",
+          ],
+        },
+        {
+          heading: "How it's collected in practice",
+          body: [
+            "On reception, material goes through a visual check and, where relevant, the magnet test, then gets weighed separately by category — ferrous, non-ferrous, mixed alloys. Bulky scrap steel structures are frequently lifted with a grapple crane, straight from the point of generation.",
+            "We weigh each category separately at our Cristur site, on a metrologically verified scale, precisely so the value of the non-ferrous fraction doesn't get lost in the mass of scrap steel — see the details on our scrap metal and metal waste collection page.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "The magnet test quickly separates ferrous (magnetic) from non-ferrous (non-magnetic) metals — copper, aluminium, brass, lead, zinc.",
+        "Non-ferrous metals carry a much higher price per kilogram than ferrous ones; mixed into a single load, they drag the total value down to the price of the cheapest metal in it.",
+        "Sorting at source, even roughly, shows up directly on the weighbridge slip.",
+      ],
+      faq: [
+        {
+          question: "How do I tell if a piece of metal waste is ferrous or non-ferrous, without special equipment?",
+          answer:
+            "An ordinary magnet is enough for the first test — ferrous metals stick, non-ferrous ones don't. Colour helps with a second check: reddish for copper, yellowish for brass, matte grey for aluminium.",
+        },
+        {
+          question: "Can ferrous and non-ferrous metal be handed over mixed together?",
+          answer:
+            "They can, but it isn't recommended: the collector separates them on reception anyway, and unsorted loads are typically weighed and paid at the price of the cheapest metal in the mix.",
+        },
+        {
+          question: "Do alloys like brass or bronze count as ferrous or non-ferrous?",
+          answer:
+            "Non-ferrous. Even though they may contain traces of other metals, brass and bronze are weighed and paid separately from scrap steel, at their own quotation.",
+        },
+      ],
+    },
+
+    "waste-recovery-and-destruction-certificates": {
+      metaTitle: "Waste recovery and destruction certificates explained",
+      metaDescription:
+        "What a recovery certificate and a destruction certificate are, who needs them, and how to get them from a licensed waste collector.",
+      title: "Recovery and destruction certificates: what they are and who needs them",
+      excerpt:
+        "A weighbridge slip proves a handover happened. A recovery or destruction certificate proves what happened to the material afterwards — and a lot of companies need exactly that.",
+      lead: "For many companies, handing over waste stops at the weighbridge slip and the transport form. For companies that report to an environmental audit, a large client, or their own ISO certification, there's a further question: what proof do you have that the material was actually recycled or destroyed, rather than just moved somewhere else? That's what recovery and destruction certificates answer.",
+      sections: [
+        {
+          heading: "What a recovery certificate is",
+          body: [
+            "A recovery certificate is the document by which the operator confirms that a batch of waste handed over was actually processed and put back into industrial circulation as secondary raw material — not just transported and left for someone else to deal with.",
+            "Companies use it as evidence in their annual reporting under the Integrated Environmental System, as proof for ISO 14001 certification, or as an answer to the responsible-supplier requirements that show up more and more often in large clients' supplier audits.",
+          ],
+        },
+        {
+          heading: "What a destruction certificate is, and when you need one",
+          body: [
+            "A destruction certificate attests that a piece of equipment or a batch of materials was permanently dismantled or destroyed, not resold or put back into circulation. It matters most for decommissioned IT equipment — servers, workstations, storage units — where the main stake is data security, not just the environment.",
+            "It's also useful for writing off fixed assets in a company's accounts: a destruction certificate backs up the correct removal of an asset from the books, with proof that the item genuinely left circulation.",
+          ],
+        },
+        {
+          heading: "How it differs from the transport form",
+          body: [
+            "The loading-unloading form required by HG 1061/2008 proves a single moment: the physical handover of material to the carrier, with the weighed quantity and the waste code. It answers \"what left, and when.\"",
+            "A recovery or destruction certificate answers the next question: \"what happened to it afterwards.\" For full traceability, an audited company needs both — one proves the handover, the other proves the final outcome.",
+          ],
+        },
+        {
+          heading: "How to get these documents from your collector",
+          body: [
+            "Ask for them at the contract stage, not after the first pickup — the same way you'd check the environmental permit and the accepted codes. An operator that only forwards material to another intermediary can't credibly issue a recovery certificate, because it doesn't control what happens to the material next.",
+            "An operator that actually processes the material on its own site — sorting, baling, granulating — can document the full route and issue the certificate on a real basis, not a declarative one. Settle upfront whether the document is issued per batch or on a periodic, consolidated basis.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "A weighbridge slip proves the handover; a recovery or destruction certificate proves what happened to the material afterwards.",
+        "A destruction certificate matters most for IT equipment holding sensitive data, and for writing off fixed assets in the accounts.",
+        "Only an operator that actually processes the material can issue a credible recovery certificate — not one that just forwards it on.",
+      ],
+      faq: [
+        {
+          question: "Who needs a recovery certificate?",
+          answer:
+            "Companies reporting under the Integrated Environmental System, ISO 14001-certified companies, and those that need to demonstrate responsible environmental practices in large clients' supplier audits.",
+        },
+        {
+          question: "Does a destruction certificate replace the transport form?",
+          answer:
+            "No, they're complementary. The transport form proves the material was handed over; the destruction certificate proves the final outcome — that it was permanently dismantled or destroyed.",
+        },
+        {
+          question: "How long does it take to get the certificate?",
+          answer:
+            "It depends on the operator and the size of the batch — typically issued on request or periodically, once the material has actually been processed. Discuss the timeline with your operator before signing the contract, so you know what to expect.",
+        },
+      ],
+    },
+
+    "how-waste-container-rental-works": {
+      metaTitle: "How waste container rental works",
+      metaDescription:
+        "From request to pickup: how waste container rental works for industrial waste, what sizes are available, and how the cost is calculated.",
+      title: "How waste container rental works for industrial waste",
+      excerpt:
+        "A phone call, a container size and a pickup window — but a few decisions in between directly shape the final cost.",
+      lead: "Scheduled pickups work well for a steady stream of waste. They don't work as well for a hall cleared out in one go, or a production line shut down for good. That's what container rental is for — here is how it runs, from the first phone call to the final weighing.",
+      sections: [
+        {
+          heading: "When a container beats scheduled pickups",
+          body: [
+            "Scheduled pickups make sense for waste you generate constantly — packaging, production offcuts. A container makes sense for a one-off volume: a hall renovation, a line shutdown, a batch of raw material decommissioned all at once.",
+            "The practical difference is flexibility: the container sits on site for as long as it takes you to fill it, instead of you waiting for the next scheduled collection route — useful especially when the volume is large and unpredictable in timing.",
+          ],
+        },
+        {
+          heading: "Sizes and types of containers",
+          body: [
+            "Abrollkipper containers come in different capacities, chosen by estimated volume, not weight — an important distinction, because waste streams have very different densities. A container full of plastic film weighs a fraction of one full of scrap steel of the same size.",
+            "Choosing the size also depends on the manoeuvring space available on site — gate width, room for the truck at pickup — a detail worth settling before delivery, not on the day itself.",
+          ],
+        },
+        {
+          heading: "How the cost is calculated",
+          body: [
+            "The final cost depends on the container size, the transport distance, the rental duration, and what's actually inside it at pickup. A container of mixed, non-recoverable waste is a pure disposal cost.",
+            "A container where metal predominates can flip that: the material weighed at pickup can generate a payment that partly or fully offsets the rental cost. The weighing at pickup, not the initial estimate, is what sets the final figure.",
+          ],
+        },
+        {
+          heading: "The process, from request to pickup",
+          body: [
+            "It starts with an estimate of the volume and the predominant waste type, followed by delivery of the empty container to your site. The filling window is agreed together — either fixed or on-call.",
+            "At pickup, the material is weighed, and the transport is documented with the loading-unloading form required by HG 1061/2008 — the same paperwork as any other non-hazardous waste handover.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "A container suits irregular or one-off volumes — a cleanout, a shutdown line — not the steady stream of a running production.",
+        "Container size is chosen by volume, not weight: waste streams have very different densities.",
+        "If metal predominates in the container, the cost can become partly or fully a payment, depending on what's weighed at pickup.",
+      ],
+      faq: [
+        {
+          question: "How long can I keep the container on site?",
+          answer:
+            "It's agreed at the time of the order, based on your expected filling pace — anywhere from a few days to a few weeks. Settle the window upfront so it's clear in the contract and no unexpected costs come up.",
+        },
+        {
+          question: "What happens if I mix different waste types in the same container?",
+          answer:
+            "It's possible, but it raises the cost: a mixed load can't be recovered as efficiently as sorted fractions and may need additional sorting before processing.",
+        },
+        {
+          question: "Do I need a special permit to order a container?",
+          answer:
+            "You don't, but the operator needs to be licensed for the waste codes you generate — check that the same way you'd check any other collector, before you sign.",
+        },
+      ],
+    },
   },
 } as const;
