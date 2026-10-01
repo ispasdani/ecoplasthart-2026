@@ -602,5 +602,253 @@ export const articlesRo = {
         },
       ],
     },
+
+    "why-companies-sell-scrap-metal": {
+      metaTitle: "De ce vând companiile și oamenii fier vechi",
+      metaDescription:
+        "Spațiu eliberat, conformare de mediu și bani din material altfel inert: de ce companiile și persoanele fizice aleg să vândă fierul vechi unui colector autorizat.",
+      title: "De ce vând companiile și oamenii fier vechi: motivele din spatele deciziei",
+      excerpt:
+        "Fierul vechi nu e gunoi, e materie primă cu preț de piață. Iată de ce companiile scapă de stocul mort și persoanele fizice de electrocasnice vechi, aducând ambele bani în loc de costuri.",
+      lead: "Un utilaj scos din uz sau un electrocasnic stricat ocupă loc și, lăsat acolo, nu face decât să ruginească. Diferența dintre a-l trata ca gunoi și a-l trata ca marfă este un singur telefon către un colector autorizat. Iată ce pune în mișcare decizia, atât pentru companii, cât și pentru persoane fizice.",
+      sections: [
+        {
+          heading: "Valoarea materialului nu dispare când echipamentul iese din uz",
+          body: [
+            "Fierul vechi, cuprul, aluminiul și alama rămân metale cu preț de piață indiferent de forma pe care o au — profil, țeavă, carcasă sau conductor. Prețul lor urmărește cotațiile internaționale ale metalelor, nu starea vizuală a piesei, așa că un utilaj ruginit poate valora la fel de mult, la kilogram, ca unul curat.",
+            "Diferența dintre neferoase și feroase este uriașă: cuprul și aluminiul se plătesc de multe ori mai mult pe kilogram decât fierul vechi. De aceea merită să știi ce ai înainte să suni un colector — poate schimba radical suma de pe bonul de cântar.",
+          ],
+        },
+        {
+          heading: "Pentru companii: eliberarea spațiului și obligațiile de mediu",
+          body: [
+            "O linie de producție oprită, utilaje înlocuite la o modernizare sau un stoc de materie primă care nu mai corespunde unui proiect abandonat ocupă spațiu care costă bani — chirie, asigurare, timp de gestiune. Vânzarea materialului transformă acel cost lunar într-o încasare unică.",
+            "Există și o latură de conformare: deșeurile metalice depozitate necontrolat, fără evidență de gestiune sau fără un operator autorizat care să le preia, pot deveni un subiect de discuție la un control de mediu. Predarea documentată către un colector autorizat închide subiectul, cu bon de cântar și, la cerere, certificat de valorificare.",
+          ],
+        },
+        {
+          heading: "Pentru persoane fizice: decluttering și un venit suplimentar",
+          body: [
+            "O renovare, o casă golită după o moștenire sau un garaj plin de piese auto vechi generează fier vechi și metale neferoase pe care majoritatea oamenilor le-ar arunca la gunoiul menajer dacă nu ar exista un centru de colectare care le preia contra cost. Rezultatul: spațiu recuperat și un mic venit din ceva care oricum urma să dispară.",
+            "Diferența față de o companie este scara, nu principiul: cantitățile sunt mai mici, dar prețul pe kilogram este același. Contează totuși, la fel ca la o firmă, cui predai materialul — un centru autorizat cântărește corect și eliberează dovada predării.",
+          ],
+        },
+        {
+          heading: "Cum se stabilește ce primești la cântar",
+          body: [
+            "Prețul final depinde de tipul de metal, de puritatea lui — un cablu cu izolație plătește mai puțin decât conductorul curat — și de cotația zilei pentru metalele neferoase, care fluctuează la fel ca orice marfă tranzacționată internațional.",
+            "Un cântar verificat metrologic și un bon emis la fiecare recepție sunt singura garanție că suma corespunde cantității reale. Detaliem mecanismul complet al prețului, cu exemple pentru fier vechi, cupru și aluminiu, în articolul dedicat prețurilor la fier vechi.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Fierul vechi și metalele neferoase își păstrează valoarea de piață chiar și scoase din uz — de aceea companiile și persoanele fizice aleg să le vândă, nu să le arunce.",
+        "Pentru companii, motivul e mixt: bani din material altfel inert, plus eliberarea spațiului de depozitare și închiderea unui subiect de conformare de mediu.",
+        "Pentru persoane fizice, vânzarea de fier vechi e o sursă simplă de venit — dar tot contează dacă centrul care preia materialul este autorizat.",
+      ],
+      faq: [
+        {
+          question: "Pot vinde fier vechi ca persoană fizică sau doar companiile au voie?",
+          answer:
+            "Pot și persoanele fizice. Un centru autorizat preia materialul de la oricine, de obicei pe bază de act de identitate, și emite un bon de cântar pentru fiecare predare.",
+        },
+        {
+          question: "De ce diferă prețul de la o zi la alta?",
+          answer:
+            "Metalele neferoase — cupru, aluminiu, alamă — urmăresc cotații internaționale care fluctuează zilnic. Fierul vechi este mai stabil, dar și el se ajustează periodic în funcție de cererea industriei siderurgice.",
+        },
+        {
+          question: "Ce documente primesc la predare?",
+          answer:
+            "Un bon de cântar la fiecare recepție, obligatoriu. Companiile care au nevoie de dovadă suplimentară pentru raportarea de mediu pot cere și un certificat de valorificare — explicăm diferența dintre cele două în articolul despre certificate.",
+        },
+      ],
+    },
+
+    "ferrous-vs-non-ferrous-waste": {
+      metaTitle: "Deșeuri feroase și neferoase: diferențe și cum se colectează",
+      metaDescription:
+        "Ce înseamnă metale feroase și neferoase, cum se recunosc, ce coduri de deșeu au și de ce prețul de colectare diferă atât de mult între ele.",
+      title: "Deșeuri feroase și neferoase: diferențe, coduri și cum se colectează",
+      excerpt:
+        "Un magnet și câteva secunde sunt de-ajuns să afli dacă un metal e feros sau neferos — dar diferența dintre ele îți schimbă radical prețul și modul de colectare.",
+      lead: "„Fier vechi” este termenul pe care îl folosim pentru orice deșeu metalic, dar din punct de vedere tehnic el acoperă doar jumătate din poveste. Cealaltă jumătate — metalele neferoase — se colectează, se cântărește și mai ales se plătește diferit. Iată ce separă cele două categorii și de ce merită să le ții separate.",
+      sections: [
+        {
+          heading: "Ce înseamnă „feros” și „neferos”",
+          body: [
+            "Metalele feroase conțin fier: oțelul, fonta, tabla și structurile metalice de construcție intră toate în această categorie. Testul practic este magnetul — dacă se lipește, metalul este feros.",
+            "Metalele neferoase nu conțin fier sau îl conțin în urme nesemnificative: cuprul, aluminiul, alama, plumbul, zincul și aliajele lor. Nu sunt magnetice, iar diferențele de culoare le fac deseori recognoscibile cu ochiul liber — cuprul roșiatic, alama gălbuie, aluminiul gri-mat.",
+          ],
+        },
+        {
+          heading: "Codurile de deșeu și de ce contează separarea",
+          body: [
+            "Lista europeană a deșeurilor, preluată în legislația română prin HG 856/2002, tratează metalele ca familii de coduri distincte — de exemplu capitolul 17 04 separă cuprul, aluminiul, plumbul, zincul, fierul și oțelul sub subcoduri diferite, chiar și atunci când provin din același șantier sau aceeași hală.",
+            "Separarea pe coduri nu este doar birocrație: ea determină și ce poate face operatorul cu materialul mai departe. Un operator autorizat pentru fier vechi nu este automat autorizat și pentru deșeuri neferoase — verifică asta la fel cum verifici orice alt cod, atunci când alegi un colector.",
+          ],
+        },
+        {
+          heading: "De ce diferă atât de mult prețul de colectare",
+          body: [
+            "Cuprul și aluminiul se tranzacționează la cotații internaționale de câteva ori mai mari pe kilogram decât fierul vechi. Un transport de metale neferoase amestecate cu fier vechi, necântărit separat, se plătește la prețul celui mai ieftin metal din încărcătură — pierzi diferența de valoare a materialului bun.",
+            "Fierul vechi compensează prin volum: nu are prețul pe kilogram al cuprului, dar apare în cantități mult mai mari — structuri, tablă, profile — ceea ce îl face rentabil chiar și la o cotație modestă.",
+          ],
+        },
+        {
+          heading: "Cum se colectează în practică",
+          body: [
+            "La recepție, materialul trece prin verificare vizuală și, unde e cazul, testul magnetului, apoi se cântărește separat pe categorii — feroase, neferoase, aliaje mixte. Structurile voluminoase de fier vechi se ridică frecvent cu macara cu graifăr, direct de la punctul de generare.",
+            "Noi cântărim fiecare categorie separat, la punctul de lucru din Cristur, cu cântar verificat metrologic, exact ca să nu se piardă valoarea neferoaselor în masa fierului vechi — vezi detaliile la colectarea fierului vechi și a deșeurilor metalice.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Testul cu magnetul separă rapid feroasele (magnetice) de neferoase (nemagnetice) — cupru, aluminiu, alamă, plumb, zinc.",
+        "Neferoasele au preț pe kilogram mult mai mare decât feroasele; amestecate într-un singur transport, scad valoarea totală la prețul celui mai ieftin metal din încărcătură.",
+        "Separarea la sursă, chiar și aproximativă, se reflectă direct în bonul de cântar.",
+      ],
+      faq: [
+        {
+          question: "Cum recunosc dacă un deșeu metalic e feros sau neferos, fără echipament special?",
+          answer:
+            "Un magnet obișnuit este suficient pentru primul test — feroasele se lipesc, neferoasele nu. Culoarea ajută la a doua verificare: roșiatic pentru cupru, gălbui pentru alamă, gri-mat pentru aluminiu.",
+        },
+        {
+          question: "Se pot preda amestecate feroase și neferoase?",
+          answer:
+            "Se pot preda, dar nu e recomandat: colectorul le separă oricum la recepție, iar loturile nesortate se cântăresc și se plătesc de regulă la prețul celui mai ieftin metal din amestec.",
+        },
+        {
+          question: "Aliajele precum alama sau bronzul intră la feroase sau neferoase?",
+          answer:
+            "La neferoase. Deși pot conține urme de alte metale, alama și bronzul se cântăresc și se plătesc separat de fierul vechi, la o cotație proprie.",
+        },
+      ],
+    },
+
+    "waste-recovery-and-destruction-certificates": {
+      metaTitle: "Certificatul de valorificare și certificatul de distrugere a deșeurilor",
+      metaDescription:
+        "Ce sunt certificatul de valorificare și certificatul de distrugere, cui îi folosesc și cum le obții de la un colector autorizat de deșeuri.",
+      title: "Certificatul de valorificare și certificatul de distrugere: ce sunt și cui folosesc",
+      excerpt:
+        "Bonul de cântar dovedește o predare. Certificatul de valorificare sau de distrugere dovedește ce s-a întâmplat cu materialul după aceea — și multe firme au nevoie exact de asta.",
+      lead: "Pentru multe firme, predarea deșeurilor se oprește la bonul de cântar și formularul de transport. Pentru cele care raportează la un audit de mediu, la un client mare sau la propria certificare ISO, urmează o întrebare în plus: ce dovadă ai că materialul chiar a fost reciclat sau distrus, și nu doar mutat în altă parte? La asta răspund certificatele de valorificare și de distrugere.",
+      sections: [
+        {
+          heading: "Ce este certificatul de valorificare",
+          body: [
+            "Certificatul de valorificare este documentul prin care operatorul confirmă că un lot de deșeuri predat a fost efectiv procesat și reintrodus în circuitul industrial ca materie primă secundară — nu doar transportat și depozitat mai departe de altcineva.",
+            "Firmele îl folosesc ca dovadă în raportarea anuală din Sistemul Integrat de Mediu, ca probă pentru certificarea ISO 14001 sau ca răspuns la cerințele de furnizori responsabili din auditurile clienților mari, tot mai frecvente în contractele industriale.",
+          ],
+        },
+        {
+          heading: "Ce este certificatul de distrugere și când e nevoie de el",
+          body: [
+            "Certificatul de distrugere atestă că un echipament sau un lot de materiale a fost dezmembrat sau distrus definitiv, nu revândut sau reintrodus în circulație. Este relevant mai ales pentru echipamentele IT scoase din uz — servere, stații de lucru, unități de stocare — unde miza principală este securitatea datelor, nu doar mediul.",
+            "Este util și pentru casarea mijloacelor fixe din contabilitatea firmei: un certificat de distrugere susține înregistrarea corectă a scoaterii din gestiune a unui activ, cu dovadă că bunul chiar a ieșit din circuit.",
+          ],
+        },
+        {
+          heading: "Diferența față de formularul de încărcare-descărcare",
+          body: [
+            "Formularul de încărcare-descărcare, prevăzut de HG 1061/2008, dovedește un singur moment: predarea fizică a materialului către transportator, cu cantitatea cântărită și codul deșeului. El răspunde la întrebarea „ce a plecat și când”.",
+            "Certificatul de valorificare sau de distrugere răspunde la întrebarea următoare: „ce s-a întâmplat cu el după aceea”. Pentru o trasabilitate completă, o firmă auditată are nevoie de amândouă — unul dovedește predarea, celălalt rezultatul final.",
+          ],
+        },
+        {
+          heading: "Cum obții aceste documente de la colector",
+          body: [
+            "Cere-le încă din faza de contract, nu după prima ridicare — la fel cum verifici autorizația de mediu și codurile acceptate. Un operator care doar transbordează materialul către un alt intermediar nu îți poate elibera un certificat de valorificare credibil, pentru că nu controlează ce se întâmplă cu el mai departe.",
+            "Un operator care procesează efectiv materialul pe platforma proprie — sortare, balotare, granulare — poate documenta traseul complet și emite certificatul pe bază reală, nu declarativă. Stabilește de la început dacă documentul se emite per lot sau centralizat, periodic.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Bonul de cântar dovedește predarea; certificatul de valorificare sau de distrugere dovedește ce s-a întâmplat cu materialul după aceea.",
+        "Certificatul de distrugere e esențial pentru echipamentele IT cu date sensibile și pentru casarea mijloacelor fixe din contabilitate.",
+        "Doar un operator care procesează efectiv materialul poate elibera un certificat de valorificare credibil, nu unul care doar îl transbordează mai departe.",
+      ],
+      faq: [
+        {
+          question: "Cine are nevoie de certificat de valorificare?",
+          answer:
+            "Firmele care raportează în Sistemul Integrat de Mediu, cele certificate ISO 14001 și cele care trebuie să demonstreze practici responsabile de mediu în auditurile de furnizori ale clienților mari.",
+        },
+        {
+          question: "Certificatul de distrugere înlocuiește formularul de transport?",
+          answer:
+            "Nu, sunt complementare. Formularul de transport dovedește predarea materialului; certificatul de distrugere dovedește rezultatul final — că a fost dezmembrat sau distrus definitiv.",
+        },
+        {
+          question: "Cât durează să primesc certificatul?",
+          answer:
+            "Depinde de operator și de mărimea lotului — de regulă se emite la cerere sau periodic, după ce materialul a fost efectiv procesat. Discută termenul cu operatorul înainte de a semna contractul, ca să știi la ce să te aștepți.",
+        },
+      ],
+    },
+
+    "how-waste-container-rental-works": {
+      metaTitle: "Cum funcționează închirierea containerelor pentru deșeuri",
+      metaDescription:
+        "De la solicitare la ridicare: cum funcționează închirierea containerelor pentru deșeuri industriale, ce dimensiuni există și cum se calculează costul.",
+      title: "Cum funcționează închirierea containerelor pentru deșeuri industriale",
+      excerpt:
+        "Un telefon, o dimensiune de container și un interval de ridicare — dar între ele sunt câteva decizii care influențează direct costul final.",
+      lead: "O ridicare programată funcționează bine pentru un flux constant de deșeuri. Nu funcționează la fel de bine pentru o hală golită dintr-un foc sau o linie de producție oprită definitiv. Pentru situațiile astea există închirierea de containere — iată cum se derulează, de la primul telefon până la cântarul final.",
+      sections: [
+        {
+          heading: "Când merită un container în locul ridicărilor programate",
+          body: [
+            "Ridicările programate au sens pentru deșeul pe care îl generezi constant — ambalaje, resturi de producție. Un container are sens pentru volumul punctual: o renovare de hală, oprirea unei linii, un stoc de materie primă scos din uz dintr-o dată.",
+            "Diferența practică este flexibilitatea: containerul stă la tine cât ai nevoie să-l umpli, în loc să aștepți următoarea rută programată de colectare — util mai ales când volumul e mare și imprevizibil ca timp de generare.",
+          ],
+        },
+        {
+          heading: "Dimensiuni și tipuri de containere",
+          body: [
+            "Containerele Abrollkipper vin în capacități diferite, alese în funcție de volumul estimat, nu de greutate — un criteriu important, pentru că deșeurile au densități foarte diferite. Un container plin cu folie de plastic cântărește o fracțiune din unul plin cu fier vechi de aceeași dimensiune.",
+            "Alegerea dimensiunii ține cont și de spațiul de manevră disponibil la punctul de lucru — lățimea porții, spațiul pentru basculantă la ridicare — un detaliu care merită discutat înainte de livrare, nu la fața locului.",
+          ],
+        },
+        {
+          heading: "Cum se calculează costul",
+          body: [
+            "Costul final depinde de dimensiunea containerului, de distanța de transport, de durata închirierii și de ce se află de fapt în el la ridicare. Un container cu deșeu mixt, nevalorificabil, este o cheltuială pură de eliminare.",
+            "Un container în care predomină metalul poate întoarce situația: materialul cântărit la ridicare poate genera o încasare care compensează parțial sau integral costul închirierii. Cântărirea la ridicare este cea care stabilește suma finală, nu estimarea inițială.",
+          ],
+        },
+        {
+          heading: "Procesul, de la solicitare la ridicare",
+          body: [
+            "Totul pornește de la o estimare a volumului și a tipului de deșeu predominant, urmată de livrarea containerului gol la punctul de lucru. Intervalul de umplere se stabilește de comun acord, fie fix, fie la cerere.",
+            "La ridicare, materialul se cântărește, iar transportul se documentează cu formularul de încărcare-descărcare prevăzut de HG 1061/2008 — aceleași documente ca la orice altă predare de deșeuri nepericuloase.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Un container e potrivit pentru volume neregulate sau punctuale — o curățenie, o linie oprită — nu pentru fluxul constant al unei producții.",
+        "Dimensiunea containerului se alege după volum, nu după greutate: deșeurile au densități foarte diferite.",
+        "Dacă în container predomină metalul, costul poate deveni parțial sau integral o încasare, în funcție de ce se cântărește la ridicare.",
+      ],
+      faq: [
+        {
+          question: "Cât timp pot ține containerul la mine?",
+          answer:
+            "Se stabilește la comandă, în funcție de ritmul de umplere — de la câteva zile la câteva săptămâni. Discută intervalul din start, ca să fie clar în contract și să nu apară costuri neașteptate.",
+        },
+        {
+          question: "Ce se întâmplă dacă amestec tipuri diferite de deșeu în același container?",
+          answer:
+            "Este posibil, dar crește costul: un amestec nu mai poate fi valorificat la fel de eficient ca fracțiile separate și poate necesita sortare suplimentară înainte de procesare.",
+        },
+        {
+          question: "Am nevoie de o autorizație specială ca să comand un container?",
+          answer:
+            "Nu tu, ci operatorul trebuie să fie autorizat pentru codurile deșeului pe care îl generezi — verifică asta la fel cum ai verifica orice alt colector, înainte de a semna.",
+        },
+      ],
+    },
   },
 } as const;

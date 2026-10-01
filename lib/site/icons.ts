@@ -79,6 +79,10 @@ export const articleIcons: Record<ArticleSlug, LucideIcon> = {
   "aluminium-scrap-recycling": Recycle,
   "weee-recycling-guide-for-companies": BatteryCharging,
   "industrial-plastic-waste-recycling": Container,
+  "why-companies-sell-scrap-metal": ShoppingBag,
+  "ferrous-vs-non-ferrous-waste": Layers,
+  "waste-recovery-and-destruction-certificates": Award,
+  "how-waste-container-rental-works": Truck,
 };
 
 /** Matches the order of `home.industries.items` in the dictionaries. */
