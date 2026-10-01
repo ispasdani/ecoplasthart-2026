@@ -850,5 +850,318 @@ export const articlesRo = {
         },
       ],
     },
+
+    "waste-records-and-sim-reporting": {
+      metaTitle: "Evidența gestiunii deșeurilor și raportarea în SIM",
+      metaDescription:
+        "Ce trebuie să conțină evidența lunară a gestiunii deșeurilor conform HG 856/2002, cum raportezi anual în SIM la ANPM și ce documente păstrezi pentru control.",
+      title:
+        "Evidența gestiunii deșeurilor și raportarea anuală în SIM: ghid pentru firme",
+      excerpt:
+        "O evidență ținută lunar, pe coduri, face raportarea anuală o formalitate. Una reconstituită în martie din facturi face din ea o problemă.",
+      lead: "Orice firmă care generează deșeuri — de la un atelier mic la o fabrică — are obligația să țină evidența lor și să o raporteze anual. Obligația nu este nouă, dar controalele au devenit mai atente, iar datele din Sistemul Integrat de Mediu se compară tot mai des cu cele raportate de colectori. Iată cum arată o evidență care trece fără emoții de un control.",
+      sections: [
+        {
+          heading: "Cine are obligația și ce înseamnă evidența gestiunii deșeurilor",
+          body: [
+            "OUG 92/2021 privind regimul deșeurilor obligă producătorii și deținătorii de deșeuri să țină evidența gestiunii lor, iar formatul este cel din anexa 1 la HG 856/2002. Nu contează dacă ai autorizație de mediu sau doar o activitate de birou: dacă generezi deșeuri din activitatea economică, obligația există.",
+            "Evidența se ține lunar, separat pentru fiecare tip de deșeu, identificat prin codul lui din lista europeană. Pentru fiecare cod se trec cantitatea generată, cantitatea valorificată, eliminată sau stocată temporar, precum și operatorul căruia i-a fost predată.",
+          ],
+        },
+        {
+          heading: "De unde iau datele: bonuri de cântar și formulare de transport",
+          body: [
+            "Cifrele din evidență nu se estimează, se documentează. Sursa lor sunt formularele de încărcare-descărcare emise la fiecare transport, conform HG 1061/2008, bonurile de cântar și, pentru deșeurile periculoase, formularele de expediție.",
+            "De aceea contează să lucrezi cu un colector care cântărește fiecare predare și îți trimite documentele lunar, centralizate pe coduri. Când cantitățile din evidența ta coincid cu cele raportate de operator, controlul se încheie repede; când nu coincid, diferența trebuie explicată.",
+          ],
+        },
+        {
+          heading: "Raportarea anuală în SIM",
+          body: [
+            "Datele din evidența lunară se centralizează anual și se raportează în SIM — Sistemul Integrat de Mediu administrat de ANPM —, pe baza unui cont creat de firmă în platformă. Termenul este anunțat de ANPM pentru fiecare sesiune de raportare; în ultimii ani, raportarea pentru anul anterior s-a făcut în primul trimestru.",
+            "Dacă evidența a fost ținută lunar, raportarea înseamnă o simplă adunare pe coduri. Dacă nu, înseamnă reconstituirea unui an întreg din facturi și e-mailuri, cu riscul ca cifrele să nu se potrivească cu cele declarate de colectori pentru aceleași predări.",
+          ],
+        },
+        {
+          heading: "Ce păstrezi și cât timp",
+          body: [
+            "Păstrează evidența împreună cu documentele justificative: formularele de transport, bonurile de cântar, contractele cu operatorii și copiile autorizațiilor de mediu ale acestora. Legislația prevede o perioadă minimă de păstrare de cel puțin trei ani, iar în practică merită păstrate mai mult.",
+            "Organizează dosarul pe ani și pe coduri de deșeu. La un control, prima cerere este de obicei evidența pe ultimul an, urmată de documentele care susțin câteva cantități alese la întâmplare — iar un dosar ordonat scurtează mult discuția.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Evidența se ține lunar, pe fiecare cod de deșeu, în formatul din anexa 1 la HG 856/2002 — nu se reconstituie la final de an.",
+        "Cantitățile vin din bonuri de cântar și formulare de transport; cere-le colectorului centralizate lunar.",
+        "Raportarea anuală se face în SIM, la termenul anunțat de ANPM, iar documentele justificative se păstrează minimum trei ani.",
+      ],
+      faq: [
+        {
+          question: "Trebuie să țin evidența dacă am o firmă mică, fără producție?",
+          answer:
+            "Da, dacă activitatea ta generează deșeuri — ambalaje, echipamente IT scoase din uz, deșeuri de la întreținere. Volumul mic simplifică evidența, dar nu o elimină.",
+        },
+        {
+          question: "Ce se întâmplă dacă nu raportez la timp în SIM?",
+          answer:
+            "Nedepunerea sau raportarea incorectă se sancționează contravențional conform OUG 92/2021. În plus, lipsa raportării iese ușor la iveală, pentru că și colectorul raportează cantitățile preluate de la tine.",
+        },
+        {
+          question: "Mă poate ajuta colectorul cu datele pentru raportare?",
+          answer:
+            "Da. Noi trimitem clienților documentele de transport și centralizatorul cantităților pe coduri, iar la cerere o situație anuală, astfel încât cifrele din evidența lor să corespundă cu ce am preluat efectiv.",
+        },
+      ],
+    },
+
+    "used-oil-collection-for-companies": {
+      metaTitle: "Colectarea uleiurilor uzate de la firme: stocare și predare",
+      metaDescription:
+        "Cum stochezi corect uleiul uzat în firmă, ce coduri de deșeu se folosesc, de ce nu se amestecă cu alte lichide și ce documente primești la predarea către un colector autorizat.",
+      title:
+        "Colectarea uleiurilor uzate de la firme: cum le stochezi și cum le predai",
+      excerpt:
+        "Un litru de ulei uzat poate compromite mii de litri de apă. Pentru firmă, el compromite și dosarul de mediu, dacă nu este stocat și predat corect.",
+      lead: "Service-urile auto, flotele de transport, atelierele de prelucrare și orice fabrică cu utilaje hidraulice generează ulei uzat. Este un deșeu periculos, cu reguli clare de stocare și predare, dar și unul care se regenerează sau se valorifică energetic foarte bine — cu condiția să ajungă curat la colector.",
+      sections: [
+        {
+          heading: "Ce este uleiul uzat și cum se codifică",
+          body: [
+            "Gestionarea uleiurilor uzate este reglementată de HG 235/2007, care stabilește obligațiile generatorilor și ale colectorilor. Uleiurile uzate se încadrează în capitolul 13 al listei deșeurilor, iar toate codurile relevante sunt marcate cu asterisc: sunt deșeuri periculoase.",
+            "Încadrarea depinde de tipul uleiului: uleiurile minerale de motor, de transmisie și de ungere neclorurate au un cod, uleiurile hidraulice minerale altul, iar conținutul separatoarelor de hidrocarburi are propriul subcapitol. Codul corect contează pentru că stabilește tratamentul și documentele.",
+          ],
+        },
+        {
+          heading: "Regula de aur: nu amesteca",
+          body: [
+            "Uleiul uzat curat poate fi regenerat sau valorificat energetic. Uleiul amestecat cu apă, solvenți, antigel, combustibil sau uleiuri clorurate devine mult mai greu de tratat și mai scump de eliminat — iar HG 235/2007 interzice explicit amestecarea uleiurilor uzate cu alte substanțe.",
+            "În practică, asta înseamnă recipiente separate pentru fiecare tip: un butoi pentru uleiul de motor, altul pentru cel hidraulic, iar antigelul, filtrele de ulei și materialele absorbante îmbibate în recipientele lor, cu codurile lor.",
+          ],
+        },
+        {
+          heading: "Stocarea temporară la generator",
+          body: [
+            "Uleiul uzat se păstrează în recipiente închise, etanșe, rezistente și etichetate cu tipul deșeului și codul lui, pe o suprafață impermeabilă, ferită de intemperii. Butoaiele se așază ideal pe o cuvă de retenție sau pe un palet colector, care să rețină o eventuală scurgere.",
+            "Stocarea la generator este temporară: nu este un depozit. Programează predarea înainte ca recipientele să se umple, iar evidența cantităților se ține lunar, ca la orice alt deșeu.",
+          ],
+        },
+        {
+          heading: "Predarea către un colector autorizat",
+          body: [
+            "Uleiul uzat se predă doar unui operator autorizat pentru codul respectiv. Fiind deșeu periculos, transportul se face cu formularul de expediție și cu aprobarea prealabilă prevăzute de HG 1061/2008, cantitatea fiind confirmată la recepție.",
+            "Noi preluăm uleiuri uzate și minerale, precum și șlamuri petroliere, cu transport propriu și documentele aferente. Pentru fluxuri constante putem stabili un program fix de ridicare, astfel încât stocul din curtea ta să rămână mic.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Uleiul uzat este deșeu periculos (capitolul 13 al listei deșeurilor), reglementat de HG 235/2007.",
+        "Nu îl amesteca cu apă, antigel, solvenți sau alte tipuri de ulei: amestecul scade șansele de valorificare și crește costul.",
+        "Stochează-l în recipiente închise și etichetate, pe suprafață impermeabilă, și predă-l doar cu formular de expediție.",
+      ],
+      faq: [
+        {
+          question: "Pot preda uleiul uzat oricărei firme de colectare?",
+          answer:
+            "Nu. Operatorul trebuie să aibă autorizație de mediu care să includă codul exact al uleiului tău. Cere copia autorizației și verifică anexa cu coduri înainte de prima predare.",
+        },
+        {
+          question: "Ce fac cu filtrele de ulei și cârpele îmbibate?",
+          answer:
+            "Sunt deșeuri periculoase separate, cu coduri proprii. Se colectează în recipiente distincte, nu împreună cu uleiul lichid, și se predau tot pe bază de formular de expediție.",
+        },
+        {
+          question: "Există o cantitate minimă pentru ridicare?",
+          answer:
+            "Depinde de distanță și de frecvență. Pentru clienții cu flux constant stabilim ridicări periodice; pentru cantități mici, punctuale, contactează-ne și găsim varianta cea mai eficientă.",
+        },
+      ],
+    },
+
+    "copper-scrap-grades-and-prices": {
+      metaTitle: "Prețul cuprului la colectare: sorturi și ce influențează prețul",
+      metaDescription:
+        "De ce cuprul lucios se plătește mai bine decât cel ars sau cositorit, cum se evaluează cablurile și radiatoarele și ce poți face ca să primești prețul maxim pe kg.",
+      title: "Prețul cuprului la colectare: sorturi, impurități și cum obții mai mult pe kg",
+      excerpt:
+        "„Cât dați pe cupru?” are cel puțin cinci răspunsuri corecte. Diferența dintre ele ține de sortare, nu de negociere.",
+      lead: "Cuprul este, după greutate, cel mai valoros metal care ajunge de obicei la un centru de colectare. Tocmai de aceea diferența dintre un sort și altul se simte imediat în bani. Iată cum se clasifică deșeul de cupru la recepție și ce poți face înainte de predare ca să primești prețul sortului superior.",
+      sections: [
+        {
+          heading: "De unde vine prețul cuprului",
+          body: [
+            "Prețul de pornire este cotația cuprului la bursa de metale de la Londra (LME), exprimată în dolari pe tonă și convertită la cursul zilei. Din ea, fiecare colector scade costurile de procesare și transport până la topitorie și marja proprie, iar ce rămâne depinde de cât de aproape este materialul tău de cuprul pur.",
+            "De aceea prețurile afișate de centrele de colectare se schimbă des, uneori de la o săptămână la alta. Un preț bun astăzi nu garantează același preț luna viitoare, iar comparațiile între colectori au sens doar pentru același sort, în aceeași zi.",
+          ],
+        },
+        {
+          heading: "Sorturile de cupru: de la lucios la amestecat",
+          body: [
+            "Sortul cel mai bine plătit este cuprul lucios: sârmă sau bară curată, fără izolație, fără cositor, fără oxidare puternică. Urmează cuprul curat dar oxidat sau ars, apoi cuprul cositorit, vopsit ori cu lipituri, iar la final cuprul amestecat cu alte metale — țevi cu fitinguri din alamă, bobinaje cu tole de fier.",
+            "Alama și bronzul sunt aliaje ale cuprului, dar se plătesc separat și mai puțin. Un sac de cupru lucios în care s-au strecurat câteva robinete de alamă poate fi încadrat în întregime la sortul inferior, așa că merită ținute separat.",
+          ],
+        },
+        {
+          heading: "Cablurile, radiatoarele și motoarele",
+          body: [
+            "Cablurile cu izolație nu se plătesc ca un cupru, ci după randamentul lor: cât cupru conțin raportat la greutatea totală. Un cablu gros, de energie, are un randament mare; unul subțire, de date sau auto, mult mai mic, iar prețul pe kg reflectă exact această diferență.",
+            "Radiatoarele cupru-aluminiu, motoarele electrice și transformatoarele au și ele prețuri proprii, stabilite după conținutul estimat de cupru. Noi procesăm cablurile în instalația proprie de granulare, așa că le putem evalua după cuprul real recuperat, nu după o estimare prudentă.",
+          ],
+        },
+        {
+          heading: "Cum pregătești cuprul ca să primești mai mult",
+          body: [
+            "Separă cuprul pe sorturi încă de la sursă: lucios, oxidat, cositorit, alamă, cabluri. Îndepărtează fitingurile de oțel, șuruburile, bucățile de plastic și pământul, care altfel se scad la cântar sau coboară tot lotul într-un sort inferior.",
+            "Nu arde cablurile ca să scoți izolația. Pe lângă faptul că arderea deșeurilor este interzisă și poluează, cuprul ars se plătește mai puțin decât cel lucios, iar cablul întreg poate fi predat direct pentru procesare. Cântărirea se face la recepție, în fața ta, pe cântar verificat metrologic.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Prețul pornește de la cotația LME a cuprului și scade cu cât materialul este mai departe de cuprul pur.",
+        "Cuprul lucios se plătește cel mai bine; oxidat, cositorit sau amestecat coboară în sorturi inferioare.",
+        "Separă alama, cablurile și cuprul curat și nu arde niciodată izolația — scade prețul și este ilegal.",
+      ],
+      faq: [
+        {
+          question: "De ce primesc mai puțin pe cabluri decât pe cupru?",
+          answer:
+            "Pentru că la cablu plătești și izolația, care nu are valoarea cuprului. Prețul se calculează după randamentul de cupru: cablurile groase de energie au randament mare, cele subțiri mult mai mic.",
+        },
+        {
+          question: "Merită să dezizolez singur cablurile?",
+          answer:
+            "La cablurile groase, dezizolarea mecanică poate merita, pentru că obții cupru lucios. La cele subțiri, efortul rar se justifică — le procesăm noi în instalația de granulare. Arderea izolației nu este o opțiune.",
+        },
+        {
+          question: "Cumpărați cupru și de la persoane fizice?",
+          answer:
+            "Da. Cântărim la recepție, în fața ta, și emitem bon de cântar pentru fiecare predare. Pentru persoane fizice este necesar actul de identitate.",
+        },
+      ],
+    },
+
+    "used-lead-acid-batteries": {
+      metaTitle: "Acumulatori auto uzați: colectare, stocare și predare",
+      metaDescription:
+        "De ce acumulatorii cu plumb sunt deșeuri periculoase, cum îi stochezi fără scurgeri de acid, ce cod de deșeu au și cum îi predai unui colector autorizat.",
+      title: "Acumulatori auto și industriali uzați: cum îi stochezi și cum îi predai corect",
+      excerpt:
+        "Un acumulator uzat este aproape în întregime reciclabil — cu condiția să ajungă întreg, cu electrolitul în el, la un colector autorizat.",
+      lead: "Flotele de transport, service-urile, depozitele cu stivuitoare și orice firmă cu surse de alimentare neîntreruptibilă ajung să aibă acumulatori uzați. Plumbul, plasticul și electrolitul din ei se recuperează aproape integral, dar până atunci acumulatorul rămâne un deșeu periculos, cu reguli stricte.",
+      sections: [
+        {
+          heading: "De ce acumulatorul cu plumb este deșeu periculos",
+          body: [
+            "Un acumulator plumb-acid conține plumb și compuși de plumb, toxici, și electrolit pe bază de acid sulfuric, coroziv. De aceea este încadrat la codul 16 06 01*, cu asterisc, și se gestionează după regulile deșeurilor periculoase: stocare controlată, transport cu formular de expediție, predare doar către operatori autorizați.",
+            "Bateriile portabile — alcaline, litiu-ion, nichel-metal hidrură — au coduri diferite și nu se amestecă cu acumulatorii auto. Separarea pe tipuri este primul pas pentru o predare fără probleme.",
+          ],
+        },
+        {
+          heading: "Ce se recuperează dintr-un acumulator",
+          body: [
+            "La reciclare, acumulatorul este mărunțit, iar componentele se separă: grila și pasta de plumb merg la topire și devin plumb secundar, carcasa din polipropilenă devine granule de plastic, iar electrolitul este neutralizat sau recuperat.",
+            "Rata de recuperare este foarte ridicată, motiv pentru care acumulatorii uzați au valoare la predare. Valoarea depinde însă de starea lor: un acumulator spart, din care s-a scurs acidul, este mai greu de manipulat și mai puțin valoros.",
+          ],
+        },
+        {
+          heading: "Stocarea în siguranță la firmă",
+          body: [
+            "Păstrează acumulatorii întregi, în poziție verticală, cu bușoanele la locul lor, pe o suprafață rezistentă la acid sau într-un recipient de colectare dedicat. Nu-i stivui direct unul peste altul fără separare și nu-i ține în bătaia ploii.",
+            "Nu goli niciodată electrolitul. Acidul scurs pe sol sau în canalizare este o poluare reală și o sancțiune sigură, iar un acumulator golit nu este mai ușor de predat, ci mai greu.",
+          ],
+        },
+        {
+          heading: "Predarea și documentele",
+          body: [
+            "Acumulatorii uzați se predau unui operator autorizat pentru codul 16 06 01*, cu formular de expediție pentru deșeuri periculoase. Cantitatea se cântărește la recepție și intră în evidența lunară a gestiunii deșeurilor, ca orice alt cod.",
+            "Preluăm acumulatori auto și industriali uzați, cu transport propriu și documentele aferente, alături de uleiurile uzate și DEEE-urile pe care un service sau o flotă le generează de obicei în paralel. O singură ridicare poate acoperi toate aceste fluxuri.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Acumulatorii plumb-acid au codul 16 06 01* și sunt deșeuri periculoase.",
+        "Păstrează-i întregi, verticali și cu electrolitul în ei; nu-i goli și nu-i amesteca cu bateriile portabile.",
+        "Predă-i doar unui operator autorizat pentru cod, cu formular de expediție și cântărire la recepție.",
+      ],
+      faq: [
+        {
+          question: "Plătiți pentru acumulatorii uzați?",
+          answer:
+            "Acumulatorii plumb-acid au valoare datorită plumbului, așa că predarea poate genera o încasare. Prețul depinde de cotația plumbului și de starea acumulatorilor — contactează-ne pentru o ofertă la zi.",
+        },
+        {
+          question: "Pot preda acumulatorii împreună cu bateriile de laptop?",
+          answer:
+            "În aceeași ridicare, da, dar în recipiente separate: bateriile litiu-ion au alt cod, alte riscuri (inclusiv de incendiu) și alt flux de reciclare.",
+        },
+        {
+          question: "Ce fac cu un acumulator spart, din care curge acid?",
+          answer:
+            "Pune-l într-un recipient etanș rezistent la acid, absoarbe scurgerea cu material absorbant și predă-l ca atare, menționând starea lui la programare. Materialul absorbant îmbibat devine și el deșeu periculos.",
+        },
+      ],
+    },
+
+    "construction-and-demolition-waste": {
+      metaTitle: "Deșeuri din construcții și demolări: ce se recuperează",
+      metaDescription:
+        "Ce deșeuri rezultă din construcții și demolări, cum le sortezi pe șantier pentru costuri mai mici, ce coduri se folosesc și ce materiale se pot vinde, nu doar elimina.",
+      title:
+        "Deșeuri din construcții și demolări: cum sortezi pe șantier ca să plătești mai puțin",
+      excerpt:
+        "Un container de moloz amestecat costă. Același volum, separat în metal, lemn și beton, poate costa mult mai puțin — sau chiar aduce bani.",
+      lead: "Demolările și renovările de hale produc volume mari de deșeuri într-un timp scurt. Cea mai mare parte din ele nu este gunoi, ci material recuperabil: fier, cabluri, lemn, plastic, beton care poate deveni agregat. Diferența dintre o cheltuială și o economie se face pe șantier, prin sortare.",
+      sections: [
+        {
+          heading: "Ce deșeuri rezultă dintr-un șantier",
+          body: [
+            "Deșeurile din construcții și demolări sunt grupate în capitolul 17 al listei deșeurilor. Aici găsești betonul, cărămizile și țiglele, lemnul, sticla și plasticul, metalele — fier și oțel, cupru, aluminiu —, cablurile, precum și amestecurile de deșeuri de construcții.",
+            "Capitolul conține și coduri periculoase, cu asterisc: materialele cu azbest, solul contaminat, deșeurile cu gudron de huilă. Acestea se identifică înainte de demolare și se gestionează separat, de operatori autorizați special pentru ele.",
+          ],
+        },
+        {
+          heading: "De ce contează sortarea pe șantier",
+          body: [
+            "Un container cu deșeuri amestecate se încadrează la codul pentru amestecuri și ajunge, de regulă, la sortare sau la depozitare, ambele plătite. Aceleași materiale, separate pe șantier, au fiecare destinația lor: metalul se vinde, lemnul și plasticul se valorifică, betonul curat poate fi concasat și refolosit.",
+            "Directiva-cadru europeană privind deșeurile, transpusă în România prin OUG 92/2021, stabilește o țintă de cel puțin 70% pentru pregătirea pentru reutilizare, reciclarea și valorificarea deșeurilor nepericuloase din construcții și demolări. Sortarea la sursă este singurul mod realist de a ajunge acolo.",
+          ],
+        },
+        {
+          heading: "Metalul din demolări: partea care aduce bani",
+          body: [
+            "Structurile metalice, armăturile, tubulatura, tabla, cablurile și instalațiile electrice sunt, de obicei, cea mai valoroasă fracție dintr-o demolare industrială. Un container separat pentru fier și altul pentru neferoase și cabluri pot acoperi o parte importantă din costul total al eliminării.",
+            "Avem echipamente pentru fierul vechi voluminos — macara cu graifăr, camioane Abrollkipper, basculante de mare tonaj — și preluăm direct de pe șantier. Metalul se cântărește la recepție, iar suma se calculează pe sort.",
+          ],
+        },
+        {
+          heading: "Organizarea pe șantier și documentele",
+          body: [
+            "Planifică din start câte containere îți trebuie și pentru ce fracții: de regulă metal, lemn, plastic și moloz curat, plus un container pentru restul. Etichetează-le clar și explică echipelor ce merge unde — un singur sac de gunoi menajer poate compromite un container de beton curat.",
+            "Fiecare transport pleacă de pe șantier cu formularul de încărcare-descărcare prevăzut de HG 1061/2008, iar cantitățile intră în evidența gestiunii deșeurilor a firmei care generează deșeul — de obicei constructorul sau beneficiarul, în funcție de contract.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Deșeurile din construcții și demolări sunt în capitolul 17 al listei; materialele cu azbest și solul contaminat sunt periculoase și se gestionează separat.",
+        "Un container amestecat costă; fracțiile separate — metal, lemn, plastic, moloz curat — costă mai puțin sau se vând.",
+        "Metalul și cablurile din demolare pot acoperi o parte importantă din costul total al eliminării.",
+      ],
+      faq: [
+        {
+          question: "Preluați și moloz, nu doar metal?",
+          answer:
+            "Punem la dispoziție containere pentru metal, lemn, plastic și moloz reciclabil. Pentru moloz, condiția este să fie curat, fără gunoi menajer sau materiale periculoase amestecate.",
+        },
+        {
+          question: "Cine trebuie să țină evidența deșeurilor de pe un șantier?",
+          answer:
+            "Firma care generează deșeul — de obicei constructorul sau beneficiarul lucrării, după cum stabilește contractul. Clarifică acest lucru din start, ca formularele de transport să fie emise pe numele corect.",
+        },
+        {
+          question: "Ce fac dacă găsesc azbest la demolare?",
+          answer:
+            "Oprește lucrul în zona respectivă și apelează la un operator autorizat special pentru deșeuri cu azbest. Nu îl amesteca în containerele obișnuite: este periculos pentru sănătate, iar amestecul contaminează tot containerul.",
+        },
+      ],
+    },
   },
 } as const;

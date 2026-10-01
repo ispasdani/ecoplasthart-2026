@@ -1,12 +1,17 @@
 import {
   Award,
   BatteryCharging,
+  BatteryFull,
+  BrickWall,
   Building2,
   Cable,
   ClipboardList,
+  Coins,
   Container,
+  Droplets,
   Factory,
   FileCheck2,
+  FileSpreadsheet,
   Fuel,
   Handshake,
   HardHat,
@@ -83,6 +88,11 @@ export const articleIcons: Record<ArticleSlug, LucideIcon> = {
   "ferrous-vs-non-ferrous-waste": Layers,
   "waste-recovery-and-destruction-certificates": Award,
   "how-waste-container-rental-works": Truck,
+  "waste-records-and-sim-reporting": FileSpreadsheet,
+  "used-oil-collection-for-companies": Droplets,
+  "copper-scrap-grades-and-prices": Coins,
+  "used-lead-acid-batteries": BatteryFull,
+  "construction-and-demolition-waste": BrickWall,
 };
 
 /** Matches the order of `home.industries.items` in the dictionaries. */

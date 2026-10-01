@@ -120,6 +120,36 @@ export const ARTICLE_FACTS: Record<ArticleSlug, ArticleFacts> = {
     updatedAt: "2026-09-29",
     readMinutes: 6,
   },
+  "waste-records-and-sim-reporting": {
+    topic: "legislation",
+    publishedAt: "2026-10-01",
+    updatedAt: "2026-10-01",
+    readMinutes: 7,
+  },
+  "used-oil-collection-for-companies": {
+    topic: "legislation",
+    publishedAt: "2026-10-01",
+    updatedAt: "2026-10-01",
+    readMinutes: 7,
+  },
+  "copper-scrap-grades-and-prices": {
+    topic: "costs",
+    publishedAt: "2026-10-01",
+    updatedAt: "2026-10-01",
+    readMinutes: 7,
+  },
+  "used-lead-acid-batteries": {
+    topic: "recycling",
+    publishedAt: "2026-10-01",
+    updatedAt: "2026-10-01",
+    readMinutes: 6,
+  },
+  "construction-and-demolition-waste": {
+    topic: "guides",
+    publishedAt: "2026-10-01",
+    updatedAt: "2026-10-01",
+    readMinutes: 7,
+  },
 };
 
 /** One article, resolved for a locale: facts + copy + localized href. */

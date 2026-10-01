@@ -174,6 +174,26 @@ export const pathnames = {
     ro: "/articole/cum-functioneaza-inchirierea-containerelor-de-deseuri",
     en: "/articles/how-waste-container-rental-works",
   },
+  "/articles/waste-records-and-sim-reporting": {
+    ro: "/articole/evidenta-gestiunii-deseurilor-si-raportarea-in-sim",
+    en: "/articles/waste-records-and-sim-reporting",
+  },
+  "/articles/used-oil-collection-for-companies": {
+    ro: "/articole/colectarea-uleiurilor-uzate-de-la-firme",
+    en: "/articles/used-oil-collection-for-companies",
+  },
+  "/articles/copper-scrap-grades-and-prices": {
+    ro: "/articole/pretul-cuprului-la-colectare-sorturi",
+    en: "/articles/copper-scrap-grades-and-prices",
+  },
+  "/articles/used-lead-acid-batteries": {
+    ro: "/articole/acumulatori-auto-uzati-colectare-si-predare",
+    en: "/articles/used-lead-acid-batteries",
+  },
+  "/articles/construction-and-demolition-waste": {
+    ro: "/articole/deseuri-din-constructii-si-demolari",
+    en: "/articles/construction-and-demolition-waste",
+  },
   "/contact": { ro: "/contact", en: "/contact" },
   "/privacy-policy": {
     ro: "/politica-de-confidentialitate",
@@ -243,6 +263,11 @@ export const articleKeys = [
   "/articles/ferrous-vs-non-ferrous-waste",
   "/articles/waste-recovery-and-destruction-certificates",
   "/articles/how-waste-container-rental-works",
+  "/articles/waste-records-and-sim-reporting",
+  "/articles/used-oil-collection-for-companies",
+  "/articles/copper-scrap-grades-and-prices",
+  "/articles/used-lead-acid-batteries",
+  "/articles/construction-and-demolition-waste",
 ] as const satisfies readonly PathnameKey[];
 
 export type ArticleKey = (typeof articleKeys)[number];

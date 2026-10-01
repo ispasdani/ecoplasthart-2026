@@ -843,5 +843,317 @@ export const articlesEn = {
         },
       ],
     },
+
+    "waste-records-and-sim-reporting": {
+      metaTitle: "Waste management records and SIM reporting in Romania",
+      metaDescription:
+        "What the monthly waste management record must contain under HG 856/2002, how to report annually in SIM to ANPM, and which documents to keep for inspections.",
+      title:
+        "Waste management records and annual SIM reporting: a guide for companies",
+      excerpt:
+        "Records kept monthly, by waste code, turn the annual report into a formality. Records rebuilt from invoices in March turn it into a problem.",
+      lead: "Every company that generates waste — from a small workshop to a factory — has to keep records of it and report them every year. The obligation isn't new, but inspections have become more thorough, and the data in the Integrated Environmental System is increasingly cross-checked against what collectors report. Here is what records that pass an inspection without drama look like.",
+      sections: [
+        {
+          heading: "Who has the obligation and what the waste record is",
+          body: [
+            "OUG 92/2021 on the waste regime requires waste producers and holders to keep records of how their waste is managed, in the format set out in annex 1 to HG 856/2002. It doesn't matter whether you hold an environmental permit or run an office-only business: if your economic activity generates waste, the obligation applies.",
+            "Records are kept monthly, separately for each type of waste, identified by its code from the European waste list. For each code you record the quantity generated, the quantity recovered, disposed of or temporarily stored, and the operator it was handed over to.",
+          ],
+        },
+        {
+          heading: "Where the numbers come from: weighbridge tickets and transport forms",
+          body: [
+            "The figures in the record aren't estimated, they're documented. They come from the loading-unloading forms issued for every shipment under HG 1061/2008, from weighbridge tickets and, for hazardous waste, from the shipment forms.",
+            "That's why it matters to work with a collector who weighs every handover and sends you the documents monthly, totalled by code. When the quantities in your record match the operator's, an inspection ends quickly; when they don't, the difference has to be explained.",
+          ],
+        },
+        {
+          heading: "Annual reporting in SIM",
+          body: [
+            "The monthly records are totalled once a year and reported in SIM — the Integrated Environmental System run by ANPM, Romania's National Environmental Protection Agency — through an account the company creates on the platform. ANPM announces the deadline for each reporting session; in recent years, reporting for the previous year has taken place in the first quarter.",
+            "If the records were kept monthly, reporting is a simple sum by code. If not, it means rebuilding a whole year from invoices and emails, with the risk that your figures won't match what collectors declared for the same handovers.",
+          ],
+        },
+        {
+          heading: "What to keep and for how long",
+          body: [
+            "Keep the records together with the supporting documents: transport forms, weighbridge tickets, contracts with operators and copies of their environmental permits. The legislation sets a minimum retention period of at least three years, and in practice it's worth keeping them longer.",
+            "Organise the file by year and by waste code. In an inspection, the first request is usually the record for the last year, followed by the documents behind a few randomly chosen quantities — and a tidy file shortens that conversation considerably.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Records are kept monthly, for each waste code, in the format in annex 1 to HG 856/2002 — not rebuilt at year end.",
+        "Quantities come from weighbridge tickets and transport forms; ask your collector for monthly totals by code.",
+        "Annual reporting happens in SIM, by the deadline ANPM announces, and supporting documents are kept for at least three years.",
+      ],
+      faq: [
+        {
+          question: "Do I need to keep records if I run a small company with no production?",
+          answer:
+            "Yes, if your activity generates waste — packaging, retired IT equipment, maintenance waste. Low volumes make the record simpler, but they don't remove the obligation.",
+        },
+        {
+          question: "What happens if I don't report in SIM on time?",
+          answer:
+            "Failing to report or reporting incorrectly is a contravention under OUG 92/2021. It's also easy to spot, because your collector reports the quantities it took from you as well.",
+        },
+        {
+          question: "Can the collector help with the reporting data?",
+          answer:
+            "Yes. We send clients the transport documents and a monthly summary of quantities by code, and an annual statement on request, so the figures in their records match what we actually collected.",
+        },
+      ],
+    },
+
+    "used-oil-collection-for-companies": {
+      metaTitle: "Used oil collection for companies: storage and handover",
+      metaDescription:
+        "How to store used oil correctly on site, which waste codes apply, why it must not be mixed with other liquids and which documents you get when handing it to a licensed collector.",
+      title: "Used oil collection for companies: how to store it and hand it over",
+      excerpt:
+        "A litre of used oil can contaminate thousands of litres of water. For a company, it can also contaminate the environmental file if it isn't stored and handed over correctly.",
+      lead: "Car workshops, transport fleets, machining shops and any factory with hydraulic machinery generate used oil. It's hazardous waste with clear rules for storage and handover, but also one that can be re-refined or recovered for energy very effectively — provided it reaches the collector clean.",
+      sections: [
+        {
+          heading: "What used oil is and how it's coded",
+          body: [
+            "Used oil management in Romania is governed by HG 235/2007, which sets out the obligations of generators and collectors. Used oils fall under chapter 13 of the waste list, and every relevant code carries an asterisk: they are hazardous waste.",
+            "The code depends on the type of oil: non-chlorinated mineral engine, gear and lubricating oils have one code, mineral hydraulic oils another, and oil/water separator contents have their own sub-chapter. The right code matters because it determines the treatment and the paperwork.",
+          ],
+        },
+        {
+          heading: "The golden rule: don't mix",
+          body: [
+            "Clean used oil can be re-refined or recovered for energy. Oil mixed with water, solvents, antifreeze, fuel or chlorinated oils becomes much harder to treat and more expensive to dispose of — and HG 235/2007 explicitly prohibits mixing used oils with other substances.",
+            "In practice, that means separate containers for each type: one drum for engine oil, another for hydraulic oil, and antifreeze, oil filters and soaked absorbents in their own containers, under their own codes.",
+          ],
+        },
+        {
+          heading: "Temporary storage at the generator",
+          body: [
+            "Used oil is kept in closed, leak-tight, sturdy containers labelled with the waste type and its code, on an impermeable surface sheltered from the weather. Ideally, drums stand on a spill tray or bunded pallet that would hold any leak.",
+            "Storage at the generator is temporary: it isn't a depot. Schedule the handover before the containers fill up, and record quantities monthly, as with any other waste.",
+          ],
+        },
+        {
+          heading: "Handing it over to a licensed collector",
+          body: [
+            "Used oil may only be handed over to an operator licensed for that code. As hazardous waste, it travels with the shipment form and prior approval required by HG 1061/2008, with the quantity confirmed on receipt.",
+            "We collect used and mineral oils, as well as oily sludges, with our own transport and the required documents. For steady volumes we can set a fixed pickup schedule, so the stock in your yard stays small.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Used oil is hazardous waste (chapter 13 of the waste list), governed by HG 235/2007.",
+        "Don't mix it with water, antifreeze, solvents or other oil types: mixing lowers the chances of recovery and raises the cost.",
+        "Store it in closed, labelled containers on an impermeable surface, and hand it over only with a shipment form.",
+      ],
+      faq: [
+        {
+          question: "Can I hand used oil over to any waste collection company?",
+          answer:
+            "No. The operator needs an environmental permit that covers the exact code of your oil. Ask for a copy of the permit and check the annex listing the codes before the first handover.",
+        },
+        {
+          question: "What do I do with oil filters and soaked rags?",
+          answer:
+            "They're separate hazardous wastes with their own codes. Collect them in their own containers, not with the liquid oil, and hand them over with a shipment form as well.",
+        },
+        {
+          question: "Is there a minimum quantity for a pickup?",
+          answer:
+            "It depends on distance and frequency. For clients with a steady flow we set up periodic pickups; for small, one-off quantities, get in touch and we'll find the most efficient option.",
+        },
+      ],
+    },
+
+    "copper-scrap-grades-and-prices": {
+      metaTitle: "Copper scrap prices: grades and what drives the price",
+      metaDescription:
+        "Why bright copper pays more than burnt or tinned copper, how cables and radiators are valued, and what you can do to get the best price per kilo.",
+      title: "Copper scrap prices: grades, impurities and how to get more per kilo",
+      excerpt:
+        "“What do you pay for copper?” has at least five correct answers. The difference between them comes down to sorting, not haggling.",
+      lead: "By weight, copper is the most valuable metal that usually reaches a collection yard. That's exactly why the gap between one grade and the next shows up in money straight away. Here's how copper scrap is graded on receipt and what you can do before the handover to get the higher grade's price.",
+      sections: [
+        {
+          heading: "Where the copper price comes from",
+          body: [
+            "The starting point is the copper price on the London Metal Exchange (LME), quoted in dollars per tonne and converted at the day's exchange rate. From it, each collector deducts the cost of processing and transport to the smelter and its own margin, and what's left depends on how close your material is to pure copper.",
+            "That's why the prices collection yards post change often, sometimes week to week. A good price today doesn't guarantee the same price next month, and comparing collectors only makes sense for the same grade, on the same day.",
+          ],
+        },
+        {
+          heading: "Copper grades: from bright to mixed",
+          body: [
+            "The best-paid grade is bright copper: clean wire or bar, without insulation, without tin, without heavy oxidation. Next comes clean but oxidised or burnt copper, then tinned, painted or soldered copper, and finally copper mixed with other metals — pipe with brass fittings, windings with iron laminations.",
+            "Brass and bronze are copper alloys, but they're paid separately and for less. A bag of bright copper with a few brass taps slipped in can be graded down as a whole, so it's worth keeping them apart.",
+          ],
+        },
+        {
+          heading: "Cables, radiators and motors",
+          body: [
+            "Insulated cables aren't paid as copper but by their yield: how much copper they contain relative to their total weight. A thick power cable has a high yield; a thin data or automotive cable a much lower one, and the price per kilo reflects exactly that difference.",
+            "Copper-aluminium radiators, electric motors and transformers also have their own prices, based on their estimated copper content. We process cables in our own granulation plant, so we can value them on the copper actually recovered rather than on a cautious estimate.",
+          ],
+        },
+        {
+          heading: "How to prepare copper to get more for it",
+          body: [
+            "Sort copper by grade at the source: bright, oxidised, tinned, brass, cables. Remove steel fittings, screws, bits of plastic and soil, which would otherwise be deducted at the scale or pull the whole lot into a lower grade.",
+            "Don't burn cables to strip the insulation. Burning waste is illegal and polluting, burnt copper pays less than bright copper, and the whole cable can be handed over for processing as it is. Weighing happens on receipt, in front of you, on a verified scale.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "The price starts from the LME copper quote and drops the further the material is from pure copper.",
+        "Bright copper pays best; oxidised, tinned or mixed copper falls into lower grades.",
+        "Keep brass, cables and clean copper apart, and never burn insulation — it lowers the price and it's illegal.",
+      ],
+      faq: [
+        {
+          question: "Why do I get less for cables than for copper?",
+          answer:
+            "Because with cable you're also weighing the insulation, which isn't worth what copper is. The price is set by copper yield: thick power cables have a high yield, thin ones much lower.",
+        },
+        {
+          question: "Is it worth stripping cables myself?",
+          answer:
+            "For thick cables, mechanical stripping can pay off, because you end up with bright copper. For thin ones the effort rarely does — we process them in our granulation plant. Burning the insulation isn't an option.",
+        },
+        {
+          question: "Do you buy copper from private individuals?",
+          answer:
+            "Yes. We weigh on receipt, in front of you, and issue a weighbridge ticket for every handover. Individuals need to bring an identity document.",
+        },
+      ],
+    },
+
+    "used-lead-acid-batteries": {
+      metaTitle: "Used lead-acid batteries: collection, storage and handover",
+      metaDescription:
+        "Why lead-acid batteries are hazardous waste, how to store them without acid leaks, which waste code applies and how to hand them over to a licensed collector.",
+      title: "Used car and industrial batteries: how to store and hand them over correctly",
+      excerpt:
+        "A used battery is almost entirely recyclable — provided it reaches a licensed collector intact, with the electrolyte still inside.",
+      lead: "Transport fleets, workshops, warehouses with forklifts and any company with UPS systems end up with used batteries. The lead, plastic and electrolyte inside are recovered almost completely, but until then the battery remains hazardous waste with strict rules.",
+      sections: [
+        {
+          heading: "Why a lead-acid battery is hazardous waste",
+          body: [
+            "A lead-acid battery contains toxic lead and lead compounds and a corrosive sulphuric-acid electrolyte. That's why it falls under code 16 06 01*, with an asterisk, and is managed under the rules for hazardous waste: controlled storage, transport with a shipment form, handover only to licensed operators.",
+            "Portable batteries — alkaline, lithium-ion, nickel-metal hydride — have different codes and aren't mixed with car batteries. Separating by type is the first step towards a trouble-free handover.",
+          ],
+        },
+        {
+          heading: "What's recovered from a battery",
+          body: [
+            "In recycling, the battery is shredded and its components separated: the lead grid and paste go to smelting and become secondary lead, the polypropylene casing becomes plastic granules, and the electrolyte is neutralised or recovered.",
+            "The recovery rate is very high, which is why used batteries have value on handover. That value depends on their condition, though: a cracked battery that has leaked its acid is harder to handle and worth less.",
+          ],
+        },
+        {
+          heading: "Storing them safely on site",
+          body: [
+            "Keep batteries intact, upright, with their caps in place, on an acid-resistant surface or in a dedicated collection container. Don't stack them directly on top of each other without separation, and don't leave them out in the rain.",
+            "Never drain the electrolyte. Acid spilled on the ground or into the sewer is real pollution and a certain fine, and a drained battery isn't easier to hand over — it's harder.",
+          ],
+        },
+        {
+          heading: "Handover and paperwork",
+          body: [
+            "Used batteries are handed over to an operator licensed for code 16 06 01*, with a hazardous-waste shipment form. The quantity is weighed on receipt and goes into the monthly waste record, like any other code.",
+            "We collect used car and industrial batteries with our own transport and the required documents, alongside the used oil and WEEE that a workshop or fleet usually generates at the same time. A single pickup can cover all of these streams.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Lead-acid batteries carry code 16 06 01* and are hazardous waste.",
+        "Keep them intact, upright and with the electrolyte inside; don't drain them or mix them with portable batteries.",
+        "Hand them over only to an operator licensed for the code, with a shipment form and weighing on receipt.",
+      ],
+      faq: [
+        {
+          question: "Do you pay for used batteries?",
+          answer:
+            "Lead-acid batteries have value because of the lead, so handing them over can generate income. The price depends on the lead quote and the condition of the batteries — get in touch for an up-to-date offer.",
+        },
+        {
+          question: "Can I hand over car batteries together with laptop batteries?",
+          answer:
+            "In the same pickup, yes, but in separate containers: lithium-ion batteries have a different code, different risks (including fire) and a different recycling route.",
+        },
+        {
+          question: "What do I do with a cracked battery that's leaking acid?",
+          answer:
+            "Put it in a sealed, acid-resistant container, soak up the spill with absorbent material and hand it over as it is, mentioning its condition when you book the pickup. The soaked absorbent becomes hazardous waste too.",
+        },
+      ],
+    },
+
+    "construction-and-demolition-waste": {
+      metaTitle: "Construction and demolition waste: what can be recovered",
+      metaDescription:
+        "What waste construction and demolition produce, how to sort it on site to cut costs, which codes apply and which materials can be sold rather than just disposed of.",
+      title:
+        "Construction and demolition waste: how to sort on site and pay less",
+      excerpt:
+        "A container of mixed rubble costs money. The same volume, split into metal, wood and concrete, can cost far less — or even bring money in.",
+      lead: "Demolitions and building refurbishments produce large volumes of waste in a short time. Most of it isn't rubbish but recoverable material: iron, cables, wood, plastic, concrete that can become aggregate. The difference between an expense and a saving is made on site, through sorting.",
+      sections: [
+        {
+          heading: "What waste a construction site produces",
+          body: [
+            "Construction and demolition waste is grouped in chapter 17 of the waste list. It covers concrete, bricks and tiles, wood, glass and plastic, metals — iron and steel, copper, aluminium —, cables, and mixed construction waste.",
+            "The chapter also has hazardous codes, marked with an asterisk: asbestos-containing materials, contaminated soil, waste containing coal tar. These are identified before demolition and managed separately, by operators licensed specifically for them.",
+          ],
+        },
+        {
+          heading: "Why sorting on site matters",
+          body: [
+            "A container of mixed waste is classed under the code for mixtures and usually ends up at a sorting plant or landfill, both of which you pay for. The same materials, separated on site, each have their own destination: metal is sold, wood and plastic are recovered, clean concrete can be crushed and reused.",
+            "The EU Waste Framework Directive, transposed in Romania by OUG 92/2021, sets a target of at least 70% for preparing for reuse, recycling and recovery of non-hazardous construction and demolition waste. Sorting at source is the only realistic way to get there.",
+          ],
+        },
+        {
+          heading: "Metal from demolition: the part that pays",
+          body: [
+            "Steel structures, rebar, ducting, sheet metal, cables and electrical installations are usually the most valuable fraction of an industrial demolition. One container for iron and another for non-ferrous metals and cables can cover a significant share of the total disposal cost.",
+            "We have the equipment for bulky scrap — a grapple crane, Abrollkipper trucks, heavy-duty tippers — and collect straight from the site. Metal is weighed on receipt, and the amount is calculated by grade.",
+          ],
+        },
+        {
+          heading: "Organising the site and the paperwork",
+          body: [
+            "Plan from the start how many containers you need and for which fractions: usually metal, wood, plastic and clean rubble, plus one container for everything else. Label them clearly and tell the crews what goes where — a single bag of household rubbish can spoil a container of clean concrete.",
+            "Every load leaves the site with the loading-unloading form required by HG 1061/2008, and the quantities go into the waste record of the company that generates the waste — usually the contractor or the client, depending on the contract.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Construction and demolition waste is in chapter 17 of the list; asbestos materials and contaminated soil are hazardous and handled separately.",
+        "A mixed container costs money; separate fractions — metal, wood, plastic, clean rubble — cost less or can be sold.",
+        "Metal and cables from demolition can cover a significant share of the total disposal cost.",
+      ],
+      faq: [
+        {
+          question: "Do you take rubble as well, not just metal?",
+          answer:
+            "We provide containers for metal, wood, plastic and recyclable rubble. For rubble, the condition is that it's clean, with no household rubbish or hazardous materials mixed in.",
+        },
+        {
+          question: "Who has to keep the waste record for a construction site?",
+          answer:
+            "The company that generates the waste — usually the contractor or the client, as the contract specifies. Settle this from the start, so transport forms are issued in the right name.",
+        },
+        {
+          question: "What should I do if I find asbestos during demolition?",
+          answer:
+            "Stop work in that area and call in an operator licensed specifically for asbestos waste. Don't mix it into ordinary containers: it's a health hazard, and mixing contaminates the whole container.",
+        },
+      ],
+    },
   },
 } as const;
