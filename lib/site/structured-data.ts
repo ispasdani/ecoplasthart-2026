@@ -220,9 +220,13 @@ function localBusinessNode(dict: Messages, locale: Locale) {
     hasMap: MAPS_HREF,
     openingHoursSpecification: OPENING_HOURS,
     areaServed: AREA_SERVED,
-    // `geo` omitted on purpose: the coordinates have to be the truck entrance
-    // on Șos. Hunedoarei nr. 13, and a guessed pin is worse than none —
-    // drivers navigate to it. See audit item B-07.
+    // The truck entrance on Șos. Hunedoarei nr. 13, confirmed by the owner —
+    // drivers navigate to this pin, so don't replace it with a geocoded guess.
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 45.832648,
+      longitude: 22.946901,
+    },
   };
 }
 
