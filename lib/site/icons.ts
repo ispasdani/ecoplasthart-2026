@@ -8,6 +8,7 @@ import {
   ClipboardList,
   Coins,
   Container,
+  CupSoda,
   Droplets,
   Factory,
   FileCheck2,
@@ -17,6 +18,7 @@ import {
   HardHat,
   Landmark,
   Layers,
+  Magnet,
   MapPinned,
   Package,
   Recycle,
@@ -27,6 +29,7 @@ import {
   Sparkles,
   Trash2,
   Truck,
+  Wrench,
   Zap,
   type LucideIcon,
 } from "lucide-react";
@@ -93,6 +96,11 @@ export const articleIcons: Record<ArticleSlug, LucideIcon> = {
   "copper-scrap-grades-and-prices": Coins,
   "used-lead-acid-batteries": BatteryFull,
   "construction-and-demolition-waste": BrickWall,
+  "where-to-sell-scrap-metal-deva-hunedoara": MapPinned,
+  "documents-needed-to-sell-scrap-metal": FileCheck2,
+  "what-you-can-sell-as-scrap-metal": Wrench,
+  "aluminium-cans-scrap-value": CupSoda,
+  "how-to-tell-copper-brass-aluminium-apart": Magnet,
 };
 
 /** Matches the order of `home.industries.items` in the dictionaries. */

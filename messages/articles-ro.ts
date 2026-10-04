@@ -1163,5 +1163,315 @@ export const articlesRo = {
         },
       ],
     },
+
+    "where-to-sell-scrap-metal-deva-hunedoara": {
+      metaTitle: "Unde vinzi fier vechi în Deva și Hunedoara",
+      metaDescription:
+        "Centru de fier vechi în Deva (Cristur), pe Șoseaua Hunedoarei nr. 13: ce primim, program, cântar verificat și ridicare de la domiciliu pentru cantități mari.",
+      title: "Unde vinzi fier vechi în Deva și Hunedoara: ce trebuie să știi înainte să pleci de acasă",
+      excerpt:
+        "Ai strâns fier vechi în curte sau în garaj? Iată unde îl poți duce în zona Deva–Hunedoara, ce să iei cu tine și cum să nu pierzi bani la cântar.",
+      lead: "Fie că ai o grămadă de fier vechi rămasă după o renovare, o mașină de spălat stricată sau câteva țevi de cupru, întrebarea e aceeași: unde le duci ca să primești un preț corect? Îți spunem cum funcționează la noi, la centrul din Cristur, între Deva și Hunedoara.",
+      sections: [
+        {
+          heading: "Unde ne găsești",
+          body: [
+            "Centrul nostru de colectare este pe Șoseaua Hunedoarei nr. 13, în Sat Cristur, Deva — pe drumul dintre Deva și Hunedoara, ușor de găsit și cu loc de manevră pentru mașini, remorci și camioane.",
+            "Suntem deschiși de luni până vineri, între 8:00 și 17:00, și sâmbăta între 8:00 și 13:00. Dacă vii cu o cantitate mare sau cu ceva neobișnuit, sună-ne înainte, ca să fim pregătiți cu utilajul potrivit.",
+          ],
+        },
+        {
+          heading: "Ce primim",
+          body: [
+            "Primim fier vechi de orice fel — tablă, țevi, profile, fontă, piese de mașini, unelte stricate — și metale neferoase: cupru, alamă, aluminiu, plumb, zinc. Luăm și cabluri electrice cu izolație, acumulatori auto, electrocasnice și electronice stricate.",
+            "Dacă nu știi sigur dacă un lucru se primește, fă o poză și trimite-ne-o sau sună-ne. E mai simplu decât să-l cari degeaba.",
+          ],
+        },
+        {
+          heading: "Cum se cântărește și cum se plătește",
+          body: [
+            "Totul se cântărește pe loc, în fața ta, pe un cântar verificat metrologic. Primești bon de cântar pentru fiecare predare, cu greutatea și tipul de metal.",
+            "Prețul depinde de ce aduci: fierul vechi are un preț, cuprul altul, aluminiul altul. Dacă le aduci amestecate, totul se plătește la prețul celui mai ieftin, așa că merită să le separi acasă.",
+          ],
+        },
+        {
+          heading: "Ai multă marfă? Venim noi după ea",
+          body: [
+            "Pentru firme sau pentru cantități mari — o hală golită, o construcție demolată, un utilaj vechi — venim noi cu camionul și cu macaraua cu graifăr, oriunde în județul Hunedoara și nu numai.",
+            "Ne spui ce ai și cam cât, iar noi îți spunem când putem veni. Cântărirea se face la noi, la centru, și primești toate actele.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Centrul nostru e în Cristur, Deva, pe Șoseaua Hunedoarei nr. 13 — luni–vineri 8–17, sâmbătă 8–13.",
+        "Primim fier vechi, cupru, alamă, aluminiu, cabluri, acumulatori și electrocasnice stricate.",
+        "Separă metalele acasă: amestecate, se plătesc la prețul celui mai ieftin.",
+      ],
+      faq: [
+        {
+          question: "Cumpărați fier vechi și de la persoane fizice?",
+          answer:
+            "Da. Vii cu buletinul, cântărim pe loc și primești banii împreună cu bonul de cântar.",
+        },
+        {
+          question: "Veniți să ridicați fierul vechi de acasă?",
+          answer:
+            "Pentru cantități mari, da — avem camioane și macara cu graifăr. Pentru câteva bucăți, de obicei e mai simplu să le aduci tu la centru.",
+        },
+        {
+          question: "Cât dați pe kilogramul de fier vechi?",
+          answer:
+            "Prețul se schimbă des, după piața metalelor. Sună-ne în ziua în care vrei să vii și îți spunem prețul la zi pentru ce ai.",
+        },
+      ],
+    },
+
+    "documents-needed-to-sell-scrap-metal": {
+      metaTitle: "Ce acte îți trebuie ca să vinzi fier vechi",
+      metaDescription:
+        "Ce acte trebuie să ai când vinzi fier vechi ca persoană fizică sau ca firmă, de ce suma primită e mai mică decât prețul brut și ce nu se poate preda la fier vechi.",
+      title: "Ce acte îți trebuie ca să vinzi fier vechi (persoană fizică sau firmă)",
+      excerpt:
+        "Pentru o persoană fizică, de obicei e suficient buletinul. Pentru o firmă, lucrurile stau puțin diferit. Iată ce să iei cu tine.",
+      lead: "Mulți oameni vin la fier vechi și află abia la cântar că le lipsește un act sau că nu pot preda un anumit obiect. Ca să nu faci drumul de două ori, iată ce îți trebuie, explicat simplu.",
+      sections: [
+        {
+          heading: "Dacă ești persoană fizică",
+          body: [
+            "Ai nevoie de actul de identitate — buletinul sau cartea de identitate. Centrul de colectare este obligat să înregistreze cine predă metalul, așa că fără act nu se poate face predarea.",
+            "Pentru fiecare predare primești un bon de cântar cu greutatea și tipul de metal. Păstrează-l: este dovada că ai predat legal materialul.",
+          ],
+        },
+        {
+          heading: "De ce primești mai puțin decât prețul brut",
+          body: [
+            "Când vinzi fier vechi ca persoană fizică, centrul de colectare reține din suma brută impozitul pe venit și contribuția la Fondul pentru mediu, așa cum prevede legea. De aceea suma pe care o primești în mână este mai mică decât prețul brut.",
+            "Când compari prețurile între centre, întreabă întotdeauna dacă prețul spus este brut sau net. Altfel poți compara două lucruri diferite.",
+          ],
+        },
+        {
+          heading: "Dacă vinzi în numele unei firme",
+          body: [
+            "O firmă predă fierul vechi pe bază de documente: un aviz sau o factură, iar transportul se face cu formularul de încărcare-descărcare a deșeurilor. Plata se face prin bancă, nu cash.",
+            "Dacă firma ta generează fier vechi constant, merită un contract cu un colector autorizat: ridicări programate, documente lunare și prețuri clare.",
+          ],
+        },
+        {
+          heading: "Ce nu poți preda la fier vechi",
+          body: [
+            "Nu se primesc obiecte care par furate sau care aparțin domeniului public: capace de canal, indicatoare rutiere, șine de cale ferată, cabluri de telecomunicații sau de curent tăiate de pe stâlpi, grilaje de la morminte. Centrele de colectare au obligația să le refuze și să anunțe poliția.",
+            "Butelii de gaz, recipiente sub presiune sau cu resturi de chimicale nu se aduc așa cum sunt, pentru că sunt periculoase. Sună-ne înainte și îți spunem cum se pot preda în siguranță.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Persoanele fizice au nevoie doar de buletin; primesc bon de cântar la fiecare predare.",
+        "Din suma brută se rețin impozitul și contribuția la Fondul pentru mediu — întreabă mereu de prețul net.",
+        "Capacele de canal, indicatoarele, cablurile de pe stâlpi și buteliile nu se primesc.",
+      ],
+      faq: [
+        {
+          question: "Pot vinde fier vechi fără buletin?",
+          answer:
+            "Nu. Centrul de colectare trebuie să înregistreze identitatea celui care predă, așa că actul de identitate este obligatoriu.",
+        },
+        {
+          question: "Pot vinde fier vechi pentru altcineva, de exemplu pentru un vecin?",
+          answer:
+            "Predarea se face pe numele tău, cu buletinul tău, iar tu răspunzi pentru proveniența materialului. Ai grijă ce aduci în numele altcuiva.",
+        },
+        {
+          question: "Primesc banii pe loc?",
+          answer:
+            "Persoanele fizice primesc banii pe loc, după cântărire. Firmele primesc plata prin transfer bancar, pe baza documentelor.",
+        },
+      ],
+    },
+
+    "what-you-can-sell-as-scrap-metal": {
+      metaTitle: "Ce poți duce la fier vechi: listă practică",
+      metaDescription:
+        "Listă simplă cu ce se primește la fier vechi: din casă, din curte, din garaj și din atelier. Plus ce merită separat ca să primești mai mulți bani.",
+      title: "Ce poți duce la fier vechi: listă practică pentru casă, curte și garaj",
+      excerpt:
+        "Calorifere vechi, o bicicletă ruginită, țevi, tablă, o mașină de spălat stricată — multe lucruri pe care le-ai arunca se pot vinde la kilogram.",
+      lead: "Înainte să arunci ceva metalic, verifică lista de mai jos. Multe obiecte din casă și din curte au valoare la fier vechi, iar unele — cele din cupru, alamă sau aluminiu — valorează de câteva ori mai mult decât fierul obișnuit.",
+      sections: [
+        {
+          heading: "Din casă",
+          body: [
+            "Calorifere din fontă sau din tablă, cazane și boilere vechi, oale și tigăi, tacâmuri, mobilier metalic, paturi și scaune cu cadru metalic, rafturi metalice. Toate se primesc ca fier vechi.",
+            "Electrocasnicele stricate — mașini de spălat, frigidere, aragazuri, cuptoare cu microunde — se primesc și ele, dar ca deșeuri electrice și electronice, separat de fierul vechi. Nu le demonta tu: mai ales frigiderele conțin gaze care nu trebuie eliberate.",
+          ],
+        },
+        {
+          heading: "Din curte și din garaj",
+          body: [
+            "Garduri și porți vechi, plasă de sârmă, tablă de pe acoperiș, țevi de apă, biciclete, roabe, unelte stricate, jante de oțel fără cauciuc, piese de mașină, motoare de mașini de tuns iarba.",
+            "Acumulatorul vechi de la mașină se primește și el, dar pune-l separat și nu-l goli de lichid: acidul din el este periculos.",
+          ],
+        },
+        {
+          heading: "Ce valorează mai mult: neferoasele",
+          body: [
+            "Cuprul (țevi de cupru, sârmă de cupru, bobinaje), alama (robinete, clanțe, fitinguri galbene), aluminiul (profile de geam, jante de aluminiu, oale, doze) și plumbul se plătesc mult mai bine decât fierul vechi.",
+            "De aceea merită să le pui în saci separați. Un robinet de alamă aruncat printre fiare se plătește la preț de fier — deci pierzi bani fără să-ți dai seama.",
+          ],
+        },
+        {
+          heading: "Cablurile electrice",
+          body: [
+            "Cablurile vechi de curent, prelungitoarele stricate și cablurile de la electrocasnice se primesc cu tot cu izolație. Se plătesc după cât cupru sau aluminiu au în ele: cablurile groase mai bine, cele subțiri mai puțin.",
+            "Nu le arde ca să scoți plasticul. Este interzis, poluează și, în plus, cuprul ars se plătește mai prost decât cablul întreg. Noi avem instalație proprie care separă cuprul de plastic.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Calorifere, țevi, tablă, garduri, biciclete, unelte și piese de mașină — toate se primesc la fier vechi.",
+        "Cuprul, alama, aluminiul și plumbul valorează mult mai mult — pune-le separat.",
+        "Electrocasnicele, acumulatorii și cablurile se primesc, dar separat și fără să le demontezi sau să le arzi.",
+      ],
+      faq: [
+        {
+          question: "Primiți frigidere și mașini de spălat?",
+          answer:
+            "Da, ca deșeuri electrice și electronice. Adu-le întregi, fără să scoți compresorul sau alte piese.",
+        },
+        {
+          question: "Se primesc conservele și dozele?",
+          answer:
+            "Dozele de aluminiu da, și se plătesc mai bine decât fierul. Conservele din tablă se primesc ca fier vechi ușor, dar în cantități mici valorează puțin.",
+        },
+        {
+          question: "Trebuie să curăț fierul vechi înainte?",
+          answer:
+            "Nu trebuie să fie lustruit, dar scoate pe cât posibil lemnul, plasticul, cauciucul și pământul. Ce nu e metal se scade la cântar.",
+        },
+      ],
+    },
+
+    "aluminium-cans-scrap-value": {
+      metaTitle: "Doze de aluminiu la fier vechi: merită să le strângi?",
+      metaDescription:
+        "Cât valorează dozele de aluminiu, cum le strângi ca să ocupe puțin loc, cum le deosebești de cele din tablă și unde le predai în zona Deva–Hunedoara.",
+      title: "Doze de aluminiu la fier vechi: merită să le strângi și cum le predai",
+      excerpt:
+        "O doză cântărește foarte puțin, dar un sac plin se adună repede. Iată când merită și cum să le pregătești.",
+      lead: "Dozele de suc și de bere sunt din aluminiu, un metal care se reciclează la nesfârșit fără să-și piardă calitatea. Pentru tine, asta înseamnă că nu sunt gunoi, ci material care se vinde la kilogram. Nu te îmbogățești din ele, dar nici nu le arunca.",
+      sections: [
+        {
+          heading: "Cât de mult trebuie să strângi",
+          body: [
+            "O doză goală de 0,5 l cântărește în jur de 15 grame. Asta înseamnă că pentru un kilogram îți trebuie aproximativ 60–70 de doze.",
+            "Pentru o familie, sunt câteva luni de strâns. Pentru un bar, un restaurant sau o firmă de evenimente, dozele se adună într-o săptămână — iar acolo chiar merită să le predai regulat.",
+          ],
+        },
+        {
+          heading: "Cum le deosebești de dozele de tablă",
+          body: [
+            "Cele mai multe doze de băuturi sunt din aluminiu, dar există și unele din tablă de oțel. Testul e simplu: apropie un magnet. Dacă se lipește, e tablă de oțel și se plătește ca fier vechi; dacă nu, e aluminiu.",
+            "Conservele de mâncare (fasole, pateu, pește) sunt de obicei din tablă de oțel, deci pune-le separat de dozele de aluminiu.",
+          ],
+        },
+        {
+          heading: "Cum le strângi ca să ocupe puțin loc",
+          body: [
+            "Clătește-le rapid, ca să nu atragă insecte, și turtește-le cu piciorul. Turtite, încap de câteva ori mai multe într-un sac.",
+            "Nu le amesteca cu sticle de plastic, hârtie sau resturi de mâncare. Dozele curate și separate se plătesc la prețul aluminiului; un sac amestecat se plătește mai puțin sau deloc.",
+          ],
+        },
+        {
+          heading: "Unde le predai",
+          body: [
+            "Le poți aduce la centrul nostru din Cristur, Deva, pe Șoseaua Hunedoarei nr. 13. Le cântărim pe loc și primești banii și bonul de cântar.",
+            "Dacă ai un bar, un restaurant sau o firmă care strânge doze în cantitate mare, putem stabili ridicări regulate cu container sau saci mari.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Ai nevoie de aproximativ 60–70 de doze pentru un kilogram de aluminiu.",
+        "Testul cu magnetul: dacă se lipește, e tablă de oțel, nu aluminiu.",
+        "Turtește-le, ține-le curate și separate de plastic și hârtie.",
+      ],
+      faq: [
+        {
+          question: "Se plătesc dozele mai bine decât fierul vechi?",
+          answer:
+            "Da, aluminiul se plătește de câteva ori mai bine decât fierul obișnuit pe kilogram. Doar că dozele sunt foarte ușoare, deci îți trebuie multe.",
+        },
+        {
+          question: "Ce fac cu dozele care au garanție SGR?",
+          answer:
+            "Dozele cu simbolul de garanție SGR se returnează la magazin, unde primești înapoi garanția. Pentru ele, varianta asta e mai avantajoasă decât vânzarea la kilogram.",
+        },
+        {
+          question: "Trebuie să scot inelul de la doză?",
+          answer:
+            "Nu. Inelul e tot din aluminiu și rămâne pe doză.",
+        },
+      ],
+    },
+
+    "how-to-tell-copper-brass-aluminium-apart": {
+      metaTitle: "Cum deosebești cuprul, alama, aluminiul și fierul",
+      metaDescription:
+        "Teste simple cu magnet, culoare și greutate ca să recunoști cuprul, alama, aluminiul, plumbul și fierul vechi — și să nu le vinzi pe toate la prețul fierului.",
+      title: "Cum deosebești cuprul, alama, aluminiul și fierul vechi: teste simple acasă",
+      excerpt:
+        "Un magnet și puțină atenție la culoare îți pot aduce mai mulți bani la fier vechi. Iată cum recunoști fiecare metal.",
+      lead: "La centrul de colectare, fiecare metal are prețul lui. Dacă aduci totul amestecat, cuprul și alama ajung plătite ca fier. Cu câteva teste simple, făcute acasă, poți separa metalele și poți primi prețul corect pentru fiecare.",
+      sections: [
+        {
+          heading: "Primul test: magnetul",
+          body: [
+            "Ia un magnet de frigider și apropie-l de metal. Dacă se lipește puternic, este fier sau oțel — fier vechi obișnuit. Dacă nu se lipește deloc, ai un metal neferos: cupru, alamă, aluminiu, plumb sau inox.",
+            "Acest singur test te ajută să separi rapid grămada în două: ce se plătește ca fier și ce merită pus deoparte.",
+          ],
+        },
+        {
+          heading: "Cuprul și alama: după culoare",
+          body: [
+            "Cuprul are o culoare roșiatică, arămie. Când e vechi, se închide la culoare spre maro sau capătă pete verzi. Îl găsești în țevi de instalații, sârmă din cabluri și bobinaje de motoare.",
+            "Alama este galbenă, aurie. O găsești în robinete, clanțe, fitinguri, bucșe și cartușe. E mai grea decât pare și nu se lipește de magnet. Pune-le separat: cuprul se plătește mai bine decât alama.",
+          ],
+        },
+        {
+          heading: "Aluminiul și plumbul: după greutate",
+          body: [
+            "Aluminiul este argintiu și foarte ușor. Profilele de geam, jantele de aluminiu, oalele vechi, dozele și radiatoarele de la mașini sunt de obicei din aluminiu. Dacă iei în mână o bucată mare și e surprinzător de ușoară, probabil e aluminiu.",
+            "Plumbul este gri-închis, foarte greu și moale — îl poți zgâria ușor cu o cheie. Îl găsești în greutăți de echilibrare, plăci vechi și acumulatori. Spală-te pe mâini după ce îl atingi.",
+          ],
+        },
+        {
+          heading: "Inoxul și piesele amestecate",
+          body: [
+            "Inoxul arată ca oțelul, dar de obicei nu se lipește de magnet sau se lipește foarte slab. Îl găsești în chiuvete, oale și echipamente de bucătărie. Pune-l separat și întreabă-ne de preț.",
+            "Multe obiecte sunt amestecate: un robinet de alamă cu mâner de oțel, un motor cu carcasă de fier și bobinaj de cupru. Dacă se pot desface ușor, desfă-le. Dacă nu, adu-le așa și le evaluăm noi la cântar.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Magnetul se lipește = fier sau oțel. Nu se lipește = neferos, care valorează mai mult.",
+        "Roșiatic = cupru, galben-auriu = alamă, argintiu și ușor = aluminiu, gri și foarte greu = plumb.",
+        "Separă-le în saci diferiți înainte să vii la cântar.",
+      ],
+      faq: [
+        {
+          question: "Care metal se plătește cel mai bine?",
+          answer:
+            "De obicei cuprul curat, apoi alama, apoi aluminiul. Fierul vechi obișnuit se plătește cel mai puțin pe kilogram, dar se adună în cantități mari.",
+        },
+        {
+          question: "Cum îmi dau seama dacă o țeavă e din cupru sau doar vopsită?",
+          answer:
+            "Zgârie ușor suprafața cu o cheie sau cu o pilă. Dacă dedesubt e roșiatic, e cupru. Dacă apare gri și se lipește magnetul, e oțel vopsit.",
+        },
+        {
+          question: "Nu sunt sigur ce metal am. Ce fac?",
+          answer:
+            "Adu-l la centru sau trimite-ne o poză. Îl verificăm la recepție și îți spunem ce este și cât valorează.",
+        },
+      ],
+    },
   },
 } as const;

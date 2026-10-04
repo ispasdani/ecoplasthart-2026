@@ -1155,5 +1155,314 @@ export const articlesEn = {
         },
       ],
     },
+
+    "where-to-sell-scrap-metal-deva-hunedoara": {
+      metaTitle: "Where to sell scrap metal in Deva and Hunedoara",
+      metaDescription:
+        "Scrap metal yard in Deva (Cristur), at Șoseaua Hunedoarei 13: what we take, opening hours, a verified scale and collection for large quantities.",
+      title: "Where to sell scrap metal in Deva and Hunedoara: what to know before you set off",
+      excerpt:
+        "Got scrap metal piling up in the yard or the garage? Here's where to take it in the Deva–Hunedoara area, what to bring and how not to lose money at the scale.",
+      lead: "Whether it's a pile of scrap left over from a renovation, a broken washing machine or a few copper pipes, the question is the same: where do you take it to get a fair price? Here's how it works at our yard in Cristur, between Deva and Hunedoara.",
+      sections: [
+        {
+          heading: "Where to find us",
+          body: [
+            "Our collection yard is at Șoseaua Hunedoarei 13, Sat Cristur, Deva — on the road between Deva and Hunedoara, easy to find and with room to manoeuvre cars, trailers and trucks.",
+            "We're open Monday to Friday from 8:00 to 17:00 and Saturday from 8:00 to 13:00. If you're bringing a large load or something unusual, call ahead so we have the right equipment ready.",
+          ],
+        },
+        {
+          heading: "What we take",
+          body: [
+            "We take all kinds of scrap iron and steel — sheet metal, pipes, sections, cast iron, car parts, broken tools — and non-ferrous metals: copper, brass, aluminium, lead, zinc. We also take insulated electrical cables, car batteries, and broken appliances and electronics.",
+            "If you're not sure whether something is accepted, take a photo and send it to us or give us a call. It's easier than hauling it over for nothing.",
+          ],
+        },
+        {
+          heading: "How weighing and payment work",
+          body: [
+            "Everything is weighed on the spot, in front of you, on a verified scale. You get a weighbridge ticket for every handover, showing the weight and the type of metal.",
+            "The price depends on what you bring: iron has one price, copper another, aluminium another. If you bring them mixed, everything is paid at the cheapest metal's price, so it's worth sorting them at home.",
+          ],
+        },
+        {
+          heading: "A lot of material? We'll come and get it",
+          body: [
+            "For companies or large quantities — an emptied warehouse, a demolished building, an old machine — we come with a truck and a grapple crane, anywhere in Hunedoara county and beyond.",
+            "Tell us what you have and roughly how much, and we'll tell you when we can come. Weighing is done at our yard, and you get all the paperwork.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Our yard is in Cristur, Deva, at Șoseaua Hunedoarei 13 — Mon–Fri 8–17, Sat 8–13.",
+        "We take scrap iron, copper, brass, aluminium, cables, batteries and broken appliances.",
+        "Sort metals at home: mixed, they're paid at the cheapest metal's price.",
+      ],
+      faq: [
+        {
+          question: "Do you buy scrap metal from private individuals?",
+          answer:
+            "Yes. Bring your ID, we weigh on the spot, and you get paid along with the weighbridge ticket.",
+        },
+        {
+          question: "Do you collect scrap metal from people's homes?",
+          answer:
+            "For large quantities, yes — we have trucks and a grapple crane. For a few pieces, it's usually simpler to bring them to the yard yourself.",
+        },
+        {
+          question: "How much do you pay per kilo of scrap iron?",
+          answer:
+            "Prices change often, following the metals market. Call us on the day you plan to come and we'll give you the current price for what you have.",
+        },
+      ],
+    },
+
+    "documents-needed-to-sell-scrap-metal": {
+      metaTitle: "What documents you need to sell scrap metal",
+      metaDescription:
+        "Which documents you need to sell scrap metal as an individual or as a company, why the amount you receive is lower than the gross price, and what can't be sold as scrap.",
+      title: "What documents you need to sell scrap metal (individual or company)",
+      excerpt:
+        "For an individual, an ID card is usually enough. For a company, things are a little different. Here's what to bring.",
+      lead: "Plenty of people turn up at the scrap yard and find out at the scale that they're missing a document or can't hand over a particular item. So you don't make the trip twice, here's what you need, explained simply.",
+      sections: [
+        {
+          heading: "If you're a private individual",
+          body: [
+            "You need an identity document — your ID card. The collection yard is required to record who hands over the metal, so without ID the handover can't go ahead.",
+            "For every handover you get a weighbridge ticket with the weight and type of metal. Keep it: it's proof that you handed the material over legally.",
+          ],
+        },
+        {
+          heading: "Why you get less than the gross price",
+          body: [
+            "When you sell scrap as an individual, the yard withholds income tax and the Environment Fund contribution from the gross amount, as the law requires. That's why the amount you get in hand is lower than the gross price.",
+            "When you compare prices between yards, always ask whether the price you're quoted is gross or net. Otherwise you may be comparing two different things.",
+          ],
+        },
+        {
+          heading: "If you're selling on behalf of a company",
+          body: [
+            "A company hands over scrap metal with documents: a delivery note or an invoice, and transport goes with the waste loading-unloading form. Payment is made by bank transfer, not cash.",
+            "If your company produces scrap metal regularly, a contract with a licensed collector is worth having: scheduled pickups, monthly paperwork and clear prices.",
+          ],
+        },
+        {
+          heading: "What you can't sell as scrap",
+          body: [
+            "Yards don't accept items that look stolen or belong to public property: manhole covers, road signs, railway rails, telecom or power cables cut from poles, grave railings. Collection yards are required to refuse them and notify the police.",
+            "Gas cylinders and containers that are pressurised or hold chemical residues aren't brought in as they are, because they're dangerous. Call us first and we'll tell you how they can be handed over safely.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Individuals only need an ID card and get a weighbridge ticket with every handover.",
+        "Income tax and the Environment Fund contribution are withheld from the gross amount — always ask for the net price.",
+        "Manhole covers, road signs, cables from poles and gas cylinders aren't accepted.",
+      ],
+      faq: [
+        {
+          question: "Can I sell scrap metal without ID?",
+          answer:
+            "No. The collection yard has to record the identity of whoever hands the material over, so ID is mandatory.",
+        },
+        {
+          question: "Can I sell scrap for someone else, for example a neighbour?",
+          answer:
+            "The handover is made in your name, with your ID, and you're responsible for where the material came from. Be careful what you bring on someone else's behalf.",
+        },
+        {
+          question: "Do I get paid on the spot?",
+          answer:
+            "Individuals are paid on the spot, after weighing. Companies are paid by bank transfer, based on the documents.",
+        },
+      ],
+    },
+
+    "what-you-can-sell-as-scrap-metal": {
+      metaTitle: "What you can sell as scrap metal: a practical list",
+      metaDescription:
+        "A simple list of what scrap yards accept from your home, yard, garage and workshop — and what's worth keeping separate to get more money.",
+      title: "What you can sell as scrap metal: a practical list for home, yard and garage",
+      excerpt:
+        "Old radiators, a rusty bike, pipes, sheet metal, a broken washing machine — many things you'd throw away can be sold by the kilo.",
+      lead: "Before you throw out anything metal, check the list below. Many things around the house and yard are worth something as scrap, and some — copper, brass or aluminium — are worth several times more than ordinary iron.",
+      sections: [
+        {
+          heading: "From the house",
+          body: [
+            "Cast-iron or steel radiators, old boilers and water heaters, pots and pans, cutlery, metal furniture, beds and chairs with metal frames, metal shelving. All of it is accepted as scrap.",
+            "Broken appliances — washing machines, fridges, cookers, microwaves — are accepted too, but as electrical and electronic waste, separately from scrap iron. Don't take them apart yourself: fridges in particular contain gases that mustn't be released.",
+          ],
+        },
+        {
+          heading: "From the yard and garage",
+          body: [
+            "Old fences and gates, wire mesh, roofing sheets, water pipes, bicycles, wheelbarrows, broken tools, steel rims without tyres, car parts, lawnmower engines.",
+            "Your old car battery is accepted too, but keep it separate and don't drain it: the acid inside is dangerous.",
+          ],
+        },
+        {
+          heading: "What's worth more: non-ferrous metals",
+          body: [
+            "Copper (copper pipes, copper wire, motor windings), brass (taps, door handles, yellow fittings), aluminium (window frames, alloy wheels, pots, cans) and lead pay much better than scrap iron.",
+            "That's why it's worth putting them in separate bags. A brass tap thrown in with the iron is paid at the iron price — so you lose money without realising it.",
+          ],
+        },
+        {
+          heading: "Electrical cables",
+          body: [
+            "Old power cables, broken extension leads and appliance cords are accepted with their insulation on. They're paid by how much copper or aluminium they contain: thick cables pay better, thin ones less.",
+            "Don't burn them to get the plastic off. It's illegal, it pollutes, and burnt copper pays less than whole cable anyway. We have our own plant that separates the copper from the plastic.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Radiators, pipes, sheet metal, fences, bikes, tools and car parts — all accepted as scrap.",
+        "Copper, brass, aluminium and lead are worth much more — keep them separate.",
+        "Appliances, batteries and cables are accepted, but separately and without taking them apart or burning them.",
+      ],
+      faq: [
+        {
+          question: "Do you take fridges and washing machines?",
+          answer:
+            "Yes, as electrical and electronic waste. Bring them whole, without removing the compressor or other parts.",
+        },
+        {
+          question: "Do you take tins and cans?",
+          answer:
+            "Aluminium cans yes, and they pay better than iron. Steel food tins are accepted as light scrap, but in small amounts they're worth little.",
+        },
+        {
+          question: "Do I need to clean the scrap first?",
+          answer:
+            "It doesn't need polishing, but remove as much wood, plastic, rubber and soil as you can. Anything that isn't metal is deducted at the scale.",
+        },
+      ],
+    },
+
+    "aluminium-cans-scrap-value": {
+      metaTitle: "Aluminium cans as scrap: are they worth collecting?",
+      metaDescription:
+        "What aluminium cans are worth, how to collect them so they take up little space, how to tell them from steel cans and where to hand them in around Deva–Hunedoara.",
+      title: "Aluminium cans as scrap: are they worth collecting, and how to hand them in",
+      excerpt:
+        "One can weighs very little, but a full bag adds up quickly. Here's when it's worth it and how to prepare them.",
+      lead: "Soft drink and beer cans are made of aluminium, a metal that can be recycled endlessly without losing quality. For you, that means they aren't rubbish but material that sells by the kilo. You won't get rich from them, but don't throw them away either.",
+      sections: [
+        {
+          heading: "How many you need to collect",
+          body: [
+            "An empty 0.5 l can weighs around 15 grams. That means you need roughly 60–70 cans for a kilo.",
+            "For a household, that's a few months of collecting. For a bar, a restaurant or an events company, cans pile up within a week — and there it really is worth handing them in regularly.",
+          ],
+        },
+        {
+          heading: "How to tell them from steel cans",
+          body: [
+            "Most drink cans are aluminium, but some are made of steel. The test is simple: hold a magnet to it. If it sticks, it's steel and is paid as scrap iron; if it doesn't, it's aluminium.",
+            "Food tins (beans, pâté, fish) are usually steel, so keep them apart from the aluminium cans.",
+          ],
+        },
+        {
+          heading: "How to collect them so they take up little space",
+          body: [
+            "Give them a quick rinse so they don't attract insects, and crush them underfoot. Crushed, several times more fit in a bag.",
+            "Don't mix them with plastic bottles, paper or food waste. Clean, separate cans are paid at the aluminium price; a mixed bag pays less or nothing at all.",
+          ],
+        },
+        {
+          heading: "Where to hand them in",
+          body: [
+            "You can bring them to our yard in Cristur, Deva, at Șoseaua Hunedoarei 13. We weigh them on the spot and you get paid along with a weighbridge ticket.",
+            "If you run a bar, a restaurant or a business that collects cans in large quantities, we can set up regular pickups with a container or large bags.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "You need roughly 60–70 cans for a kilo of aluminium.",
+        "The magnet test: if it sticks, it's steel, not aluminium.",
+        "Crush them, keep them clean and separate from plastic and paper.",
+      ],
+      faq: [
+        {
+          question: "Do cans pay better than scrap iron?",
+          answer:
+            "Yes, per kilo aluminium pays several times more than ordinary iron. It's just that cans are very light, so you need a lot of them.",
+        },
+        {
+          question: "What about cans with an SGR deposit?",
+          answer:
+            "Cans carrying the SGR deposit symbol go back to the shop, where you get the deposit refunded. For those, that's a better deal than selling them by the kilo.",
+        },
+        {
+          question: "Do I need to remove the ring pull?",
+          answer: "No. The ring pull is aluminium too and stays on the can.",
+        },
+      ],
+    },
+
+    "how-to-tell-copper-brass-aluminium-apart": {
+      metaTitle: "How to tell copper, brass, aluminium and iron apart",
+      metaDescription:
+        "Simple magnet, colour and weight tests to recognise copper, brass, aluminium, lead and scrap iron — so you don't sell them all at the iron price.",
+      title: "How to tell copper, brass, aluminium and scrap iron apart: simple tests at home",
+      excerpt:
+        "A magnet and a bit of attention to colour can get you more money for your scrap. Here's how to recognise each metal.",
+      lead: "At the scrap yard, every metal has its own price. If you bring everything mixed together, the copper and brass end up paid as iron. With a few simple tests at home, you can sort the metals and get the right price for each.",
+      sections: [
+        {
+          heading: "First test: the magnet",
+          body: [
+            "Take a fridge magnet and hold it to the metal. If it sticks firmly, it's iron or steel — ordinary scrap iron. If it doesn't stick at all, you have a non-ferrous metal: copper, brass, aluminium, lead or stainless steel.",
+            "That single test splits the pile in two quickly: what's paid as iron and what's worth setting aside.",
+          ],
+        },
+        {
+          heading: "Copper and brass: by colour",
+          body: [
+            "Copper is reddish, the colour of a new penny. As it ages it darkens towards brown or picks up green spots. You'll find it in plumbing pipes, cable wire and motor windings.",
+            "Brass is yellow, golden. You'll find it in taps, door handles, fittings, bushings and cartridge cases. It's heavier than it looks and doesn't stick to a magnet. Keep them apart: copper pays better than brass.",
+          ],
+        },
+        {
+          heading: "Aluminium and lead: by weight",
+          body: [
+            "Aluminium is silvery and very light. Window frames, alloy wheels, old pots, cans and car radiators are usually aluminium. If you pick up a big piece and it's surprisingly light, it's probably aluminium.",
+            "Lead is dark grey, very heavy and soft — you can scratch it easily with a key. You'll find it in wheel weights, old sheeting and batteries. Wash your hands after handling it.",
+          ],
+        },
+        {
+          heading: "Stainless steel and mixed parts",
+          body: [
+            "Stainless steel looks like ordinary steel but usually doesn't stick to a magnet, or only very weakly. You'll find it in sinks, pots and kitchen equipment. Keep it separate and ask us for a price.",
+            "Many items are mixed: a brass tap with a steel handle, a motor with an iron casing and copper windings. If they come apart easily, take them apart. If not, bring them as they are and we'll assess them at the scale.",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Magnet sticks = iron or steel. Doesn't stick = non-ferrous, which is worth more.",
+        "Reddish = copper, golden yellow = brass, silvery and light = aluminium, grey and very heavy = lead.",
+        "Sort them into separate bags before you come to the scale.",
+      ],
+      faq: [
+        {
+          question: "Which metal pays best?",
+          answer:
+            "Usually clean copper, then brass, then aluminium. Ordinary scrap iron pays least per kilo, but it adds up in large quantities.",
+        },
+        {
+          question: "How can I tell if a pipe is copper or just painted?",
+          answer:
+            "Lightly scratch the surface with a key or a file. If it's reddish underneath, it's copper. If it's grey and a magnet sticks, it's painted steel.",
+        },
+        {
+          question: "I'm not sure what metal I have. What should I do?",
+          answer:
+            "Bring it to the yard or send us a photo. We'll check it on receipt and tell you what it is and what it's worth.",
+        },
+      ],
+    },
   },
 } as const;

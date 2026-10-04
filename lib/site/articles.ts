@@ -150,6 +150,36 @@ export const ARTICLE_FACTS: Record<ArticleSlug, ArticleFacts> = {
     updatedAt: "2026-10-01",
     readMinutes: 7,
   },
+  "where-to-sell-scrap-metal-deva-hunedoara": {
+    topic: "guides",
+    publishedAt: "2026-10-04",
+    updatedAt: "2026-10-04",
+    readMinutes: 5,
+  },
+  "documents-needed-to-sell-scrap-metal": {
+    topic: "guides",
+    publishedAt: "2026-10-04",
+    updatedAt: "2026-10-04",
+    readMinutes: 5,
+  },
+  "what-you-can-sell-as-scrap-metal": {
+    topic: "recycling",
+    publishedAt: "2026-10-04",
+    updatedAt: "2026-10-04",
+    readMinutes: 5,
+  },
+  "aluminium-cans-scrap-value": {
+    topic: "recycling",
+    publishedAt: "2026-10-04",
+    updatedAt: "2026-10-04",
+    readMinutes: 4,
+  },
+  "how-to-tell-copper-brass-aluminium-apart": {
+    topic: "recycling",
+    publishedAt: "2026-10-04",
+    updatedAt: "2026-10-04",
+    readMinutes: 5,
+  },
 };
 
 /** One article, resolved for a locale: facts + copy + localized href. */

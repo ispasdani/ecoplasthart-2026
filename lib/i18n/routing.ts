@@ -194,6 +194,26 @@ export const pathnames = {
     ro: "/articole/deseuri-din-constructii-si-demolari",
     en: "/articles/construction-and-demolition-waste",
   },
+  "/articles/where-to-sell-scrap-metal-deva-hunedoara": {
+    ro: "/articole/unde-vinzi-fier-vechi-deva-hunedoara",
+    en: "/articles/where-to-sell-scrap-metal-deva-hunedoara",
+  },
+  "/articles/documents-needed-to-sell-scrap-metal": {
+    ro: "/articole/acte-necesare-vanzare-fier-vechi",
+    en: "/articles/documents-needed-to-sell-scrap-metal",
+  },
+  "/articles/what-you-can-sell-as-scrap-metal": {
+    ro: "/articole/ce-poti-duce-la-fier-vechi",
+    en: "/articles/what-you-can-sell-as-scrap-metal",
+  },
+  "/articles/aluminium-cans-scrap-value": {
+    ro: "/articole/doze-de-aluminiu-la-fier-vechi",
+    en: "/articles/aluminium-cans-scrap-value",
+  },
+  "/articles/how-to-tell-copper-brass-aluminium-apart": {
+    ro: "/articole/cum-deosebesti-cuprul-alama-aluminiul",
+    en: "/articles/how-to-tell-copper-brass-aluminium-apart",
+  },
   "/contact": { ro: "/contact", en: "/contact" },
   "/privacy-policy": {
     ro: "/politica-de-confidentialitate",
@@ -268,6 +288,11 @@ export const articleKeys = [
   "/articles/copper-scrap-grades-and-prices",
   "/articles/used-lead-acid-batteries",
   "/articles/construction-and-demolition-waste",
+  "/articles/where-to-sell-scrap-metal-deva-hunedoara",
+  "/articles/documents-needed-to-sell-scrap-metal",
+  "/articles/what-you-can-sell-as-scrap-metal",
+  "/articles/aluminium-cans-scrap-value",
+  "/articles/how-to-tell-copper-brass-aluminium-apart",
 ] as const satisfies readonly PathnameKey[];
 
 export type ArticleKey = (typeof articleKeys)[number];
