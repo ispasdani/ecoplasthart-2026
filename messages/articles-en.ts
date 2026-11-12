@@ -33,6 +33,8 @@ export const articlesEn = {
 
   keyPointsHeading: "In short",
   faqHeading: "Frequently asked questions",
+  relatedServiceEyebrow: "Our service",
+  relatedServiceCta: "View the service",
   disclaimer:
     "This article is informational and reflects our practice at the date of publication. Romanian environmental legislation changes frequently — for your company's specific situation, check the texts in force and consult the environmental protection agency or a specialist adviser.",
 

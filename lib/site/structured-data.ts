@@ -507,6 +507,11 @@ export function articleDetailGraph(
       isPartOf: {
         "@id": `${absoluteUrl(localizedPath("/articles", locale))}#blog`,
       },
+      // Same `@id` the service page declares, so the two graphs join: this
+      // article is about that service, matching the visible callout.
+      about: {
+        "@id": `${absoluteUrl(localizedPath(article.service, locale))}#service`,
+      },
     },
   ]);
 }

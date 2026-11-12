@@ -8,6 +8,9 @@ import {
   pathnameKeys,
   type PathnameKey,
 } from "@/lib/i18n/routing";
+// The lean facts module, not `lib/site/articles.ts`: that one imports the icon
+// maps, for the same bundle reason given on `PAGE_IMAGES` below.
+import { ARTICLE_FACTS } from "@/lib/site/article-facts";
 
 /**
  * Content photography per page, for the `<image:image>` entries.
@@ -36,18 +39,39 @@ const PAGE_IMAGES: Partial<Record<PathnameKey, string[]>> = {
  * `changefreq` and `priority` are deliberately omitted: Google has stated it
  * ignores both, and they were previously misrepresenting the site anyway.
  *
- * `lastmod` is also omitted rather than faked. It was `new Date()`, so every
- * URL claimed to change on every deploy — including deploys that touched only
- * CSS. Google detects an unreliable `lastmod` and then discounts the field
- * across the whole site, which is worse than not sending it. Restore it once
- * there is a real per-page content-modification date to report (audit D-01).
+ * `lastmod` is sent only where there is a real content-modification date:
+ * each article's `updatedAt`, and the newest of those for the articles index
+ * (its content is the feed). Every other page omits it rather than faking it.
+ * It used to be `new Date()` everywhere, so every URL claimed to change on
+ * every deploy — Google detects an unreliable `lastmod` and then discounts the
+ * field across the whole site, which is worse than not sending it (audit D-01).
+ * So keep `updatedAt` honest: bump it when an article's body changes, and only
+ * then.
  */
+const ARTICLES_PREFIX = "/articles/";
+
+const latestArticleUpdate = Object.values(ARTICLE_FACTS)
+  .map((facts) => facts.updatedAt)
+  .sort()
+  .at(-1);
+
+function lastModifiedFor(key: PathnameKey): string | undefined {
+  if (key === "/articles") return latestArticleUpdate;
+  if (key.startsWith(ARTICLES_PREFIX)) {
+    const slug = key.slice(ARTICLES_PREFIX.length) as keyof typeof ARTICLE_FACTS;
+    return ARTICLE_FACTS[slug]?.updatedAt;
+  }
+  return undefined;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return pathnameKeys.map((key) => {
     const images = PAGE_IMAGES[key];
+    const lastModified = lastModifiedFor(key);
 
     return {
       url: absoluteUrl(localizedPath(key, defaultLocale)),
+      ...(lastModified ? { lastModified } : {}),
       alternates: {
         languages: languageAlternates(key),
       },

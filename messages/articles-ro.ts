@@ -39,6 +39,8 @@ export const articlesRo = {
 
   keyPointsHeading: "Pe scurt",
   faqHeading: "Întrebări frecvente",
+  relatedServiceEyebrow: "Serviciul nostru",
+  relatedServiceCta: "Vezi serviciul",
   disclaimer:
     "Materialul are caracter informativ și rezumă practica noastră la data publicării. Legislația de mediu se modifică frecvent — pentru situația concretă a firmei tale, verifică textele în vigoare și consultă agenția pentru protecția mediului sau un consultant de specialitate.",
 

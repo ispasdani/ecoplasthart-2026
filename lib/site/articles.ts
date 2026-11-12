@@ -7,6 +7,7 @@ import {
   type ArticleSlug,
   type Locale,
 } from "@/lib/i18n/routing";
+import { ARTICLE_FACTS, articleTopics } from "@/lib/site/article-facts";
 import { articleIcons } from "@/lib/site/icons";
 import type { Messages } from "@/messages/ro";
 
@@ -19,168 +20,12 @@ import type { Messages } from "@/messages/ro";
  * services use between `lib/site/icons.ts` and `services.items`.
  */
 
-export const articleTopics = [
-  "legislation",
-  "recycling",
-  "costs",
-  "guides",
-] as const;
-
-export type ArticleTopic = (typeof articleTopics)[number];
-
-export function isArticleTopic(value: string): value is ArticleTopic {
-  return (articleTopics as readonly string[]).includes(value);
-}
-
-type ArticleFacts = {
-  topic: ArticleTopic;
-  /** ISO 8601 date. Feeds `datePublished` in JSON-LD and the `<time>` element. */
-  publishedAt: string;
-  /** ISO 8601 date. Bump whenever the body copy is edited. */
-  updatedAt: string;
-  readMinutes: number;
-};
-
-export const ARTICLE_FACTS: Record<ArticleSlug, ArticleFacts> = {
-  "choosing-a-waste-collection-partner": {
-    topic: "guides",
-    publishedAt: "2026-08-27",
-    updatedAt: "2026-08-27",
-    readMinutes: 8,
-  },
-  "waste-codes-and-transport-documents": {
-    topic: "legislation",
-    publishedAt: "2026-08-11",
-    updatedAt: "2026-08-11",
-    readMinutes: 9,
-  },
-  "scrap-metal-prices-explained": {
-    topic: "costs",
-    publishedAt: "2026-07-23",
-    updatedAt: "2026-07-23",
-    readMinutes: 7,
-  },
-  "cable-recycling-copper-granules": {
-    topic: "recycling",
-    publishedAt: "2026-07-02",
-    updatedAt: "2026-07-02",
-    readMinutes: 8,
-  },
-  "hazardous-waste-obligations": {
-    topic: "legislation",
-    publishedAt: "2026-06-16",
-    updatedAt: "2026-06-16",
-    readMinutes: 9,
-  },
-  "packaging-waste-recycling-obligations": {
-    topic: "legislation",
-    publishedAt: "2026-09-10",
-    updatedAt: "2026-09-10",
-    readMinutes: 8,
-  },
-  "aluminium-scrap-recycling": {
-    topic: "recycling",
-    publishedAt: "2026-09-01",
-    updatedAt: "2026-09-01",
-    readMinutes: 7,
-  },
-  "weee-recycling-guide-for-companies": {
-    topic: "guides",
-    publishedAt: "2026-09-19",
-    updatedAt: "2026-09-19",
-    readMinutes: 6,
-  },
-  "industrial-plastic-waste-recycling": {
-    topic: "recycling",
-    publishedAt: "2026-09-18",
-    updatedAt: "2026-09-18",
-    readMinutes: 7,
-  },
-  "why-companies-sell-scrap-metal": {
-    topic: "guides",
-    publishedAt: "2026-09-22",
-    updatedAt: "2026-09-22",
-    readMinutes: 6,
-  },
-  "ferrous-vs-non-ferrous-waste": {
-    topic: "recycling",
-    publishedAt: "2026-09-24",
-    updatedAt: "2026-09-24",
-    readMinutes: 7,
-  },
-  "waste-recovery-and-destruction-certificates": {
-    topic: "legislation",
-    publishedAt: "2026-09-26",
-    updatedAt: "2026-09-26",
-    readMinutes: 7,
-  },
-  "how-waste-container-rental-works": {
-    topic: "guides",
-    publishedAt: "2026-09-29",
-    updatedAt: "2026-09-29",
-    readMinutes: 6,
-  },
-  "waste-records-and-sim-reporting": {
-    topic: "legislation",
-    publishedAt: "2026-10-01",
-    updatedAt: "2026-10-01",
-    readMinutes: 7,
-  },
-  "used-oil-collection-for-companies": {
-    topic: "legislation",
-    publishedAt: "2026-10-01",
-    updatedAt: "2026-10-01",
-    readMinutes: 7,
-  },
-  "copper-scrap-grades-and-prices": {
-    topic: "costs",
-    publishedAt: "2026-10-01",
-    updatedAt: "2026-10-01",
-    readMinutes: 7,
-  },
-  "used-lead-acid-batteries": {
-    topic: "recycling",
-    publishedAt: "2026-10-01",
-    updatedAt: "2026-10-01",
-    readMinutes: 6,
-  },
-  "construction-and-demolition-waste": {
-    topic: "guides",
-    publishedAt: "2026-10-01",
-    updatedAt: "2026-10-01",
-    readMinutes: 7,
-  },
-  "where-to-sell-scrap-metal-deva-hunedoara": {
-    topic: "guides",
-    publishedAt: "2026-10-04",
-    updatedAt: "2026-10-04",
-    readMinutes: 5,
-  },
-  "documents-needed-to-sell-scrap-metal": {
-    topic: "guides",
-    publishedAt: "2026-10-04",
-    updatedAt: "2026-10-04",
-    readMinutes: 5,
-  },
-  "what-you-can-sell-as-scrap-metal": {
-    topic: "recycling",
-    publishedAt: "2026-10-04",
-    updatedAt: "2026-10-04",
-    readMinutes: 5,
-  },
-  "aluminium-cans-scrap-value": {
-    topic: "recycling",
-    publishedAt: "2026-10-04",
-    updatedAt: "2026-10-04",
-    readMinutes: 4,
-  },
-  "how-to-tell-copper-brass-aluminium-apart": {
-    topic: "recycling",
-    publishedAt: "2026-10-04",
-    updatedAt: "2026-10-04",
-    readMinutes: 5,
-  },
-};
+export {
+  ARTICLE_FACTS,
+  articleTopics,
+  isArticleTopic,
+  type ArticleTopic,
+} from "@/lib/site/article-facts";
 
 /** One article, resolved for a locale: facts + copy + localized href. */
 export type ArticleListing = ReturnType<typeof getArticles>[number];
@@ -219,6 +64,7 @@ function getArticleByKey(dict: Messages, locale: Locale, key: ArticleKey) {
     publishedAt: facts.publishedAt,
     updatedAt: facts.updatedAt,
     readMinutes: facts.readMinutes,
+    service: facts.service,
     readTime: dict.articles.readTime.replace(
       "{minutes}",
       String(facts.readMinutes),

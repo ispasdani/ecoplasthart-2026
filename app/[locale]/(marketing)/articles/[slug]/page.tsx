@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, Check, ChevronRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, ChevronRight } from "lucide-react";
 
 import { ArticleSummaryCard } from "@/components/marketing/articles/article-summary-card";
 import { CtaBand } from "@/components/marketing/sections/cta-band";
@@ -24,7 +24,7 @@ import {
   getArticle,
   getArticles,
 } from "@/lib/site/articles";
-import { getPrimaryLinks } from "@/lib/site/nav";
+import { getPrimaryLinks, getServiceNavItems } from "@/lib/site/nav";
 import { articleDetailGraph } from "@/lib/site/structured-data";
 
 /** All five articles × both locales are prerendered at build time. */
@@ -84,6 +84,10 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   const related = getArticles(dict, locale)
     .filter((candidate) => candidate.slug !== slug)
     .slice(0, 3);
+  // Always present: `service` is a required `ARTICLE_FACTS` field.
+  const service = getServiceNavItems(dict, locale).find(
+    (item) => item.key === article.service,
+  );
 
   const facts = [
     { label: t.authorLabel, value: t.author.name },
@@ -222,6 +226,34 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                   </section>
                 ))}
               </div>
+
+              {/* Related service — the bridge from an informational read to
+                  the page that converts, and an internal link that tells
+                  search engines which service page this topic belongs to. */}
+              {service ? (
+                <Link
+                  href={service.href}
+                  className="group mt-12 flex flex-col gap-4 rounded-2xl border border-hairline bg-surface-soft p-6 transition-colors hover:border-hairline-strong sm:flex-row sm:items-center sm:justify-between sm:p-8"
+                >
+                  <div className="min-w-0">
+                    <Eyebrow className="mb-3">{t.relatedServiceEyebrow}</Eyebrow>
+                    <p className="text-[1.125rem] font-semibold leading-snug text-ink">
+                      {service.name}
+                    </p>
+                    <p className="mt-1.5 text-[0.9375rem] leading-relaxed text-slate">
+                      {service.desc}
+                    </p>
+                  </div>
+                  <span className="inline-flex shrink-0 items-center gap-1.5 text-[0.875rem] font-medium text-brand">
+                    {t.relatedServiceCta}
+                    <ArrowRight
+                      aria-hidden
+                      className="size-4 transition-transform group-hover:translate-x-0.5"
+                      strokeWidth={2}
+                    />
+                  </span>
+                </Link>
+              ) : null}
 
               {/* FAQ — plain markup, no disclosure widget: the answers must be
                   in the rendered text for the JSON-LD `FAQPage` to be honest. */}
