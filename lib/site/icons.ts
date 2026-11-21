@@ -34,7 +34,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-import type { ArticleSlug, ServiceSlug } from "@/lib/i18n/routing";
+import type { ArticleSlug, MaterialSlug, ServiceSlug } from "@/lib/i18n/routing";
 
 /**
  * Icons live here, not in the dictionaries — they're presentation, not copy,
@@ -78,6 +78,16 @@ export const serviceVideoPosters: Partial<Record<ServiceSlug, string>> = {
   "recycling-recovery": "/images/posters/verificare.webp",
   "cable-processing": "/images/posters/cabluri.webp",
   logistics: "/images/posters/graifer.webp",
+};
+
+/** Icons for each commercial material-buying page under `/ce-cumparam/*`. */
+export const materialIcons: Record<MaterialSlug, LucideIcon> = {
+  copper: Coins,
+  "ferrous-scrap": Scale,
+  aluminium: Recycle,
+  brass: Wrench,
+  cables: Cable,
+  "lead-batteries": BatteryFull,
 };
 
 /**

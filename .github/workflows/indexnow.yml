@@ -1,0 +1,28 @@
+name: IndexNow Sitemap Ping
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "app/**"
+      - "lib/i18n/routing.ts"
+      - "lib/site/**"
+      - "messages/**"
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Wait briefly for production deploy
+        if: github.event_name == 'push'
+        run: sleep 90
+      - name: Submit sitemap URLs to IndexNow
+        continue-on-error: true
+        env:
+          NEXT_PUBLIC_SITE_URL: https://www.ecoplasthart.com
+        run: node scripts/indexnow.mjs

@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { Clock, Mail, Phone } from "lucide-react";
 
 import { ConvexPublicProvider } from "@/app/providers/convex-public-provider";
 import { PageHero } from "@/components/marketing/page-hero";
 import { ButtonLink, IconCircle } from "@/components/ui/button";
 import { Container, Section } from "@/components/ui/layout";
 import { ContactForm } from "./_components/contact-form";
-import { MediaTile } from "@/components/ui/media";
 import { Reveal, RevealItem, Stagger } from "@/components/ui/reveal";
 import { JsonLd } from "@/components/seo/json-ld";
 import { getDictionary } from "@/lib/i18n/dictionary";

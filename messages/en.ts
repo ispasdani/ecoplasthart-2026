@@ -1,5 +1,6 @@
 import type { Messages } from "./ro";
 import { articlesEn } from "./articles-en";
+import { materialsEn } from "./materials-en";
 
 /**
  * English dictionary. Typed as `Messages`, so it must mirror `ro.ts` exactly —
@@ -60,6 +61,7 @@ export const en: Messages = {
     services: "Services",
     servicesOverview: "All services",
     servicesOverviewDesc: "See our full range of waste-management services.",
+    materials: "What we buy",
     certifications: "Certifications",
     articles: "Articles",
     contact: "Contact",
@@ -107,6 +109,7 @@ export const en: Messages = {
     blurb:
       "Collecting, sorting and recycling recyclable materials since 2004. An authorised partner for responsible waste management in Hunedoara county and across Romania.",
     servicesHeading: "Services",
+    materialsHeading: "What we buy",
     companyHeading: "Company",
     contactHeading: "Contact",
     legalHeading: "Company details",
@@ -566,6 +569,7 @@ export const en: Messages = {
     title: "Site map",
     lead: "Every public page on the site, in one place.",
     servicesHeading: "Services",
+    materialsHeading: "What we buy",
     companyHeading: "Company",
     resourcesHeading: "Resources",
     legalHeading: "Legal documents",
@@ -918,6 +922,8 @@ export const en: Messages = {
       },
     ],
   },
+
+  materials: materialsEn,
 
   articles: articlesEn,
 

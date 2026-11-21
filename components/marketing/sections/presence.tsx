@@ -1,4 +1,4 @@
-import { Container, Section, SectionHeader } from "@/components/ui/layout";
+import { Container, Section } from "@/components/ui/layout";
 import { Reveal } from "@/components/ui/reveal";
 import EuropeMap from "@/components/svgs/EuropeMap";
 import type { Messages } from "@/messages/ro";

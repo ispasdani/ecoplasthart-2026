@@ -47,6 +47,37 @@ export function getArticle(dict: Messages, locale: Locale, slug: ArticleSlug) {
   return getArticleByKey(dict, locale, articleKeyFromSlug(slug));
 }
 
+/**
+ * Picks topically related articles rather than blindly repeating the 3 newest
+ * posts on every page. Scores shared commercial material (+4), shared parent
+ * service (+2), and shared topic (+1), with recency as the tie-breaker.
+ */
+export function getRelatedArticles(
+  dict: Messages,
+  locale: Locale,
+  currentSlug: ArticleSlug,
+  limit = 3,
+) {
+  const current = getArticle(dict, locale, currentSlug);
+
+  return getArticles(dict, locale)
+    .filter((candidate) => candidate.slug !== currentSlug)
+    .map((candidate) => {
+      let score = 0;
+      if (current.material && candidate.material === current.material) score += 4;
+      if (candidate.service === current.service) score += 2;
+      if (candidate.topic === current.topic) score += 1;
+      return { candidate, score };
+    })
+    .sort(
+      (a, b) =>
+        b.score - a.score ||
+        b.candidate.publishedAt.localeCompare(a.candidate.publishedAt),
+    )
+    .slice(0, limit)
+    .map(({ candidate }) => candidate);
+}
+
 function getArticleByKey(dict: Messages, locale: Locale, key: ArticleKey) {
   const slug = key.slice("/articles/".length) as ArticleSlug;
   const facts = ARTICLE_FACTS[slug];
@@ -65,6 +96,7 @@ function getArticleByKey(dict: Messages, locale: Locale, key: ArticleKey) {
     updatedAt: facts.updatedAt,
     readMinutes: facts.readMinutes,
     service: facts.service,
+    material: facts.material,
     readTime: dict.articles.readTime.replace(
       "{minutes}",
       String(facts.readMinutes),

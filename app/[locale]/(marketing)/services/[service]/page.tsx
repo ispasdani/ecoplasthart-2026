@@ -26,6 +26,7 @@ import {
   serviceVideoPosters,
   serviceVideos,
 } from "@/lib/site/icons";
+import { getMaterials } from "@/lib/site/materials";
 import { getPrimaryLinks, getServiceNavItems, serviceImageAlt } from "@/lib/site/nav";
 import { serviceDetailGraph } from "@/lib/site/structured-data";
 
@@ -74,6 +75,9 @@ export default async function ServiceDetailPage({
   const href = localizedPath(pathnameKey, locale);
   const Icon = serviceIcons[service];
   const related = allServices.filter((s) => s.slug !== service).slice(0, 3);
+  const serviceMaterials = getMaterials(dict, locale).filter(
+    (m) => m.service === pathnameKey,
+  );
   const variant = serviceSlugs.indexOf(service);
 
   return (
@@ -147,6 +151,27 @@ export default async function ServiceDetailPage({
                   </ul>
                 </div>
               </Reveal>
+
+              {serviceMaterials.length > 0 ? (
+                <Reveal>
+                  <div className="mt-8 rounded-2xl border border-hairline bg-canvas p-6 sm:p-8">
+                    <Eyebrow className="mb-4">{dict.materials.eyebrow}</Eyebrow>
+                    <div className="flex flex-wrap gap-2.5">
+                      {serviceMaterials.map((material) => (
+                        <ButtonLink
+                          key={material.slug}
+                          href={material.href}
+                          variant="secondary"
+                          size="sm"
+                          trailingIcon="arrow"
+                        >
+                          {material.name}
+                        </ButtonLink>
+                      ))}
+                    </div>
+                  </div>
+                </Reveal>
+              ) : null}
             </div>
 
             <Reveal className="lg:col-span-5">

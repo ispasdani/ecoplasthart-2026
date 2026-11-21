@@ -41,6 +41,8 @@ export const articlesRo = {
   faqHeading: "Întrebări frecvente",
   relatedServiceEyebrow: "Serviciul nostru",
   relatedServiceCta: "Vezi serviciul",
+  relatedMaterialEyebrow: "Predare și cumpărare",
+  relatedMaterialCta: "Vezi detalii și sorturi",
   disclaimer:
     "Materialul are caracter informativ și rezumă practica noastră la data publicării. Legislația de mediu se modifică frecvent — pentru situația concretă a firmei tale, verifică textele în vigoare și consultă agenția pentru protecția mediului sau un consultant de specialitate.",
 
@@ -375,9 +377,9 @@ export const articlesRo = {
     },
 
     "packaging-waste-recycling-obligations": {
-      metaTitle: "Obligații privind ambalajele: ce trebuie să facă firmele",
+      metaTitle: "Obligații privind ambalajele pentru firme",
       metaDescription:
-        "Ce prevede Legea 249/2015 pentru firmele care introduc ambalaje pe piața din România: conformare individuală, transfer de responsabilitate, raportare și operatori autorizați.",
+        "Ce prevede Legea 249/2015 pentru firmele care introduc ambalaje pe piață: conformare individuală, OIREP, raportare și operatori autorizați.",
       title:
         "Obligații privind ambalajele: ce trebuie să facă orice firmă care utilizează ambalaje",
       excerpt:
@@ -441,10 +443,9 @@ export const articlesRo = {
     },
 
     "aluminium-scrap-recycling": {
-      metaTitle:
-        "Reciclarea aluminiului: categorii, prețuri și pregătire la sursă",
+      metaTitle: "Reciclarea aluminiului: sorturi și pregătire",
       metaDescription:
-        "Profile, piese turnate, șpan, cablu și folie: cum se clasifică, prețuiesc și procesează deșeurile de aluminiu. Ce să separi la sursă pentru a recupera valoarea maximă.",
+        "Profile, piese turnate, șpan și cablu: cum se clasifică și procesează deșeurile de aluminiu și ce separi la sursă pentru valoare maximă.",
       title:
         "Reciclarea deșeurilor de aluminiu: categorii, prețuri și ce faci la sursă",
       excerpt:
@@ -668,9 +669,9 @@ export const articlesRo = {
     },
 
     "ferrous-vs-non-ferrous-waste": {
-      metaTitle: "Deșeuri feroase și neferoase: diferențe și cum se colectează",
+      metaTitle: "Metale feroase vs. neferoase: diferențe",
       metaDescription:
-        "Ce înseamnă metale feroase și neferoase, cum se recunosc, ce coduri de deșeu au și de ce prețul de colectare diferă atât de mult între ele.",
+        "Ce înseamnă metale feroase și neferoase, cum se recunosc, ce coduri de deșeu au și de ce diferă prețul de colectare între ele.",
       title: "Deșeuri feroase și neferoase: diferențe, coduri și cum se colectează",
       excerpt:
         "Un magnet și câteva secunde sunt de-ajuns să afli dacă un metal e feros sau neferos — dar diferența dintre ele îți schimbă radical prețul și modul de colectare.",
@@ -730,9 +731,9 @@ export const articlesRo = {
     },
 
     "waste-recovery-and-destruction-certificates": {
-      metaTitle: "Certificatul de valorificare și certificatul de distrugere a deșeurilor",
+      metaTitle: "Certificate de valorificare și distrugere",
       metaDescription:
-        "Ce sunt certificatul de valorificare și certificatul de distrugere, cui îi folosesc și cum le obții de la un colector autorizat de deșeuri.",
+        "Ce sunt certificatul de valorificare și cel de distrugere a deșeurilor, cui folosesc și cum le obții de la un colector autorizat.",
       title: "Certificatul de valorificare și certificatul de distrugere: ce sunt și cui folosesc",
       excerpt:
         "Bonul de cântar dovedește o predare. Certificatul de valorificare sau de distrugere dovedește ce s-a întâmplat cu materialul după aceea — și multe firme au nevoie exact de asta.",
@@ -792,9 +793,9 @@ export const articlesRo = {
     },
 
     "how-waste-container-rental-works": {
-      metaTitle: "Cum funcționează închirierea containerelor pentru deșeuri",
+      metaTitle: "Închiriere containere deșeuri: ghid complet",
       metaDescription:
-        "De la solicitare la ridicare: cum funcționează închirierea containerelor pentru deșeuri industriale, ce dimensiuni există și cum se calculează costul.",
+        "De la solicitare la ridicare: cum funcționează închirierea containerelor pentru deșeuri industriale, dimensiuni și calculul costurilor.",
       title: "Cum funcționează închirierea containerelor pentru deșeuri industriale",
       excerpt:
         "Un telefon, o dimensiune de container și un interval de ridicare — dar între ele sunt câteva decizii care influențează direct costul final.",
@@ -917,9 +918,9 @@ export const articlesRo = {
     },
 
     "used-oil-collection-for-companies": {
-      metaTitle: "Colectarea uleiurilor uzate de la firme: stocare și predare",
+      metaTitle: "Colectarea uleiurilor uzate de la firme",
       metaDescription:
-        "Cum stochezi corect uleiul uzat în firmă, ce coduri de deșeu se folosesc, de ce nu se amestecă cu alte lichide și ce documente primești la predarea către un colector autorizat.",
+        "Cum stochezi corect uleiul uzat în firmă, ce coduri de deșeu se folosesc și ce documente primești la predarea către un colector autorizat.",
       title:
         "Colectarea uleiurilor uzate de la firme: cum le stochezi și cum le predai",
       excerpt:
@@ -980,9 +981,9 @@ export const articlesRo = {
     },
 
     "copper-scrap-grades-and-prices": {
-      metaTitle: "Prețul cuprului la colectare: sorturi și ce influențează prețul",
+      metaTitle: "Sorturi de cupru și factorii de preț pe kg",
       metaDescription:
-        "De ce cuprul lucios se plătește mai bine decât cel ars sau cositorit, cum se evaluează cablurile și radiatoarele și ce poți face ca să primești prețul maxim pe kg.",
+        "De ce cuprul lucios se plătește mai bine decât cel ars sau cositorit, cum se evaluează cablurile și cum obții prețul corect pe kg.",
       title: "Prețul cuprului la colectare: sorturi, impurități și cum obții mai mult pe kg",
       excerpt:
         "„Cât dați pe cupru?” are cel puțin cinci răspunsuri corecte. Diferența dintre ele ține de sortare, nu de negociere.",
@@ -1104,9 +1105,9 @@ export const articlesRo = {
     },
 
     "construction-and-demolition-waste": {
-      metaTitle: "Deșeuri din construcții și demolări: ce se recuperează",
+      metaTitle: "Deșeuri din construcții: ce se recuperează",
       metaDescription:
-        "Ce deșeuri rezultă din construcții și demolări, cum le sortezi pe șantier pentru costuri mai mici, ce coduri se folosesc și ce materiale se pot vinde, nu doar elimina.",
+        "Ce deșeuri rezultă din construcții și demolări, cum le sortezi pe șantier pentru costuri mai mici și ce materiale se pot valorifica.",
       title:
         "Deșeuri din construcții și demolări: cum sortezi pe șantier ca să plătești mai puțin",
       excerpt:

@@ -120,6 +120,31 @@ export const pathnames = {
     ro: "/servicii/transport-si-containere",
     en: "/services/logistics",
   },
+  "/materials": { ro: "/ce-cumparam", en: "/what-we-buy" },
+  "/materials/copper": {
+    ro: "/ce-cumparam/cupru",
+    en: "/what-we-buy/copper",
+  },
+  "/materials/ferrous-scrap": {
+    ro: "/ce-cumparam/fier-vechi",
+    en: "/what-we-buy/ferrous-scrap",
+  },
+  "/materials/aluminium": {
+    ro: "/ce-cumparam/aluminiu",
+    en: "/what-we-buy/aluminium",
+  },
+  "/materials/brass": {
+    ro: "/ce-cumparam/alama",
+    en: "/what-we-buy/brass",
+  },
+  "/materials/cables": {
+    ro: "/ce-cumparam/cabluri",
+    en: "/what-we-buy/cables",
+  },
+  "/materials/lead-batteries": {
+    ro: "/ce-cumparam/acumulatori-plumb",
+    en: "/what-we-buy/lead-batteries",
+  },
   "/certifications": { ro: "/certificari", en: "/certifications" },
   "/articles": { ro: "/articole", en: "/articles" },
   "/articles/choosing-a-waste-collection-partner": {
@@ -258,6 +283,37 @@ export function isServiceSlug(value: string): value is ServiceSlug {
 
 export function serviceKeyFromSlug(slug: ServiceSlug): ServiceKey {
   return `/services/${slug}` as ServiceKey;
+}
+
+/**
+ * Commercial material buying pages under `/ce-cumparam/*` (`/what-we-buy/*`).
+ * These sit between informational articles and broad B2B service pages,
+ * matching high-intent local searches ("cumpăr cupru Deva", "fier vechi").
+ */
+export const materialKeys = [
+  "/materials/copper",
+  "/materials/ferrous-scrap",
+  "/materials/aluminium",
+  "/materials/brass",
+  "/materials/cables",
+  "/materials/lead-batteries",
+] as const satisfies readonly PathnameKey[];
+
+export type MaterialKey = (typeof materialKeys)[number];
+
+/** `"/materials/copper"` → `"copper"` (the `[material]` route param). */
+export type MaterialSlug = MaterialKey extends `/materials/${infer S}` ? S : never;
+
+export const materialSlugs = materialKeys.map(
+  (key) => key.slice("/materials/".length) as MaterialSlug,
+);
+
+export function isMaterialSlug(value: string): value is MaterialSlug {
+  return (materialSlugs as string[]).includes(value);
+}
+
+export function materialKeyFromSlug(slug: MaterialSlug): MaterialKey {
+  return `/materials/${slug}` as MaterialKey;
 }
 
 /**

@@ -28,6 +28,9 @@ const PAGE_IMAGES: Partial<Record<PathnameKey, string[]>> = {
   "/": ["/images/feros.webp", "/images/hazard.webp"],
   "/services/metal-waste": ["/images/feros.webp"],
   "/services/hazardous-waste": ["/images/hazard.webp"],
+  "/materials": ["/images/feros.webp", "/images/hazard.webp"],
+  "/materials/ferrous-scrap": ["/images/feros.webp"],
+  "/materials/lead-batteries": ["/images/hazard.webp"],
 };
 
 /**

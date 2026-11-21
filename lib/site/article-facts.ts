@@ -1,4 +1,4 @@
-import type { ArticleSlug, ServiceKey } from "@/lib/i18n/routing";
+import type { ArticleSlug, MaterialKey, ServiceKey } from "@/lib/i18n/routing";
 
 /**
  * Article facts with no dependencies beyond routing types.
@@ -35,6 +35,13 @@ type ArticleFacts = {
    * so the service pages collect internal links from every related article.
    */
   service: ServiceKey;
+  /**
+   * Optional commercial material page this article feeds (e.g. copper article
+   * → `/ce-cumparam/cupru`). Rendered as a direct conversion callout above the
+   * broader service card so informational searches flow straight to the
+   * matching buying page.
+   */
+  material?: MaterialKey;
 };
 
 export const ARTICLE_FACTS: Record<ArticleSlug, ArticleFacts> = {
@@ -55,6 +62,7 @@ export const ARTICLE_FACTS: Record<ArticleSlug, ArticleFacts> = {
   "scrap-metal-prices-explained": {
     topic: "costs",
     service: "/services/metal-waste",
+    material: "/materials/ferrous-scrap",
     publishedAt: "2026-07-23",
     updatedAt: "2026-07-23",
     readMinutes: 7,
@@ -62,6 +70,7 @@ export const ARTICLE_FACTS: Record<ArticleSlug, ArticleFacts> = {
   "cable-recycling-copper-granules": {
     topic: "recycling",
     service: "/services/cable-processing",
+    material: "/materials/cables",
     publishedAt: "2026-07-02",
     updatedAt: "2026-07-02",
     readMinutes: 8,
@@ -83,6 +92,7 @@ export const ARTICLE_FACTS: Record<ArticleSlug, ArticleFacts> = {
   "aluminium-scrap-recycling": {
     topic: "recycling",
     service: "/services/metal-waste",
+    material: "/materials/aluminium",
     publishedAt: "2026-09-01",
     updatedAt: "2026-09-01",
     readMinutes: 7,
@@ -104,6 +114,7 @@ export const ARTICLE_FACTS: Record<ArticleSlug, ArticleFacts> = {
   "why-companies-sell-scrap-metal": {
     topic: "guides",
     service: "/services/metal-waste",
+    material: "/materials/ferrous-scrap",
     publishedAt: "2026-09-22",
     updatedAt: "2026-09-22",
     readMinutes: 6,
@@ -111,6 +122,7 @@ export const ARTICLE_FACTS: Record<ArticleSlug, ArticleFacts> = {
   "ferrous-vs-non-ferrous-waste": {
     topic: "recycling",
     service: "/services/metal-waste",
+    material: "/materials/ferrous-scrap",
     publishedAt: "2026-09-24",
     updatedAt: "2026-09-24",
     readMinutes: 7,
@@ -146,6 +158,7 @@ export const ARTICLE_FACTS: Record<ArticleSlug, ArticleFacts> = {
   "copper-scrap-grades-and-prices": {
     topic: "costs",
     service: "/services/metal-waste",
+    material: "/materials/copper",
     publishedAt: "2026-10-01",
     updatedAt: "2026-10-01",
     readMinutes: 7,
@@ -153,6 +166,7 @@ export const ARTICLE_FACTS: Record<ArticleSlug, ArticleFacts> = {
   "used-lead-acid-batteries": {
     topic: "recycling",
     service: "/services/hazardous-waste",
+    material: "/materials/lead-batteries",
     publishedAt: "2026-10-01",
     updatedAt: "2026-10-01",
     readMinutes: 6,
@@ -167,6 +181,7 @@ export const ARTICLE_FACTS: Record<ArticleSlug, ArticleFacts> = {
   "where-to-sell-scrap-metal-deva-hunedoara": {
     topic: "guides",
     service: "/services/metal-waste",
+    material: "/materials/ferrous-scrap",
     publishedAt: "2026-10-04",
     updatedAt: "2026-10-04",
     readMinutes: 5,
@@ -174,6 +189,7 @@ export const ARTICLE_FACTS: Record<ArticleSlug, ArticleFacts> = {
   "documents-needed-to-sell-scrap-metal": {
     topic: "guides",
     service: "/services/metal-waste",
+    material: "/materials/ferrous-scrap",
     publishedAt: "2026-10-04",
     updatedAt: "2026-10-04",
     readMinutes: 5,
@@ -181,6 +197,7 @@ export const ARTICLE_FACTS: Record<ArticleSlug, ArticleFacts> = {
   "what-you-can-sell-as-scrap-metal": {
     topic: "recycling",
     service: "/services/metal-waste",
+    material: "/materials/ferrous-scrap",
     publishedAt: "2026-10-04",
     updatedAt: "2026-10-04",
     readMinutes: 5,
@@ -188,6 +205,7 @@ export const ARTICLE_FACTS: Record<ArticleSlug, ArticleFacts> = {
   "aluminium-cans-scrap-value": {
     topic: "recycling",
     service: "/services/metal-waste",
+    material: "/materials/aluminium",
     publishedAt: "2026-10-04",
     updatedAt: "2026-10-04",
     readMinutes: 4,
@@ -195,6 +213,7 @@ export const ARTICLE_FACTS: Record<ArticleSlug, ArticleFacts> = {
   "how-to-tell-copper-brass-aluminium-apart": {
     topic: "recycling",
     service: "/services/metal-waste",
+    material: "/materials/brass",
     publishedAt: "2026-10-04",
     updatedAt: "2026-10-04",
     readMinutes: 5,

@@ -9,6 +9,7 @@
  * Content is grounded in `knowledge/ecoplast-hart-knowledge-graph.md`.
  */
 import { articlesRo } from "./articles-ro";
+import { materialsRo } from "./materials-ro";
 
 export const ro = {
   meta: {
@@ -67,6 +68,7 @@ export const ro = {
     servicesOverview: "Toate serviciile",
     servicesOverviewDesc:
       "Vezi întreaga gamă de servicii de management al deșeurilor.",
+    materials: "Ce cumpărăm",
     certifications: "Certificări",
     articles: "Articole",
     contact: "Contact",
@@ -114,6 +116,7 @@ export const ro = {
     blurb:
       "Colectarea, sortarea și reciclarea materialelor reciclabile din 2004. Un partener autorizat pentru gestionarea responsabilă a deșeurilor în județul Hunedoara și în toată România.",
     servicesHeading: "Servicii",
+    materialsHeading: "Ce cumpărăm",
     companyHeading: "Companie",
     contactHeading: "Contact",
     legalHeading: "Date firmă",
@@ -589,6 +592,7 @@ export const ro = {
     title: "Harta site-ului",
     lead: "Toate paginile publice ale site-ului, într-un singur loc.",
     servicesHeading: "Servicii",
+    materialsHeading: "Ce cumpărăm",
     companyHeading: "Companie",
     resourcesHeading: "Resurse",
     legalHeading: "Documente legale",
@@ -955,6 +959,9 @@ export const ro = {
       },
     ],
   },
+
+  /** Commercial material-buying hub & detail copy — see `messages/materials-ro.ts`. */
+  materials: materialsRo,
 
   /** Article feed and long-form copy — see `messages/articles-ro.ts`. */
   articles: articlesRo,

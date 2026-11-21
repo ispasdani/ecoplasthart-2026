@@ -22,8 +22,9 @@ import {
 import {
   formatArticleDate,
   getArticle,
-  getArticles,
+  getRelatedArticles,
 } from "@/lib/site/articles";
+import { getMaterials } from "@/lib/site/materials";
 import { getPrimaryLinks, getServiceNavItems } from "@/lib/site/nav";
 import { articleDetailGraph } from "@/lib/site/structured-data";
 
@@ -82,13 +83,14 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
   const article = getArticle(dict, locale, slug);
   const articlesHref = localizedPath("/articles", locale);
-  const related = getArticles(dict, locale)
-    .filter((candidate) => candidate.slug !== slug)
-    .slice(0, 3);
+  const related = getRelatedArticles(dict, locale, slug, 3);
   // Always present: `service` is a required `ARTICLE_FACTS` field.
   const service = getServiceNavItems(dict, locale).find(
     (item) => item.key === article.service,
   );
+  const material = article.material
+    ? getMaterials(dict, locale).find((item) => item.key === article.material)
+    : undefined;
 
   const facts = [
     { label: t.authorLabel, value: t.author.name },
@@ -237,33 +239,60 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 ))}
               </div>
 
-              {/* Related service — the bridge from an informational read to
-                  the page that converts, and an internal link that tells
-                  search engines which service page this topic belongs to. */}
-              {service ? (
-                <Link
-                  href={service.href}
-                  className="group mt-12 flex flex-col gap-4 rounded-2xl border border-hairline bg-surface-soft p-6 transition-colors hover:border-hairline-strong sm:flex-row sm:items-center sm:justify-between sm:p-8"
-                >
-                  <div className="min-w-0">
-                    <Eyebrow className="mb-3">{t.relatedServiceEyebrow}</Eyebrow>
-                    <p className="text-[1.125rem] font-semibold leading-snug text-ink">
-                      {service.name}
-                    </p>
-                    <p className="mt-1.5 text-[0.9375rem] leading-relaxed text-slate">
-                      {service.desc}
-                    </p>
-                  </div>
-                  <span className="inline-flex shrink-0 items-center gap-1.5 text-[0.875rem] font-medium text-brand">
-                    {t.relatedServiceCta}
-                    <ArrowRight
-                      aria-hidden
-                      className="size-4 transition-transform group-hover:translate-x-0.5"
-                      strokeWidth={2}
-                    />
-                  </span>
-                </Link>
-              ) : null}
+              {/* Direct bridge to the commercial material page when applicable,
+                  plus the parent service page — turning informational searches
+                  into direct conversion paths. */}
+              <div className="mt-12 flex flex-col gap-4">
+                {material ? (
+                  <Link
+                    href={material.href}
+                    className="group flex flex-col gap-4 rounded-2xl border border-hairline bg-surface-feature p-6 transition-colors hover:border-hairline-strong sm:flex-row sm:items-center sm:justify-between sm:p-8"
+                  >
+                    <div className="min-w-0">
+                      <Eyebrow className="mb-3">{t.relatedMaterialEyebrow}</Eyebrow>
+                      <p className="text-[1.125rem] font-semibold leading-snug text-ink">
+                        {material.title}
+                      </p>
+                      <p className="mt-1.5 text-[0.9375rem] leading-relaxed text-slate">
+                        {material.navDesc}
+                      </p>
+                    </div>
+                    <span className="inline-flex shrink-0 items-center gap-1.5 text-[0.875rem] font-medium text-brand">
+                      {t.relatedMaterialCta}
+                      <ArrowRight
+                        aria-hidden
+                        className="size-4 transition-transform group-hover:translate-x-0.5"
+                        strokeWidth={2}
+                      />
+                    </span>
+                  </Link>
+                ) : null}
+
+                {service ? (
+                  <Link
+                    href={service.href}
+                    className="group flex flex-col gap-4 rounded-2xl border border-hairline bg-surface-soft p-6 transition-colors hover:border-hairline-strong sm:flex-row sm:items-center sm:justify-between sm:p-8"
+                  >
+                    <div className="min-w-0">
+                      <Eyebrow className="mb-3">{t.relatedServiceEyebrow}</Eyebrow>
+                      <p className="text-[1.125rem] font-semibold leading-snug text-ink">
+                        {service.name}
+                      </p>
+                      <p className="mt-1.5 text-[0.9375rem] leading-relaxed text-slate">
+                        {service.desc}
+                      </p>
+                    </div>
+                    <span className="inline-flex shrink-0 items-center gap-1.5 text-[0.875rem] font-medium text-brand">
+                      {t.relatedServiceCta}
+                      <ArrowRight
+                        aria-hidden
+                        className="size-4 transition-transform group-hover:translate-x-0.5"
+                        strokeWidth={2}
+                      />
+                    </span>
+                  </Link>
+                ) : null}
+              </div>
 
               {/* FAQ — plain markup, no disclosure widget: the answers must be
                   in the rendered text for the JSON-LD `FAQPage` to be honest. */}

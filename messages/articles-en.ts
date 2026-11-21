@@ -35,6 +35,8 @@ export const articlesEn = {
   faqHeading: "Frequently asked questions",
   relatedServiceEyebrow: "Our service",
   relatedServiceCta: "View the service",
+  relatedMaterialEyebrow: "Sell & drop off",
+  relatedMaterialCta: "See grades & details",
   disclaimer:
     "This article is informational and reflects our practice at the date of publication. Romanian environmental legislation changes frequently — for your company's specific situation, check the texts in force and consult the environmental protection agency or a specialist adviser.",
 
@@ -368,9 +370,9 @@ export const articlesEn = {
     },
 
     "packaging-waste-recycling-obligations": {
-      metaTitle: "Packaging waste recycling obligations for companies in Romania",
+      metaTitle: "Packaging waste obligations in Romania",
       metaDescription:
-        "What Legea 249/2015 requires of companies that put packaging on the Romanian market: individual compliance, transfer of responsibility, reporting and permitted operators.",
+        "What Legea 249/2015 requires for packaging in Romania: individual compliance, OTR transfer of responsibility, reporting and permitted operators.",
       title:
         "Packaging waste obligations: what every company that uses packaging must do",
       excerpt:
@@ -434,10 +436,9 @@ export const articlesEn = {
     },
 
     "aluminium-scrap-recycling": {
-      metaTitle:
-        "Aluminium scrap recycling: grades, prices and how to prepare your waste",
+      metaTitle: "Aluminium scrap recycling: grades & prep",
       metaDescription:
-        "Profiles, castings, turnings, cable and foil: how aluminium waste is graded, priced and processed. What to separate at source to recover the most value.",
+        "Profiles, castings, turnings, cable and foil: how aluminium waste is graded, priced and processed, and what to separate at source for maximum value.",
       title:
         "Recycling aluminium scrap: grades, prices and what to do at source",
       excerpt:
@@ -661,9 +662,9 @@ export const articlesEn = {
     },
 
     "ferrous-vs-non-ferrous-waste": {
-      metaTitle: "Ferrous vs non-ferrous waste: differences and how it's collected",
+      metaTitle: "Ferrous vs non-ferrous scrap: differences",
       metaDescription:
-        "What ferrous and non-ferrous metals mean, how to tell them apart, which waste codes apply, and why the collection price differs so much between them.",
+        "What ferrous and non-ferrous metals mean, how to tell them apart, which waste codes apply, and why their collection prices differ so much.",
       title: "Ferrous vs non-ferrous waste: differences, codes, and how it's collected",
       excerpt:
         "A magnet and a few seconds are enough to tell whether a metal is ferrous or non-ferrous — but the difference changes your price and how it gets collected.",
@@ -910,9 +911,9 @@ export const articlesEn = {
     },
 
     "used-oil-collection-for-companies": {
-      metaTitle: "Used oil collection for companies: storage and handover",
+      metaTitle: "Used oil collection for companies",
       metaDescription:
-        "How to store used oil correctly on site, which waste codes apply, why it must not be mixed with other liquids and which documents you get when handing it to a licensed collector.",
+        "How to store used oil correctly on site, which waste codes apply, and what handover paperwork you receive from a licensed collector.",
       title: "Used oil collection for companies: how to store it and hand it over",
       excerpt:
         "A litre of used oil can contaminate thousands of litres of water. For a company, it can also contaminate the environmental file if it isn't stored and handed over correctly.",
@@ -1034,9 +1035,9 @@ export const articlesEn = {
     },
 
     "used-lead-acid-batteries": {
-      metaTitle: "Used lead-acid batteries: collection, storage and handover",
+      metaTitle: "Used lead-acid batteries: storage & handover",
       metaDescription:
-        "Why lead-acid batteries are hazardous waste, how to store them without acid leaks, which waste code applies and how to hand them over to a licensed collector.",
+        "Why lead-acid batteries are hazardous waste, how to store them without acid leaks, which waste code applies and how to hand them to a licensed collector.",
       title: "Used car and industrial batteries: how to store and hand them over correctly",
       excerpt:
         "A used battery is almost entirely recyclable — provided it reaches a licensed collector intact, with the electrolyte still inside.",

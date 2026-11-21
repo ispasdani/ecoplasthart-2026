@@ -16,6 +16,7 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { getDictionary } from "@/lib/i18n/dictionary";
 import { buildPageMetadata } from "@/lib/i18n/metadata";
 import { isLocale } from "@/lib/i18n/routing";
+import { getMaterials } from "@/lib/site/materials";
 import { getPrimaryLinks, getServiceNavItems } from "@/lib/site/nav";
 import { homeGraph } from "@/lib/site/structured-data";
 
@@ -48,6 +49,7 @@ export default async function HomePage({
   const dict = await getDictionary(locale);
   const links = getPrimaryLinks(dict, locale);
   const services = getServiceNavItems(dict, locale);
+  const materials = getMaterials(dict, locale);
 
   return (
     <>
@@ -73,7 +75,11 @@ export default async function HomePage({
       />
       <Process dict={dict} />
       <Presence dict={dict} />
-      <WasteStreams dict={dict} />
+      <WasteStreams
+        dict={dict}
+        materials={materials}
+        materialsHref={links.materials.href}
+      />
       <CertificationsTeaser dict={dict} href={links.certifications.href} />
       <CtaBand dict={dict} contactHref={links.contact.href} />
     </>

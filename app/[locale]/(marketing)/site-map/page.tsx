@@ -10,6 +10,7 @@ import { getDictionary } from "@/lib/i18n/dictionary";
 import { buildPageMetadata } from "@/lib/i18n/metadata";
 import { isLocale, localizedPath } from "@/lib/i18n/routing";
 import { getArticles } from "@/lib/site/articles";
+import { getMaterials } from "@/lib/site/materials";
 import { getPrimaryLinks, getServiceNavItems } from "@/lib/site/nav";
 import { simplePageGraph } from "@/lib/site/structured-data";
 
@@ -53,6 +54,7 @@ export default async function SiteMapPage({
   const dict = await getDictionary(locale);
   const links = getPrimaryLinks(dict, locale);
   const services = getServiceNavItems(dict, locale);
+  const materials = getMaterials(dict, locale);
   const articles = getArticles(dict, locale);
   const t = dict.siteMap;
 
@@ -62,6 +64,13 @@ export default async function SiteMapPage({
       items: [
         { href: links.services.href, label: dict.nav.servicesOverview },
         ...services.map((s) => ({ href: s.href, label: s.name })),
+      ],
+    },
+    {
+      heading: t.materialsHeading,
+      items: [
+        { href: links.materials.href, label: dict.materials.index.title },
+        ...materials.map((m) => ({ href: m.href, label: m.name })),
       ],
     },
     {

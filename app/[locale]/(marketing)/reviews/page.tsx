@@ -5,7 +5,7 @@ import { Quote } from "lucide-react";
 import { CtaBand } from "@/components/marketing/sections/cta-band";
 import { PageHero } from "@/components/marketing/page-hero";
 import { Container, Section } from "@/components/ui/layout";
-import { Reveal, RevealItem, Stagger } from "@/components/ui/reveal";
+import { RevealItem, Stagger } from "@/components/ui/reveal";
 import { JsonLd } from "@/components/seo/json-ld";
 import { getDictionary } from "@/lib/i18n/dictionary";
 import { buildPageMetadata } from "@/lib/i18n/metadata";
@@ -77,7 +77,7 @@ export default async function ReviewsPage({
                       strokeWidth={1.6}
                     />
                     <p className="text-[1.0625rem] italic leading-relaxed text-ink">
-                      "{testimonial.quote}"
+                      &ldquo;{testimonial.quote}&rdquo;
                     </p>
                   </div>
                   <div className="mt-8 border-t border-hairline pt-4">

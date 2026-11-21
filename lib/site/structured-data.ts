@@ -20,15 +20,18 @@ import {
   articleKeyFromSlug,
   localeHtmlLang,
   localizedPath,
+  materialKeyFromSlug,
   serviceKeyFromSlug,
   siteUrl,
   type ArticleSlug,
   type Locale,
+  type MaterialSlug,
   type PathnameKey,
   type ServiceSlug,
 } from "@/lib/i18n/routing";
 import { FOUNDING_DATE } from "@/lib/site/company";
 import { getArticle, getArticles } from "@/lib/site/articles";
+import { getMaterial, getMaterials } from "@/lib/site/materials";
 import { MAPS_HREF, getServiceNavItems } from "@/lib/site/nav";
 import type { Messages } from "@/messages/ro";
 
@@ -292,6 +295,13 @@ function servicesCrumb(dict: Messages, locale: Locale): Crumb {
   };
 }
 
+function materialsCrumb(dict: Messages, locale: Locale): Crumb {
+  return {
+    name: dict.nav.materials,
+    url: absoluteUrl(localizedPath("/materials", locale)),
+  };
+}
+
 function graph(nodes: unknown[]) {
   return { "@context": "https://schema.org", "@graph": nodes };
 }
@@ -384,6 +394,82 @@ export function serviceDetailGraph(
       // A reference, not a second copy of the company.
       provider: { "@id": ORGANIZATION_ID },
       areaServed: AREA_SERVED,
+    },
+  ]);
+}
+
+export function materialsIndexGraph(dict: Messages, locale: Locale) {
+  const materials = getMaterials(dict, locale);
+
+  return graph([
+    organizationNode(dict),
+    localBusinessNode(dict, locale),
+    webSiteNode(dict, locale),
+    webPageNode({
+      locale,
+      pathnameKey: "/materials",
+      title: dict.materials.metaTitle,
+      description: dict.materials.metaDescription,
+    }),
+    breadcrumbNode([homeCrumb(dict, locale), materialsCrumb(dict, locale)]),
+    {
+      "@type": "ItemList",
+      "@id": `${absoluteUrl(localizedPath("/materials", locale))}#list`,
+      name: dict.materials.index.title,
+      itemListElement: materials.map((material, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: material.name,
+        url: absoluteUrl(material.href),
+      })),
+    },
+  ]);
+}
+
+export function materialDetailGraph(
+  dict: Messages,
+  locale: Locale,
+  slug: MaterialSlug,
+) {
+  const material = getMaterial(dict, locale, slug);
+  const pathnameKey = materialKeyFromSlug(slug);
+  const url = absoluteUrl(localizedPath(pathnameKey, locale));
+
+  return graph([
+    organizationNode(dict),
+    localBusinessNode(dict, locale),
+    webSiteNode(dict, locale),
+    {
+      ...webPageNode({
+        locale,
+        pathnameKey,
+        title: material.metaTitle,
+        description: material.metaDescription,
+      }),
+      "@type": ["WebPage", "FAQPage"],
+      mainEntity: material.faq.map((entry) => ({
+        "@type": "Question",
+        name: entry.question,
+        acceptedAnswer: { "@type": "Answer", text: entry.answer },
+      })),
+    },
+    breadcrumbNode([
+      homeCrumb(dict, locale),
+      materialsCrumb(dict, locale),
+      { name: material.name, url },
+    ]),
+    {
+      "@type": "Service",
+      "@id": `${url}#service`,
+      name: material.title,
+      description: material.metaDescription,
+      url,
+      serviceType: material.name,
+      provider: { "@id": ORGANIZATION_ID },
+      areaServed: AREA_SERVED,
+      isRelatedTo: {
+        "@id": `${absoluteUrl(localizedPath(material.service, locale))}#service`,
+      },
     },
   ]);
 }

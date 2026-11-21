@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "seo:indexnow": "node scripts/indexnow.mjs",
+    "seo:indexnow:dry": "node scripts/indexnow.mjs --dry-run"
   },
   "dependencies": {
     "@clerk/nextjs": "^7.8.4",
