@@ -396,15 +396,15 @@ function articlesCrumb(dict: Messages, locale: Locale): Crumb {
 }
 
 /**
- * The OG card route doubles as the article's `image`. Google requires an image
- * on `Article` for the rich result, and pointing at the generated card is
- * honest — it is the picture that actually represents the page — where a
- * yard photograph unrelated to the topic would not be.
+ * Each article's own statically generated OG card doubles as its `image`.
+ * Google requires an image on `Article`/`BlogPosting` for the rich result, and
+ * pointing at the article's dedicated card gives every post a unique, honest
+ * representation rather than reusing the homepage card.
  */
-function articleImage(locale: Locale) {
+function articleImage(locale: Locale, slug: ArticleSlug) {
   return {
     "@type": "ImageObject",
-    url: absoluteUrl(`/${locale}/opengraph-image`),
+    url: absoluteUrl(`/og/${locale}/articles/${slug}`),
     width: 1200,
     height: 630,
   };
@@ -501,7 +501,7 @@ export function articleDetailGraph(
       inLanguage: localeHtmlLang[locale],
       wordCount: countWords(article),
       timeRequired: `PT${article.readMinutes}M`,
-      image: articleImage(locale),
+      image: articleImage(locale, slug),
       author: { "@id": ORGANIZATION_ID },
       publisher: { "@id": ORGANIZATION_ID },
       isPartOf: {

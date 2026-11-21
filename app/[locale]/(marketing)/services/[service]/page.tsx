@@ -20,7 +20,12 @@ import {
   serviceKeyFromSlug,
   serviceSlugs,
 } from "@/lib/i18n/routing";
-import { serviceIcons, serviceImages, serviceVideos } from "@/lib/site/icons";
+import {
+  serviceIcons,
+  serviceImages,
+  serviceVideoPosters,
+  serviceVideos,
+} from "@/lib/site/icons";
 import { getPrimaryLinks, getServiceNavItems, serviceImageAlt } from "@/lib/site/nav";
 import { serviceDetailGraph } from "@/lib/site/structured-data";
 
@@ -48,6 +53,7 @@ export async function generateMetadata({
     title: item.metaTitle,
     description: item.metaDescription,
     siteName: dict.meta.siteName,
+    ogImagePath: `/og/${locale}/services/${service}`,
   });
 }
 
@@ -149,6 +155,7 @@ export default async function ServiceDetailPage({
                 src={serviceImages[service]}
                 alt={serviceImageAlt(dict, service) ?? ""}
                 video={serviceVideos[service]}
+                poster={serviceVideoPosters[service]}
                 variant={variant}
                 overlay={false}
                 sizes="(min-width: 1024px) 40vw, 100vw"

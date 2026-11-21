@@ -24,12 +24,15 @@ export function buildPageMetadata({
   title,
   description,
   siteName,
+  ogImagePath,
 }: {
   locale: Locale;
   pathnameKey: PathnameKey;
   title: string;
   description: string;
   siteName: string;
+  /** Override when the route segment defines its own `opengraph-image.tsx`. */
+  ogImagePath?: string;
 }): Metadata {
   const path = localizedPath(pathnameKey, locale);
 
@@ -38,7 +41,7 @@ export function buildPageMetadata({
   // image has to be referenced explicitly or no card is emitted at all.
   const images = [
     {
-      url: `/${locale}/opengraph-image`,
+      url: ogImagePath ?? `/${locale}/opengraph-image`,
       width: 1200,
       height: 630,
       alt: `${siteName} — ${title}`,

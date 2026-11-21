@@ -22,7 +22,8 @@ function isExcluded(pathname: string): boolean {
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
     pathname.startsWith("/__clerk") ||
-    pathname.startsWith("/monitoring")
+    pathname.startsWith("/monitoring") ||
+    pathname.startsWith("/og/")
   ) {
     return true;
   }

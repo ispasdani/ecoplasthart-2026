@@ -66,10 +66,18 @@ export const serviceImages: Partial<Record<ServiceSlug, string>> = {
  * Only the slugs listed here get a video; the rest keep the gradient artwork.
  */
 export const serviceVideos: Partial<Record<ServiceSlug, string>> = {
-  "waste-collection": "/videos/trucks.mov",
+  "waste-collection": "/videos/trucks.mp4",
   "recycling-recovery": "/videos/verificare.mp4",
   "cable-processing": "/videos/cabluri.mp4",
   logistics: "/videos/graifer.mp4",
+};
+
+/** Still poster frames matching `serviceVideos`, shown immediately before playback. */
+export const serviceVideoPosters: Partial<Record<ServiceSlug, string>> = {
+  "waste-collection": "/images/posters/trucks.webp",
+  "recycling-recovery": "/images/posters/verificare.webp",
+  "cable-processing": "/images/posters/cabluri.webp",
+  logistics: "/images/posters/graifer.webp",
 };
 
 /**

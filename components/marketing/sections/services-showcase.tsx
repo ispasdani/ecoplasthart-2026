@@ -5,7 +5,12 @@ import { ButtonLink } from "@/components/ui/button";
 import { Container, Section, SectionHeader } from "@/components/ui/layout";
 import { MediaCaption, MediaTile } from "@/components/ui/media";
 import { Reveal, RevealItem, Stagger } from "@/components/ui/reveal";
-import { serviceIcons, serviceImages, serviceVideos } from "@/lib/site/icons";
+import {
+  serviceIcons,
+  serviceImages,
+  serviceVideoPosters,
+  serviceVideos,
+} from "@/lib/site/icons";
 import type { ServiceNavItem } from "@/lib/site/nav";
 import type { Messages } from "@/messages/ro";
 
@@ -94,6 +99,7 @@ function ServiceTile({
         src={serviceImages[service.slug]}
         alt={service.imageAlt ?? ""}
         video={serviceVideos[service.slug]}
+        poster={serviceVideoPosters[service.slug]}
         variant={variant}
         sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
         className={className}

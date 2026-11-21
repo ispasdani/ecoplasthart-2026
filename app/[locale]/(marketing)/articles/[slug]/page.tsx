@@ -53,6 +53,7 @@ export async function generateMetadata({
     title: article.metaTitle,
     description: article.metaDescription,
     siteName: dict.meta.siteName,
+    ogImagePath: `/og/${locale}/articles/${slug}`,
   });
 
   return {

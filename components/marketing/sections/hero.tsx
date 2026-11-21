@@ -74,11 +74,12 @@ export function Hero({
             muted
             loop
             playsInline
-            preload="auto"
+            poster="/images/posters/herobox-video.webp"
+            preload="metadata"
             aria-hidden
             tabIndex={-1}
           >
-            <source src="/videos/herobox-video.mov" />
+            <source src="/videos/herobox-video.mp4" type="video/mp4" />
           </video>
 
           <div

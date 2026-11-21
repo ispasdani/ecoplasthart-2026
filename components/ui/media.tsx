@@ -28,13 +28,6 @@ const ART = [
 /**
  * Explicit `type` on each `<source>`, so a browser can skip a container it
  * cannot decode instead of fetching it to find out.
- *
- * `.mov` is deliberately absent, and that is load-bearing. Chromium plays the
- * two QuickTime clips here happily by sniffing the content — but
- * `canPlayType("video/quicktime")` returns "", so declaring the type makes it
- * refuse the source outright (`networkState: NO_SOURCE`) and the tile goes
- * blank. Leaving `.mov` untyped preserves the sniffing path that works today.
- * Once the clips are transcoded to mp4/webm this map covers them.
  */
 const VIDEO_MIME: Record<string, string> = {
   mp4: "video/mp4",
@@ -66,7 +59,7 @@ export function MediaTile({
 }: {
   src?: string;
   alt?: string;
-  /** Looping background clip, e.g. `"/videos/trucks.mov"`. Ignored when `src` is set. */
+  /** Looping background clip, e.g. `"/videos/trucks.mp4"`. Ignored when `src` is set. */
   video?: string;
   /** Still frame shown before the clip can paint. Also what remains if it never can. */
   poster?: string;
