@@ -69,7 +69,9 @@ export default async function SiteMapPage({
       items: [
         { href: localizedPath("/", locale), label: dict.nav.home },
         { href: links.about.href, label: dict.nav.about },
+        { href: links.howItWorks.href, label: dict.nav.howItWorks },
         { href: links.certifications.href, label: dict.nav.certifications },
+        { href: links.reviews.href, label: dict.nav.reviews },
         { href: links.contact.href, label: dict.nav.contact },
       ],
     },

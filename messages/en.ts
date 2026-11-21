@@ -10,12 +10,12 @@ export const en: Messages = {
   meta: {
     siteName: "Ecoplast Hart",
     titleDefault:
-      "Ecoplast Hart — Waste Collection, Sorting & Recycling | Deva, Hunedoara, Romania",
+      "Ecoplast Hart — Waste Collection & Recycling | Deva, Romania",
     titleTemplate: "%s | Ecoplast Hart",
     description:
       "Collection, sorting and recycling of non-hazardous and hazardous waste across Hunedoara and all of Romania. In-house cable plant and full traceability.",
     home: {
-      title: "Waste collection, sorting and recycling — Deva, Hunedoara, Romania",
+      title: "Waste collection & recycling in Deva, Romania",
       description:
         "We collect, sort and recycle waste for companies across Romania: scrap metal, plastic, cardboard, Al/Cu cables, used oils and WEEE.",
     },
@@ -121,7 +121,7 @@ export const en: Messages = {
   home: {
     hero: {
       eyebrow: "Ecoplast Hart SRL · Since 2004",
-      title: "Your waste, handled responsibly.",
+      title: "Waste collection and recycling in Romania.",
       subtitle:
         "We collect, sort and recycle non-hazardous and hazardous waste for companies across Romania — with complete documentation, our own transport, and real recovery rather than just collection.",
       ctaPrimary: "Request a quote",
@@ -898,6 +898,7 @@ export const en: Messages = {
       title: "How our process works",
       subtitle: "We simplify waste management from the first visit to issuing the certificates.",
     },
+    stepsHeading: "Steps in the process",
     steps: [
       {
         title: "1. Audit and Quote",

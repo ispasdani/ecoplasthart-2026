@@ -8,8 +8,9 @@ const convex = new ConvexReactClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 /**
  * Convex without Clerk, for the public marketing tree.
  *
- * The marketing pages render no Clerk UI and read only `files.list`, which is
- * an unauthenticated query. Mounting `ConvexClientProvider` above them pulled
+ * The marketing pages render no Clerk UI and only use unauthenticated Convex
+ * operations (`files.list` on `/certifications` and `messages.submit` on
+ * `/contact`). Mounting `ConvexClientProvider` above them pulled
  * `ClerkProvider` — and with it a third-party connection to
  * `clerk.ecoplasthart.com` plus the full `clerk.browser.js` bundle — onto every
  * public page, including the homepage, for visitors who never sign in.

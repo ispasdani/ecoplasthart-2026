@@ -68,7 +68,7 @@ export default async function HowItWorksPage({
         <Container>
           <Reveal>
             <SectionHeader
-              heading={t.hero.title}
+              heading={t.stepsHeading}
               layout="stacked"
             />
           </Reveal>

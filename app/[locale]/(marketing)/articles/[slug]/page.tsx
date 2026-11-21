@@ -96,6 +96,15 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       value: formatArticleDate(article.publishedAt, locale),
       dateTime: article.publishedAt,
     },
+    ...(article.updatedAt !== article.publishedAt
+      ? [
+          {
+            label: t.updatedLabel,
+            value: formatArticleDate(article.updatedAt, locale),
+            dateTime: article.updatedAt,
+          },
+        ]
+      : []),
     { label: t.readLabel, value: article.readTime },
   ];
 

@@ -4,7 +4,6 @@ import { notFound } from "next/navigation";
 import { Analytics } from "@vercel/analytics/next";
 
 import "../globals.css";
-import { ConvexPublicClientProvider } from "@/app/providers/convex-public-client-provider";
 import { getDictionary } from "@/lib/i18n/dictionary";
 import {
   isLocale,
@@ -144,10 +143,8 @@ export default async function LocaleRootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <ConvexPublicClientProvider>
-          {children}
-          <Analytics />
-        </ConvexPublicClientProvider>
+        {children}
+        <Analytics />
       </body>
     </html>
   );

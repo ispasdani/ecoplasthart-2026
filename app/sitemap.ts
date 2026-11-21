@@ -2,9 +2,9 @@ import type { MetadataRoute } from "next";
 
 import {
   absoluteUrl,
-  defaultLocale,
   languageAlternates,
   localizedPath,
+  locales,
   pathnameKeys,
   type PathnameKey,
 } from "@/lib/i18n/routing";
@@ -31,10 +31,12 @@ const PAGE_IMAGES: Partial<Record<PathnameKey, string[]>> = {
 };
 
 /**
- * One `<url>` entry per page, keyed on the default-locale (Romanian) URL, with
- * `<xhtml:link rel="alternate" hreflang="…">` for every locale plus
- * `x-default`. Adding a page or locale in `lib/i18n/routing.ts` updates this
- * automatically.
+ * One `<url>` entry per page per locale (`ro` + `en`), each with reciprocal
+ * `<xhtml:link rel="alternate" hreflang="…">` entries for every locale plus
+ * `x-default`. Listing every locale as its own `<loc>` follows Google's
+ * multi-language sitemap spec and ensures `scripts/indexnow.mjs` submits both
+ * Romanian and English URLs. Adding a page or locale in `lib/i18n/routing.ts`
+ * updates this automatically.
  *
  * `changefreq` and `priority` are deliberately omitted: Google has stated it
  * ignores both, and they were previously misrepresenting the site anyway.
@@ -65,17 +67,16 @@ function lastModifiedFor(key: PathnameKey): string | undefined {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return pathnameKeys.map((key) => {
-    const images = PAGE_IMAGES[key];
+  return pathnameKeys.flatMap((key) => {
+    const images = PAGE_IMAGES[key]?.map(absoluteUrl);
     const lastModified = lastModifiedFor(key);
+    const languages = languageAlternates(key);
 
-    return {
-      url: absoluteUrl(localizedPath(key, defaultLocale)),
+    return locales.map((locale) => ({
+      url: absoluteUrl(localizedPath(key, locale)),
       ...(lastModified ? { lastModified } : {}),
-      alternates: {
-        languages: languageAlternates(key),
-      },
-      ...(images ? { images: images.map(absoluteUrl) } : {}),
-    };
+      alternates: { languages },
+      ...(images ? { images } : {}),
+    }));
   });
 }

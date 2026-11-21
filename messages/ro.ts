@@ -14,14 +14,14 @@ export const ro = {
   meta: {
     siteName: "Ecoplast Hart",
     titleDefault:
-      "Ecoplast Hart — Colectare, sortare și reciclare deșeuri | Deva, Hunedoara, România",
+      "Ecoplast Hart — Colectare și reciclare deșeuri | Deva, Hunedoara",
     titleTemplate: "%s | Ecoplast Hart",
     description:
       "Colectare, sortare și reciclare deșeuri nepericuloase și periculoase în Hunedoara și toată România. Instalație proprie de cabluri și trasabilitate completă.",
     // Per-page titles. These are plain strings so the parent layout's
     // `%s | Ecoplast Hart` template appends the brand exactly once.
     home: {
-      title: "Colectare, sortare și reciclare deșeuri — Deva, Hunedoara, România",
+      title: "Colectare și reciclare deșeuri Deva, Hunedoara",
       description:
         "Colectăm, sortăm și reciclăm deșeuri pentru companii din toată România: fier vechi, plastic, carton, cabluri Al/Cu, uleiuri uzate și DEEE.",
     },
@@ -134,7 +134,7 @@ export const ro = {
   home: {
     hero: {
       eyebrow: "Ecoplast Hart SRL · Din 2004",
-      title: "Deșeurile tale, gestionate responsabil.",
+      title: "Colectare și reciclare deșeuri în România.",
       subtitle:
         "Colectăm, sortăm și reciclăm deșeuri nepericuloase și periculoase pentru companii din toată România — cu documentație completă, transport propriu și valorificare reală, nu doar colectare.",
       ctaPrimary: "Solicită o ofertă",
@@ -935,6 +935,7 @@ export const ro = {
       title: "Cum funcționează procesul nostru",
       subtitle: "Simplificăm managementul deșeurilor de la prima vizită până la emiterea certificatelor.",
     },
+    stepsHeading: "Etapele colaborării",
     steps: [
       {
         title: "1. Audit și Ofertare",

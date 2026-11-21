@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 
+import { ConvexPublicProvider } from "@/app/providers/convex-public-provider";
 import { PageHero } from "@/components/marketing/page-hero";
 import { ButtonLink, IconCircle } from "@/components/ui/button";
 import { Container, Section } from "@/components/ui/layout";
@@ -132,10 +133,12 @@ export default async function ContactPage({
         <Container>
           <div className="grid gap-8 lg:grid-cols-12 lg:gap-12">
             <Reveal className="lg:col-span-6">
-              <ContactForm
-                t={t.form}
-                privacyHref={localizedPath("/privacy-policy", locale)}
-              />
+              <ConvexPublicProvider>
+                <ContactForm
+                  t={t.form}
+                  privacyHref={localizedPath("/privacy-policy", locale)}
+                />
+              </ConvexPublicProvider>
             </Reveal>
 
             <div className="space-y-8 lg:col-span-6">
