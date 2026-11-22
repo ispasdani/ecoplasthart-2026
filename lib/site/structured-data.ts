@@ -103,12 +103,20 @@ function digitalSourceType(value: string) {
 }
 
 /**
- * The moving imagery is generated (Higgsfield AI, conditioned on the company’s
- * own photographs), so it is `trainedAlgorithmicMedia` rather than a capture.
- * Attach this to a `VideoObject` when the clips gain poster frames and can be
- * marked up — audit B-16.
+ * Only the homepage hero background video (`/videos/herobox-video.mp4`) is
+ * AI-generated (conditioned on the company's own photographs), so that clip is
+ * `trainedAlgorithmicMedia`. All other operational clips (`trucks.mp4`,
+ * `verificare.mp4`, `cabluri.mp4`, `graifer.mp4`, `infrastructura.mp4`) and
+ * all site photographs are original yard captures (`digitalCapture`).
+ * Attach the appropriate IPTC source type when marking up `VideoObject` nodes.
  */
 export const SYNTHETIC_MEDIA_SOURCE_TYPE = "trainedAlgorithmicMedia";
+
+const BUSINESS_IMAGE_PATHS = ["/images/feros.webp", "/images/hazard.webp"] as const;
+
+const BUSINESS_IMAGE_IDS = BUSINESS_IMAGE_PATHS.map((path) => ({
+  "@id": `${absoluteUrl(path)}#image`,
+}));
 
 /**
  * Photographs of the operation, as full `ImageObject` nodes rather than bare
@@ -116,10 +124,15 @@ export const SYNTHETIC_MEDIA_SOURCE_TYPE = "trainedAlgorithmicMedia";
  *
  * This is original photography of an industrial site — genuinely scarce
  * material that competitors fill with stock — so it is worth claiming
- * explicitly rather than publishing anonymously.
+ * explicitly rather than publishing anonymously. Including `license` (all
+ * rights reserved terms) and `acquireLicensePage` (contact page for reuse
+ * permission) satisfies Google Images' full Image Metadata schema cleanly.
  */
-const BUSINESS_IMAGES = ["/images/feros.webp", "/images/hazard.webp"].map(
-  (path) => ({
+function businessImages(locale: Locale) {
+  const license = absoluteUrl(localizedPath("/terms", locale));
+  const acquireLicensePage = absoluteUrl(localizedPath("/contact", locale));
+
+  return BUSINESS_IMAGE_PATHS.map((path) => ({
     "@type": "ImageObject",
     "@id": `${absoluteUrl(path)}#image`,
     url: absoluteUrl(path),
@@ -128,9 +141,11 @@ const BUSINESS_IMAGES = ["/images/feros.webp", "/images/hazard.webp"].map(
     creator: { "@id": ORGANIZATION_ID },
     copyrightHolder: { "@id": ORGANIZATION_ID },
     copyrightNotice: "© Ecoplast Hart SRL",
+    license,
+    acquireLicensePage,
     additionalProperty: digitalSourceType("digitalCapture"),
-  }),
-);
+  }));
+}
 
 /**
  * The company mark on a stable, crawlable URL — the same recycling loop the
@@ -154,7 +169,7 @@ const LOGO = {
 /** Strips the display spacing from a phone number for `telephone` values. */
 const tel = (value: string) => value.replace(/\s/g, "");
 
-function organizationNode(dict: Messages) {
+function organizationNode(dict: Messages, locale: Locale) {
   const c = dict.company;
 
   return {
@@ -172,7 +187,7 @@ function organizationNode(dict: Messages) {
     taxID: c.cui,
     description: dict.meta.description,
     logo: LOGO,
-    image: BUSINESS_IMAGES,
+    image: businessImages(locale),
     address: POSTAL_ADDRESS,
     areaServed: AREA_SERVED,
     // Globally unique registry keys. These let Google and LLMs match the site
@@ -216,7 +231,7 @@ function localBusinessNode(dict: Messages, locale: Locale) {
     name: c.legalName,
     parentOrganization: { "@id": ORGANIZATION_ID },
     url: absoluteUrl(localizedPath("/contact", locale)),
-    image: BUSINESS_IMAGES,
+    image: BUSINESS_IMAGE_IDS,
     email: c.email,
     telephone: tel(c.phonePrimary),
     address: POSTAL_ADDRESS,
@@ -312,7 +327,7 @@ export function homeGraph(dict: Messages, locale: Locale) {
   const services = getServiceNavItems(dict, locale);
 
   return graph([
-    organizationNode(dict),
+    organizationNode(dict, locale),
     localBusinessNode(dict, locale),
     webSiteNode(dict, locale),
     webPageNode({
@@ -339,7 +354,7 @@ export function servicesIndexGraph(dict: Messages, locale: Locale) {
   const services = getServiceNavItems(dict, locale);
 
   return graph([
-    organizationNode(dict),
+    organizationNode(dict, locale),
     webSiteNode(dict, locale),
     webPageNode({
       locale,
@@ -371,7 +386,7 @@ export function serviceDetailGraph(
   const url = absoluteUrl(localizedPath(pathnameKey, locale));
 
   return graph([
-    organizationNode(dict),
+    organizationNode(dict, locale),
     webSiteNode(dict, locale),
     webPageNode({
       locale,
@@ -402,7 +417,7 @@ export function materialsIndexGraph(dict: Messages, locale: Locale) {
   const materials = getMaterials(dict, locale);
 
   return graph([
-    organizationNode(dict),
+    organizationNode(dict, locale),
     localBusinessNode(dict, locale),
     webSiteNode(dict, locale),
     webPageNode({
@@ -436,7 +451,7 @@ export function materialDetailGraph(
   const url = absoluteUrl(localizedPath(pathnameKey, locale));
 
   return graph([
-    organizationNode(dict),
+    organizationNode(dict, locale),
     localBusinessNode(dict, locale),
     webSiteNode(dict, locale),
     {
@@ -502,7 +517,7 @@ export function articlesIndexGraph(dict: Messages, locale: Locale) {
   const url = absoluteUrl(localizedPath("/articles", locale));
 
   return graph([
-    organizationNode(dict),
+    organizationNode(dict, locale),
     webSiteNode(dict, locale),
     webPageNode({
       locale,
@@ -553,7 +568,7 @@ export function articleDetailGraph(
   const url = absoluteUrl(localizedPath(pathnameKey, locale));
 
   return graph([
-    organizationNode(dict),
+    organizationNode(dict, locale),
     webSiteNode(dict, locale),
     {
       ...webPageNode({
@@ -617,7 +632,7 @@ function countWords(article: { lead: string; sections: readonly { body: readonly
 
 export function contactGraph(dict: Messages, locale: Locale) {
   return graph([
-    organizationNode(dict),
+    organizationNode(dict, locale),
     localBusinessNode(dict, locale),
     webSiteNode(dict, locale),
     webPageNode({
@@ -653,7 +668,7 @@ export function simplePageGraph({
   crumbLabel: string;
 }) {
   return graph([
-    organizationNode(dict),
+    organizationNode(dict, locale),
     webSiteNode(dict, locale),
     webPageNode({ locale, pathnameKey, title, description }),
     breadcrumbNode([

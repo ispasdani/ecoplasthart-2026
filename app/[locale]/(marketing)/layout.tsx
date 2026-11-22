@@ -81,6 +81,7 @@ export default async function MarketingLayout({
         legalLinks={[
           { href: links.privacy.href, label: dict.nav.privacy },
           { href: links.cookies.href, label: dict.nav.cookies },
+          { href: links.terms.href, label: dict.nav.terms },
           {
             href: localizedPath("/site-map", locale),
             label: dict.nav.siteMap,

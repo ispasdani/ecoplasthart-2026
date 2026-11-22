@@ -88,6 +88,10 @@ export function getPrimaryLinks(dict: Messages, locale: Locale) {
       href: localizedPath("/cookie-policy", locale),
       label: dict.nav.cookies,
     },
+    terms: {
+      href: localizedPath("/terms", locale),
+      label: dict.nav.terms,
+    },
     reviews: {
       href: localizedPath("/reviews", locale),
       label: dict.nav.reviews,

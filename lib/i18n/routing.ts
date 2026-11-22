@@ -245,6 +245,7 @@ export const pathnames = {
     en: "/privacy-policy",
   },
   "/cookie-policy": { ro: "/politica-cookie", en: "/cookie-policy" },
+  "/terms": { ro: "/termeni-si-conditii", en: "/terms" },
   "/site-map": { ro: "/harta-site", en: "/site-map" },
   "/reviews": { ro: "/recenzii", en: "/reviews" },
   "/how-it-works": { ro: "/cum-functioneaza", en: "/how-it-works" },

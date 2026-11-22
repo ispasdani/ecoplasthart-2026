@@ -74,6 +74,7 @@ export const ro = {
     contact: "Contact",
     privacy: "Politica de confidențialitate",
     cookies: "Politica de cookie-uri",
+    terms: "Termeni și drepturi de autor",
     siteMap: "Harta site-ului",
     reviews: "Recenzii",
     howItWorks: "Cum funcționează",
@@ -122,13 +123,13 @@ export const ro = {
     legalHeading: "Date firmă",
     rights: "Toate drepturile rezervate.",
     /**
-     * Media provenance. The photography is ours and worth claiming; the video
-     * is generated and worth declaring. A company whose whole proposition is
-     * documented traceability cannot run undisclosed synthetic footage of its
-     * own yard.
+     * Media provenance. Photographs and operational video clips are captured
+     * by Ecoplast Hart at the Cristur yard; only the homepage hero background
+     * video is AI-generated. A company whose whole proposition is documented
+     * traceability should state that plainly.
      */
     mediaCredit:
-      "Fotografiile sunt realizate de noi la punctul de lucru Cristur. Secvențele video sunt generate cu inteligență artificială, pornind de la fotografiile noastre.",
+      "Fotografiile și clipurile video operaționale sunt realizate de noi la punctul de lucru Cristur. Doar clipul video de fundal din pagina principală este generat cu inteligență artificială, pornind de la fotografiile noastre.",
     officeLabel: "Punct de lucru",
     legalSeatLabel: "Sediu social",
     legalLinksLabel: "Documente legale",
@@ -913,6 +914,68 @@ export const ro = {
       privacyCrossLink: {
         text: "Cum prelucrăm datele cu caracter personal, cui le divulgăm și ce drepturi ai — inclusiv datele de contact ale operatorului.",
         cta: "Vezi politica de confidențialitate",
+      },
+    },
+
+    terms: {
+      eyebrow: "Legal",
+      title: "Termeni de utilizare și drepturi de autor",
+      lead: "Condițiile de utilizare a site-ului ecoplasthart.com, drepturile de autor asupra fotografiilor, clipurilor video și textelor noastre și cum ne poți solicita acordul de reutilizare.",
+      metaTitle: "Termeni și drepturi de autor",
+      metaDescription:
+        "Termenii de utilizare a site-ului Ecoplast Hart SRL, drepturile de autor asupra fotografiilor și clipurilor video originale și procedura de solicitare a acordului de utilizare.",
+      updatedDate: "22 noiembrie 2026",
+      sections: [
+        {
+          heading: "Utilizarea site-ului",
+          paragraphs: [
+            "Site-ul ecoplasthart.com este administrat de Ecoplast Hart SRL și are scop exclusiv de prezentare și informare cu privire la serviciile noastre de colectare, transport, sortare și valorificare a deșeurilor.",
+            "Informațiile publicate pe site — inclusiv descrierile serviciilor, materialele acceptate și ghidurile informative — nu constituie o ofertă comercială fermă. Prețurile, programările de ridicare și condițiile contractuale se stabilesc direct, prin telefon, e-mail sau contract.",
+          ],
+          bullets: [],
+          footnote: "",
+        },
+        {
+          heading: "Drepturi de autor și proveniența materialelor media",
+          paragraphs: [
+            "Întregul conținut publicat pe acest site — texte, ghiduri, elemente de identitate vizuală, fotografii și materiale video — aparține Ecoplast Hart SRL și este protejat de Legea nr. 8/1996 privind dreptul de autor și drepturile conexe. Toate drepturile sunt rezervate.",
+            "Materialele vizuale de pe site sunt realizate de echipa noastră, cu o singură excepție marcată transparent:",
+          ],
+          bullets: [
+            "Fotografiile operaționale (inclusiv imaginile de pe platforma din Sat Cristur, Deva) sunt capturi originale realizate de Ecoplast Hart SRL.",
+            "Clipurile video operaționale (camioane, cântărire și verificare, procesare cabluri, graifer și infrastructură) sunt filmări originale realizate în activitatea noastră.",
+            "Doar clipul video de fundal din secțiunea principală a paginii de start este generat cu inteligență artificială, pornind de la fotografiile noastre.",
+          ],
+          footnote:
+            "Reproducerea, distribuirea, republicarea, modificarea sau utilizarea comercială a fotografiilor, clipurilor video ori textelor de pe acest site fără acordul scris prealabil al Ecoplast Hart SRL este interzisă, cu excepția citărilor scurte cu menționarea clară a sursei și a linkului către pagina originală.",
+        },
+        {
+          heading: "Solicitarea acordului de utilizare (licențiere media)",
+          paragraphs: [
+            "Fotografiile și materialele video de pe acest site nu sunt oferite sub licență liberă și nu pot fi preluate automat din Google Imagini sau de pe site fără consimțământul nostru.",
+            "Partenerii comerciali, publicațiile de presă sau instituțiile care doresc să preia o fotografie ori un material video din activitatea noastră pot solicita acordul scris prin pagina de contact sau pe e-mail la ecoplast_hart@yahoo.com, precizând:",
+          ],
+          bullets: [
+            "Adresa URL a fotografiei sau a paginii de pe ecoplasthart.com pe care apare materialul.",
+            "Scopul utilizării (articol de presă, prezentare de parteneriat, raport de mediu etc.) și mediul de publicare.",
+            "Datele de contact ale organizației care solicită permisiunea.",
+          ],
+          footnote:
+            "Acordul scris poate include condiții privind menționarea creditului foto („© Ecoplast Hart SRL”) și a linkului către site.",
+        },
+        {
+          heading: "Conținut informativ și legislație aplicabilă",
+          paragraphs: [
+            "Articolele și ghidurile publicate în secțiunea de articole sintetizează obligații de mediu și practici uzuale din România cu caracter orientativ; acestea nu înlocuiesc consultanța juridică sau de mediu specifică activității fiecărei companii.",
+            "Acești termeni sunt guvernați de legislația din România. Putem actualiza acest document ori de câte ori apar modificări relevante, iar data ultimei actualizări este afișată la începutul paginii.",
+          ],
+          bullets: [],
+          footnote: "",
+        },
+      ],
+      contactCrossLink: {
+        text: "Vrei să soliciți acordul scris pentru folosirea unei fotografii sau a unui clip video, ori ai întrebări despre conținutul acestui site?",
+        cta: "Mergi la pagina de contact",
       },
     },
   },

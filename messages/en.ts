@@ -67,6 +67,7 @@ export const en: Messages = {
     contact: "Contact",
     privacy: "Privacy policy",
     cookies: "Cookie policy",
+    terms: "Terms & copyright",
     siteMap: "Site map",
     reviews: "Reviews",
     howItWorks: "How it works",
@@ -115,7 +116,7 @@ export const en: Messages = {
     legalHeading: "Company details",
     rights: "All rights reserved.",
     mediaCredit:
-      "Photographs were taken by us at the Cristur site. Video sequences are generated with artificial intelligence from our own photographs.",
+      "Site photographs and operational video clips were captured by us at the Cristur yard. Only the homepage hero background video is generated with artificial intelligence from our own photographs.",
     officeLabel: "Operational site",
     legalSeatLabel: "Registered office",
     legalLinksLabel: "Legal documents",
@@ -876,6 +877,68 @@ export const en: Messages = {
       privacyCrossLink: {
         text: "How we process personal data, who we share it with and what rights you have — including the controller's contact details.",
         cta: "Read the privacy policy",
+      },
+    },
+
+    terms: {
+      eyebrow: "Legal",
+      title: "Terms of use & copyright",
+      lead: "The terms governing the use of ecoplasthart.com, copyright ownership of our photographs, video clips and copy, and how to request permission to reuse them.",
+      metaTitle: "Terms & copyright",
+      metaDescription:
+        "Website terms of use for Ecoplast Hart SRL, copyright notice for original yard photography and video footage, and how to request reuse permission.",
+      updatedDate: "22 November 2026",
+      sections: [
+        {
+          heading: "Use of this website",
+          paragraphs: [
+            "The website ecoplasthart.com is operated by Ecoplast Hart SRL and provides general information about our waste collection, transport, sorting and recovery services.",
+            "Information published on this site — including service descriptions, accepted materials and informational guides — does not constitute a binding commercial offer. Prices, pickup schedules and contractual terms are confirmed directly by phone, email or written contract.",
+          ],
+          bullets: [],
+          footnote: "",
+        },
+        {
+          heading: "Copyright and media provenance",
+          paragraphs: [
+            "All content published on this website — copy, guides, visual identity elements, photographs and video footage — belongs to Ecoplast Hart SRL and is protected under Romanian Law no. 8/1996 on copyright and related rights. All rights reserved.",
+            "Visual media on this site is created by our own team, with one transparently noted exception:",
+          ],
+          bullets: [
+            "Operational photographs (including imagery of our Cristur, Deva yard) are original captures taken by Ecoplast Hart SRL.",
+            "Operational video clips (trucks, weighing and inspection, cable processing, grab crane and yard infrastructure) are original footage recorded during our operations.",
+            "Only the homepage hero background video is generated with artificial intelligence based on our own photographs.",
+          ],
+          footnote:
+            "Reproducing, distributing, republishing, modifying or commercially using photographs, video clips or text from this site without prior written permission from Ecoplast Hart SRL is prohibited, except for brief quotations with clear source attribution and a link to the original page.",
+        },
+        {
+          heading: "Requesting permission to reuse media",
+          paragraphs: [
+            "Photographs and video footage on this site are not released under an open or royalty-free license and may not be copied from Google Images or from this website without our consent.",
+            "Business partners, press publications or institutions wishing to reuse a photograph or video clip from our operations may request written permission via our contact page or by email at ecoplast_hart@yahoo.com, specifying:",
+          ],
+          bullets: [
+            "The URL of the image or page on ecoplasthart.com where the material appears.",
+            "The intended purpose (press article, partner presentation, environmental report, etc.) and publication channel.",
+            "Contact details of the organisation requesting permission.",
+          ],
+          footnote:
+            "Written permission may include attribution requirements (“© Ecoplast Hart SRL”) and a link back to this website.",
+        },
+        {
+          heading: "Informational content and governing law",
+          paragraphs: [
+            "Articles and guides published in the articles section summarise Romanian environmental obligations and industry practices for general orientation; they do not replace legal or environmental consultancy tailored to a specific business.",
+            "These terms are governed by the laws of Romania. We may update this document whenever relevant changes occur, and the date of the latest revision is shown at the top of the page.",
+          ],
+          bullets: [],
+          footnote: "",
+        },
+      ],
+      contactCrossLink: {
+        text: "Need written permission to reuse a photograph or video clip, or have questions about the content on this site?",
+        cta: "Go to the contact page",
       },
     },
   },
