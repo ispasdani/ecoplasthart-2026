@@ -1,6 +1,7 @@
 import type { Messages } from "./ro";
 import { articlesEn } from "./articles-en";
 import { materialsEn } from "./materials-en";
+import { pricesEn } from "./prices-en";
 
 /**
  * English dictionary. Typed as `Messages`, so it must mirror `ro.ts` exactly —
@@ -62,6 +63,7 @@ export const en: Messages = {
     servicesOverview: "All services",
     servicesOverviewDesc: "See our full range of waste-management services.",
     materials: "What we buy",
+    prices: "Prices",
     certifications: "Certifications",
     articles: "Articles",
     contact: "Contact",
@@ -465,9 +467,9 @@ export const en: Messages = {
           "Lead, nickel, zinc",
           "Mixed alloys",
         ],
-        metaTitle: "Scrap metal and metal waste collection — Hunedoara",
+        metaTitle: "Scrap iron & metal collection centre — Deva, Hunedoara",
         metaDescription:
-          "Authorised collection centre for scrap iron and ferrous and non-ferrous metals (aluminium, copper, brass, lead, zinc) in Cristur, Deva. Transparent weighing.",
+          "Authorised scrap metal collection centre for iron, cast iron, aluminium, copper and brass in Cristur, Deva (Hunedoara). Certified scales & fleet pickup.",
       },
       "cable-processing": {
         name: "Cable processing",
@@ -987,6 +989,8 @@ export const en: Messages = {
   },
 
   materials: materialsEn,
+
+  prices: pricesEn,
 
   articles: articlesEn,
 

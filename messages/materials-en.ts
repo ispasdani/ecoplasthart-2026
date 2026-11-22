@@ -112,9 +112,9 @@ export const materialsEn: Messages["materials"] = {
       navDesc: "Heavy iron, sheet metal, cast iron, steel beams and industrial scrap.",
       title: "Sell scrap iron and ferrous metal in Deva and Hunedoara",
       lead: "Authorised scrap metal yard in Cristur (Deva). We buy ferrous scrap from individuals and businesses — from household sheet metal to industrial steel structures, decommissioned machinery and turnings, with grab-crane and container pickup available.",
-      metaTitle: "Scrap iron & steel yard in Deva, Hunedoara — Ecoplast Hart",
+      metaTitle: "Scrap iron & cast iron collection centre — per-kg prices, Deva",
       metaDescription:
-        "Sell ferrous scrap in Cristur, Deva (Hunedoara): heavy iron, sheet metal, cast iron and industrial steel. Certified weighing and grab-crane pickup.",
+        "Authorised scrap iron collection centre in Cristur, Deva (Hunedoara): heavy steel, sheet metal, cast iron and structures. Fair per-kg prices & certified scales.",
       grades: [
         {
           title: "Heavy melting scrap (thick steel/iron)",
@@ -163,6 +163,11 @@ export const materialsEn: Messages["materials"] = {
           answer:
             "Yes. We serve Deva, Hunedoara, Simeria, Călan, Orăștie, Hațeg, Brad, Petroșani and nationwide for industrial volumes using our own containers, tippers and grab-crane trucks.",
         },
+        {
+          question: "How much is 1 kg of scrap iron and cast iron worth?",
+          answer:
+            "The indicative price per kg depends on thickness and cleanliness: thin sheet sits at the lower end of ferrous rates, while heavy steel (> 6 mm) and clean cast iron (radiators, castings) command the top ferrous rates. Check our updated price list or call +40 740 072 256 for today's exact rate.",
+        },
       ],
     },
 
@@ -171,9 +176,9 @@ export const materialsEn: Messages["materials"] = {
       navDesc: "Profiles, sheet, alloy wheels, cast aluminium, radiators and cans.",
       title: "Sell aluminium scrap in Deva and Hunedoara",
       lead: "We buy all grades of aluminium scrap — from window profiles and alloy wheels to cast aluminium, sheet, aluminium cables and beverage cans. Each fraction is graded fairly at our Cristur yard in Deva.",
-      metaTitle: "Sell aluminium scrap in Deva, Hunedoara — profiles, wheels, cans",
+      metaTitle: "Aluminium scrap prices per kg — profiles, wheels, cans | Deva",
       metaDescription:
-        "Drop off aluminium scrap in Cristur, Deva: profiles, sheet, cast aluminium, alloy rims and beverage cans. Certified weighing for individuals & businesses.",
+        "Sell aluminium scrap in Cristur, Deva: window profiles, sheet, cast aluminium, alloy rims and cans. Fair per-kg pricing & certified weighing.",
       grades: [
         {
           title: "Extruded profiles & clean aluminium",
@@ -222,6 +227,11 @@ export const materialsEn: Messages["materials"] = {
           answer:
             "Yes. We work on contract with window fabricators and industrial manufacturers, providing on-site containers and full recovery documentation.",
         },
+        {
+          question: "How much does 1 kg of aluminium scrap pay?",
+          answer:
+            "Per-kg aluminium scrap rates depend on the grade: bare aluminium wire and alloy rims pay the most, followed by clean window profiles, cast aluminium, radiators and beverage cans. Check our indicative price list or call us for today's live rate.",
+        },
       ],
     },
 
@@ -230,9 +240,9 @@ export const materialsEn: Messages["materials"] = {
       navDesc: "Taps, plumbing fittings, valves, radiators, industrial parts and turnings.",
       title: "Sell brass scrap in Deva and Hunedoara",
       lead: "We buy yellow brass, bronze, plumbing taps, fittings, valves, radiators and CNC turnings at our Cristur yard in Deva. Accurate grade assessment and certified weighing on site.",
-      metaTitle: "Sell brass scrap in Deva, Hunedoara — fittings, taps, turnings",
+      metaTitle: "Brass scrap prices per kg — fittings, taps, turnings | Deva",
       metaDescription:
-        "Drop off or sell brass scrap in Cristur, Deva: plumbing taps, fittings, radiators, clean brass and turnings. Certified scales at Ecoplast Hart.",
+        "Sell brass scrap in Cristur, Deva: plumbing taps, fittings, radiators, clean yellow brass and turnings. Fair per-kg pricing on certified scales.",
       grades: [
         {
           title: "Clean yellow brass",
@@ -280,6 +290,11 @@ export const materialsEn: Messages["materials"] = {
           question: "Do you buy bronze separately from brass?",
           answer:
             "Yes. If you have bronze bushings, bearings or castings in a distinct lot, keep them separate from yellow brass for proper grading at intake.",
+        },
+        {
+          question: "How much is 1 kg of brass scrap worth?",
+          answer:
+            "Per-kg brass rates depend on cleanliness: clean yellow brass (fittings and rods free of iron or rubber) commands the top rate, while assembled bathroom taps fall into mixed brass. Check our price list or call +40 740 072 256 for today's exact rate.",
         },
       ],
     },

@@ -182,12 +182,12 @@ export const articlesEn = {
     },
 
     "scrap-metal-prices-explained": {
-      metaTitle: "How scrap metal prices are set",
+      metaTitle: "How scrap metal prices are set (2026 guide)",
       metaDescription:
-        "Exchange quotations, sorting quality, contamination deductions and haulage cost: what the price per tonne of ferrous and non-ferrous scrap is actually made of.",
-      title: "How scrap metal and metal waste prices are actually set",
+        "Exchange quotations, sorting (heavy iron, cast iron, sheet, aluminium, brass), contamination, haulage and tax rules: what shapes scrap metal prices per kg in 2026.",
+      title: "How scrap metal and metal waste prices are actually set in 2026",
       excerpt:
-        "The price per tonne is not an arbitrary number. It is the metal quotation, the sorting quality, the contamination deducted at intake, and the cost of the run.",
+        "The price per kg or per tonne is not an arbitrary number. It is the metal quotation, the sorting quality (heavy steel, cast iron, non-ferrous), deductions and haulage cost.",
       lead: "Two quotes can look very different on paper and land at the same figure on the invoice — or the other way round. Once you understand what a scrap price is made of, you can compare offers properly and, more usefully, influence the part that depends on you.",
       sections: [
         {
@@ -218,10 +218,17 @@ export const articlesEn = {
             "Consistency matters just as much. A predictable flow, with scheduled pickups and material ready at the agreed time, supports a better price than an occasional collection, because the logistics can be planned. That is usually where the difference between two seemingly identical offers actually lives.",
           ],
         },
+        {
+          heading: "Price per kg vs. per tonne and statutory deductions in 2026",
+          body: [
+            "For private individuals and small drop-offs at the yard, quotes are given per kilogram: thin sheet metal sits at the base ferrous rate, heavy steel (> 6 mm) and clean cast iron earn a higher rate, while non-ferrous metals — aluminium, brass and copper — pay several times more per kg.",
+            "On purchase slips issued to private individuals in Romania, authorised yards legally withhold and remit the 2% Environment Fund contribution and applicable 10% income tax. For companies, settlements run on reverse-charge invoices (for VAT-registered entities) with per-tonne quotes tailored to volume and frequency.",
+          ],
+        },
       ],
       keyPoints: [
         "The price starts from public quotations, with a discount applied for processing, haulage and quality risk.",
-        "Sorting by type and removing non-metallic attachments is the fastest way to raise what you are paid.",
+        "Sorting by type (heavy steel, cast iron, sheet, aluminium, brass, copper) and removing contaminants is the fastest way to raise what you are paid.",
         "A weight ticket showing gross, tare and net is the only fair basis for comparing two offers.",
       ],
       faq: [
@@ -229,6 +236,11 @@ export const articlesEn = {
           question: "Why does the scrap price change from one week to the next?",
           answer:
             "Because it tracks international metal quotations and mill demand. Serious offers are given for a stated period, not open-endedly.",
+        },
+        {
+          question: "Why do cast iron and heavy steel pay more per kg than sheet metal?",
+          answer:
+            "Heavy steel (> 6 mm) and clean cast iron have higher density and better remelting yield with less slag loss and no extra baling cost, which is why mills pay more for them than for thin sheet.",
         },
         {
           question: "How much do I lose by handing over unsorted material?",

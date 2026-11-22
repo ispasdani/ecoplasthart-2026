@@ -168,6 +168,15 @@ export default async function ServiceDetailPage({
                           {material.name}
                         </ButtonLink>
                       ))}
+                      {service === "metal-waste" || service === "cable-processing" ? (
+                        <ButtonLink
+                          href={links.prices.href}
+                          size="sm"
+                          trailingIcon="arrow"
+                        >
+                          {dict.prices.crossLink.cta}
+                        </ButtonLink>
+                      ) : null}
                     </div>
                   </div>
                 </Reveal>

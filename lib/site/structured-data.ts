@@ -33,6 +33,7 @@ import { FOUNDING_DATE } from "@/lib/site/company";
 import { getArticle, getArticles } from "@/lib/site/articles";
 import { getMaterial, getMaterials } from "@/lib/site/materials";
 import { MAPS_HREF, getServiceNavItems } from "@/lib/site/nav";
+import { PRICE_CATEGORIES, PRICES_UPDATED_AT } from "@/lib/site/prices";
 import type { Messages } from "@/messages/ro";
 
 /** Stable node identifiers. Referenced, never redefined. */
@@ -485,6 +486,61 @@ export function materialDetailGraph(
       isRelatedTo: {
         "@id": `${absoluteUrl(localizedPath(material.service, locale))}#service`,
       },
+    },
+  ]);
+}
+
+export function pricesPageGraph(dict: Messages, locale: Locale) {
+  const url = absoluteUrl(localizedPath("/prices", locale));
+  const t = dict.prices;
+  const rows = PRICE_CATEGORIES.flatMap((category) =>
+    category.rows.map((row) => ({
+      category,
+      row,
+      grade: t.grades[row.id],
+    })),
+  );
+
+  return graph([
+    organizationNode(dict, locale),
+    localBusinessNode(dict, locale),
+    webSiteNode(dict, locale),
+    {
+      ...webPageNode({
+        locale,
+        pathnameKey: "/prices",
+        title: t.metaTitle,
+        description: t.metaDescription,
+      }),
+      "@type": ["WebPage", "FAQPage"],
+      dateModified: PRICES_UPDATED_AT,
+      mainEntity: t.faq.map((entry) => ({
+        "@type": "Question",
+        name: entry.question,
+        acceptedAnswer: { "@type": "Answer", text: entry.answer },
+      })),
+    },
+    breadcrumbNode([
+      homeCrumb(dict, locale),
+      { name: dict.nav.prices, url },
+    ]),
+    {
+      "@type": "ItemList",
+      "@id": `${url}#price-list`,
+      name: t.title,
+      numberOfItems: rows.length,
+      itemListElement: rows.map(({ category, grade }, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        item: {
+          "@type": "Offer",
+          name: grade.label,
+          description: grade.details,
+          url: absoluteUrl(localizedPath(category.material, locale)),
+          priceCurrency: "RON",
+          offeredBy: { "@id": ORGANIZATION_ID },
+        },
+      })),
     },
   ]);
 }

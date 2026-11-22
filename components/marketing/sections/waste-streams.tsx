@@ -20,10 +20,12 @@ export function WasteStreams({
   dict,
   materials,
   materialsHref,
+  pricesHref,
 }: {
   dict: Messages;
   materials: readonly MaterialItem[];
   materialsHref: string;
+  pricesHref: string;
 }) {
   const t = dict.home.streams;
   const items = [...t.items];
@@ -37,14 +39,23 @@ export function WasteStreams({
             heading={t.heading}
             intro={t.intro}
             action={
-              <ButtonLink
-                href={materialsHref}
-                variant="secondary"
-                size="sm"
-                trailingIcon="arrow"
-              >
-                {dict.materials.labels.allMaterialsCta}
-              </ButtonLink>
+              <div className="flex flex-wrap gap-2.5">
+                <ButtonLink
+                  href={pricesHref}
+                  size="sm"
+                  trailingIcon="arrow"
+                >
+                  {dict.prices.crossLink.cta}
+                </ButtonLink>
+                <ButtonLink
+                  href={materialsHref}
+                  variant="secondary"
+                  size="sm"
+                  trailingIcon="arrow"
+                >
+                  {dict.materials.labels.allMaterialsCta}
+                </ButtonLink>
+              </div>
             }
           />
         </Reveal>

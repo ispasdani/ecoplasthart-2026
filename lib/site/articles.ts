@@ -97,6 +97,7 @@ function getArticleByKey(dict: Messages, locale: Locale, key: ArticleKey) {
     readMinutes: facts.readMinutes,
     service: facts.service,
     material: facts.material,
+    showPricesCta: facts.showPricesCta ?? false,
     readTime: dict.articles.readTime.replace(
       "{minutes}",
       String(facts.readMinutes),

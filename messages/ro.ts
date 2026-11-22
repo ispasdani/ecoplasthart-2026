@@ -10,6 +10,7 @@
  */
 import { articlesRo } from "./articles-ro";
 import { materialsRo } from "./materials-ro";
+import { pricesRo } from "./prices-ro";
 
 export const ro = {
   meta: {
@@ -69,6 +70,7 @@ export const ro = {
     servicesOverviewDesc:
       "Vezi întreaga gamă de servicii de management al deșeurilor.",
     materials: "Ce cumpărăm",
+    prices: "Prețuri",
     certifications: "Certificări",
     articles: "Articole",
     contact: "Contact",
@@ -488,9 +490,9 @@ export const ro = {
           "Plumb, nichel, zinc",
           "Aliaje mixte",
         ],
-        metaTitle: "Colectare fier vechi și deșeuri metalice — Hunedoara",
+        metaTitle: "Centru colectare fier vechi și deșeuri metalice — Deva, Hunedoara",
         metaDescription:
-          "Centru autorizat de colectare fier vechi și metale feroase și neferoase (aluminiu, cupru, alamă, plumb, zinc) în Cristur, Deva. Cântărire transparentă.",
+          "Centru autorizat de colectare fier vechi, fontă, aluminiu, cupru și alamă în Cristur, Deva (Hunedoara). Cântar metrologic, plată pe loc și flotă proprie.",
       },
       "cable-processing": {
         name: "Procesare cabluri",
@@ -1025,6 +1027,9 @@ export const ro = {
 
   /** Commercial material-buying hub & detail copy — see `messages/materials-ro.ts`. */
   materials: materialsRo,
+
+  /** Indicative scrap metal prices copy — see `messages/prices-ro.ts`. */
+  prices: pricesRo,
 
   /** Article feed and long-form copy — see `messages/articles-ro.ts`. */
   articles: articlesRo,

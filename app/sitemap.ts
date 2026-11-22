@@ -8,9 +8,10 @@ import {
   pathnameKeys,
   type PathnameKey,
 } from "@/lib/i18n/routing";
-// The lean facts module, not `lib/site/articles.ts`: that one imports the icon
+// The lean facts modules, not `lib/site/articles.ts`: that one imports the icon
 // maps, for the same bundle reason given on `PAGE_IMAGES` below.
 import { ARTICLE_FACTS } from "@/lib/site/article-facts";
+import { PRICES_UPDATED_AT } from "@/lib/site/prices";
 
 /**
  * Content photography per page, for the `<image:image>` entries.
@@ -31,6 +32,7 @@ const PAGE_IMAGES: Partial<Record<PathnameKey, string[]>> = {
   "/materials": ["/images/feros.webp", "/images/hazard.webp"],
   "/materials/ferrous-scrap": ["/images/feros.webp"],
   "/materials/lead-batteries": ["/images/hazard.webp"],
+  "/prices": ["/images/feros.webp"],
 };
 
 /**
@@ -61,6 +63,7 @@ const latestArticleUpdate = Object.values(ARTICLE_FACTS)
   .at(-1);
 
 function lastModifiedFor(key: PathnameKey): string | undefined {
+  if (key === "/prices") return PRICES_UPDATED_AT;
   if (key === "/articles") return latestArticleUpdate;
   if (key.startsWith(ARTICLES_PREFIX)) {
     const slug = key.slice(ARTICLES_PREFIX.length) as keyof typeof ARTICLE_FACTS;

@@ -145,6 +145,10 @@ export const pathnames = {
     ro: "/ce-cumparam/acumulatori-plumb",
     en: "/what-we-buy/lead-batteries",
   },
+  "/prices": {
+    ro: "/preturi-fier-vechi",
+    en: "/scrap-metal-prices",
+  },
   "/certifications": { ro: "/certificari", en: "/certifications" },
   "/articles": { ro: "/articole", en: "/articles" },
   "/articles/choosing-a-waste-collection-partner": {

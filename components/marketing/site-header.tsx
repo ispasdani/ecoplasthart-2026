@@ -34,6 +34,7 @@ export type SiteHeaderProps = {
     about: { href: string; label: string };
     services: { href: string; label: string };
     materials: { href: string; label: string };
+    prices: { href: string; label: string };
     certifications: { href: string; label: string };
     articles: { href: string; label: string };
     contact: { href: string; label: string };
@@ -247,6 +248,12 @@ export function SiteHeader({
               {links.materials.label}
             </NavLink>
             <NavLink
+              href={links.prices.href}
+              active={isActive(links.prices.href)}
+            >
+              {links.prices.label}
+            </NavLink>
+            <NavLink
               href={links.certifications.href}
               active={isActive(links.certifications.href)}
             >
@@ -403,6 +410,11 @@ export function SiteHeader({
               <li>
                 <MobileLink href={links.materials.href}>
                   {links.materials.label}
+                </MobileLink>
+              </li>
+              <li>
+                <MobileLink href={links.prices.href}>
+                  {links.prices.label}
                 </MobileLink>
               </li>
               <li>

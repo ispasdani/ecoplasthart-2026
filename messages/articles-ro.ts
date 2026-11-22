@@ -188,13 +188,13 @@ export const articlesRo = {
     },
 
     "scrap-metal-prices-explained": {
-      metaTitle: "Cum se stabilește prețul la fier vechi",
+      metaTitle: "Cum se stabilește prețul la fier vechi (ghid 2026)",
       metaDescription:
-        "Cotații internaționale, calitatea sortării, impuritățile și costul de transport: din ce se compune, de fapt, prețul pe tonă la fier vechi și deșeuri neferoase.",
+        "Cotații internaționale, sortare (fier greu, fontă, tablă, aluminiu, alamă), impurități, transport și taxe: din ce se compune prețul pe kg la fier vechi în 2026.",
       title:
-        "Cum se stabilește prețul la fier vechi și la deșeurile metalice",
+        "Cum se stabilește prețul la fier vechi și la deșeurile metalice în 2026",
       excerpt:
-        "Prețul pe tonă nu este o cifră arbitrară. Se compune din cotația metalului, calitatea sortării, impuritățile reținute la recepție și costul cursei.",
+        "Prețul pe kg sau pe tonă nu este o cifră arbitrară. Se compune din cotația metalului, calitatea sortării (fier greu, fontă, neferoase), impurități și costul cursei.",
       lead: "Două oferte pot arăta foarte diferit pe hârtie și pot ajunge la aceeași sumă pe factură — sau invers. Dacă înțelegi din ce se compune prețul la deșeuri metalice, poți compara corect ofertele și, mai important, poți influența partea care depinde de tine.",
       sections: [
         {
@@ -225,10 +225,17 @@ export const articlesRo = {
             "Constanța contează la fel de mult. Un flux previzibil, cu ridicări programate și material pregătit la ora convenită, susține un preț mai bun decât o ridicare ocazională, pentru că logistica se poate planifica. Aici se explică, cel mai des, diferența dintre două oferte care par identice pe hârtie.",
           ],
         },
+        {
+          heading: "Prețul pe kilogram vs. prețul pe tonă și reținerile legale în 2026",
+          body: [
+            "Pentru persoane fizice și loturi mici aduse direct la centrul de colectare, discuția este pe kilogram: tabla și fierul subțire intră la cotația de bază, în timp ce fierul greu (peste 6 mm) și fonta curată primesc un preț mai bun, iar metalele neferoase — aluminiu, alamă, cupru — se plătesc de câteva ori mai mult pe kg.",
+            "Pe borderoul de achiziție emis persoanelor fizice se rețin și se virează legal la sursă contribuția la Fondul de Mediu (2%) și impozitul pe venit aplicabil (10%). Pentru firme, tranzacția se face pe bază de factură cu taxare inversă (pentru plătitorii de TVA) și oferte negociate pe tonă în funcție de volum și recurență.",
+          ],
+        },
       ],
       keyPoints: [
         "Prețul pornește de la cotații publice, peste care se aplică un discount de procesare, transport și risc de calitate.",
-        "Sortarea pe tip și eliminarea atașamentelor nemetalice sunt cea mai rapidă cale de a crește prețul încasat.",
+        "Sortarea pe tip (fier greu, fontă, tablă, aluminiu, alamă, cupru) și eliminarea impurităților sunt cea mai rapidă cale de a crește prețul încasat.",
         "Bonul de cântar cu brut, tara și net este singura bază corectă de comparație între două oferte.",
       ],
       faq: [
@@ -236,6 +243,11 @@ export const articlesRo = {
           question: "De ce diferă prețul la fier vechi de la o săptămână la alta?",
           answer:
             "Pentru că urmează cotațiile internaționale ale metalelor și cererea topitoriilor. Ofertele serioase se dau pentru o perioadă precizată, nu pe termen nelimitat.",
+        },
+        {
+          question: "De ce are fonta sau fierul greu un preț mai bun pe kg decât tabla?",
+          answer:
+            "Fierul greu (peste 6 mm) și fonta curată au o densitate mare și un randament mai bun la retopire, fără pierderi mari de zgură sau costuri suplimentare de presare, motiv pentru care se plătesc mai bine decât tabla subțire.",
         },
         {
           question: "Cât pierd dacă predau material nesortat?",

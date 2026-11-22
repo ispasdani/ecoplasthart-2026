@@ -239,10 +239,37 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 ))}
               </div>
 
-              {/* Direct bridge to the commercial material page when applicable,
-                  plus the parent service page — turning informational searches
-                  into direct conversion paths. */}
+              {/* Direct bridge to the commercial price list & material page when
+                  applicable, plus the parent service page — turning informational
+                  searches into direct conversion paths. */}
               <div className="mt-12 flex flex-col gap-4">
+                {article.showPricesCta ? (
+                  <Link
+                    href={links.prices.href}
+                    className="group flex flex-col gap-4 rounded-2xl border border-brand/25 bg-surface-feature p-6 transition-colors hover:border-brand sm:flex-row sm:items-center sm:justify-between sm:p-8"
+                  >
+                    <div className="min-w-0">
+                      <Eyebrow className="mb-3">
+                        {dict.prices.crossLink.eyebrow}
+                      </Eyebrow>
+                      <p className="text-[1.125rem] font-semibold leading-snug text-ink">
+                        {dict.prices.crossLink.title}
+                      </p>
+                      <p className="mt-1.5 text-[0.9375rem] leading-relaxed text-slate">
+                        {dict.prices.crossLink.description}
+                      </p>
+                    </div>
+                    <span className="inline-flex shrink-0 items-center gap-1.5 text-[0.875rem] font-medium text-brand">
+                      {dict.prices.crossLink.cta}
+                      <ArrowRight
+                        aria-hidden
+                        className="size-4 transition-transform group-hover:translate-x-0.5"
+                        strokeWidth={2}
+                      />
+                    </span>
+                  </Link>
+                ) : null}
+
                 {material ? (
                   <Link
                     href={material.href}

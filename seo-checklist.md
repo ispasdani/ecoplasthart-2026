@@ -10,14 +10,15 @@ Open **Google Search Console** on property `https://www.ecoplasthart.com/`:
 
 - [ ] **Sitemap-uri → `/sitemap.xml`**
   - Status is **Succes** (not *Nu s-a putut prelua*).
-  - Discovered URLs updated from **40 → 94** (47 RO + 47 EN).
+  - Discovered URLs updated to **96** (48 RO + 48 EN, including `/preturi-fier-vechi` and `/en/scrap-metal-prices`).
   - If still 40, re-submit `sitemap.xml` once in *"Adaugă un sitemap nou"*.
 - [ ] **Pagini → Indexate vs. Neindexate**
   - Confirm pages are moving into **Indexate** (especially `/`, `/servicii/*`, `/ce-cumparam/*`, `/articole/*`).
   - Click every **Neindexate** reason to verify there are no surprises:
     - *Expected / OK:* `?topic=` filtered URLs under *Exclusă de eticheta „noindex”*, or `/ro/...` under *Pagină cu redirecționare*.
     - *Investigate:* Any core page stuck in *Duplicate / Canonical* or *Eroare de server (5xx)* or *404*.
-- [ ] **Inspectarea adresei URL (spot check 3 priority pages)**
+- [ ] **Inspectarea adresei URL (spot check 4 priority pages)**
+  - `https://www.ecoplasthart.com/preturi-fier-vechi`
   - `https://www.ecoplasthart.com/ce-cumparam`
   - `https://www.ecoplasthart.com/ce-cumparam/fier-vechi`
   - `https://www.ecoplasthart.com/ce-cumparam/cupru`

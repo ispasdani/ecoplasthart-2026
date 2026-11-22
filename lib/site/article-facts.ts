@@ -42,6 +42,12 @@ type ArticleFacts = {
    * matching buying page.
    */
   material?: MaterialKey;
+  /**
+   * When true, render a direct callout to `/preturi-fier-vechi`
+   * (`/en/scrap-metal-prices`) so price-intent readers can jump straight to
+   * current per-kg ranges.
+   */
+  showPricesCta?: boolean;
 };
 
 export const ARTICLE_FACTS: Record<ArticleSlug, ArticleFacts> = {
@@ -63,9 +69,10 @@ export const ARTICLE_FACTS: Record<ArticleSlug, ArticleFacts> = {
     topic: "costs",
     service: "/services/metal-waste",
     material: "/materials/ferrous-scrap",
+    showPricesCta: true,
     publishedAt: "2026-07-23",
-    updatedAt: "2026-07-23",
-    readMinutes: 7,
+    updatedAt: "2026-11-22",
+    readMinutes: 8,
   },
   "cable-recycling-copper-granules": {
     topic: "recycling",
@@ -93,6 +100,7 @@ export const ARTICLE_FACTS: Record<ArticleSlug, ArticleFacts> = {
     topic: "recycling",
     service: "/services/metal-waste",
     material: "/materials/aluminium",
+    showPricesCta: true,
     publishedAt: "2026-09-01",
     updatedAt: "2026-09-01",
     readMinutes: 7,
@@ -159,6 +167,7 @@ export const ARTICLE_FACTS: Record<ArticleSlug, ArticleFacts> = {
     topic: "costs",
     service: "/services/metal-waste",
     material: "/materials/copper",
+    showPricesCta: true,
     publishedAt: "2026-10-01",
     updatedAt: "2026-10-01",
     readMinutes: 7,
@@ -182,6 +191,7 @@ export const ARTICLE_FACTS: Record<ArticleSlug, ArticleFacts> = {
     topic: "guides",
     service: "/services/metal-waste",
     material: "/materials/ferrous-scrap",
+    showPricesCta: true,
     publishedAt: "2026-10-04",
     updatedAt: "2026-10-04",
     readMinutes: 5,
@@ -206,6 +216,7 @@ export const ARTICLE_FACTS: Record<ArticleSlug, ArticleFacts> = {
     topic: "recycling",
     service: "/services/metal-waste",
     material: "/materials/aluminium",
+    showPricesCta: true,
     publishedAt: "2026-10-04",
     updatedAt: "2026-10-04",
     readMinutes: 4,

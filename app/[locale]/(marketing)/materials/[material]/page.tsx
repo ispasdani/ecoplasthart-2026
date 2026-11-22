@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 
 import { ArticleSummaryCard } from "@/components/marketing/articles/article-summary-card";
+import { BlurredPriceBadge } from "@/components/marketing/blurred-price-pill";
 import { PageHero } from "@/components/marketing/page-hero";
 import { CtaBand } from "@/components/marketing/sections/cta-band";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -30,6 +31,10 @@ import {
 import { getArticle } from "@/lib/site/articles";
 import { getMaterial, getMaterials } from "@/lib/site/materials";
 import { getPrimaryLinks, getServiceNavItems } from "@/lib/site/nav";
+import {
+  formatBlurredMask,
+  getPriceCategoryForMaterial,
+} from "@/lib/site/prices";
 import { materialDetailGraph } from "@/lib/site/structured-data";
 
 export function generateStaticParams() {
@@ -81,6 +86,12 @@ export default async function MaterialDetailPage({ params }: MaterialPageProps) 
   const Icon = material.icon;
   const phoneHref = `tel:${dict.company.phonePrimary.replace(/\s/g, "")}`;
   const materialsHref = localizedPath("/materials", locale);
+  const priceCategory = getPriceCategoryForMaterial(slug);
+  const pricesAnchorHref = priceCategory
+    ? `${links.prices.href}#${priceCategory}`
+    : links.prices.href;
+  const priceMaskSize =
+    slug === "ferrous-scrap" || slug === "lead-batteries" ? "short" : "wide";
   const documentsArticleHref = localizedPath(
     "/articles/documents-needed-to-sell-scrap-metal",
     locale,
@@ -138,24 +149,38 @@ export default async function MaterialDetailPage({ params }: MaterialPageProps) 
 
               {/* Price callout */}
               <Reveal>
-                <div className="mt-10 flex flex-col gap-4 rounded-2xl border border-hairline bg-surface-feature p-6 sm:flex-row sm:items-center sm:justify-between">
+                <div className="mt-10 flex flex-col gap-5 rounded-2xl border border-hairline bg-surface-feature p-6 sm:flex-row sm:items-center sm:justify-between">
                   <div className="flex items-start gap-3">
                     <Phone
                       aria-hidden
                       className="mt-0.5 size-5 shrink-0 text-brand"
                       strokeWidth={2}
                     />
-                    <p className="text-[0.9375rem] leading-relaxed text-ink">
-                      {t.priceCtaNote}
-                    </p>
+                    <div>
+                      <BlurredPriceBadge
+                        maskText={formatBlurredMask(priceMaskSize, locale)}
+                        ctaLabel={dict.prices.unlockCta}
+                        href={links.contact.href}
+                        ariaLabel={`${dict.prices.unlockAriaPrefix} ${material.name}`}
+                      />
+                      <p className="mt-2.5 text-[0.9375rem] leading-relaxed text-slate">
+                        {t.priceCtaNote}
+                      </p>
+                    </div>
                   </div>
-                  <ButtonLink
-                    href={phoneHref}
-                    size="sm"
-                    className="shrink-0"
-                  >
-                    {dict.company.phonePrimary}
-                  </ButtonLink>
+                  <div className="flex shrink-0 flex-wrap gap-2.5">
+                    <ButtonLink
+                      href={pricesAnchorHref}
+                      variant="secondary"
+                      size="sm"
+                      trailingIcon="arrow"
+                    >
+                      {dict.prices.crossLink.cta}
+                    </ButtonLink>
+                    <ButtonLink href={phoneHref} size="sm">
+                      {dict.company.phonePrimary}
+                    </ButtonLink>
+                  </div>
                 </div>
               </Reveal>
 

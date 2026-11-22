@@ -68,6 +68,10 @@ export function getPrimaryLinks(dict: Messages, locale: Locale) {
       href: localizedPath("/materials", locale),
       label: dict.nav.materials,
     },
+    prices: {
+      href: localizedPath("/prices", locale),
+      label: dict.nav.prices,
+    },
     certifications: {
       href: localizedPath("/certifications", locale),
       label: dict.nav.certifications,

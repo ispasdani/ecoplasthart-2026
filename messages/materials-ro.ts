@@ -110,9 +110,9 @@ export const materialsRo = {
       navDesc: "Fier greu, tablă, fontă, profile metalice și structuri industriale.",
       title: "Predare și colectare fier vechi în Deva și Hunedoara",
       lead: "Centru autorizat de colectare fier vechi în Cristur (Deva). Preluăm deșeuri metalice feroase de la persoane fizice și companii — de la tablă și piese gospodărești până la structuri industriale, utilaje casate și șpan, inclusiv cu macara cu graifăr și containere.",
-      metaTitle: "Fier vechi Deva, Hunedoara — centru autorizat de colectare",
+      metaTitle: "Centru colectare fier vechi și fontă — preț 1 kg, Deva, Hunedoara",
       metaDescription:
-        "Vinde fier vechi în Cristur, Deva (Hunedoara): fier greu, tablă, fontă, profile și structuri metalice. Cântărire metrologică, ridicare cu graifăr.",
+        "Centru autorizat de colectare fier vechi în Cristur, Deva (Hunedoara): fier greu, tablă, fontă, profile și structuri metalice. Preț pe kg corect, cântar metrologic.",
       grades: [
         {
           title: "Fier vechi greu (gros)",
@@ -161,6 +161,11 @@ export const materialsRo = {
           answer:
             "Da. Acoperim Deva, Hunedoara, Simeria, Călan, Orăștie, Hațeg, Brad, Petroșani și restul țării pentru cantități industriale, cu containere proprii, basculante și macara cu graifăr.",
         },
+        {
+          question: "Cât este 1 kg de fier vechi și fontă la centrul de colectare?",
+          answer:
+            "Prețul orientativ pentru 1 kg de fier vechi variază în funcție de grosime și curățenie: tabla și fierul ușor au un preț mai mic, în timp ce fierul greu (peste 6 mm) și fonta curată (calorifere, piese turnate) obțin cele mai bune cotații din categoria feroaselor. Poți consulta intervalele actualizate în pagina noastră de prețuri sau suna la +40 740 072 256 pentru cotația zilei.",
+        },
       ],
     },
 
@@ -169,9 +174,9 @@ export const materialsRo = {
       navDesc: "Profile, tablă, jante auto, aluminiu turnat, radiatoare și doze.",
       title: "Cumpărăm aluminiu și deșeuri de aluminiu în Deva",
       lead: "Preluăm toate categoriile de deșeuri de aluminiu — de la profile de tâmplărie și jante auto până la aluminiu turnat, tablă, cabluri de aluminiu și doze de băuturi. Sortăm corect fiecare fracție la centrul nostru din Cristur, Deva.",
-      metaTitle: "Cumpărăm aluminiu Deva, Hunedoara — profile, jante, doze",
+      metaTitle: "Aluminiu la fier vechi — preț pe kg, profile, jante, doze | Deva",
       metaDescription:
-        "Predare deșeuri de aluminiu în Cristur, Deva: profile, tablă, aluminiu turnat, jante auto și doze. Cântărire transparentă pentru persoane fizice și firme.",
+        "Cumpărăm aluminiu la fier vechi în Cristur, Deva: profile, tablă, aluminiu turnat, jante auto și doze. Preț corect pe kg și cântărire transparentă.",
       grades: [
         {
           title: "Profile și aluminiu curat (extrudat)",
@@ -220,6 +225,11 @@ export const materialsRo = {
           answer:
             "Da. Colaborăm cu ateliere de tâmplărie și producători industriali pe bază de contract, cu containere la punctul de lucru și documente complete de valorificare.",
         },
+        {
+          question: "Cât costă 1 kg de aluminiu la fier vechi?",
+          answer:
+            "Prețul pentru 1 kg de aluminiu la fier vechi depinde de sort: sârma curată și jantele auto din aliaj au cele mai ridicate cotații, urmate de profilele de tâmplărie curate, aluminiul turnat, radiatoarele și dozele de aluminiu. Vezi intervalele orientative pe pagina noastră de prețuri sau sună-ne pentru cotația exactă de azi.",
+        },
       ],
     },
 
@@ -228,9 +238,9 @@ export const materialsRo = {
       navDesc: "Robineți, fitinguri sanitare, radiatoare, piese industriale și șpan.",
       title: "Cumpărăm alamă și deșeuri din alamă în Deva, Hunedoara",
       lead: "Preluăm alamă galbenă și roșie (bronz), robineți, fitinguri sanitare, vane, radiatoare și șpan din prelucrări mecanice la punctul nostru de lucru din Cristur, Deva. Evaluare corectă pe sort și cântărire pe loc.",
-      metaTitle: "Cumpărăm alamă Deva, Hunedoara — fitinguri, robineți, șpan",
+      metaTitle: "Alamă la fier vechi — preț pe kg, fitinguri, robineți | Deva",
       metaDescription:
-        "Predare și cumpărare alamă în Cristur, Deva: robineți, fitinguri sanitare, radiatoare, alamă curată și șpan. Cântărire metrologică la Ecoplast Hart.",
+        "Predare și cumpărare alamă la fier vechi în Cristur, Deva: robineți, fitinguri sanitare, radiatoare, alamă curată și șpan. Preț corect pe kg, cântar metrologic.",
       grades: [
         {
           title: "Alamă curată (galbenă)",
@@ -278,6 +288,11 @@ export const materialsRo = {
           question: "Cumpărați și bronz separat de alamă?",
           answer:
             "Da. Dacă ai bucșe, lagăre sau piese din bronz în cantitate distinctă, ține-le separat de alama galbenă pentru o evaluare corectă la recepție.",
+        },
+        {
+          question: "Cât este 1 kg de alamă la fier vechi?",
+          answer:
+            "Prețul pentru 1 kg de alamă depinde de gradul de curățenie: alama galbenă curată (fitinguri și bare fără fier sau garnituri) obține cotația de top, în timp ce bateriile sanitare nedemontate intră la alamă mixtă. Consultă lista noastră de prețuri sau sună la +40 740 072 256 pentru cotația zilei.",
         },
       ],
     },

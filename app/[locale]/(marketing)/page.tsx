@@ -79,6 +79,7 @@ export default async function HomePage({
         dict={dict}
         materials={materials}
         materialsHref={links.materials.href}
+        pricesHref={links.prices.href}
       />
       <CertificationsTeaser dict={dict} href={links.certifications.href} />
       <CtaBand dict={dict} contactHref={links.contact.href} />

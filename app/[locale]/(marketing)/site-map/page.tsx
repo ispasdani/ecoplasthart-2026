@@ -70,6 +70,7 @@ export default async function SiteMapPage({
       heading: t.materialsHeading,
       items: [
         { href: links.materials.href, label: dict.materials.index.title },
+        { href: links.prices.href, label: dict.prices.title },
         ...materials.map((m) => ({ href: m.href, label: m.name })),
       ],
     },

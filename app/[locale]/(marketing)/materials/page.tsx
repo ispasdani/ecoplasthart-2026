@@ -11,6 +11,7 @@ import {
   Truck,
 } from "lucide-react";
 
+import { BlurredPriceBadge } from "@/components/marketing/blurred-price-pill";
 import { CtaBand } from "@/components/marketing/sections/cta-band";
 import { PageHero } from "@/components/marketing/page-hero";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -22,6 +23,7 @@ import { buildPageMetadata } from "@/lib/i18n/metadata";
 import { isLocale, localizedPath } from "@/lib/i18n/routing";
 import { getMaterials } from "@/lib/site/materials";
 import { getPrimaryLinks } from "@/lib/site/nav";
+import { formatBlurredMask } from "@/lib/site/prices";
 import { materialsIndexGraph } from "@/lib/site/structured-data";
 
 export async function generateMetadata({
@@ -75,11 +77,11 @@ export default async function MaterialsIndexPage({
         ]}
         aside={
           <div className="mt-7 flex flex-wrap gap-3">
-            <ButtonLink href={phoneHref} trailingIcon="arrow">
-              {t.labels.callForPrice}
+            <ButtonLink href={links.prices.href} trailingIcon="arrow">
+              {dict.prices.crossLink.cta}
             </ButtonLink>
-            <ButtonLink href={links.contact.href} variant="secondary">
-              {dict.common.requestQuote}
+            <ButtonLink href={phoneHref} variant="secondary">
+              {t.labels.callForPrice}
             </ButtonLink>
           </div>
         }
@@ -91,6 +93,11 @@ export default async function MaterialsIndexPage({
           <Stagger className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {materials.map((material) => {
               const Icon = material.icon;
+              const maskSize =
+                material.slug === "ferrous-scrap" ||
+                material.slug === "lead-batteries"
+                  ? "short"
+                  : "wide";
               return (
                 <RevealItem key={material.slug}>
                   <Link
@@ -116,7 +123,13 @@ export default async function MaterialsIndexPage({
                     <h2 className="mt-6 text-xl font-semibold text-ink">
                       {material.name}
                     </h2>
-                    <p className="mt-2 text-[0.9375rem] leading-relaxed text-slate">
+                    <div className="mt-2.5">
+                      <BlurredPriceBadge
+                        maskText={formatBlurredMask(maskSize, locale)}
+                        ctaLabel={dict.prices.unlockCta}
+                      />
+                    </div>
+                    <p className="mt-3 text-[0.9375rem] leading-relaxed text-slate">
                       {material.navDesc}
                     </p>
 
@@ -194,13 +207,21 @@ export default async function MaterialsIndexPage({
                 <p className="mt-2.5 flex-1 text-[0.9375rem] leading-relaxed text-slate">
                   {t.index.priceNoteBody}
                 </p>
-                <a
-                  href={phoneHref}
-                  className="mt-5 inline-flex items-center gap-1.5 text-[0.9375rem] font-semibold text-brand transition-colors hover:text-brand-dark"
-                >
-                  {dict.company.phonePrimary}
-                  <ArrowRight aria-hidden className="size-4" />
-                </a>
+                <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2">
+                  <Link
+                    href={links.prices.href}
+                    className="inline-flex items-center gap-1.5 text-[0.9375rem] font-semibold text-brand transition-colors hover:text-brand-dark"
+                  >
+                    {dict.prices.crossLink.cta}
+                    <ArrowRight aria-hidden className="size-4" />
+                  </Link>
+                  <a
+                    href={phoneHref}
+                    className="text-[0.875rem] font-medium text-charcoal transition-colors hover:text-brand"
+                  >
+                    {dict.company.phonePrimary}
+                  </a>
+                </div>
               </div>
             </RevealItem>
           </Stagger>
