@@ -171,6 +171,65 @@ export const pricesEn: Messages["prices"] = {
   guidesHeading: "Useful guides on scrap pricing and drop-off",
   documentsLinkLabel: "Documents needed to sell scrap metal (individuals & companies)",
   howPricesWorkLinkLabel: "How scrap metal and metal waste prices are actually set",
+  guide: {
+    eyebrow: "Scrap price guide",
+    heading: "How today's scrap metal price is set, and how to get more per kg",
+    lead: "The price you get at a collection centre isn't arbitrary. It depends on the international metals market, the grade of the material, how clean it is and the quantity. Here's how it works, so you know what to expect before you set off.",
+    sections: [
+      {
+        heading: "What drives the scrap metal price today",
+        body: [
+          "Scrap iron is a raw material for steel mills and foundries, so its price follows steel demand. When construction and industry are busy, mills buy more and the price rises. When demand drops, so does the per-kg price at collection centres.",
+          "Non-ferrous metals (copper, aluminium, brass, lead) are priced daily against London Metal Exchange (LME) quotes. That's why the copper or aluminium price can change from one day to the next, even when the iron price stays stable.",
+        ],
+        points: [
+          "Demand from steel mills and foundries in Romania and the region",
+          "LME quotes for copper, aluminium, lead, zinc and nickel",
+          "The leu/euro and leu/dollar exchange rates",
+          "Energy and transport costs to the smelter",
+          "Season: demand usually rises with the construction season",
+        ],
+      },
+      {
+        heading: "Why prices differ so much between grades",
+        body: [
+          "For ferrous scrap, heavy iron and clean cast iron get the best rates because they melt with little loss. Thin sheet and light iron get the lowest: they rust faster, take up a lot of volume and yield less when melted.",
+          "For non-ferrous metals the gaps are even bigger. Bright copper (milberry) is worth noticeably more than burnt or tinned copper, and clean brass more than taps with iron parts. For cables, the price depends on how much metal the cable contains relative to insulation. A thick power cable yields far more than a thin car wiring harness.",
+        ],
+        points: [],
+      },
+      {
+        heading: "How to work out what you'll be paid for scrap",
+        body: [
+          "The formula is simple: the net weight of each grade multiplied by that grade's price per kilogram. Net weight is the difference between the loaded vehicle weighed on entry and the empty vehicle weighed on exit.",
+          "For private individuals, the centre withholds the Environment Fund contribution and income tax from that amount at source, as the law requires. Companies are paid on invoice, usually under the VAT reverse-charge mechanism. So when you compare offers, always ask whether the price quoted on the phone is before or after deductions.",
+        ],
+        points: [],
+      },
+      {
+        heading: "How to get a better price per kilogram",
+        body: [
+          "Sorting makes a bigger difference to what you are paid than negotiating. A few simple steps raise the value of your load:",
+        ],
+        points: [
+          "Separate non-ferrous metals (aluminium, copper, brass, stainless steel) from iron. Use a magnet: whatever doesn't stick is usually worth much more.",
+          "Separate heavy iron from sheet, and cast iron from the rest.",
+          "Remove plastic, wood, rubber, seals and iron screws from non-ferrous parts.",
+          "Drain vehicle parts and machinery of oil, fuel and coolant.",
+          "Bring larger quantities in one go rather than many small trips. For large loads the price can be negotiated.",
+          "Call ahead for today's rate, especially for copper and aluminium, where prices move daily.",
+        ],
+      },
+      {
+        heading: "Prices for companies and large volumes",
+        body: [
+          "For factories, machine shops, construction and demolition firms and industrial plant clearances, we work with negotiated prices per tonne, based on grade, volume and collection frequency. We provide dedicated containers, transport with our own fleet and complete traceability and recovery paperwork.",
+          "Send us the material type, estimated quantity and location through the contact form and we'll reply with a concrete offer.",
+        ],
+        points: [],
+      },
+    ],
+  },
   faqHeading: "Frequently asked questions about 2026 scrap metal prices",
   faq: [
     {
@@ -202,6 +261,21 @@ export const pricesEn: Messages["prices"] = {
       question: "Where is the Ecoplast Hart yard and what are the opening hours?",
       answer:
         "Our operational yard is at Șos. Hunedoarei nr. 13, Sat Cristur, Deva (between Deva and Hunedoara). Opening hours are Mon–Fri 08:00–17:00 and Sat 08:00–13:00. For commercial and industrial loads, we arrange direct pickup with our own fleet.",
+    },
+    {
+      question: "What is the scrap metal price today?",
+      answer:
+        "Today's price depends on the grade: heavy iron and cast iron get the best ferrous rate, sheet and light iron the lowest. Non-ferrous rates are updated daily in line with the LME. Call us on +40 740 072 256 and we'll give you today's price for your material and quantity on the spot.",
+    },
+    {
+      question: "Why is the yard price lower than the LME quote?",
+      answer:
+        "The LME quote is the price of pure metal, delivered in large lots to exchange standard. Scrap has to be sorted, transported, sometimes processed (cables, for example, must be granulated) and delivered to a smelter, and it contains impurities. The collection centre's price reflects those costs and the material's real yield.",
+    },
+    {
+      question: "Is the price the same for a small load and for several tonnes?",
+      answer:
+        "The base price per kg is set by grade and cleanliness. For large or regular volumes, or collections from companies, we can negotiate a price per tonne and include transport and containers. Tell us the estimated quantity and we'll send you an offer.",
     },
   ],
   crossLink: {

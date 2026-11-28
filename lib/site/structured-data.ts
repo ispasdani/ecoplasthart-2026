@@ -23,12 +23,15 @@ import {
   materialKeyFromSlug,
   serviceKeyFromSlug,
   siteUrl,
+  topicKeyFromSlug,
   type ArticleSlug,
   type Locale,
   type MaterialSlug,
   type PathnameKey,
   type ServiceSlug,
+  type TopicSlug,
 } from "@/lib/i18n/routing";
+import { getTopic } from "@/lib/site/topics";
 import { FOUNDING_DATE } from "@/lib/site/company";
 import { getArticle, getArticles } from "@/lib/site/articles";
 import { getMaterial, getMaterials } from "@/lib/site/materials";
@@ -542,6 +545,62 @@ export function pricesPageGraph(dict: Messages, locale: Locale) {
         },
       })),
     },
+  ]);
+}
+
+export function topicDetailGraph(
+  dict: Messages,
+  locale: Locale,
+  slug: TopicSlug,
+) {
+  const topic = getTopic(dict, locale, slug);
+  const url = absoluteUrl(topic.href);
+
+  const crumbs: Crumb[] = [homeCrumb(dict, locale)];
+  if (topic.parent === "/services") crumbs.push(servicesCrumb(dict, locale));
+  if (topic.parent === "/materials") crumbs.push(materialsCrumb(dict, locale));
+  crumbs.push({ name: topic.name, url });
+
+  // A reference page (waste codes) is not a service offer; everything else
+  // describes something the company actually does, so it gets a Service node.
+  const serviceNode = topic.service
+    ? {
+        "@type": "Service",
+        "@id": `${url}#service`,
+        name: topic.title,
+        description: topic.metaDescription,
+        url,
+        serviceType: topic.name,
+        provider: { "@id": ORGANIZATION_ID },
+        areaServed: topic.city
+          ? { "@type": "City", name: topic.city }
+          : AREA_SERVED,
+        isRelatedTo: {
+          "@id": `${absoluteUrl(localizedPath(topic.service, locale))}#service`,
+        },
+      }
+    : null;
+
+  return graph([
+    organizationNode(dict, locale),
+    localBusinessNode(dict, locale),
+    webSiteNode(dict, locale),
+    {
+      ...webPageNode({
+        locale,
+        pathnameKey: topicKeyFromSlug(slug),
+        title: topic.metaTitle,
+        description: topic.metaDescription,
+      }),
+      "@type": ["WebPage", "FAQPage"],
+      mainEntity: topic.faq.map((entry) => ({
+        "@type": "Question",
+        name: entry.question,
+        acceptedAnswer: { "@type": "Answer", text: entry.answer },
+      })),
+    },
+    breadcrumbNode(crumbs),
+    ...(serviceNode ? [serviceNode] : []),
   ]);
 }
 

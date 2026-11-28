@@ -40,12 +40,115 @@ export const materialsEn: Messages["materials"] = {
     allMaterialsCta: "See all materials",
     faqHeading: "Frequently asked questions",
     backToMaterials: "All materials",
+    topicsHeading: "Useful pages",
   },
   imageAlts: {
     "ferrous-scrap":
       "Sorted ferrous scrap metal at the Ecoplast Hart yard in Cristur, Deva",
     "lead-batteries":
       "Dedicated containers for safe storage of used batteries and hazardous waste at Ecoplast Hart",
+  },
+  guides: {
+    "ferrous-scrap": {
+      eyebrow: "Complete scrap metal guide",
+      heading: "Everything to know before you sell scrap metal",
+      lead: "From what an authorised collection centre is and how weighing works, to sorting, paperwork and pickup from your address. The guide below answers the questions individuals and companies ask us every day.",
+      sections: [
+        {
+          heading: "A scrap metal collection centre (the former “remat”) between Deva and Hunedoara",
+          body: [
+            "Many Romanians still say they are “going to the remat” when they take scrap metal in. The name comes from the state enterprises that recovered and recycled materials before 1990. Today scrap collection, buying and recovery is done by private operators authorised by the environmental authorities.",
+            "Ecoplast Hart has been collecting and recycling waste since 2004. Our yard is at Șos. Hunedoarei nr. 13, Sat Cristur, on the road out of Deva towards Hunedoara, so it is easy to reach from Deva, Hunedoara, Simeria, Călan, Orăștie or Hațeg. We buy scrap metal from private individuals as well as workshops, factories, construction sites and demolition companies.",
+          ],
+          points: [
+            "Hours: Monday–Friday 08:00–17:00, Saturday 08:00–13:00",
+            "Metrologically certified scales and a weight ticket for every load",
+            "Scrap buying from individuals (with an ID card) and companies (with an invoice)",
+            "Collection with our own fleet for large volumes, across Hunedoara county and Romania",
+          ],
+        },
+        {
+          heading: "How handing in scrap metal works, step by step",
+          body: [
+            "A typical drop-off is quick if the material arrives sorted. The procedure is the same for a household trailer and a workshop truck:",
+          ],
+          points: [
+            "Call us first on +40 740 072 256 for today's rate and to tell us what you are bringing and roughly how much.",
+            "On arrival, the loaded vehicle is weighed (gross weight).",
+            "You unload by category: heavy iron, sheet, cast iron, non-ferrous. Our team checks the grade and cleanliness.",
+            "The empty vehicle is weighed again (tare). The difference is the net weight you are paid for.",
+            "You receive the weight ticket and purchase documents: a purchase slip for individuals, an invoice and transport documents for companies.",
+          ],
+        },
+        {
+          heading: "How scrap metal is graded and why it matters for the price",
+          body: [
+            "Scrap metal has no single price. Steel mills pay differently by thickness, composition and cleanliness, and we apply the same logic at our weighbridge.",
+            "Heavy iron (profiles, beams, thick pipes, solid parts over 4–6 mm) melts with a high yield and gets the best ferrous rate. Cast iron (radiators, drained engine blocks, castings) is paid at a similar level. Thin sheet, wire and light iron get the lowest rate because they lose more to oxidation and take up a lot of volume. Turnings from lathes and mills are collected separately, in containers.",
+            "A mixed load is usually graded at the lowest grade it contains. A few minutes of sorting at home or in the workshop translate directly into money.",
+          ],
+          points: [
+            "The magnet test: if a magnet sticks, it is ferrous (iron, steel, cast iron). If not, it may be aluminium, copper, brass or stainless steel and is usually worth much more, so set it aside.",
+            "Separate thick iron from thin sheet.",
+            "Remove wood, plastic, rubber, glass and concrete. Their weight is deducted from the load.",
+            "Fully drain vehicle and machinery parts of oil, fuel and coolant.",
+          ],
+        },
+        {
+          heading: "What you can bring as scrap from your home, yard and garage",
+          body: [
+            "Almost any old metal object has scrap value. The items we most often receive from individuals:",
+          ],
+          points: [
+            "Old cast-iron or steel radiators",
+            "Fences, gates, mesh and metal posts",
+            "Roofing sheet, gutters and downpipes",
+            "Old bicycles, frames and metal parts",
+            "Metal furniture, shelving, cabinets and iron beds",
+            "Tools and parts from farm machinery",
+            "Pipes, profiles and offcuts from building or renovation work",
+            "Metal car parts (brake discs, steel wheels, springs), drained of fluids",
+          ],
+        },
+        {
+          heading: "What we don't accept as scrap metal",
+          body: [
+            "For our team's safety, and because the law requires it, some items cannot be handed in as ordinary scrap or need a separate route:",
+          ],
+          points: [
+            "Household appliances and electronics (fridges, washing machines, TVs). These are WEEE and are handed in separately.",
+            "Gas cylinders, fire extinguishers and other pressurised containers",
+            "Containers with residues of paint, oil, solvents or other chemicals",
+            "Materials containing asbestos",
+            "Items that appear to come from public infrastructure (manhole covers, road signs, network cables, rails) without proof of origin",
+          ],
+        },
+        {
+          heading: "Individual or company: paperwork and deductions when selling scrap",
+          body: [
+            "As a private individual you only need your identity card. A purchase slip is drawn up for every load. The collection centre withholds the Environment Fund contribution and income tax from the load's value and pays them over at source, as required by the Fiscal Code, so you have nothing to declare afterwards.",
+            "Companies sell scrap metal against an invoice, usually under the VAT reverse-charge mechanism, with the relevant transport and traceability documents. For waste producers with steady volumes we sign collection contracts, with dedicated containers and a negotiated price per tonne.",
+          ],
+          points: [],
+        },
+        {
+          heading: "What happens to scrap metal after weighing: recovery and recycling",
+          body: [
+            "Scrap handed in to us doesn't sit in a pile. It is sorted by grade, cut to the required sizes and delivered to steel mills and foundries, where it is melted into new steel. In practice scrap metal is a secondary raw material that replaces iron ore.",
+            "Recycling scrap metal uses far less energy than making steel from ore and reduces the amount of waste going to landfill. For companies, recovery through an authorised operator also means documented proof that the waste was handled legally.",
+          ],
+          points: [],
+        },
+        {
+          heading: "Scrap metal pickup from your address and large volumes",
+          body: [
+            "If you have a lot of scrap or heavy items (steel structures, decommissioned machinery, demolition or plant-clearance scrap), you don't have to bring it in. We run grab-crane trucks, small and large tippers and Abrollkipper containers that we can leave with you for loading.",
+            "The transport cost depends on volume, material type and distance. We collect from Deva, Hunedoara, Simeria, Călan, Orăștie, Hațeg, Brad, Petroșani and, for industrial loads, from anywhere in Romania.",
+          ],
+          points: [],
+        },
+      ],
+    },
   },
   items: {
     copper: {
@@ -110,11 +213,11 @@ export const materialsEn: Messages["materials"] = {
     "ferrous-scrap": {
       name: "Ferrous scrap",
       navDesc: "Heavy iron, sheet metal, cast iron, steel beams and industrial scrap.",
-      title: "Sell scrap iron and ferrous metal in Deva and Hunedoara",
-      lead: "Authorised scrap metal yard in Cristur (Deva). We buy ferrous scrap from individuals and businesses — from household sheet metal to industrial steel structures, decommissioned machinery and turnings, with grab-crane and container pickup available.",
-      metaTitle: "Scrap iron & cast iron collection centre — per-kg prices, Deva",
+      title: "Scrap metal collection in Deva and Hunedoara — we buy scrap iron and cast iron",
+      lead: "Authorised scrap metal collection and buying centre in Cristur, between Deva and Hunedoara. We buy ferrous scrap from individuals and businesses — from household sheet metal to industrial steel structures, decommissioned machinery and turnings, with grab-crane and container pickup available.",
+      metaTitle: "Scrap metal Deva, Hunedoara — collection centre, price per kg",
       metaDescription:
-        "Authorised scrap iron collection centre in Cristur, Deva (Hunedoara): heavy steel, sheet metal, cast iron and structures. Fair per-kg prices & certified scales.",
+        "We buy scrap iron, cast iron, sheet metal and turnings at our authorised collection centre in Cristur, Deva. Certified scales, fair per-kg prices, grab-crane pickup.",
       grades: [
         {
           title: "Heavy melting scrap (thick steel/iron)",
@@ -167,6 +270,26 @@ export const materialsEn: Messages["materials"] = {
           question: "How much is 1 kg of scrap iron and cast iron worth?",
           answer:
             "The indicative price per kg depends on thickness and cleanliness: thin sheet sits at the lower end of ferrous rates, while heavy steel (> 6 mm) and clean cast iron (radiators, castings) command the top ferrous rates. Check our updated price list or call +40 740 072 256 for today's exact rate.",
+        },
+        {
+          question: "What does “remat” mean, and do remats still exist?",
+          answer:
+            "“Remat” comes from Romania's former state enterprises for recovering and recycling materials. Today the same work is done by authorised scrap metal collection centres such as our Cristur yard in Deva, which operates under an environmental permit, with certified scales and paperwork for every load.",
+        },
+        {
+          question: "Do you buy scrap metal from private individuals?",
+          answer:
+            "Yes. We buy scrap from individuals against an identity card, with a purchase slip for every load. The Environment Fund contribution and income tax are withheld at source from the load's value, as required by law.",
+        },
+        {
+          question: "Do you accept washing machines, fridges or other appliances as scrap?",
+          answer:
+            "Household appliances are waste electrical and electronic equipment (WEEE) and are handed in separately from scrap iron, through the dedicated WEEE stream. Call us first and we'll tell you how to hand them in correctly.",
+        },
+        {
+          question: "Do you take old cast-iron radiators?",
+          answer:
+            "Yes. Cast-iron radiators fall under cast iron, one of the best-paid ferrous grades. Drain them before transport; for large quantities (block renovations, boiler rooms) we can arrange collection.",
         },
       ],
     },

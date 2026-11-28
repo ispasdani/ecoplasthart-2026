@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 
 import { BlurredPriceBadge } from "@/components/marketing/blurred-price-pill";
+import { LongformGuide } from "@/components/marketing/longform-guide";
 import { PageHero } from "@/components/marketing/page-hero";
 import { CtaBand } from "@/components/marketing/sections/cta-band";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -340,8 +341,10 @@ export default async function PricesPage({
         </Container>
       </Section>
 
+      <LongformGuide guide={t.guide} tone="canvas" />
+
       {/* FAQ — plain visible markup matching FAQPage JSON-LD */}
-      <Section tone="canvas" space="lg">
+      <Section tone="surface" space="lg">
         <Container>
           <div className="max-w-3xl">
             <Reveal>

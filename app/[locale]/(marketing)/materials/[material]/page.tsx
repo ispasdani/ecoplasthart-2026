@@ -12,6 +12,7 @@ import {
 
 import { ArticleSummaryCard } from "@/components/marketing/articles/article-summary-card";
 import { BlurredPriceBadge } from "@/components/marketing/blurred-price-pill";
+import { LongformGuide } from "@/components/marketing/longform-guide";
 import { PageHero } from "@/components/marketing/page-hero";
 import { CtaBand } from "@/components/marketing/sections/cta-band";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -27,9 +28,14 @@ import {
   localizedPath,
   materialKeyFromSlug,
   materialSlugs,
+  type TopicSlug,
 } from "@/lib/i18n/routing";
 import { getArticle } from "@/lib/site/articles";
-import { getMaterial, getMaterials } from "@/lib/site/materials";
+import {
+  getMaterial,
+  getMaterials,
+  materialGuide,
+} from "@/lib/site/materials";
 import { getPrimaryLinks, getServiceNavItems } from "@/lib/site/nav";
 import {
   formatBlurredMask,
@@ -82,6 +88,7 @@ export default async function MaterialDetailPage({ params }: MaterialPageProps) 
     getArticle(dict, locale, articleSlug),
   );
 
+  const guide = materialGuide(dict, slug);
   const t = dict.materials.labels;
   const Icon = material.icon;
   const phoneHref = `tel:${dict.company.phonePrimary.replace(/\s/g, "")}`;
@@ -274,6 +281,35 @@ export default async function MaterialDetailPage({ params }: MaterialPageProps) 
                   </Link>
                 ) : null}
 
+                {material.topics.length > 0 ? (
+                  <nav
+                    aria-label={t.topicsHeading}
+                    className="rounded-2xl border border-hairline bg-canvas p-6"
+                  >
+                    <Eyebrow className="mb-3">{t.topicsHeading}</Eyebrow>
+                    <ul>
+                      {material.topics.map((key) => (
+                        <li key={key}>
+                          <Link
+                            href={localizedPath(key, locale)}
+                            className="group flex items-center justify-between gap-3 border-b border-hairline py-3 text-[0.9375rem] text-charcoal transition-colors last:border-b-0 hover:text-brand"
+                          >
+                            {
+                              dict.topics.items[
+                                key.slice("/topics/".length) as TopicSlug
+                              ].name
+                            }
+                            <ArrowRight
+                              aria-hidden
+                              className="size-3.5 shrink-0 text-steel transition-transform group-hover:translate-x-0.5 group-hover:text-brand"
+                            />
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </nav>
+                ) : null}
+
                 <Link
                   href={materialsHref}
                   className="group inline-flex items-center gap-1.5 text-[0.8125rem] font-medium text-steel transition-colors hover:text-ink"
@@ -290,6 +326,8 @@ export default async function MaterialDetailPage({ params }: MaterialPageProps) 
           </div>
         </Container>
       </Section>
+
+      {guide ? <LongformGuide guide={guide} tone="canvas" /> : null}
 
       {/* FAQ — plain visible markup matching FAQPage JSON-LD */}
       <Section tone="surface" space="lg">

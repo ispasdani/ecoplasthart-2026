@@ -149,6 +149,30 @@ export const pathnames = {
     ro: "/preturi-fier-vechi",
     en: "/scrap-metal-prices",
   },
+  "/topics/scrap-pickup": {
+    ro: "/ridicare-fier-vechi",
+    en: "/scrap-metal-pickup",
+  },
+  "/topics/scrap-metal-deva": {
+    ro: "/fier-vechi-deva",
+    en: "/scrap-metal-deva",
+  },
+  "/topics/scrap-metal-hunedoara": {
+    ro: "/fier-vechi-hunedoara",
+    en: "/scrap-metal-hunedoara",
+  },
+  "/topics/cast-iron-radiators": {
+    ro: "/calorifere-fonta-fier-vechi",
+    en: "/cast-iron-radiators-scrap",
+  },
+  "/topics/plant-dismantling": {
+    ro: "/servicii/dezafectari-hale-utilaje",
+    en: "/services/plant-and-machinery-dismantling",
+  },
+  "/topics/metal-waste-codes": {
+    ro: "/coduri-deseuri-metalice",
+    en: "/metal-waste-codes",
+  },
   "/certifications": { ro: "/certificari", en: "/certifications" },
   "/articles": { ro: "/articole", en: "/articles" },
   "/articles/choosing-a-waste-collection-partner": {
@@ -319,6 +343,39 @@ export function isMaterialSlug(value: string): value is MaterialSlug {
 
 export function materialKeyFromSlug(slug: MaterialSlug): MaterialKey {
   return `/materials/${slug}` as MaterialKey;
+}
+
+/**
+ * Intent-specific landing pages (pickup, city pages, item pages, B2B
+ * dismantling, waste-code reference). Each one answers a search need the
+ * material and service pages don't, rather than restating them under a
+ * synonym. The trailing segment is the `[topic]` param of
+ * `app/[locale]/(marketing)/topics/[topic]/page.tsx`.
+ */
+export const topicKeys = [
+  "/topics/scrap-pickup",
+  "/topics/scrap-metal-deva",
+  "/topics/scrap-metal-hunedoara",
+  "/topics/cast-iron-radiators",
+  "/topics/plant-dismantling",
+  "/topics/metal-waste-codes",
+] as const satisfies readonly PathnameKey[];
+
+export type TopicKey = (typeof topicKeys)[number];
+
+/** `"/topics/scrap-pickup"` → `"scrap-pickup"` (the `[topic]` route param). */
+export type TopicSlug = TopicKey extends `/topics/${infer S}` ? S : never;
+
+export const topicSlugs = topicKeys.map(
+  (key) => key.slice("/topics/".length) as TopicSlug,
+);
+
+export function isTopicSlug(value: string): value is TopicSlug {
+  return (topicSlugs as string[]).includes(value);
+}
+
+export function topicKeyFromSlug(slug: TopicSlug): TopicKey {
+  return `/topics/${slug}` as TopicKey;
 }
 
 /**

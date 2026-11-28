@@ -7,13 +7,17 @@ import {
   type MaterialKey,
   type MaterialSlug,
   type ServiceKey,
+  type TopicKey,
 } from "@/lib/i18n/routing";
+import type { LongformGuideContent } from "@/components/marketing/longform-guide";
 import { materialIcons } from "@/lib/site/icons";
 import type { Messages } from "@/messages/ro";
 
 type MaterialFacts = {
   service: ServiceKey;
   articles: readonly ArticleSlug[];
+  /** Intent-specific landing pages linked from this material page. */
+  topics?: readonly TopicKey[];
   image?: string;
   video?: string;
   poster?: string;
@@ -31,6 +35,14 @@ export const MATERIAL_FACTS: Record<MaterialSlug, MaterialFacts> = {
   "ferrous-scrap": {
     service: "/services/metal-waste",
     image: "/images/feros.webp",
+    topics: [
+      "/topics/scrap-pickup",
+      "/topics/scrap-metal-deva",
+      "/topics/scrap-metal-hunedoara",
+      "/topics/cast-iron-radiators",
+      "/topics/plant-dismantling",
+      "/topics/metal-waste-codes",
+    ],
     articles: [
       "scrap-metal-prices-explained",
       "where-to-sell-scrap-metal-deva-hunedoara",
@@ -82,6 +94,21 @@ export function materialImageAlt(
   return alts[slug];
 }
 
+/**
+ * Long-form guide copy for a material page, when one has been written. Kept
+ * as a partial map (like `imageAlts`) so guides can be added one material at
+ * a time without forcing placeholder copy onto every page.
+ */
+export function materialGuide(
+  dict: Messages,
+  slug: MaterialSlug,
+): LongformGuideContent | undefined {
+  const guides = dict.materials.guides as Partial<
+    Record<MaterialSlug, LongformGuideContent>
+  >;
+  return guides[slug];
+}
+
 export function getMaterials(dict: Messages, locale: Locale) {
   return materialKeys.map((key) => getMaterialByKey(dict, locale, key));
 }
@@ -107,6 +134,7 @@ function getMaterialByKey(dict: Messages, locale: Locale, key: MaterialKey) {
     variant: materialKeys.indexOf(key),
     service: facts.service,
     articles: facts.articles,
+    topics: facts.topics ?? [],
     image: facts.image,
     imageAlt: materialImageAlt(dict, slug),
     video: facts.video,

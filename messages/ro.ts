@@ -11,6 +11,7 @@
 import { articlesRo } from "./articles-ro";
 import { materialsRo } from "./materials-ro";
 import { pricesRo } from "./prices-ro";
+import { topicsRo } from "./topics-ro";
 
 export const ro = {
   meta: {
@@ -1030,6 +1031,9 @@ export const ro = {
 
   /** Indicative scrap metal prices copy — see `messages/prices-ro.ts`. */
   prices: pricesRo,
+
+  /** Intent-specific landing pages — see `messages/topics-ro.ts`. */
+  topics: topicsRo,
 
   /** Article feed and long-form copy — see `messages/articles-ro.ts`. */
   articles: articlesRo,

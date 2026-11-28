@@ -13,6 +13,7 @@ import { getArticles } from "@/lib/site/articles";
 import { getMaterials } from "@/lib/site/materials";
 import { getPrimaryLinks, getServiceNavItems } from "@/lib/site/nav";
 import { simplePageGraph } from "@/lib/site/structured-data";
+import { getTopics } from "@/lib/site/topics";
 
 export async function generateMetadata({
   params,
@@ -56,6 +57,7 @@ export default async function SiteMapPage({
   const services = getServiceNavItems(dict, locale);
   const materials = getMaterials(dict, locale);
   const articles = getArticles(dict, locale);
+  const topics = getTopics(dict, locale);
   const t = dict.siteMap;
 
   const groups = [
@@ -72,6 +74,7 @@ export default async function SiteMapPage({
         { href: links.materials.href, label: dict.materials.index.title },
         { href: links.prices.href, label: dict.prices.title },
         ...materials.map((m) => ({ href: m.href, label: m.name })),
+        ...topics.map((topic) => ({ href: topic.href, label: topic.name })),
       ],
     },
     {

@@ -2,6 +2,7 @@ import type { Messages } from "./ro";
 import { articlesEn } from "./articles-en";
 import { materialsEn } from "./materials-en";
 import { pricesEn } from "./prices-en";
+import { topicsEn } from "./topics-en";
 
 /**
  * English dictionary. Typed as `Messages`, so it must mirror `ro.ts` exactly —
@@ -991,6 +992,7 @@ export const en: Messages = {
   materials: materialsEn,
 
   prices: pricesEn,
+  topics: topicsEn,
 
   articles: articlesEn,
 

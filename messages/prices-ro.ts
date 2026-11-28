@@ -169,6 +169,65 @@ export const pricesRo = {
   guidesHeading: "Ghiduri utile despre prețuri și predare",
   documentsLinkLabel: "Ce acte îți trebuie ca să vinzi fier vechi (persoane fizice și firme)",
   howPricesWorkLinkLabel: "Cum se stabilește, de fapt, prețul la fier vechi și metale",
+  guide: {
+    eyebrow: "Ghid prețuri fier vechi",
+    heading: "Cum se formează prețul la fier vechi azi și cum obții mai mult pe kg",
+    lead: "Prețul pe care îl primești la centrul de colectare nu este întâmplător. Depinde de piața internațională a metalelor, de sortul materialului, de cât de curat este și de cantitate. Iată cum funcționează, ca să știi la ce să te aștepți înainte să pleci de acasă.",
+    sections: [
+      {
+        heading: "Ce influențează prețul fierului vechi astăzi",
+        body: [
+          "Fierul vechi este materie primă pentru oțelării și turnătorii, așa că prețul lui urmează cererea de oțel. Când construcțiile și industria merg bine, oțelăriile cumpără mai mult și prețul crește. Când cererea scade, scade și prețul pe kilogram la centrele de colectare.",
+          "Metalele neferoase (cupru, aluminiu, alamă, plumb) se raportează zilnic la cotațiile Bursei de Metale de la Londra (LME). De aceea prețul cuprului sau al aluminiului se poate schimba de la o zi la alta, chiar și când prețul fierului rămâne stabil.",
+        ],
+        points: [
+          "Cererea oțelăriilor și a turnătoriilor din România și din regiune",
+          "Cotațiile LME pentru cupru, aluminiu, plumb, zinc și nichel",
+          "Cursul de schimb leu/euro și leu/dolar",
+          "Costurile cu energia și transportul până la topitorie",
+          "Sezonul: cererea crește de obicei odată cu sezonul de construcții",
+        ],
+      },
+      {
+        heading: "De ce diferă atât de mult prețul între sorturi",
+        body: [
+          "La feroase, fierul greu și fonta curată primesc cele mai bune cotații, pentru că se topesc cu pierderi mici. Tabla subțire și fierul ușor au prețul cel mai mic: ruginesc mai repede, ocupă volum mare și au randament mai slab la topire.",
+          "La neferoase diferențele sunt și mai mari. Cuprul lucios (milberry) valorează vizibil mai mult decât cuprul ars sau cositorit, iar alama curată mai mult decât robineții cu piese din fier. La cabluri, prețul depinde de câtă metal conține cablul față de izolație. Un cablu gros de forță are randament mult mai mare decât un cablaj auto subțire.",
+        ],
+        points: [],
+      },
+      {
+        heading: "Cum calculezi cât primești pe fier vechi",
+        body: [
+          "Formula este simplă: greutatea netă a fiecărui sort, înmulțită cu prețul pe kilogram al sortului respectiv. Greutatea netă este diferența dintre cântărirea vehiculului plin la intrare și cântărirea vehiculului gol la ieșire.",
+          "Pentru persoane fizice, din suma rezultată centrul reține la sursă contribuția la Fondul pentru Mediu și impozitul pe venit, conform legii. Pentru firme, plata se face pe factură, de regulă cu taxare inversă a TVA. De aceea, când compari oferte, întreabă întotdeauna dacă prețul spus la telefon este înainte sau după rețineri.",
+        ],
+        points: [],
+      },
+      {
+        heading: "Cum obții un preț mai bun pe kilogram",
+        body: [
+          "Cea mai mare diferență de bani o face sortarea, nu negocierea. Câteva lucruri simple îți cresc valoarea lotului:",
+        ],
+        points: [
+          "Separă metalele neferoase (aluminiu, cupru, alamă, inox) de fier. Folosește un magnet: ce nu se prinde valorează de obicei mult mai mult.",
+          "Separă fierul greu de tablă și fonta de restul fierului.",
+          "Scoate plasticul, lemnul, cauciucul, garniturile și șuruburile din fier din piesele neferoase.",
+          "Golește piesele auto și utilajele de ulei, combustibil și antigel.",
+          "Adu cantități mai mari o dată, nu multe drumuri mici. Pentru loturi mari, prețul se poate negocia.",
+          "Sună înainte pentru cotația zilei, mai ales la cupru și aluminiu, unde prețul se mișcă zilnic.",
+        ],
+      },
+      {
+        heading: "Prețuri pentru firme și cantități mari",
+        body: [
+          "Pentru fabrici, ateliere mecanice, firme de construcții și demolări sau dezafectări industriale, lucrăm cu prețuri negociate pe tonă, în funcție de sort, volum și frecvența ridicărilor. Punem la dispoziție containere dedicate, transport cu flota proprie și documentele complete de trasabilitate și valorificare.",
+          "Trimite-ne prin formularul de contact tipul de material, cantitatea estimată și locația, iar noi îți răspundem cu o ofertă concretă.",
+        ],
+        points: [],
+      },
+    ],
+  },
   faqHeading: "Întrebări frecvente despre prețul la fier vechi în 2026",
   faq: [
     {
@@ -200,6 +259,21 @@ export const pricesRo = {
       question: "Unde pot preda fier vechi și care este programul centrului Ecoplast Hart?",
       answer:
         "Punctul nostru de lucru este situat pe Șos. Hunedoarei nr. 13, Sat Cristur, Deva (între Deva și Hunedoara). Programul este Luni–Vineri 08:00–17:00 și Sâmbătă 08:00–13:00. Pentru loturi comerciale și industriale, organizăm ridicare directă cu flota proprie.",
+    },
+    {
+      question: "Care este prețul la fier vechi azi?",
+      answer:
+        "Prețul de azi depinde de sort: fierul greu și fonta au cea mai bună cotație dintre feroase, iar tabla și fierul ușor pe cea mai mică. Pentru metalele neferoase, cotația se actualizează zilnic după bursa LME. Sună-ne la +40 740 072 256 și îți spunem pe loc prețul de azi pentru materialul și cantitatea ta.",
+    },
+    {
+      question: "De ce prețul primit la centru este mai mic decât cotația LME?",
+      answer:
+        "Cotația LME este prețul metalului pur, livrat în cantități mari, la standard de bursă. Fierul vechi și deșeurile neferoase trebuie sortate, transportate, uneori procesate (de exemplu cablurile, care trebuie granulate) și livrate la topitorie, iar materialul are impurități. Prețul de la centrul de colectare ține cont de aceste costuri și de randamentul real al materialului.",
+    },
+    {
+      question: "Prețul este același pentru o cantitate mică și pentru câteva tone?",
+      answer:
+        "Prețul de bază pe kg este stabilit după sort și curățenie. Pentru cantități mari, livrate constant sau ridicate de la firme, putem negocia un preț pe tonă și putem include transportul și containerele. Spune-ne cantitatea estimată și îți facem o ofertă.",
     },
   ],
   crossLink: {

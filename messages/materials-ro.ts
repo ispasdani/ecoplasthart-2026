@@ -38,12 +38,115 @@ export const materialsRo = {
     allMaterialsCta: "Vezi toate materialele",
     faqHeading: "Întrebări frecvente",
     backToMaterials: "Toate materialele",
+    topicsHeading: "Pagini utile",
   },
   imageAlts: {
     "ferrous-scrap":
       "Fier vechi și deșeuri metalice feroase sortate la punctul de lucru Ecoplast Hart din Cristur, Deva",
     "lead-batteries":
       "Recipiente dedicate pentru stocarea în siguranță a acumulatorilor uzați și deșeurilor periculoase la Ecoplast Hart",
+  },
+  guides: {
+    "ferrous-scrap": {
+      eyebrow: "Ghid complet fier vechi",
+      heading: "Tot ce trebuie să știi înainte să vinzi fier vechi",
+      lead: "De la ce înseamnă un centru autorizat de colectare și cum decurge cântărirea, până la sortare, acte și ridicare de la adresă. Ghidul de mai jos răspunde la întrebările pe care ni le pun zilnic clienții, persoane fizice și firme.",
+      sections: [
+        {
+          heading: "Centru de colectare fier vechi (fostul „remat”) între Deva și Hunedoara",
+          body: [
+            "Mulți încă spun „merg la remat” când duc fier vechi. Numele vine de la întreprinderile de stat care recuperau și valorificau materialele înainte de 1990. Astăzi, activitatea de colectare, achiziție și valorificare a fierului vechi o fac operatori privați autorizați de autoritățile de mediu.",
+            "Ecoplast Hart colectează și valorifică deșeuri din 2004. Punctul nostru de lucru este pe Șos. Hunedoarei nr. 13, Sat Cristur, la ieșirea din Deva spre Hunedoara, așa că ajungi ușor din Deva, Hunedoara, Simeria, Călan, Orăștie sau Hațeg. Cumpărăm fier vechi atât de la persoane fizice, cât și de la ateliere, fabrici, șantiere și firme de demolări.",
+          ],
+          points: [
+            "Program: Luni–Vineri 08:00–17:00, Sâmbătă 08:00–13:00",
+            "Cântar verificat metrologic și bon de cântar pentru fiecare recepție",
+            "Achiziție fier vechi de la persoane fizice (cu buletinul) și de la firme (cu factură)",
+            "Ridicare cu flota proprie pentru cantități mari, în județul Hunedoara și în toată țara",
+          ],
+        },
+        {
+          heading: "Cum decurge predarea fierului vechi, pas cu pas",
+          body: [
+            "O predare obișnuită durează puțin dacă materialul vine sortat. Procedura este aceeași pentru o remorcă de gospodărie și pentru un camion de la un atelier:",
+          ],
+          points: [
+            "Sună-ne înainte la +40 740 072 256 pentru cotația zilei și ca să ne spui ce aduci și cam ce cantitate.",
+            "La intrare, vehiculul încărcat este cântărit (greutatea brută).",
+            "Descarci materialul pe categorii: fier greu, tablă, fontă, neferoase. Colegii noștri verifică sortul și curățenia.",
+            "Vehiculul gol este cântărit din nou (tara). Diferența este greutatea netă pentru care primești banii.",
+            "Primești bonul de cântar și documentele de achiziție: borderou pentru persoane fizice, factură și documente de însoțire pentru firme.",
+          ],
+        },
+        {
+          heading: "Cum se sortează fierul vechi și de ce contează pentru preț",
+          body: [
+            "Fierul vechi nu are un singur preț. Oțelăriile plătesc diferit în funcție de grosime, compoziție și cât de curat este materialul, iar noi aplicăm aceeași logică la recepție.",
+            "Fierul greu (profile, grinzi, țevi groase, piese masive de peste 4–6 mm) are randament mare la topire și primește cea mai bună cotație dintre feroase. Fonta (calorifere, blocuri motor golite, piese turnate) se plătește la un nivel apropiat. Tabla subțire, sârma și fierul ușor au prețul cel mai mic, pentru că pierd mai mult prin oxidare și ocupă volum mare. Șpanul din strunjire și frezare se preia separat, în containere.",
+            "Un lot amestecat se încadrează de regulă la sortul cel mai slab din el. Câteva minute de sortare acasă sau în atelier se traduc direct în bani.",
+          ],
+          points: [
+            "Testul cu magnetul: dacă magnetul se prinde, este metal feros (fier, oțel, fontă). Dacă nu, poate fi aluminiu, cupru, alamă sau inox și valorează de obicei mult mai mult, deci pune-l deoparte.",
+            "Separă fierul gros de tabla subțire.",
+            "Scoate lemnul, plasticul, cauciucul, sticla și betonul. Greutatea lor se scade din lot.",
+            "Golește complet piesele auto și de utilaje de ulei, combustibil și antigel.",
+          ],
+        },
+        {
+          heading: "Ce poți aduce la fier vechi din casă, curte și garaj",
+          body: [
+            "Aproape orice obiect metalic vechi are valoare la fier vechi. Cele mai frecvente lucruri pe care le primim de la persoane fizice:",
+          ],
+          points: [
+            "Calorifere vechi din fontă sau din oțel",
+            "Garduri, porți, plase și stâlpi metalici",
+            "Tablă de acoperiș, jgheaburi și burlane din tablă",
+            "Biciclete vechi, cadre și piese metalice",
+            "Mobilier metalic, rafturi, dulapuri și paturi din fier",
+            "Unelte, scule și piese de mașini agricole",
+            "Țevi, profile și resturi din construcții sau renovări",
+            "Piese auto metalice (discuri de frână, jante din oțel, arcuri), golite de fluide",
+          ],
+        },
+        {
+          heading: "Ce nu primim ca fier vechi",
+          body: [
+            "Pentru siguranța oamenilor noștri și pentru că legea o cere, unele obiecte nu pot fi predate ca fier vechi obișnuit sau au nevoie de un circuit separat:",
+          ],
+          points: [
+            "Electrocasnice și echipamente electronice (frigidere, mașini de spălat, televizoare). Acestea sunt DEEE și se predau separat.",
+            "Butelii, extinctoare și alte recipiente sub presiune",
+            "Recipiente cu resturi de vopsea, ulei, solvenți sau alte substanțe chimice",
+            "Materiale care conțin azbest",
+            "Bunuri care par să provină din infrastructura publică (capace de canal, indicatoare rutiere, cabluri de rețea, șine) fără documente de proveniență",
+          ],
+        },
+        {
+          heading: "Persoană fizică sau firmă: acte și rețineri la vânzarea fierului vechi",
+          body: [
+            "Ca persoană fizică ai nevoie doar de cartea de identitate. Pentru fiecare predare se întocmește un borderou de achiziție. Din valoarea lotului, centrul de colectare reține și virează la sursă contribuția la Fondul pentru Mediu și impozitul pe venit, conform Codului Fiscal, așa că nu mai ai nimic de declarat ulterior.",
+            "Firmele vând fier vechi pe bază de factură, de regulă cu taxare inversă a TVA, și cu documentele de transport și trasabilitate aferente. Pentru producători de deșeuri cu volume constante încheiem contracte de colectare, cu containere dedicate și preț negociat pe tonă.",
+          ],
+          points: [],
+        },
+        {
+          heading: "Ce se întâmplă cu fierul vechi după cântar: valorificare și reciclare",
+          body: [
+            "Fierul vechi predat la noi nu stă la grămadă. Este sortat pe calități, debitat la dimensiunile cerute și livrat către oțelării și turnătorii, unde se topește și devine oțel nou. Practic, fierul vechi este o materie primă secundară care înlocuiește minereul de fier.",
+            "Reciclarea fierului vechi consumă mult mai puțină energie decât producția de oțel din minereu și reduce cantitatea de deșeuri care ajunge la groapă. Pentru firme, valorificarea prin operator autorizat înseamnă și dovada documentată că deșeul a fost gestionat legal.",
+          ],
+          points: [],
+        },
+        {
+          heading: "Ridicare fier vechi de la adresă și cantități mari",
+          body: [
+            "Dacă ai mult fier vechi sau piese grele (structuri metalice, utilaje casate, resturi din demolări sau dezafectări), nu trebuie să îl aduci tu. Avem camioane cu macara cu graifăr, basculante de mic și mare tonaj și containere Abrollkipper pe care le putem lăsa la tine pentru încărcare.",
+            "Costul transportului se stabilește în funcție de cantitate, tipul materialului și distanță. Ridicăm din Deva, Hunedoara, Simeria, Călan, Orăștie, Hațeg, Brad, Petroșani și, pentru loturi industriale, din toată România.",
+          ],
+          points: [],
+        },
+      ],
+    },
   },
   items: {
     copper: {
@@ -108,11 +211,11 @@ export const materialsRo = {
     "ferrous-scrap": {
       name: "Fier vechi",
       navDesc: "Fier greu, tablă, fontă, profile metalice și structuri industriale.",
-      title: "Predare și colectare fier vechi în Deva și Hunedoara",
-      lead: "Centru autorizat de colectare fier vechi în Cristur (Deva). Preluăm deșeuri metalice feroase de la persoane fizice și companii — de la tablă și piese gospodărești până la structuri industriale, utilaje casate și șpan, inclusiv cu macara cu graifăr și containere.",
-      metaTitle: "Centru colectare fier vechi și fontă — preț 1 kg, Deva, Hunedoara",
+      title: "Colectare fier vechi în Deva și Hunedoara — cumpărăm fier vechi și fontă",
+      lead: "Centru autorizat de colectare și achiziție fier vechi în Cristur, între Deva și Hunedoara. Cumpărăm deșeuri metalice feroase de la persoane fizice și companii — de la tablă și piese gospodărești până la structuri industriale, utilaje casate și șpan, inclusiv cu macara cu graifăr și containere.",
+      metaTitle: "Fier vechi Deva, Hunedoara — centru colectare (remat), preț kg",
       metaDescription:
-        "Centru autorizat de colectare fier vechi în Cristur, Deva (Hunedoara): fier greu, tablă, fontă, profile și structuri metalice. Preț pe kg corect, cântar metrologic.",
+        "Cumpărăm fier vechi, fontă, tablă și șpan la centrul autorizat de colectare din Cristur, Deva (fostul „remat”). Cântar metrologic, preț corect pe kg, ridicare cu graifăr.",
       grades: [
         {
           title: "Fier vechi greu (gros)",
@@ -165,6 +268,26 @@ export const materialsRo = {
           question: "Cât este 1 kg de fier vechi și fontă la centrul de colectare?",
           answer:
             "Prețul orientativ pentru 1 kg de fier vechi variază în funcție de grosime și curățenie: tabla și fierul ușor au un preț mai mic, în timp ce fierul greu (peste 6 mm) și fonta curată (calorifere, piese turnate) obțin cele mai bune cotații din categoria feroaselor. Poți consulta intervalele actualizate în pagina noastră de prețuri sau suna la +40 740 072 256 pentru cotația zilei.",
+        },
+        {
+          question: "Ce înseamnă „remat” și mai există remat-uri?",
+          answer:
+            "„Remat” vine de la vechile întreprinderi de stat pentru recuperarea și valorificarea materialelor. Astăzi, aceeași activitate o fac centrele autorizate de colectare fier vechi, cum este punctul nostru de lucru din Cristur, Deva, care funcționează cu autorizație de mediu, cântar verificat metrologic și documente pentru fiecare predare.",
+        },
+        {
+          question: "Cumpărați fier vechi de la persoane fizice?",
+          answer:
+            "Da. Cumpărăm fier vechi de la persoane fizice pe baza cărții de identitate, cu borderou de achiziție pentru fiecare predare. Din valoarea lotului se rețin la sursă contribuția la Fondul pentru Mediu și impozitul pe venit, conform legii.",
+        },
+        {
+          question: "Primiți mașini de spălat, frigidere sau alte electrocasnice la fier vechi?",
+          answer:
+            "Electrocasnicele sunt deșeuri de echipamente electrice și electronice (DEEE) și se predau separat de fierul vechi, pe circuitul dedicat DEEE. Sună-ne înainte și îți spunem cum le poți preda corect.",
+        },
+        {
+          question: "Preluați calorifere vechi din fontă?",
+          answer:
+            "Da. Caloriferele din fontă intră la categoria fontă, una dintre cele mai bine plătite categorii de fier vechi. Golește-le de apă înainte de transport, iar pentru cantități mari (renovări de blocuri, centrale termice) putem organiza ridicarea.",
         },
       ],
     },
